@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — AERSI</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='60' x='10' fill='white' font-weight='bold'>AE</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/layout.js"></script>
+  <script src="js/main.js" defer></script>
+  <style>
+    .not-found {
+      min-height: calc(100vh - var(--nav-h));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .not-found-inner { max-width: 480px; }
+
+    .not-found-code {
+      font-family: var(--font-display);
+      font-size: 8rem;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      color: var(--border3);
+      margin-bottom: 1rem;
+    }
+
+    .not-found h1 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .not-found p {
+      color: var(--text2);
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <div class="page">
+    <div class="not-found">
+      <div class="not-found-inner anim-fade-up">
+        <div class="not-found-code">404</div>
+        <h1>Page not found</h1>
+        <p>The page you're looking for doesn't exist. The air here is clean — but there's nothing to see.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+          <a href="map.html" class="btn btn-outline">View Map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script>
+    document.getElementById('nav-root').innerHTML = renderNav();
+    document.getElementById('footer-root').innerHTML = renderFooter();
+  </script>
+</body>
+</html>

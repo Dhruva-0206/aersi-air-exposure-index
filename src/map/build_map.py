@@ -1,6 +1,7 @@
 """
 Step 5 — Build AERSI interactive station map
-Light / dark mode, adaptive legend, station popups.
+Bigger, more detailed popups with all pollutant data.
+Light / dark mode, adaptive legend.
 """
 
 import math
@@ -19,82 +20,154 @@ OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(DATA_FILE)
 
-required = {"station", "city", "state", "latitude", "longitude",
-            "PL", "AERSI", "EPF", "VSF"}
+required = {"station", "city", "state", "latitude", "longitude", "PL", "AERSI", "EPF", "VSF"}
 missing  = required - set(df.columns)
 if missing:
-    raise ValueError(f"Missing columns in AERSI scores: {missing}")
+    raise ValueError(f"Missing columns: {missing}")
 
 df = df.dropna(subset=["latitude", "longitude", "AERSI"])
 print(f"Plotting {len(df)} stations")
 
-# ── Color mapping ────────────────────────────────────────────────────────────
+# ── Helpers ───────────────────────────────────────────────────────────────────
 
-def aersi_color(value: float) -> str:
-    if value < 0.8:   return "#16a34a"   # very low  — green
-    elif value < 1.2: return "#84cc16"   # low       — lime
-    elif value < 2.0: return "#eab308"   # moderate  — yellow
-    elif value < 3.0: return "#f97316"   # high      — orange
-    else:             return "#dc2626"   # extreme   — red
+def aersi_color(v):
+    if v < 0.8:   return "#16a34a"
+    elif v < 1.2: return "#65a30d"
+    elif v < 2.0: return "#d97706"
+    elif v < 3.0: return "#ea580c"
+    else:         return "#dc2626"
 
-def aersi_label(value: float) -> str:
-    if value < 0.8:   return "Very Low"
-    elif value < 1.2: return "Low"
-    elif value < 2.0: return "Moderate"
-    elif value < 3.0: return "High"
-    else:             return "Extreme"
+def aersi_label(v):
+    if v < 0.8:   return "Very Low"
+    elif v < 1.2: return "Low"
+    elif v < 2.0: return "Moderate"
+    elif v < 3.0: return "High"
+    else:         return "Extreme"
 
-# ── Map ──────────────────────────────────────────────────────────────────────
+def fmt(v):
+    try:
+        f = float(v)
+        return f"{f:.2f}" if not math.isnan(f) else "—"
+    except:
+        return "—"
 
-m = folium.Map(location=[22.8, 79.2], zoom_start=4.8, tiles=None)
+# ── Map ───────────────────────────────────────────────────────────────────────
 
-folium.TileLayer("cartodbpositron",   name="Light Mode", control=True).add_to(m)
-folium.TileLayer("cartodbdarkmatter", name="Dark Mode",  control=True).add_to(m)
+m = folium.Map(
+    location=[22.5, 82.0],
+    zoom_start=5,
+    tiles=None,
+    prefer_canvas=True,
+)
+
+folium.TileLayer(
+    tiles="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    name="Light",
+    control=True,
+    max_zoom=19,
+).add_to(m)
 
 # ── Station markers ──────────────────────────────────────────────────────────
 
 for _, row in df.iterrows():
     aersi = row["AERSI"]
-    radius = min(11, 4 + math.sqrt(aersi) * 2.2)
-    color  = aersi_color(aersi)
+    color = aersi_color(aersi)
+    label = aersi_label(aersi)
+    radius = min(12, 4.5 + math.sqrt(max(aersi, 0)) * 2.0)
 
-    def fmt(v):
-        return "—" if pd.isna(v) else f"{v:.2f}"
+    # Build pollutant rows if individual data exists
+    pollutant_rows = ""
+    for col, name in [
+        ("PM2.5", "PM₂.₅"), ("PM10", "PM₁₀"), ("NO2", "NO₂"),
+        ("OZONE", "Ozone"), ("SO2", "SO₂"), ("CO", "CO"), ("NH3", "NH₃")
+    ]:
+        if col in row and not pd.isna(row.get(col)):
+            pollutant_rows += f"""
+            <tr>
+              <td style="color:#64748b;padding:3px 0;">{name}</td>
+              <td style="text-align:right;font-weight:500;">{fmt(row[col])}</td>
+              <td style="text-align:right;font-size:11px;color:#94a3b8;padding-left:6px;">µg/m³</td>
+            </tr>"""
+
+    pollutant_section = ""
+    if pollutant_rows:
+        pollutant_section = f"""
+        <div style="margin-top:12px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:6px;">Pollutants</div>
+          <table style="width:100%;font-size:12px;border-collapse:collapse;">
+            {pollutant_rows}
+          </table>
+        </div>"""
 
     popup_html = f"""
-    <div style="font-family:Arial,sans-serif; font-size:13px; min-width:220px;">
-        <b style="font-size:15px;">{row['station']}</b><br>
-        <span style="color:#6b7280;">{row['city']}, {row['state']}</span>
-        <hr style="margin:8px 0; border-color:#e5e7eb;">
+    <div style="
+      font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+      min-width: 280px;
+      max-width: 320px;
+      font-size: 13px;
+      line-height: 1.5;
+    ">
+      <!-- Header -->
+      <div style="
+        background: {color}12;
+        border-bottom: 2px solid {color};
+        padding: 14px 16px;
+        margin: -8px -8px 0 -8px;
+        border-radius: 8px 8px 0 0;
+      ">
+        <div style="font-weight:700;font-size:15px;color:#0f1629;margin-bottom:2px;">{row['station']}</div>
+        <div style="font-size:12px;color:#64748b;">{row.get('city','')}{', ' + row.get('state','') if row.get('city') and row.get('state') else row.get('state','')}</div>
+      </div>
 
-        <div style="margin-bottom:6px;">
-            <span style="font-size:18px; font-weight:bold; color:{color};">
-                {aersi:.2f}
-            </span>
-            <span style="color:#6b7280; font-size:12px;">
-              AERSI — {aersi_label(aersi)}
-            </span>
+      <!-- AERSI Score -->
+      <div style="padding:14px 16px;border-bottom:1px solid #f1f5f9;">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;">
+          <div>
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:4px;">AERSI Score</div>
+            <div style="font-size:2rem;font-weight:800;color:{color};letter-spacing:-0.03em;line-height:1;">{fmt(aersi)}</div>
+          </div>
+          <div style="
+            background:{color}15;
+            color:{color};
+            border:1px solid {color}30;
+            border-radius:100px;
+            padding:4px 12px;
+            font-size:11px;
+            font-weight:600;
+            letter-spacing:0.04em;
+          ">{label}</div>
         </div>
+      </div>
 
-        <table style="width:100%; font-size:12px; border-collapse:collapse;">
-            <tr>
-                <td style="color:#6b7280; padding:2px 0;">Pollution Load (PL)</td>
-                <td style="text-align:right; font-weight:bold;">{fmt(row['PL'])}</td>
-            </tr>
-            <tr>
-                <td style="color:#6b7280; padding:2px 0;">Persistence (EPF)</td>
-                <td style="text-align:right; font-weight:bold;">{fmt(row['EPF'])}</td>
-            </tr>
-            <tr>
-                <td style="color:#6b7280; padding:2px 0;">Volatility (VSF)</td>
-                <td style="text-align:right; font-weight:bold;">{fmt(row['VSF'])}</td>
-            </tr>
-        </table>
+      <!-- Components -->
+      <div style="padding:12px 16px;border-bottom:1px solid #f1f5f9;">
+        <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:10px;">Components · PL × EPF × VSF</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+          <div style="background:#f8fafc;border-radius:8px;padding:8px;text-align:center;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;color:#94a3b8;font-weight:500;margin-bottom:3px;">PL</div>
+            <div style="font-size:15px;font-weight:700;color:#0f1629;">{fmt(row.get('PL'))}</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:8px;text-align:center;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;color:#94a3b8;font-weight:500;margin-bottom:3px;">EPF</div>
+            <div style="font-size:15px;font-weight:700;color:#0f1629;">{fmt(row.get('EPF'))}</div>
+          </div>
+          <div style="background:#f8fafc;border-radius:8px;padding:8px;text-align:center;border:1px solid #e2e8f0;">
+            <div style="font-size:10px;color:#94a3b8;font-weight:500;margin-bottom:3px;">VSF</div>
+            <div style="font-size:15px;font-weight:700;color:#0f1629;">{fmt(row.get('VSF'))}</div>
+          </div>
+        </div>
+      </div>
 
-        <p style="font-size:11px; color:#9ca3af; margin-top:8px; margin-bottom:0;">
-            AERSI = PL × EPF × VSF<br>
-            Temporal factors stabilize as data accumulates.
-        </p>
+      <!-- Pollutants -->
+      {f'<div style="padding:12px 16px;">{pollutant_section}</div>' if pollutant_section else ''}
+
+      <!-- Footer -->
+      <div style="padding:8px 16px;background:#f8fafc;border-radius:0 0 8px 8px;border-top:1px solid #f1f5f9;">
+        <div style="font-size:10px;color:#94a3b8;text-align:center;">
+          AERSI = PL x EPF x VSF · aersi.live
+        </div>
+      </div>
     </div>
     """
 
@@ -104,96 +177,117 @@ for _, row in df.iterrows():
         color=color,
         fill=True,
         fill_color=color,
-        fill_opacity=0.6,
-        weight=0.5,
-        popup=folium.Popup(popup_html, max_width=300),
-        tooltip=f"{row['station']} — AERSI {aersi:.2f}",
+        fill_opacity=0.65,
+        weight=1.2,
+        popup=folium.Popup(popup_html, max_width=340),
+        tooltip=f"<b>{row['station']}</b> — AERSI {fmt(aersi)} ({label})",
     ).add_to(m)
 
-# ── Legend + status + dark mode adapter ──────────────────────────────────────
+# ── Controls & Legend ────────────────────────────────────────────────────────
 
 legend_html = """
 <style>
-#aersi-legend, #aersi-status {
-    position: fixed;
-    z-index: 9999;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.22);
-    font-family: Arial, sans-serif;
-    transition: background 0.3s, color 0.3s;
-}
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 #aersi-legend {
-    bottom: 30px; left: 30px;
-    padding: 14px 16px;
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    z-index: 9999;
+    background: white;
+    border: 1px solid rgba(13,110,253,0.12);
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-family: 'Instrument Sans', system-ui, sans-serif;
     font-size: 13px;
-    line-height: 1.8;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    min-width: 200px;
 }
-#aersi-status {
-    bottom: 30px; right: 30px;
-    padding: 10px 14px;
+
+#aersi-legend-title {
+    font-weight: 700;
+    font-size: 13px;
+    color: #0f1629;
+    margin-bottom: 2px;
+    letter-spacing: -0.01em;
+}
+
+#aersi-legend-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+}
+
+.aersi-legend-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
     font-size: 12px;
+    color: #3d4f6e;
+}
+
+.aersi-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+#aersi-status {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    background: white;
+    border: 1px solid rgba(13,110,253,0.12);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-family: 'Instrument Sans', system-ui, sans-serif;
+    font-size: 11px;
+    color: #64748b;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     line-height: 1.6;
 }
-.leaflet-control-layers, .leaflet-bar {
-    border-radius: 6px !important;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2) !important;
-    transition: background 0.3s;
+
+.live-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: #16a34a;
+    border-radius: 50%;
+    margin-right: 4px;
+    animation: pulse-live 2s infinite;
+}
+
+@keyframes pulse-live {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 </style>
 
 <div id="aersi-legend">
-    <b style="font-size:14px;">AERSI — Air Exposure Severity Index</b>
-    <br><br>
-    <span style="color:#16a34a;">●</span> &lt; 0.8 &nbsp; Very Low Exposure<br>
-    <span style="color:#84cc16;">●</span> 0.8–1.2 &nbsp; Low Exposure<br>
-    <span style="color:#eab308;">●</span> 1.2–2.0 &nbsp; Moderate Exposure<br>
-    <span style="color:#f97316;">●</span> 2.0–3.0 &nbsp; High Exposure<br>
-    <span style="color:#dc2626;">●</span> &gt; 3.0 &nbsp; Extreme Exposure<br>
-    <br>
-    <i style="font-size:11px; opacity:0.7;">AERSI = PL × EPF × VSF</i>
+  <div id="aersi-legend-title">AERSI Severity Index</div>
+  <div id="aersi-legend-sub">AERSI = PL x EPF x VSF</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#16a34a;"></div> &lt; 0.8 &nbsp; Very Low</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#65a30d;"></div> 0.8–1.2 &nbsp; Low</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#d97706;"></div> 1.2–2.0 &nbsp; Moderate</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#ea580c;"></div> 2.0–3.0 &nbsp; High</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#dc2626;"></div> &gt; 3.0 &nbsp; Extreme</div>
 </div>
 
 <div id="aersi-status">
-    <b>Data status</b><br>
-    Rolling window: <b>30-day</b><br>
-    Updated daily at 10:30 AM IST
+  <span class="live-dot"></span><strong>aersi.live</strong><br>
+  Updated daily · 10:30 AM IST<br>
+  Rolling 30-day window
 </div>
-
-<script>
-function adaptTheme() {
-    const isDark = !!document.querySelector(
-        '.leaflet-tile-loaded[src*="dark"]'
-    );
-
-    const bg    = isDark ? "#1f2937" : "#ffffff";
-    const color = isDark ? "#e5e7eb" : "#111827";
-    const border = isDark ? "1px solid #374151" : "1px solid #d1d5db";
-
-    ["aersi-legend", "aersi-status"].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) { el.style.background = bg; el.style.color = color; }
-    });
-
-    document.querySelectorAll(
-        ".leaflet-control-layers, .leaflet-bar a"
-    ).forEach(el => {
-        el.style.background = bg;
-        el.style.color      = color;
-        el.style.border     = border;
-    });
-}
-
-setTimeout(adaptTheme, 800);
-document.addEventListener("click", () => setTimeout(adaptTheme, 300));
-</script>
 """
 
 m.get_root().html.add_child(folium.Element(legend_html))
-folium.LayerControl(position="topright", collapsed=False).add_to(m)
 
 # ── Save ─────────────────────────────────────────────────────────────────────
 
 m.save(OUTPUT_FILE)
-
 print(f"Map saved: {OUTPUT_FILE}")
 print(f"Stations plotted: {len(df)}")

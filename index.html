@@ -5,330 +5,442 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AERSI — Air Exposure Severity Index</title>
   <meta name="description" content="Station-level rolling air quality severity index for India. Beyond AQI — tracking intensity, persistence, and volatility of air pollution exposure.">
+  <meta property="og:title" content="AERSI — Air Exposure Severity Index">
+  <meta property="og:description" content="Beyond AQI — tracking intensity, persistence, and volatility of air pollution across India.">
+  <meta property="og:url" content="https://www.aersi.live">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='60' x='10' fill='white' font-weight='bold'>AE</text></svg>">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/layout.js"></script>
   <script src="js/main.js" defer></script>
-  <script src="js/layout.js" defer></script>
   <style>
-    /* ── Hero ── */
+
+    /* ── Hero ──────────────────────────────────────────────────────────── */
     .hero {
       min-height: calc(100vh - var(--nav-h));
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 5rem 0 4rem;
       position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
       overflow: hidden;
     }
 
-    .hero-bg {
+    /* World map background on right */
+    .hero-map-bg {
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(56,189,248,0.06) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(129,140,248,0.05) 0%, transparent 60%);
-      pointer-events: none;
+      z-index: 0;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+    .hero-map-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        var(--bg) 42%,
+        rgba(247,248,252,0.85) 58%,
+        rgba(247,248,252,0.3) 100%
+      );
+      z-index: 2;
+    }
+
+    #world-map-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .hero-map-hint {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 3;
+      display: flex;
       align-items: center;
+      gap: 0.5rem;
+      background: white;
+      border: 1px solid var(--border2);
+      border-radius: 100px;
+      padding: 0.5rem 1rem;
+      font-size: 0.78rem;
+      color: var(--text2);
+      font-weight: 500;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      animation: bounce-hint 2s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce-hint {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 5rem 0 5rem 0;
+      grid-column: 1;
     }
 
     .hero-eyebrow {
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
     .hero-eyebrow-line {
-      width: 32px;
-      height: 1px;
+      width: 28px;
+      height: 2px;
       background: var(--accent);
+      border-radius: 2px;
     }
 
     .hero-title {
       margin-bottom: 1.5rem;
+      color: var(--text);
     }
 
-    .hero-title span {
-      display: block;
+    .hero-title .accent-word {
+      color: var(--accent);
+      font-style: italic;
+      font-family: var(--font-serif);
     }
 
-    .hero-subtitle {
-      font-size: 1.1rem;
+    .hero-sub {
+      font-size: 1.05rem;
       color: var(--text2);
-      line-height: 1.7;
+      line-height: 1.75;
       margin-bottom: 2.5rem;
-      max-width: 480px;
+      max-width: 500px;
     }
 
     .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
+      margin-bottom: 3rem;
     }
 
-    /* ── Map preview ── */
-    .hero-map-preview {
-      position: relative;
-    }
-
-    .hero-map-frame {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border2);
-      box-shadow: 0 32px 80px rgba(0,0,0,0.4), 0 0 0 1px var(--border);
-      aspect-ratio: 4/3;
-      background: var(--bg2);
-      position: relative;
-    }
-
-    .hero-map-frame iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      pointer-events: none;
-    }
-
-    .hero-map-overlay {
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      right: 1rem;
+    .hero-chips {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      pointer-events: none;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
 
-    .hero-map-cta {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(10,15,26,0.5);
-      opacity: 0;
-      transition: opacity var(--transition);
-      border-radius: var(--radius-lg);
-    }
-
-    .hero-map-frame:hover .hero-map-cta {
-      opacity: 1;
-    }
-
-    /* ── Stat strip ── */
+    /* ── Stat strip ──────────────────────────────────────────────────── */
     .stat-strip {
+      background: white;
+      border-top: 1px solid var(--border2);
+      border-bottom: 1px solid var(--border2);
       padding: 2.5rem 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--bg2);
     }
 
-    /* ── Why section ── */
+    .stat-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+    }
+
+    .stat-strip-item {
+      padding: 0 2rem;
+      border-right: 1px solid var(--border2);
+      transition: background var(--t) var(--ease);
+    }
+
+    .stat-strip-item:first-child { padding-left: 0; }
+    .stat-strip-item:last-child { border-right: none; }
+
+    .stat-strip-item:hover { background: var(--bg2); border-radius: var(--radius-sm); }
+
+    /* ── Why section ──────────────────────────────────────────────── */
     .why-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .why-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: white;
+      border: 1px solid var(--border2);
       border-radius: var(--radius);
       padding: 2rem;
       position: relative;
       overflow: hidden;
-      transition: border-color var(--transition), transform var(--transition);
+      transition: all var(--t) var(--ease);
     }
 
-    .why-card:hover {
-      border-color: var(--border2);
-      transform: translateY(-2px);
+    .why-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--teal));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease);
     }
 
-    .why-card-icon {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
+    .why-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13,110,253,0.09); }
+    .why-card:hover::before { transform: scaleX(1); }
+
+    .why-icon {
+      width: 44px; height: 44px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-mid);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-bottom: 1.25rem;
     }
 
     .why-card h3 {
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
     }
 
     .why-card p {
       font-size: 0.875rem;
       color: var(--text2);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
-    /* ── Score guide ── */
+    /* ── Score guide ──────────────────────────────────────────────── */
     .score-guide {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
     .score-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: white;
+      border: 1.5px solid var(--border2);
       border-radius: var(--radius);
-      padding: 1.25rem 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
-      transition: transform var(--transition);
+      transition: all var(--t) var(--ease);
+      cursor: default;
     }
 
-    .score-item:hover { transform: translateY(-2px); }
+    .score-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    }
 
     .score-dot {
-      width: 12px; height: 12px;
+      width: 14px; height: 14px;
       border-radius: 50%;
-      margin: 0 auto 0.75rem;
+      margin: 0 auto 1rem;
     }
 
     .score-range {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       color: var(--text3);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.35rem;
     }
 
-    .score-name {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text);
-    }
+    .score-name { font-size: 0.875rem; font-weight: 700; }
 
-    /* ── Top stations ── */
-    .top-stations-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+    /* ── Top stations ─────────────────────────────────────────────── */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 3rem;
+      align-items: start;
     }
 
     .station-row {
       display: flex;
       align-items: center;
       gap: 1rem;
-      padding: 0.875rem 1rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      padding: 0.875rem 1.1rem;
+      background: white;
+      border: 1px solid var(--border2);
       border-radius: var(--radius-sm);
-      transition: border-color var(--transition);
+      transition: all var(--t) var(--ease);
+      cursor: default;
     }
 
-    .station-row:hover { border-color: var(--border2); }
+    .station-row:hover {
+      border-color: var(--border3);
+      box-shadow: 0 4px 16px rgba(13,110,253,0.07);
+      transform: translateX(3px);
+    }
 
     .station-rank {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text3);
-      width: 20px;
+      font-size: 0.7rem;
+      color: var(--text4);
+      width: 18px;
       flex-shrink: 0;
     }
 
     .station-info { flex: 1; min-width: 0; }
 
     .station-name {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.875rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      color: var(--text);
     }
 
-    .station-location {
-      font-size: 0.75rem;
+    .station-loc {
+      font-size: 0.73rem;
       color: var(--text3);
+      margin-top: 1px;
     }
 
     .station-score {
       font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.1rem;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* ── Formula cards ─────────────────────────────────────────────── */
+    .formula-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .formula-comp {
+      background: white;
+      border: 1px solid var(--border2);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: all var(--t) var(--ease);
+    }
+
+    .formula-comp:hover {
+      border-color: var(--accent-mid);
+      background: var(--accent-soft);
+    }
+
+    .formula-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-weight: 600;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-mid);
+      border-radius: 5px;
+      padding: 0.2rem 0.5rem;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-map-preview { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-content { padding: 3rem 0; }
+      .hero-map-bg::before {
+        background: linear-gradient(to bottom, var(--bg) 50%, rgba(247,248,252,0.4) 100%);
+      }
       .why-grid { grid-template-columns: 1fr; }
       .score-guide { grid-template-columns: repeat(3, 1fr); }
+      .bottom-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .stat-strip-grid { grid-template-columns: repeat(3, 1fr); }
+      .stat-strip-item:nth-child(3) { border-right: none; }
+      .hero-map-hint { display: none; }
     }
   </style>
 </head>
 <body>
   <div id="nav-root"></div>
 
+  <!-- Map overlay -->
+  <div class="overlay" id="map-overlay">
+    <div class="overlay-frame">
+      <button class="overlay-close" onclick="closeMapOverlay()" title="Close">✕</button>
+      <iframe id="map-iframe" src="" title="AERSI Live Map" loading="lazy"></iframe>
+    </div>
+  </div>
+
   <div class="page">
 
     <!-- ── Hero ── -->
     <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="container">
-        <div class="hero-grid">
-          <div class="animate-fade-up">
-            <div class="hero-eyebrow">
-              <span class="hero-eyebrow-line"></span>
-              <span class="label">India · Station-Level · Rolling 30-Day</span>
-            </div>
-            <h1 class="display display-xl hero-title">
-              <span>Air Exposure</span>
-              <span class="gradient-text">Severity Index</span>
-            </h1>
-            <p class="hero-subtitle">
-              AERSI goes beyond snapshot AQI to measure how <em>intense</em>,
-              <em>persistent</em>, and <em>volatile</em> air pollution exposure
-              really is — across 547 stations in India, updated every day.
-            </p>
-            <div class="hero-actions">
-              <a href="map.html" class="btn btn-primary">
-                View Live Map →
-              </a>
-              <a href="methodology.html" class="btn btn-ghost">
-                How it works
-              </a>
-            </div>
+      <div class="hero-map-bg">
+        <canvas id="world-map-canvas"></canvas>
+      </div>
+
+      <div class="container" style="position:relative;z-index:3;width:100%;">
+        <div class="hero-content anim-fade-up">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-line"></span>
+            <span class="label">India · Station-Level · Rolling 30-Day</span>
           </div>
 
-          <div class="hero-map-preview animate-fade-up delay-3">
-            <div class="hero-map-frame">
-              <iframe src="outputs/aersi_map.html" title="AERSI Map Preview" loading="lazy"></iframe>
-              <a href="map.html" class="hero-map-cta">
-                <span class="btn btn-primary">Open Full Map →</span>
-              </a>
-            </div>
+          <h1 class="display display-xl hero-title">
+            Air Exposure<br>
+            <span class="accent-word">Severity</span> Index
+          </h1>
+
+          <p class="hero-sub">
+            AERSI moves beyond snapshot AQI to measure how
+            <strong>intense</strong>, <strong>persistent</strong>, and
+            <strong>volatile</strong> air pollution exposure really is —
+            across <span id="hero-station-count">547</span> stations in India,
+            updated every single day.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" onclick="openMapOverlay()">
+              Explore Live Map →
+            </button>
+            <a href="why.html" class="btn btn-outline btn-lg">
+              Why AERSI?
+            </a>
+          </div>
+
+          <div class="hero-chips">
+            <span class="chip">📊 WHO-normalized PL</span>
+            <span class="chip">📅 30-day rolling EPF</span>
+            <span class="chip">📈 tanh-bounded VSF</span>
           </div>
         </div>
       </div>
+
+      <div class="hero-map-hint" onclick="openMapOverlay()">
+        🗺️ Click map to explore stations
+      </div>
     </section>
 
-    <!-- ── Live stat strip ── -->
+    <!-- ── Stat strip ── -->
     <div class="stat-strip">
       <div class="container">
-        <div class="stat-grid" id="stat-grid">
-          <div class="stat-card animate-fade-up">
+        <div class="stat-strip-grid">
+          <div class="stat-strip-item anim-fade-up d1">
             <div class="stat-value" id="stat-stations">—</div>
             <div class="stat-label">Stations Monitored</div>
           </div>
-          <div class="stat-card animate-fade-up delay-1">
+          <div class="stat-strip-item anim-fade-up d2">
             <div class="stat-value aersi-extreme" id="stat-extreme">—</div>
             <div class="stat-label">Extreme Exposure</div>
           </div>
-          <div class="stat-card animate-fade-up delay-2">
+          <div class="stat-strip-item anim-fade-up d3">
             <div class="stat-value aersi-high" id="stat-high">—</div>
             <div class="stat-label">High Exposure</div>
           </div>
-          <div class="stat-card animate-fade-up delay-3">
-            <div class="stat-value" id="stat-avg">—</div>
-            <div class="stat-label">Avg AERSI Score</div>
+          <div class="stat-strip-item anim-fade-up d4">
+            <div class="stat-value" style="color:var(--accent)" id="stat-avg">—</div>
+            <div class="stat-label">Average AERSI</div>
           </div>
-          <div class="stat-card animate-fade-up delay-4">
+          <div class="stat-strip-item anim-fade-up d5">
             <div class="stat-value aersi-very-low" id="stat-clean">—</div>
             <div class="stat-label">Clean Stations</div>
           </div>
@@ -336,70 +448,71 @@
       </div>
     </div>
 
-    <!-- ── Why AERSI ── -->
-    <section class="section">
+    <!-- ── Why section ── -->
+    <section class="section" style="background:var(--bg2);">
       <div class="container">
-        <div class="section-header animate-fade-up">
+        <div class="section-header anim-fade-up">
           <span class="label">Why AERSI?</span>
-          <h2 class="display display-lg" style="margin-top:0.5rem;">
+          <h2 class="display display-lg" style="margin-top:0.5rem;max-width:560px;">
             AQI tells you the moment.<br>AERSI tells you the story.
           </h2>
         </div>
         <div class="why-grid">
-          <div class="why-card animate-fade-up delay-1">
-            <div class="why-card-icon">📊</div>
+          <div class="why-card anim-fade-up d1">
+            <div class="why-icon">📊</div>
             <h3>Pollution Load</h3>
-            <p>WHO-normalized weighted index across PM2.5, PM10, NO2, Ozone, and SO2 — giving fine particulates the weight they deserve based on health research.</p>
+            <p>WHO-normalized weighted index across PM2.5, PM10, NO2, Ozone, and SO2. Fine particulates get the weight they deserve based on epidemiological evidence.</p>
           </div>
-          <div class="why-card animate-fade-up delay-2">
-            <div class="why-card-icon">📅</div>
+          <div class="why-card anim-fade-up d2">
+            <div class="why-icon">📅</div>
             <h3>Exposure Persistence</h3>
-            <p>How often does a station cross the unsafe threshold? A city that's polluted 25 out of 30 days is fundamentally different from one with rare spikes.</p>
+            <p>How often does a station cross the unsafe threshold over 30 days? Persistent pollution is fundamentally more damaging than rare spikes of equal magnitude.</p>
           </div>
-          <div class="why-card animate-fade-up delay-3">
-            <div class="why-card-icon">📈</div>
+          <div class="why-card anim-fade-up d3">
+            <div class="why-icon">📈</div>
             <h3>Volatility Severity</h3>
-            <p>Unpredictable swings cause acute health events. A station that jumps from clean to toxic without warning is penalized — people can't adapt to what they can't predict.</p>
+            <p>Unpredictable swings cause acute health events. A station jumping from clean to toxic without warning is penalized — people can't adapt to what they can't predict.</p>
           </div>
+        </div>
+        <div style="margin-top:2rem;text-align:center;">
+          <a href="why.html" class="btn btn-outline">Read the full case for AERSI →</a>
         </div>
       </div>
     </section>
 
-    <hr class="divider">
-
     <!-- ── Score guide ── -->
     <section class="section">
       <div class="container">
-        <div class="section-header animate-fade-up">
+        <div class="section-header anim-fade-up">
           <span class="label">Score Reference</span>
           <h2 class="display display-lg" style="margin-top:0.5rem;">Reading the Index</h2>
-          <p style="color:var(--text2);margin-top:0.75rem;font-size:0.95rem;">
-            AERSI = 1.0 is the baseline — exactly at WHO safety thresholds with no exceedances.
+          <p style="color:var(--text2);margin-top:0.6rem;font-size:0.95rem;max-width:500px;">
+            AERSI = 1.0 is the baseline — a station exactly at WHO limits, zero exceedances, zero volatility.
           </p>
         </div>
-        <div class="score-guide animate-fade-up delay-1">
+        <div class="score-guide anim-fade-up d1">
           <div class="score-item">
-            <div class="score-dot" style="background:#22c55e;box-shadow:0 0 8px #22c55e;"></div>
+            <div class="score-dot" style="background:#16a34a;box-shadow:0 0 10px rgba(22,163,74,0.35);"></div>
             <div class="score-range">&lt; 0.8</div>
             <div class="score-name aersi-very-low">Very Low</div>
           </div>
           <div class="score-item">
-            <div class="score-dot" style="background:#84cc16;box-shadow:0 0 8px #84cc16;"></div>
+            <div class="score-dot" style="background:#65a30d;box-shadow:0 0 10px rgba(101,163,13,0.35);"></div>
             <div class="score-range">0.8 – 1.2</div>
             <div class="score-name aersi-low">Low</div>
           </div>
           <div class="score-item">
-            <div class="score-dot" style="background:#eab308;box-shadow:0 0 8px #eab308;"></div>
+            <div class="score-dot" style="background:#d97706;box-shadow:0 0 10px rgba(217,119,6,0.35);"></div>
             <div class="score-range">1.2 – 2.0</div>
             <div class="score-name aersi-moderate">Moderate</div>
           </div>
           <div class="score-item">
-            <div class="score-dot" style="background:#f97316;box-shadow:0 0 8px #f97316;"></div>
+            <div class="score-dot" style="background:#ea580c;box-shadow:0 0 10px rgba(234,88,12,0.35);"></div>
             <div class="score-range">2.0 – 3.0</div>
             <div class="score-name aersi-high">High</div>
           </div>
           <div class="score-item">
-            <div class="score-dot" style="background:#ef4444;box-shadow:0 0 8px #ef4444;"></div>
+            <div class="score-dot" style="background:#dc2626;box-shadow:0 0 10px rgba(220,38,38,0.35);"></div>
             <div class="score-range">&gt; 3.0</div>
             <div class="score-name aersi-extreme">Extreme</div>
           </div>
@@ -409,68 +522,63 @@
 
     <hr class="divider">
 
-    <!-- ── Top stations ── -->
+    <!-- ── Bottom: stations + formula ── -->
     <section class="section">
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+        <div class="bottom-grid">
           <div>
-            <div class="section-header animate-fade-up">
+            <div class="section-header anim-fade-up">
               <span class="label">Today's Data</span>
-              <h2 class="display display-md" style="margin-top:0.5rem;">Most Affected Stations</h2>
+              <h2 class="display display-md" style="margin-top:0.4rem;">Most Affected Stations</h2>
             </div>
-            <div class="top-stations-list animate-fade-up delay-1" id="top-stations">
-              <div style="color:var(--text3);font-size:0.875rem;padding:1rem;">Loading...</div>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;" id="top-stations">
+              <div style="color:var(--text3);font-size:0.875rem;padding:1rem 0;">Loading station data...</div>
             </div>
-            <div style="margin-top:1rem;">
-              <a href="explore.html" class="btn btn-ghost">View all stations →</a>
+            <div style="margin-top:1.25rem;">
+              <a href="explore.html" class="btn btn-outline">View all stations →</a>
             </div>
           </div>
-          <div>
-            <div class="section-header animate-fade-up">
+
+          <div class="anim-fade-up d2">
+            <div class="section-header">
               <span class="label">Formula</span>
-              <h2 class="display display-md" style="margin-top:0.5rem;">How It's Computed</h2>
+              <h2 class="display display-md" style="margin-top:0.4rem;">How It's Computed</h2>
             </div>
-            <div class="animate-fade-up delay-1">
-              <div class="formula-block" style="margin-bottom:1rem;">AERSI = PL × EPF × VSF</div>
-              <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                <div class="card" style="padding:1rem 1.25rem;">
-                  <div style="display:flex;gap:0.75rem;align-items:flex-start;">
-                    <span class="label" style="flex-shrink:0;padding-top:2px;">PL</span>
-                    <div>
-                      <div style="font-weight:500;font-size:0.875rem;margin-bottom:0.2rem;">Pollution Load</div>
-                      <div style="font-size:0.8rem;color:var(--text2);">WHO-normalized weighted sum of all pollutants today</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card" style="padding:1rem 1.25rem;">
-                  <div style="display:flex;gap:0.75rem;align-items:flex-start;">
-                    <span class="label" style="flex-shrink:0;padding-top:2px;">EPF</span>
-                    <div>
-                      <div style="font-weight:500;font-size:0.875rem;margin-bottom:0.2rem;">Exposure Persistence Factor</div>
-                      <div style="font-size:0.8rem;color:var(--text2);">How often AQI exceeds 100 over 30 days, confidence-weighted</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card" style="padding:1rem 1.25rem;">
-                  <div style="display:flex;gap:0.75rem;align-items:flex-start;">
-                    <span class="label" style="flex-shrink:0;padding-top:2px;">VSF</span>
-                    <div>
-                      <div style="font-weight:500;font-size:0.875rem;margin-bottom:0.2rem;">Variability Severity Factor</div>
-                      <div style="font-size:0.8rem;color:var(--text2);">Bounded volatility via tanh — always 1.0 to 2.0</div>
-                    </div>
-                  </div>
+            <div class="formula-block" style="margin-bottom:1.25rem;font-size:1.2rem;">
+              AERSI = PL × EPF × VSF
+            </div>
+            <div class="formula-cards">
+              <div class="formula-comp">
+                <span class="formula-tag">PL</span>
+                <div>
+                  <div style="font-weight:600;font-size:0.875rem;color:var(--text);">Pollution Load</div>
+                  <div style="font-size:0.8rem;color:var(--text2);margin-top:2px;">WHO-normalized weighted sum of all pollutants</div>
                 </div>
               </div>
-              <div style="margin-top:1rem;">
-                <a href="methodology.html" class="btn btn-ghost">Full methodology →</a>
+              <div class="formula-comp">
+                <span class="formula-tag">EPF</span>
+                <div>
+                  <div style="font-weight:600;font-size:0.875rem;color:var(--text);">Exposure Persistence Factor</div>
+                  <div style="font-size:0.8rem;color:var(--text2);margin-top:2px;">How often AQI exceeds 100, confidence-weighted over 30 days</div>
+                </div>
               </div>
+              <div class="formula-comp">
+                <span class="formula-tag">VSF</span>
+                <div>
+                  <div style="font-weight:600;font-size:0.875rem;color:var(--text);">Variability Severity Factor</div>
+                  <div style="font-size:0.8rem;color:var(--text2);margin-top:2px;">Bounded volatility via tanh — always between 1.0 and 2.0</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:1.25rem;">
+              <a href="methodology.html" class="btn btn-outline">Full methodology →</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-  </div><!-- /page -->
+  </div>
 
   <div id="footer-root"></div>
 
@@ -479,37 +587,165 @@
     document.getElementById('footer-root').innerHTML = renderFooter();
     setActiveNav();
 
-    // Load live data
+    // ── World map canvas ──────────────────────────────────────────────────
+    (function() {
+      const canvas = document.getElementById('world-map-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      function resize() {
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        drawMap();
+      }
+
+      function drawMap() {
+        const W = canvas.width, H = canvas.height;
+        ctx.clearRect(0, 0, W, H);
+
+        // Use OpenStreetMap tile via image
+        // We draw a clean ocean + land color background
+        ctx.fillStyle = '#dbeafe';
+        ctx.fillRect(0, 0, W, H);
+
+        // Draw India approximate shape using SVG path projected to canvas
+        // Simplified India outline (key coordinates lon/lat -> canvas)
+        const lon0 = 20, lon1 = 110, lat0 = 40, lat1 = -15;
+
+        function project(lon, lat) {
+          const x = ((lon - lon0) / (lon1 - lon0)) * W;
+          const y = ((lat0 - lat) / (lat0 - lat1)) * H;
+          return [x, y];
+        }
+
+        // Draw landmass blocks (simplified world continents)
+        ctx.fillStyle = '#e2e8f4';
+        ctx.strokeStyle = '#c8d4e8';
+        ctx.lineWidth = 0.5;
+
+        // Europe/Asia landmass
+        ctx.beginPath();
+        const euroAsia = [
+          [25,70],[30,72],[40,70],[50,68],[60,68],[70,70],[80,70],[90,68],[100,68],[110,68],
+          [110,60],[100,55],[90,50],[80,45],[70,40],[60,38],[55,32],[50,28],[45,22],[40,18],
+          [36,14],[34,12],[32,10],[30,12],[28,16],[26,20],[25,24],[23,28],[22,32],[22,38],
+          [24,42],[25,48],[24,54],[22,60],[20,66],[22,68],[25,70]
+        ];
+        euroAsia.forEach(([lon, lat], i) => {
+          const [x, y] = project(lon, lat);
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Africa
+        ctx.beginPath();
+        const africa = [
+          [20,36],[24,32],[28,24],[32,16],[36,10],[40,4],[42,-2],[44,-10],
+          [38,-18],[34,-26],[30,-34],[24,-36],[18,-34],[14,-26],[12,-18],
+          [10,-10],[10,-2],[12,8],[16,16],[20,24],[20,32],[20,36]
+        ];
+        africa.forEach(([lon, lat], i) => {
+          const [x, y] = project(lon, lat);
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        // Highlight India with a warmer tone
+        ctx.fillStyle = '#c7d7f0';
+        ctx.beginPath();
+        const india = [
+          [68,37],[72,36],[76,34],[80,30],[84,28],[88,26],[92,24],[94,22],
+          [92,18],[88,14],[84,10],[80,8],[76,8],[72,10],[68,22],[66,28],[68,34],[68,37]
+        ];
+        india.forEach(([lon, lat], i) => {
+          const [x, y] = project(lon, lat);
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        ctx.fill();
+        ctx.strokeStyle = '#93b3d8';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // India label
+        const [indX, indY] = project(79, 22);
+        ctx.fillStyle = 'rgba(13,110,253,0.7)';
+        ctx.font = `bold ${Math.max(11, W * 0.012)}px 'JetBrains Mono', monospace`;
+        ctx.textAlign = 'center';
+        ctx.fillText('INDIA', indX, indY);
+
+        // Pulsing dots for major cities
+        const cities = [
+          { name: 'Delhi', lon: 77.2, lat: 28.6 },
+          { name: 'Mumbai', lon: 72.8, lat: 19.1 },
+          { name: 'Kolkata', lon: 88.4, lat: 22.6 },
+          { name: 'Chennai', lon: 80.3, lat: 13.1 },
+          { name: 'Bangalore', lon: 77.6, lat: 12.9 },
+        ];
+
+        cities.forEach(c => {
+          const [cx, cy] = project(c.lon, c.lat);
+          ctx.beginPath();
+          ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(220,38,38,0.8)';
+          ctx.fill();
+          ctx.beginPath();
+          ctx.arc(cx, cy, 6, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(220,38,38,0.3)';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        });
+      }
+
+      canvas.addEventListener('click', openMapOverlay);
+      canvas.style.cursor = 'pointer';
+
+      window.addEventListener('resize', resize);
+      resize();
+
+      // Load map iframe lazily when overlay opens
+      document.getElementById('map-overlay').addEventListener('click', () => {
+        const iframe = document.getElementById('map-iframe');
+        if (!iframe.src || iframe.src === window.location.href) {
+          iframe.src = 'outputs/aersi_map.html';
+        }
+      });
+    })();
+
+    // ── Live data ─────────────────────────────────────────────────────────
     async function initHome() {
       const data = await loadStationData();
       if (!data.length) return;
 
-      const valid = data.filter(d => !isNaN(d.AERSI));
-      const extreme = valid.filter(d => d.AERSI >= 3).length;
-      const high    = valid.filter(d => d.AERSI >= 2 && d.AERSI < 3).length;
-      const clean   = valid.filter(d => d.AERSI < 0.8).length;
-      const avg     = valid.reduce((s,d) => s + d.AERSI, 0) / valid.length;
+      const extreme = data.filter(d => d.AERSI >= 3).length;
+      const high    = data.filter(d => d.AERSI >= 2 && d.AERSI < 3).length;
+      const clean   = data.filter(d => d.AERSI < 0.8).length;
+      const avg     = data.reduce((s, d) => s + d.AERSI, 0) / data.length;
 
-      document.getElementById('stat-stations').textContent = valid.length;
+      document.getElementById('stat-stations').textContent = data.length;
       document.getElementById('stat-extreme').textContent  = extreme;
       document.getElementById('stat-high').textContent     = high;
       document.getElementById('stat-avg').textContent      = avg.toFixed(2);
       document.getElementById('stat-clean').textContent    = clean;
+      document.getElementById('hero-station-count').textContent = data.length;
 
-      // Top 10 worst stations
-      const sorted = [...valid].sort((a,b) => b.AERSI - a.AERSI).slice(0, 10);
-      const list = document.getElementById('top-stations');
-      list.innerHTML = sorted.map((s, i) => {
+      const top10 = [...data].sort((a, b) => b.AERSI - a.AERSI).slice(0, 10);
+      const list  = document.getElementById('top-stations');
+      list.innerHTML = top10.map((s, i) => {
         const cat = aersiCategory(s.AERSI);
         return `
         <div class="station-row">
-          <span class="station-rank">${i+1}</span>
+          <span class="station-rank">${i + 1}</span>
           <div class="station-info">
             <div class="station-name">${s.station}</div>
-            <div class="station-location">${s.city || ''}, ${s.state || ''}</div>
+            <div class="station-loc">${s.city || ''}${s.city && s.state ? ', ' : ''}${s.state || ''}</div>
           </div>
           <span class="badge badge-${cat.cls}">${cat.label}</span>
-          <span class="station-score" style="color:${cat.color}">${fmt(s.AERSI)}</span>
+          <span class="station-score" style="color:${cat.color};">${fmt(s.AERSI)}</span>
         </div>`;
       }).join('');
     }

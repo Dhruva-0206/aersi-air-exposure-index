@@ -1,28 +1,4 @@
-// ── Theme ──────────────────────────────────────────────────────────────────
-
-const THEME_KEY = 'aersi-theme';
-
-function getTheme() {
-  return localStorage.getItem(THEME_KEY) ||
-    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-}
-
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem(THEME_KEY, theme);
-  const btn = document.getElementById('theme-toggle');
-  if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
-}
-
-function toggleTheme() {
-  applyTheme(getTheme() === 'dark' ? 'light' : 'dark');
-}
-
-// Apply immediately to avoid flash
-applyTheme(getTheme());
-
-// ── Active nav link ────────────────────────────────────────────────────────
-
+// ── Active nav ─────────────────────────────────────────────────────────────
 function setActiveNav() {
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(a => {
@@ -34,65 +10,108 @@ function setActiveNav() {
 }
 
 // ── Data loading ───────────────────────────────────────────────────────────
-
 let _stationData = null;
 
 async function loadStationData() {
   if (_stationData) return _stationData;
-  try {
-    const res = await fetch('data/processed/aersi_station_scores.csv');
-    const text = await res.text();
-    _stationData = parseCSV(text);
-    return _stationData;
-  } catch (e) {
-    console.error('Failed to load station data:', e);
-    return [];
+  // Try multiple paths to handle both local and deployed environments
+  const paths = [
+    'data/processed/aersi_station_scores.csv',
+    '/data/processed/aersi_station_scores.csv',
+    './data/processed/aersi_station_scores.csv',
+  ];
+  for (const path of paths) {
+    try {
+      const res = await fetch(path);
+      if (!res.ok) continue;
+      const text = await res.text();
+      if (!text || text.trim().length < 10) continue;
+      _stationData = parseCSV(text);
+      if (_stationData.length > 0) return _stationData;
+    } catch (e) {
+      continue;
+    }
   }
+  console.warn('Could not load station data from any path.');
+  return [];
 }
 
 function parseCSV(text) {
   const lines = text.trim().split('\n');
-  const headers = lines[0].split(',').map(h => h.trim());
+  if (lines.length < 2) return [];
+  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
   return lines.slice(1).map(line => {
-    const vals = line.split(',');
+    // Handle quoted fields with commas inside
+    const vals = [];
+    let inQuote = false, cur = '';
+    for (const ch of line) {
+      if (ch === '"') { inQuote = !inQuote; }
+      else if (ch === ',' && !inQuote) { vals.push(cur); cur = ''; }
+      else cur += ch;
+    }
+    vals.push(cur);
     const obj = {};
     headers.forEach((h, i) => {
-      const v = (vals[i] || '').trim();
-      obj[h] = isNaN(v) || v === '' ? v : parseFloat(v);
+      const v = (vals[i] || '').trim().replace(/^"|"$/g, '');
+      obj[h] = (v !== '' && !isNaN(v)) ? parseFloat(v) : v;
     });
     return obj;
-  }).filter(r => r.station && !isNaN(r.AERSI));
+  }).filter(r => r.station && r.AERSI !== undefined && !isNaN(r.AERSI));
 }
 
 // ── AERSI helpers ──────────────────────────────────────────────────────────
-
 function aersiCategory(v) {
-  if (v < 0.8)  return { label: 'Very Low',  cls: 'very-low',  color: '#22c55e' };
-  if (v < 1.2)  return { label: 'Low',       cls: 'low',       color: '#84cc16' };
-  if (v < 2.0)  return { label: 'Moderate',  cls: 'moderate',  color: '#eab308' };
-  if (v < 3.0)  return { label: 'High',      cls: 'high',      color: '#f97316' };
-  return           { label: 'Extreme',    cls: 'extreme',   color: '#ef4444' };
+  if (v < 0.8) return { label: 'Very Low',  cls: 'very-low',  color: '#16a34a' };
+  if (v < 1.2) return { label: 'Low',       cls: 'low',       color: '#65a30d' };
+  if (v < 2.0) return { label: 'Moderate',  cls: 'moderate',  color: '#d97706' };
+  if (v < 3.0) return { label: 'High',      cls: 'high',      color: '#ea580c' };
+  return         { label: 'Extreme',    cls: 'extreme',   color: '#dc2626' };
 }
 
 function fmt(v, d = 2) {
-  if (v === undefined || v === null || isNaN(v)) return '—';
+  if (v === undefined || v === null || v === '' || isNaN(v)) return '—';
   return parseFloat(v).toFixed(d);
 }
 
-// ── Init ───────────────────────────────────────────────────────────────────
+// ── Map overlay ────────────────────────────────────────────────────────────
+function openMapOverlay() {
+  const overlay = document.getElementById('map-overlay');
+  if (!overlay) return;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 
+function closeMapOverlay() {
+  const overlay = document.getElementById('map-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   setActiveNav();
-
-  const toggleBtn = document.getElementById('theme-toggle');
-  if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
 
   // Mobile menu
   const menuBtn = document.getElementById('mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
   if (menuBtn && navLinks) {
     menuBtn.addEventListener('click', () => {
-      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+      const isOpen = navLinks.style.display === 'flex';
+      navLinks.style.cssText = isOpen
+        ? ''
+        : 'display:flex;flex-direction:column;position:absolute;top:var(--nav-h);left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border2);padding:1rem;gap:0.25rem;z-index:999;';
+    });
+  }
+
+  // Close overlay on backdrop click
+  const overlay = document.getElementById('map-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeMapOverlay();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMapOverlay();
     });
   }
 });

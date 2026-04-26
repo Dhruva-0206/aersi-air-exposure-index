@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why AERSI? — Air Exposure Severity Index</title>
+  <meta name="description" content="Why standard AQI is not enough — and how AERSI fills the gap.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='60' x='10' fill='white' font-weight='bold'>AE</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/layout.js"></script>
+  <script src="js/main.js" defer></script>
+  <style>
+    .why-hero {
+      background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+      border-bottom: 1px solid var(--border2);
+      padding: 6rem 0 5rem;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .comparison-card {
+      border-radius: var(--radius);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .comparison-card.aqi-card {
+      background: #fff8f0;
+      border: 1.5px solid rgba(234,88,12,0.2);
+    }
+
+    .comparison-card.aersi-card {
+      background: #eff6ff;
+      border: 1.5px solid rgba(13,110,253,0.2);
+    }
+
+    .comparison-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .comparison-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .comparison-card li {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text2);
+      line-height: 1.6;
+      align-items: flex-start;
+    }
+
+    .comparison-card li span:first-child { flex-shrink: 0; }
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .scenario-card {
+      background: white;
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      transition: all var(--t) var(--ease);
+    }
+
+    .scenario-card:hover {
+      border-color: var(--accent-mid);
+      box-shadow: 0 8px 28px rgba(13,110,253,0.07);
+    }
+
+    .scenario-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text3);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .scenario-card h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .scenario-card p {
+      font-size: 0.875rem;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    .scenario-scores {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .scenario-score-item {
+      flex: 1;
+      background: var(--bg2);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .scenario-score-val {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .scenario-score-lbl {
+      font-size: 0.68rem;
+      color: var(--text3);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .big-quote {
+      background: linear-gradient(135deg, #eff6ff, #f0f9ff);
+      border: 1px solid var(--border2);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin: 3rem 0;
+    }
+
+    .big-quote p {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      line-height: 1.65;
+      color: var(--text);
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+      .scenario-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <div class="page">
+
+    <div class="why-hero">
+      <div class="container-narrow">
+        <div class="anim-fade-up">
+          <span class="label">Why AERSI?</span>
+          <h1 class="display display-xl" style="margin-top:0.6rem;margin-bottom:1.25rem;">
+            AQI is a snapshot.<br>Exposure is a story.
+          </h1>
+          <p style="font-size:1.1rem;color:var(--text2);line-height:1.8;max-width:600px;">
+            Standard air quality indices were designed to answer one question:
+            how bad is the air at this moment? But chronic health damage from
+            air pollution is driven by something far more complex — and AERSI
+            is built to capture it.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container-narrow">
+
+        <div class="big-quote anim-fade-up">
+          <p>"The burden of air pollution on human health is not determined by the worst single day — it is determined by the cumulative weight of every day, every spike, every season of exposure."</p>
+        </div>
+
+        <div class="section-header anim-fade-up">
+          <span class="label">The Problem</span>
+          <h2 class="display display-lg" style="margin-top:0.5rem;">What AQI misses</h2>
+        </div>
+
+        <div class="comparison-grid anim-fade-up d1">
+          <div class="comparison-card aqi-card">
+            <h3 style="color:#ea580c;">Standard AQI answers:</h3>
+            <ul>
+              <li><span>✓</span> How bad is the air right now?</li>
+              <li><span>✗</span> How often has it been unsafe?</li>
+              <li><span>✗</span> Is this pollution stable or swinging?</li>
+              <li><span>✗</span> What is the accumulated exposure over time?</li>
+              <li><span>✗</span> Which pollutants are driving the danger?</li>
+              <li><span>✗</span> How does today compare to last month?</li>
+            </ul>
+          </div>
+          <div class="comparison-card aersi-card">
+            <h3 style="color:var(--accent);">AERSI answers:</h3>
+            <ul>
+              <li><span>✓</span> How polluted is the air today, weighted by health impact?</li>
+              <li><span>✓</span> How many of the last 30 days exceeded safe thresholds?</li>
+              <li><span>✓</span> How unpredictably is the air quality swinging?</li>
+              <li><span>✓</span> What is the composite severity of exposure over time?</li>
+              <li><span>✓</span> Which stations are the worst for long-term health?</li>
+              <li><span>✓</span> Is a station getting better or worse as data grows?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-header anim-fade-up" style="margin-top:4rem;">
+          <span class="label">Real Scenarios</span>
+          <h2 class="display display-lg" style="margin-top:0.5rem;">Where AQI misleads</h2>
+          <p style="color:var(--text2);margin-top:0.6rem;font-size:0.95rem;">Two stations with the same AQI can have vastly different AERSI scores.</p>
+        </div>
+
+        <div class="scenario-grid anim-fade-up d1">
+          <div class="scenario-card">
+            <div class="scenario-label">Scenario 1</div>
+            <h3>The Consistent Polluter</h3>
+            <p>AQI of 160 every single day for 30 days. Bad, but predictable. People adapt, wear masks, close windows. The damage accumulates slowly.</p>
+            <div class="scenario-scores">
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--high);">160</div>
+                <div class="scenario-score-lbl">Daily AQI</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--extreme);">High EPF</div>
+                <div class="scenario-score-lbl">Persistence</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--very-low);">Low VSF</div>
+                <div class="scenario-score-lbl">Volatility</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-label">Scenario 2</div>
+            <h3>The Unpredictable Spiker</h3>
+            <p>AQI oscillates between 40 and 380 with no pattern. Average is also 160. But acute spikes cause cardiovascular events — people have no warning.</p>
+            <div class="scenario-scores">
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--high);">160</div>
+                <div class="scenario-score-lbl">Avg AQI</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--moderate);">Mod EPF</div>
+                <div class="scenario-score-lbl">Persistence</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--extreme);">High VSF</div>
+                <div class="scenario-score-lbl">Volatility</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-label">Scenario 3</div>
+            <h3>The Seasonal Trap</h3>
+            <p>Air is clean for 25 days, then hits AQI 400 for 5 days during crop burning. A single snapshot misses the severity entirely. AERSI captures it.</p>
+            <div class="scenario-scores">
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--very-low);">~60</div>
+                <div class="scenario-score-lbl">Typical AQI</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--extreme);">400</div>
+                <div class="scenario-score-lbl">Spike AQI</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--high);">High VSF</div>
+                <div class="scenario-score-lbl">Volatility</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-label">Scenario 4</div>
+            <h3>The Multi-Pollutant Problem</h3>
+            <p>AQI reports only the worst single pollutant. A station with PM2.5 at 3x limit AND NO2 at 2x limit looks the same as one with just PM2.5 at 3x. AERSI sums them all.</p>
+            <div class="scenario-scores">
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--extreme);">Same</div>
+                <div class="scenario-score-lbl">AQI Score</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--extreme);">Higher</div>
+                <div class="scenario-score-lbl">True PL</div>
+              </div>
+              <div class="scenario-score-item">
+                <div class="scenario-score-val" style="color:var(--extreme);">Higher</div>
+                <div class="scenario-score-lbl">AERSI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:3rem;text-align:center;" class="anim-fade-up">
+          <a href="methodology.html" class="btn btn-primary btn-lg">See the Full Formula →</a>
+          <a href="map.html" class="btn btn-outline btn-lg" style="margin-left:1rem;">Explore the Map</a>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script>
+    document.getElementById('nav-root').innerHTML = renderNav();
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    setActiveNav();
+  </script>
+</body>
+</html>
