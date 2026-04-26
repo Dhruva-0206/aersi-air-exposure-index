@@ -9,28 +9,33 @@ function setActiveNav() {
   });
 }
 
-// ── Data loading ───────────────────────────────────────────────────────────
+// ── Data loading — XHR avoids fetch/CORS issues on Vercel ─────────────────
 let _stationData = null;
 
-async function loadStationData() {
-  if (_stationData) return _stationData;
-  // Absolute path from site root works on Vercel; relative fallback for local
-  const paths = [
-    '/data/processed/aersi_station_scores.csv',
-    'data/processed/aersi_station_scores.csv',
-  ];
-  for (const p of paths) {
-    try {
-      const res = await fetch(p, { cache: 'no-store' });
-      if (!res.ok) continue;
-      const text = await res.text();
-      if (!text || text.trim().length < 20) continue;
-      const parsed = parseCSV(text);
-      if (parsed.length > 0) { _stationData = parsed; return _stationData; }
-    } catch (e) { continue; }
-  }
-  console.warn('AERSI: Could not load station CSV.');
-  return [];
+function loadStationData() {
+  if (_stationData) return Promise.resolve(_stationData);
+
+  return new Promise((resolve) => {
+    const xhr = new XMLHttpRequest();
+    // Absolute URL using current origin — works on Vercel and locally
+    const url = window.location.origin + '/data/processed/aersi_station_scores.csv';
+    xhr.open('GET', url, true);
+    xhr.setRequestHeader('Accept', 'text/plain, text/csv, */*');
+    xhr.onload = function () {
+      if (xhr.status === 200 && xhr.responseText && xhr.responseText.length > 20) {
+        _stationData = parseCSV(xhr.responseText);
+        resolve(_stationData);
+      } else {
+        console.warn('AERSI: CSV load failed, status:', xhr.status);
+        resolve([]);
+      }
+    };
+    xhr.onerror = function () {
+      console.warn('AERSI: CSV network error');
+      resolve([]);
+    };
+    xhr.send();
+  });
 }
 
 function parseCSV(text) {
