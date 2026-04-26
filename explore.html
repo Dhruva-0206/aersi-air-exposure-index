@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore — AERSI</title>
+  <meta name="description" content="Explore AERSI scores across India. Compare stations, states, and pollution patterns.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    .explore-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chart-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .chart-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .chart-subtitle {
+      font-size: 0.78rem;
+      color: var(--text3);
+      margin-bottom: 1.25rem;
+    }
+
+    .chart-wrap {
+      position: relative;
+      height: 260px;
+    }
+
+    /* ── Filter bar ── */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-bar input,
+    .filter-bar select {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      padding: 0.5rem 0.875rem;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+
+    .filter-bar input:focus,
+    .filter-bar select:focus {
+      border-color: var(--accent);
+    }
+
+    .filter-bar input { flex: 1; min-width: 200px; }
+
+    .filter-count {
+      font-size: 0.8rem;
+      color: var(--text3);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* ── Station table ── */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .aersi-bar-bg {
+      background: var(--bg2);
+      border-radius: 4px;
+      height: 6px;
+      overflow: hidden;
+      min-width: 80px;
+    }
+
+    .aersi-bar {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    @media (max-width: 900px) {
+      .explore-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <div class="page">
+    <div class="section">
+      <div class="container-wide">
+
+        <!-- Header -->
+        <div class="section-header animate-fade-up">
+          <span class="label">Explore</span>
+          <h1 class="display display-lg" style="margin-top:0.5rem;">Data Explorer</h1>
+          <p style="color:var(--text2);margin-top:0.5rem;font-size:0.95rem;">
+            Compare stations, states, and pollution patterns across India.
+          </p>
+        </div>
+
+        <!-- Charts -->
+        <div class="explore-grid animate-fade-up delay-1">
+          <div class="chart-card">
+            <div class="chart-title">Score Distribution</div>
+            <div class="chart-subtitle">Number of stations in each AERSI category</div>
+            <div class="chart-wrap">
+              <canvas id="chart-dist"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">Top 10 States by Avg AERSI</div>
+            <div class="chart-subtitle">States with highest average exposure severity</div>
+            <div class="chart-wrap">
+              <canvas id="chart-states"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="explore-grid animate-fade-up delay-2">
+          <div class="chart-card">
+            <div class="chart-title">Top 15 Most Affected Stations</div>
+            <div class="chart-subtitle">Ranked by AERSI score</div>
+            <div class="chart-wrap" style="height:320px;">
+              <canvas id="chart-top"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-title">Component Breakdown</div>
+            <div class="chart-subtitle">Average PL, EPF, VSF across all stations</div>
+            <div class="chart-wrap">
+              <canvas id="chart-components"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Station table -->
+        <div class="animate-fade-up delay-3">
+          <h2 class="display display-md" style="margin-bottom:1.25rem;">All Stations</h2>
+
+          <div class="filter-bar">
+            <input type="text" id="search" placeholder="Search station, city, or state...">
+            <select id="filter-cat">
+              <option value="">All categories</option>
+              <option value="very-low">Very Low</option>
+              <option value="low">Low</option>
+              <option value="moderate">Moderate</option>
+              <option value="high">High</option>
+              <option value="extreme">Extreme</option>
+            </select>
+            <select id="sort-by">
+              <option value="aersi-desc">AERSI: High to Low</option>
+              <option value="aersi-asc">AERSI: Low to High</option>
+              <option value="pl-desc">PL: High to Low</option>
+              <option value="station-asc">Station A–Z</option>
+            </select>
+            <span class="filter-count" id="filter-count"></span>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Station</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>AERSI</th>
+                  <th>Category</th>
+                  <th>PL</th>
+                  <th>EPF</th>
+                  <th>VSF</th>
+                  <th>Score Bar</th>
+                </tr>
+              </thead>
+              <tbody id="station-tbody">
+                <tr><td colspan="10" style="text-align:center;color:var(--text3);padding:2rem;">Loading...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script>
+    document.getElementById('nav-root').innerHTML = renderNav();
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    setActiveNav();
+
+    const isDark = () => document.documentElement.getAttribute('data-theme') !== 'light';
+
+    function chartDefaults() {
+      return {
+        color: isDark() ? '#94a3b8' : '#475569',
+        gridColor: isDark() ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)',
+        bgColor: isDark() ? '#1a2438' : '#ffffff',
+      };
+    }
+
+    Chart.defaults.font.family = "'DM Sans', sans-serif";
+
+    let allData = [];
+
+    function renderTable(data) {
+      const tbody = document.getElementById('station-tbody');
+      const maxAERSI = Math.max(...data.map(d => d.AERSI), 5);
+
+      if (!data.length) {
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;color:var(--text3);padding:2rem;">No stations match your filters.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = data.map((s, i) => {
+        const cat = aersiCategory(s.AERSI);
+        const barW = Math.min((s.AERSI / maxAERSI) * 100, 100).toFixed(1);
+        return `
+        <tr>
+          <td style="color:var(--text3);font-family:var(--font-mono);font-size:0.75rem;">${i+1}</td>
+          <td style="font-weight:500;">${s.station}</td>
+          <td style="color:var(--text2);">${s.city || '—'}</td>
+          <td style="color:var(--text2);">${s.state || '—'}</td>
+          <td style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:${cat.color};">${fmt(s.AERSI)}</td>
+          <td><span class="badge badge-${cat.cls}">${cat.label}</span></td>
+          <td style="font-family:var(--font-mono);font-size:0.8rem;">${fmt(s.PL)}</td>
+          <td style="font-family:var(--font-mono);font-size:0.8rem;">${fmt(s.EPF)}</td>
+          <td style="font-family:var(--font-mono);font-size:0.8rem;">${fmt(s.VSF)}</td>
+          <td>
+            <div class="aersi-bar-bg">
+              <div class="aersi-bar" style="width:${barW}%;background:${cat.color};"></div>
+            </div>
+          </td>
+        </tr>`;
+      }).join('');
+    }
+
+    function applyFilters() {
+      const q   = document.getElementById('search').value.toLowerCase();
+      const cat = document.getElementById('filter-cat').value;
+      const srt = document.getElementById('sort-by').value;
+
+      let filtered = allData.filter(s => {
+        const matchQ = !q || [s.station, s.city, s.state].some(v => (v||'').toLowerCase().includes(q));
+        const matchC = !cat || aersiCategory(s.AERSI).cls === cat;
+        return matchQ && matchC;
+      });
+
+      filtered.sort((a,b) => {
+        if (srt === 'aersi-asc')    return a.AERSI - b.AERSI;
+        if (srt === 'pl-desc')      return b.PL - a.PL;
+        if (srt === 'station-asc')  return a.station.localeCompare(b.station);
+        return b.AERSI - a.AERSI;
+      });
+
+      document.getElementById('filter-count').textContent = `${filtered.length} of ${allData.length} stations`;
+      renderTable(filtered);
+    }
+
+    ['search','filter-cat','sort-by'].forEach(id => {
+      document.getElementById(id).addEventListener('input', applyFilters);
+    });
+
+    function buildCharts(data) {
+      const cd = chartDefaults();
+
+      // Distribution
+      const cats = ['Very Low','Low','Moderate','High','Extreme'];
+      const catCounts = [
+        data.filter(d => d.AERSI < 0.8).length,
+        data.filter(d => d.AERSI >= 0.8 && d.AERSI < 1.2).length,
+        data.filter(d => d.AERSI >= 1.2 && d.AERSI < 2.0).length,
+        data.filter(d => d.AERSI >= 2.0 && d.AERSI < 3.0).length,
+        data.filter(d => d.AERSI >= 3.0).length,
+      ];
+      const catColors = ['#22c55e','#84cc16','#eab308','#f97316','#ef4444'];
+
+      new Chart(document.getElementById('chart-dist'), {
+        type: 'doughnut',
+        data: { labels: cats, datasets: [{ data: catCounts, backgroundColor: catColors, borderWidth: 2, borderColor: cd.bgColor }] },
+        options: { plugins: { legend: { position: 'right', labels: { color: cd.color, font: { size: 12 }, boxWidth: 12 } } }, cutout: '65%' }
+      });
+
+      // States
+      const stateMap = {};
+      data.forEach(d => {
+        if (!d.state) return;
+        if (!stateMap[d.state]) stateMap[d.state] = [];
+        stateMap[d.state].push(d.AERSI);
+      });
+      const stateAvgs = Object.entries(stateMap)
+        .map(([k,v]) => ({ state: k, avg: v.reduce((a,b) => a+b,0)/v.length }))
+        .sort((a,b) => b.avg - a.avg).slice(0, 10);
+
+      new Chart(document.getElementById('chart-states'), {
+        type: 'bar',
+        data: {
+          labels: stateAvgs.map(s => s.state),
+          datasets: [{ data: stateAvgs.map(s => s.avg.toFixed(2)), backgroundColor: 'rgba(56,189,248,0.7)', borderRadius: 6 }]
+        },
+        options: {
+          indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: cd.gridColor }, ticks: { color: cd.color } },
+            y: { grid: { display: false }, ticks: { color: cd.color, font: { size: 11 } } }
+          }
+        }
+      });
+
+      // Top 15 stations
+      const top15 = [...data].sort((a,b) => b.AERSI - a.AERSI).slice(0,15);
+      new Chart(document.getElementById('chart-top'), {
+        type: 'bar',
+        data: {
+          labels: top15.map(s => s.station.length > 20 ? s.station.slice(0,18)+'…' : s.station),
+          datasets: [{
+            data: top15.map(s => s.AERSI.toFixed(2)),
+            backgroundColor: top15.map(s => aersiCategory(s.AERSI).color + 'cc'),
+            borderRadius: 6
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: cd.gridColor }, ticks: { color: cd.color } },
+            y: { grid: { display: false }, ticks: { color: cd.color, font: { size: 10 } } }
+          }
+        }
+      });
+
+      // Component breakdown
+      const avgPL  = data.reduce((s,d) => s + (d.PL||0), 0) / data.length;
+      const avgEPF = data.reduce((s,d) => s + (d.EPF||0), 0) / data.length;
+      const avgVSF = data.reduce((s,d) => s + (d.VSF||0), 0) / data.length;
+
+      new Chart(document.getElementById('chart-components'), {
+        type: 'radar',
+        data: {
+          labels: ['Pollution Load (PL)', 'Persistence (EPF)', 'Volatility (VSF)'],
+          datasets: [{
+            label: 'Average',
+            data: [avgPL.toFixed(2), avgEPF.toFixed(2), avgVSF.toFixed(2)],
+            backgroundColor: 'rgba(56,189,248,0.15)',
+            borderColor: '#38bdf8',
+            pointBackgroundColor: '#38bdf8',
+            pointRadius: 5
+          }]
+        },
+        options: {
+          scales: {
+            r: {
+              grid: { color: cd.gridColor },
+              ticks: { color: cd.color, backdropColor: 'transparent' },
+              pointLabels: { color: cd.color, font: { size: 12 } }
+            }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
+
+    async function init() {
+      allData = await loadStationData();
+      allData.sort((a,b) => b.AERSI - a.AERSI);
+      document.getElementById('filter-count').textContent = `${allData.length} stations`;
+      renderTable(allData);
+      buildCharts(allData);
+    }
+
+    init();
+  </script>
+</body>
+</html>

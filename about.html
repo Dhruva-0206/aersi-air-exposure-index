@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — AERSI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <style>
+    .about-hero {
+      padding: 5rem 0 4rem;
+      max-width: 760px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .about-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-card p {
+      font-size: 0.875rem;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    .pipeline-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 2rem 0;
+    }
+
+    .pipeline-step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding-bottom: 2rem;
+      position: relative;
+    }
+
+    .pipeline-step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 40px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border2);
+    }
+
+    .step-icon {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-body h4 {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-body p {
+      font-size: 0.85rem;
+      color: var(--text2);
+      line-height: 1.65;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: border-color var(--transition), transform var(--transition);
+      margin-bottom: 0.75rem;
+    }
+
+    .link-card:hover {
+      border-color: var(--border2);
+      transform: translateX(4px);
+    }
+
+    .link-card-icon {
+      font-size: 1.25rem;
+      width: 36px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .link-card-body { flex: 1; }
+
+    .link-card-title {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .link-card-desc {
+      font-size: 0.78rem;
+      color: var(--text3);
+    }
+
+    .link-card-arrow {
+      color: var(--text3);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <div class="page">
+    <div class="section">
+      <div class="container">
+
+        <div class="about-hero animate-fade-up">
+          <span class="label">About</span>
+          <h1 class="display display-lg" style="margin-top:0.5rem;margin-bottom:1rem;">
+            What is AERSI?
+          </h1>
+          <p style="font-size:1.05rem;color:var(--text2);line-height:1.75;margin-bottom:1rem;">
+            AERSI — the Air Exposure Severity Index — is an independent research project
+            building a better way to understand air pollution in India.
+          </p>
+          <p style="font-size:1.05rem;color:var(--text2);line-height:1.75;">
+            Standard AQI answers one question: <em>how bad is the air right now?</em>
+            AERSI answers three: how intense, how persistent, and how volatile is the
+            exposure — over time, not just in this moment.
+          </p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section-sm">
+          <span class="label">The problem</span>
+          <h2 class="display display-md" style="margin-top:0.5rem;margin-bottom:1.5rem;">Why AQI isn't enough</h2>
+
+          <div class="about-grid animate-fade-up">
+            <div class="about-card">
+              <h3>📸 Snapshots miss the pattern</h3>
+              <p>AQI captures a moment. A city that has moderate air on the day you check might have had extreme pollution for the previous three weeks. AERSI captures that accumulated story.</p>
+            </div>
+            <div class="about-card">
+              <h3>📅 Persistence compounds risk</h3>
+              <p>Breathing mildly bad air every day is fundamentally different from breathing very bad air once a week. Long-term exposure to persistent pollution is the primary driver of chronic health damage.</p>
+            </div>
+            <div class="about-card">
+              <h3>📈 Volatility causes acute harm</h3>
+              <p>When air quality swings unpredictably from clean to toxic, people cannot adapt. Sudden spikes trigger acute cardiovascular and respiratory events — especially for vulnerable populations.</p>
+            </div>
+            <div class="about-card">
+              <h3>⚖️ All pollutants aren't equal</h3>
+              <p>Standard AQI reports the worst single pollutant. AERSI combines all major pollutants with weights based on their actual health burden — giving PM2.5 the weight it deserves.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section-sm">
+          <span class="label">How it runs</span>
+          <h2 class="display display-md" style="margin-top:0.5rem;margin-bottom:0.5rem;">The Data Pipeline</h2>
+          <p style="color:var(--text2);font-size:0.95rem;margin-bottom:2rem;">Fully automated. Runs every day at 10:30 AM IST without any manual intervention.</p>
+
+          <div class="pipeline-steps animate-fade-up delay-1">
+            <div class="pipeline-step">
+              <div class="step-icon">🌐</div>
+              <div class="step-body">
+                <h4>Fetch from CPCB API</h4>
+                <p>Daily snapshot pulled from the Central Pollution Control Board via data.gov.in. Covers all 547 active monitoring stations across India.</p>
+              </div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">📦</div>
+              <div class="step-body">
+                <h4>Build 30-day rolling dataset</h4>
+                <p>New snapshot is merged with the previous 29 days. Missing days are detected and flagged. The dataset grows until the 30-day window is full.</p>
+              </div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">🧮</div>
+              <div class="step-body">
+                <h4>Compute AQI and AERSI</h4>
+                <p>CPCB sub-index AQI is computed per station per day. Then PL, EPF, and VSF are calculated and multiplied to produce each station's AERSI score.</p>
+              </div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">🗺️</div>
+              <div class="step-body">
+                <h4>Generate map and outputs</h4>
+                <p>Interactive Folium map is rebuilt with fresh scores. All outputs are committed back to the GitHub repository automatically.</p>
+              </div>
+            </div>
+            <div class="pipeline-step">
+              <div class="step-icon">🌍</div>
+              <div class="step-body">
+                <h4>Site updates live</h4>
+                <p>The website reads directly from the committed CSV files. No backend required — the data is always the latest committed version.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="section-sm animate-fade-up">
+          <span class="label">Resources</span>
+          <h2 class="display display-md" style="margin-top:0.5rem;margin-bottom:1.5rem;">Links & Data</h2>
+
+          <a href="https://github.com/Dhruva-0206/aersi-air-exposure-index" target="_blank" class="link-card">
+            <span class="link-card-icon">🐙</span>
+            <div class="link-card-body">
+              <div class="link-card-title">GitHub Repository</div>
+              <div class="link-card-desc">Full source code, pipeline scripts, and all historical data snapshots</div>
+            </div>
+            <span class="link-card-arrow">→</span>
+          </a>
+
+          <a href="methodology.html" class="link-card">
+            <span class="link-card-icon">📐</span>
+            <div class="link-card-body">
+              <div class="link-card-title">Formula Reference</div>
+              <div class="link-card-desc">Complete technical documentation of AERSI, PL, EPF, and VSF</div>
+            </div>
+            <span class="link-card-arrow">→</span>
+          </a>
+
+          <a href="https://data.gov.in/resource/real-time-air-quality-index-various-locations" target="_blank" class="link-card">
+            <span class="link-card-icon">🏛️</span>
+            <div class="link-card-body">
+              <div class="link-card-title">CPCB Data Source</div>
+              <div class="link-card-desc">Real-time AQI data from the Central Pollution Control Board via data.gov.in</div>
+            </div>
+            <span class="link-card-arrow">→</span>
+          </a>
+
+          <a href="https://www.who.int/publications/i/item/9789240034228" target="_blank" class="link-card">
+            <span class="link-card-icon">🏥</span>
+            <div class="link-card-body">
+              <div class="link-card-title">WHO Air Quality Guidelines (2021)</div>
+              <div class="link-card-desc">Source for the pollutant safety limits used in PL normalization</div>
+            </div>
+            <span class="link-card-arrow">→</span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script>
+    document.getElementById('nav-root').innerHTML = renderNav();
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    setActiveNav();
+  </script>
+</body>
+</html>

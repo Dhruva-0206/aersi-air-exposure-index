@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map — AERSI</title>
+  <meta name="description" content="Interactive station-level AERSI map of India. Explore air exposure severity across 547 monitoring stations.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/layout.js" defer></script>
+  <style>
+    .map-page {
+      height: calc(100vh - var(--nav-h));
+      display: flex;
+      flex-direction: column;
+    }
+
+    .map-header {
+      padding: 1rem 2rem;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .map-header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .map-header h1 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .map-header-meta {
+      font-size: 0.8rem;
+      color: var(--text3);
+      font-family: var(--font-mono);
+    }
+
+    .map-legend {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      color: var(--text2);
+      white-space: nowrap;
+    }
+
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .map-frame {
+      flex: 1;
+      position: relative;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .map-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      z-index: 10;
+      transition: opacity 0.4s;
+    }
+
+    .map-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .map-loading-inner {
+      text-align: center;
+    }
+
+    .spinner {
+      width: 40px; height: 40px;
+      border: 3px solid var(--border2);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .map-legend { display: none; }
+      .map-header { padding: 0.75rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <div class="page">
+    <div class="map-page">
+
+      <div class="map-header">
+        <div class="map-header-left">
+          <div>
+            <h1>AERSI Station Map</h1>
+            <div class="map-header-meta" id="map-meta">Loading station data...</div>
+          </div>
+        </div>
+        <div class="map-legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#22c55e;box-shadow:0 0 6px #22c55e;"></div>
+            Very Low (&lt;0.8)
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#84cc16;box-shadow:0 0 6px #84cc16;"></div>
+            Low (0.8–1.2)
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#eab308;box-shadow:0 0 6px #eab308;"></div>
+            Moderate (1.2–2.0)
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#f97316;box-shadow:0 0 6px #f97316;"></div>
+            High (2.0–3.0)
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#ef4444;box-shadow:0 0 6px #ef4444;"></div>
+            Extreme (&gt;3.0)
+          </div>
+        </div>
+      </div>
+
+      <div class="map-frame">
+        <div class="map-loading" id="map-loading">
+          <div class="map-loading-inner">
+            <div class="spinner"></div>
+            <div style="color:var(--text2);font-size:0.875rem;">Loading map...</div>
+          </div>
+        </div>
+        <iframe
+          src="outputs/aersi_map.html"
+          title="AERSI Interactive Map"
+          id="map-iframe"
+          onload="document.getElementById('map-loading').classList.add('hidden')"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('nav-root').innerHTML = renderNav();
+    setActiveNav();
+
+    async function initMap() {
+      const data = await loadStationData();
+      const meta = document.getElementById('map-meta');
+      if (data.length) {
+        meta.textContent = `${data.length} stations · Updated daily at 10:30 AM IST · AERSI = PL × EPF × VSF`;
+      }
+    }
+    initMap();
+  </script>
+</body>
+</html>
