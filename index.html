@@ -13,6 +13,7 @@
   <script src="js/layout.js"></script>
   <script src="js/main.js"></script>
   <style>
+    /* ── Hero ── */
     .hero {
       height: calc(100vh - var(--nav-h));
       min-height: 600px;
@@ -20,36 +21,36 @@
       display: flex;
       align-items: center;
       overflow: hidden;
+      background: var(--bg);
     }
 
-    /* SVG India map — right side background */
-    .hero-india-svg {
+    /* Live map iframe — right side preview */
+    .hero-map-preview {
       position: absolute;
-      right: -2%;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 52%;
-      height: 95%;
+      right: 0; top: 0; bottom: 0;
+      width: 58%;
+      cursor: pointer;
       z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-map-preview iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
       pointer-events: none;
     }
 
-    .hero-india-svg svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Gradient fade from left so text is always readable */
-    .hero-overlay {
+    /* Gradient mask so text is always readable */
+    .hero-map-mask {
       position: absolute;
       inset: 0;
       background: linear-gradient(
         to right,
-        var(--bg) 28%,
-        rgba(247,248,252,0.82) 52%,
-        rgba(247,248,252,0.08) 100%
+        var(--bg) 0%,
+        rgba(247,248,252,0.55) 45%,
+        transparent 100%
       );
-      z-index: 1;
       pointer-events: none;
     }
 
@@ -198,8 +199,7 @@
 
     @media (max-width: 900px) {
       .hero { height: auto; min-height: 100svh; }
-      .hero-india-svg { opacity: 0.25; width: 100%; right: 0; }
-      .hero-overlay { background: rgba(247,248,252,0.88); }
+      .hero-map-preview { display: none; }
       .hero-content { padding: 3rem 0; }
       .why-grid { grid-template-columns: 1fr; }
       .score-guide { grid-template-columns: repeat(3, 1fr); }
@@ -225,83 +225,11 @@
     <!-- ── Hero ── -->
     <section class="hero">
 
-      <!-- India SVG — pure CSS, zero JS, always renders -->
-      <div class="hero-india-svg" onclick="openMapOverlay()" style="cursor:pointer;" title="Click to explore map">
-        <svg viewBox="0 0 520 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-          <!-- Ocean background -->
-          <rect width="520" height="600" fill="#dbeafe" rx="16"/>
-
-          <!-- Pakistan / Afghanistan rough shape -->
-          <path d="M 60 80 L 100 60 L 140 55 L 165 70 L 170 100 L 160 130 L 145 155 L 130 170 L 110 168 L 88 160 L 70 145 L 55 120 Z"
-                fill="#e8f0fa" stroke="#cddcf0" stroke-width="1"/>
-
-          <!-- Bangladesh -->
-          <path d="M 358 188 L 375 182 L 385 195 L 380 215 L 365 220 L 352 210 Z"
-                fill="#e2ecf8" stroke="#bdd0ea" stroke-width="1"/>
-
-          <!-- Myanmar partial -->
-          <path d="M 385 180 L 420 160 L 440 175 L 445 210 L 430 240 L 405 250 L 388 235 L 382 215 Z"
-                fill="#e8f0fa" stroke="#cddcf0" stroke-width="1"/>
-
-          <!-- INDIA — detailed outline -->
-          <path d="
-            M 168 72
-            L 195 58  L 230 50  L 265 48  L 300 52  L 332 62
-            L 355 78  L 368 98  L 372 120 L 368 142 L 358 162
-            L 350 178 L 352 195 L 358 210 L 360 228 L 355 245
-            L 345 260 L 332 272 L 318 282 L 305 292 L 295 305
-            L 288 320 L 285 336 L 285 352 L 288 368 L 292 384
-            L 295 400 L 292 416 L 285 430 L 274 444 L 260 456
-            L 245 466 L 232 474 L 220 482 L 210 492 L 200 504
-            L 192 516 L 188 530 L 184 518 L 178 505 L 170 492
-            L 160 480 L 148 470 L 134 462 L 118 456 L 102 450
-            L 88  442 L 76  430 L 66  416 L 60  400 L 58  384
-            L 60  368 L 65  352 L 68  336 L 68  320 L 64  304
-            L 56  288 L 45  273 L 35  258 L 28  242 L 24  225
-            L 24  208 L 28  192 L 36  177 L 48  163 L 62  150
-            L 74  137 L 82  122 L 84  106 L 88  90
-            Z"
-                fill="#b8cfe8" stroke="#6fa4cc" stroke-width="2" stroke-linejoin="round"/>
-
-          <!-- Sri Lanka -->
-          <path d="M 210 548 L 222 540 L 232 545 L 238 560 L 234 575 L 222 582 L 210 575 L 206 562 Z"
-                fill="#cce0f0" stroke="#8fbcd8" stroke-width="1.2"/>
-
-          <!-- INDIA label -->
-          <text x="192" y="295" text-anchor="middle"
-                fill="rgba(13,110,253,0.4)"
-                font-size="22" font-family="JetBrains Mono, monospace"
-                font-weight="600" letter-spacing="4">INDIA</text>
-
-          <!-- Major city dots with glow rings -->
-          <!-- Delhi -->
-          <circle cx="192" cy="128" r="9"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="192" cy="128" r="4.5" fill="rgba(220,38,38,0.75)"/>
-          <!-- Mumbai -->
-          <circle cx="98"  cy="290" r="9"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="98"  cy="290" r="4.5" fill="rgba(220,38,38,0.75)"/>
-          <!-- Kolkata -->
-          <circle cx="318" cy="220" r="8"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="318" cy="220" r="4"  fill="rgba(220,38,38,0.72)"/>
-          <!-- Chennai -->
-          <circle cx="230" cy="408" r="8"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="230" cy="408" r="4"  fill="rgba(220,38,38,0.72)"/>
-          <!-- Bangalore -->
-          <circle cx="188" cy="418" r="7"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="188" cy="418" r="3.5" fill="rgba(220,38,38,0.68)"/>
-          <!-- Hyderabad -->
-          <circle cx="205" cy="332" r="7"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="205" cy="332" r="3.5" fill="rgba(220,38,38,0.68)"/>
-          <!-- Ahmedabad -->
-          <circle cx="108" cy="212" r="7"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="108" cy="212" r="3.5" fill="rgba(220,38,38,0.65)"/>
-          <!-- Pune -->
-          <circle cx="132" cy="308" r="6"  fill="rgba(220,38,38,0.10)"/>
-          <circle cx="132" cy="308" r="3"  fill="rgba(220,38,38,0.62)"/>
-        </svg>
+      <!-- Live map preview — click to open fullscreen -->
+      <div class="hero-map-preview" onclick="openMapOverlay()" title="Click to explore live map">
+        <iframe src="outputs/aersi_map.html" tabindex="-1" scrolling="no" aria-hidden="true" loading="lazy"></iframe>
+        <div class="hero-map-mask"></div>
       </div>
-
-      <div class="hero-overlay"></div>
 
       <div class="container" style="position:relative;z-index:2;width:100%;">
         <div class="hero-content anim-fade-up">
@@ -505,7 +433,13 @@
     loadStationData().then(data => {
       if (!data.length) return;
 
-      const valid   = data.filter(d => !isNaN(d.AERSI));
+      // Parse AERSI explicitly to handle any string values from CSV
+      const valid = data
+        .map(d => ({ ...d, AERSI: parseFloat(d.AERSI) }))
+        .filter(d => !isNaN(d.AERSI) && isFinite(d.AERSI));
+
+      if (!valid.length) return;
+
       const extreme = valid.filter(d => d.AERSI >= 3).length;
       const high    = valid.filter(d => d.AERSI >= 2 && d.AERSI < 3).length;
       const clean   = valid.filter(d => d.AERSI < 0.8).length;
