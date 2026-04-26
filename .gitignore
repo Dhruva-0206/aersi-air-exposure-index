@@ -13,7 +13,6 @@ venv/
 
 # Data — keep snapshots, ignore rolling intermediates
 data/rolling/
-data/processed/
 
 # Outputs are committed by the GitHub Action
 # Remove this line if you want to track them locally too
