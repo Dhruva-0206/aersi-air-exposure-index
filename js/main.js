@@ -78,8 +78,6 @@ function fmt(v, d = 2) {
 function openMapOverlay() {
   const overlay = document.getElementById('map-overlay');
   if (!overlay) return;
-  const iframe = document.getElementById('map-iframe');
-  if (iframe && !iframe.src) iframe.src = 'outputs/aersi_map.html';
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
