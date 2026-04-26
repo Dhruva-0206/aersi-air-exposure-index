@@ -428,7 +428,7 @@
       const ctx = canvas.getContext('2d');
 
       function project(lon, lat, W, H) {
-        const lon0 = 20, lon1 = 118, lat0 = 45, lat1 = -10;
+        const lon0 = 45, lon1 = 100, lat0 = 40, lat1 = -5;
         return [
           ((lon - lon0) / (lon1 - lon0)) * W,
           ((lat0 - lat) / (lat0 - lat1)) * H
@@ -511,7 +511,8 @@
       const extreme = data.filter(d => d.AERSI >= 3).length;
       const high    = data.filter(d => d.AERSI >= 2 && d.AERSI < 3).length;
       const clean   = data.filter(d => d.AERSI < 0.8).length;
-      const avg     = data.reduce((s, d) => s + d.AERSI, 0) / data.length;
+      const valid = data.filter(d => !isNaN(d.AERSI));
+      const avg = valid.reduce((s, d) => s + d.AERSI, 0) / valid.length;
 
       document.getElementById('stat-stations').textContent = data.length;
       document.getElementById('stat-extreme').textContent  = extreme;
