@@ -1,178 +1,101 @@
-# 🌏 AERSI — Air Exposure Severity Index (India)
+# AERSI — Air Exposure Severity Index
 
-AERSI is a **station-level, rolling air exposure severity index** designed to move beyond single-moment AQI readings and instead capture **how intense, persistent, and volatile air pollution exposure is over time**.
-
-This project focuses on **India**, where air quality often fluctuates rapidly and long-term exposure risks are not well represented by snapshot AQI values alone.
-
----
-
-## 🧭 Why This Project?
-
-Traditional air quality metrics (like AQI) answer:
-
-> **“How bad is the air right now?”**
-
-But they do **not** answer:
-
-- How frequently a location experiences unsafe air  
-- Whether pollution levels are stable or highly volatile  
-- How exposure accumulates over time  
-- How persistent pollution episodes are  
-
-**AERSI bridges this gap** by introducing a rolling, exposure-aware severity index that **improves automatically as historical data accumulates**.
+Station-level rolling air exposure severity index for India.
+Moves beyond snapshot AQI to capture **intensity, persistence, and volatility**
+of pollution exposure over a 30-day rolling window.
 
 ---
 
-## 🧠 What is AERSI?
+## Formula
 
-**AERSI (Air Exposure Severity Index)** is a composite index designed to represent **air exposure severity**, not just instantaneous air quality.
-
-It is structured around **three components**:
-
-| Component | Meaning | Status |
-|--------|--------|--------|
-| **PL** | Pollution Load (current intensity) | ✅ Active |
-| **EPF** | Exposure Persistence Factor | ⚠️ Partial (data-limited) |
-| **VSF** | Variability Severity Factor | ⚠️ Partial (data-limited) |
-
----
-
-## 🧮 AERSI Formula (Current Implementation)
-
-### Overall Index
+```
 AERSI = PL × EPF × VSF
+```
+
+| Component | Meaning | Range |
+|-----------|---------|-------|
+| **PL** — Pollution Load | WHO-normalized weighted pollutant concentration | 0 → ∞ |
+| **EPF** — Exposure Persistence Factor | How often AQI > 100, confidence-weighted | 1.0 → 2.0 |
+| **VSF** — Variability Severity Factor | Daily AQI swing via tanh-bounded std dev | 1.0 → 2.0 |
+
+**Baseline:** AERSI = 1.0 means exactly at WHO thresholds, no exceedances, zero volatility.
 
 ---
 
-## 🔬 Pollution Load (PL)
+## Project Structure
 
-### Pollutant Normalization
-Each pollutant is normalized using WHO guideline limits:
-
-Nₚ = Cₚ / WHOₚ
-
-Where:
-- `Cₚ` = Observed pollutant concentration
-- `WHOₚ` = WHO guideline limit for that pollutant
-
----
-
-### Pollution Load Calculation
-PL = 0.35·N_PM2.5 + 0.25·N_PM10 + 0.15·N_NO2 + 0.15·N_O3 + 0.10·N_SO2
-
-> These weights reflect the **relative health burden** of pollutants based on epidemiological literature, with fine particulates (PM₂.₅) carrying the highest weight.
-
----
-
-## ⏱ Exposure Persistence Factor (EPF)
-
-EPF captures **how often unsafe air occurs** over a rolling window.
-
-EPF = 1 + (D_exceed / W)
-
-Where:
-- `D_exceed` = Number of days AQI exceeds the safe threshold
-- `W` = Rolling window size (target: 30 days)
-
-📌 *Currently stabilizing as more data accumulates.*
+```
+aersi/
+├── .github/workflows/daily_pipeline.yml   ← automated daily run
+├── src/
+│   ├── pipeline.py                        ← orchestrator
+│   ├── fetch/fetch_snapshot.py            ← CPCB API fetch
+│   ├── process/
+│   │   ├── build_rolling.py               ← merge 30-day window
+│   │   ├── compute_aqi.py                 ← CPCB AQI calculation
+│   │   └── compute_aersi.py               ← new formula
+│   └── map/build_map.py                   ← interactive map
+├── data/snapshots/                        ← daily CSVs (committed)
+├── outputs/                               ← map HTML
+├── logs/                                  ← daily run logs
+├── requirements.txt
+└── .env                                   ← API key (never commit)
+```
 
 ---
 
-## 📈 Variability Severity Factor (VSF)
+## Setup
 
-VSF captures **volatility in pollution levels**, penalizing locations with unstable air quality.
+### 1. Clone and install
 
-VSF = 1 + (σ / μ)
+```bash
+git clone https://github.com/YOUR_USERNAME/aersi.git
+cd aersi
+pip install -r requirements.txt
+```
 
-Where:
-- `σ` = Rolling standard deviation of AQI
-- `μ` = Rolling mean AQI
+### 2. Add your API key
 
-📌 *Low during early data stages, becomes meaningful as historical depth increases.*
+Create a `.env` file in the project root:
 
----
+```
+DATA_GOV_API_KEY=your_key_here
+```
 
-## 🗺️ Visualization
+Get your key at: https://data.gov.in → Register → API Key
 
-- Interactive **station-level map of India**
-- Clean, non-clustered markers for clarity
-- Adaptive **light / dark mode**
-- Scientifically backed color thresholds
-- Detailed station popups with PL, EPF, VSF, and AERSI
+### 3. Run manually
 
-📍 Output file:
-outputs/aersi_station_map_final.html
-
----
-
-## 🔁 Data Pipeline
-
-CPCB Snapshot API
-↓
-Daily Snapshot Storage
-↓
-Rolling 30-Day Dataset
-↓
-AERSI Computation
-↓
-Interactive Map Output
-
-- Data is fetched **once daily**
-- Rolling datasets grow until 30 days, then stabilize
-- Older data is **retained** for long-term analysis
+```bash
+python src/pipeline.py
+```
 
 ---
 
-## ⚠️ Data Status & Accuracy
+## GitHub Actions — Automated Daily Run
 
-- The project is currently in **early-stage data collection**
-- **PL is fully reliable**
-- **EPF and VSF improve progressively** as historical depth increases
-- Index accuracy stabilizes after ~30 days of continuous data
+The pipeline runs automatically every day at **10:30 AM IST** via GitHub Actions.
 
-> Until then, AERSI primarily reflects **WHO-normalized pollution intensity**, with temporal factors gradually activating.
+### Setup (one time only)
 
----
+1. Push this repo to GitHub
+2. Go to **Settings → Secrets and variables → Actions**
+3. Click **New repository secret**
+4. Name: `DATA_GOV_API_KEY` — Value: your API key
+5. Done. The Action runs daily and commits new snapshots back to the repo.
 
-## Project Status
+### Manual trigger
 
-This project is currently in its early data accumulation phase.
-
-- Pollution Load (PL) is fully active and WHO-aligned
-- Temporal severity factors (EPF, VSF) are partially active and stabilize as more data is collected
-- Index accuracy improves significantly after 30+ days of continuous data
-
-Future updates will include:
-- Fully stabilized EPF and VSF
-- Health correlation analysis
-- Interactive dashboards and deeper temporal insights
+Go to **Actions → AERSI Daily Pipeline → Run workflow**
 
 ---
 
-## 🔮 Planned Enhancements
+## Score Reference
 
-- Full EPF & VSF activation after 30-day window
-- Deeper temporal analytics (seasonality, trends)
-- Health impact correlation (hospital / mortality datasets)
-- Public dashboard (Power BI / web-based)
-- Regional and city-level aggregation
-- Long-term historical analysis
-
----
-
-## 📌 Disclaimer
-
-AERSI is a **research-driven exposure severity index**, not an official regulatory metric.  
-It is intended for **analysis, visualization, and public awareness**, not for medical or legal use.
-
----
-
-## 🤝 Contributions & Feedback
-
-Ideas, critiques, and discussions are welcome.  
-This project is evolving as data accumulates and methodologies improve.
-
----
-
-**Author:** Dhruva  
-**Focus:** Environmental data science · air quality analytics · public health exposure  
+| AERSI | Category | Meaning |
+|-------|----------|---------|
+| < 0.8 | Very Low | Cleaner than WHO guidelines |
+| 0.8 – 1.2 | Low | Near safety threshold |
+| 1.2 – 2.0 | Moderate | Concerning cumulative exposure |
+| 2.0 – 3.0 | High | Significant exposure risk |
+| > 3.0 | Extreme | Persistent, intense, volatile pollution |

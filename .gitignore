@@ -1,40 +1,27 @@
-# =========================
-# Environment & secrets
-# =========================
+# Environment
 .env
+*.env
 
-# =========================
 # Python
-# =========================
 __pycache__/
 *.pyc
-
-# =========================
-# Virtual environments
-# =========================
+*.pyo
+.Python
+env/
 venv/
+.venv/
 
-# =========================
-# Editor / OS files
-# =========================
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# =========================
-# Logs
-# =========================
-*.log
-
-# =========================
-# Generated data (DO NOT COMMIT)
-# =========================
-data/snapshots/
+# Data — keep snapshots, ignore rolling intermediates
 data/rolling/
 data/processed/
 
-# =========================
-# Generated outputs
-# =========================
-outputs/
+# Outputs are committed by the GitHub Action
+# Remove this line if you want to track them locally too
+# outputs/
+
+# Logs
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
