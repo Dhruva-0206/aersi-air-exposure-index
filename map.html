@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Map — AERSI</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='60' x='10' fill='white' font-weight='bold'>AE</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='55' x='8' fill='white' font-weight='bold'>AE</text></svg>">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/layout.js"></script>
   <script src="js/main.js" defer></script>
@@ -26,11 +26,7 @@
       gap: 1rem;
     }
 
-    .map-toolbar-left {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-    }
+    .map-toolbar-left { display: flex; align-items: center; gap: 1.25rem; }
 
     .map-toolbar h1 {
       font-family: var(--font-display);
@@ -44,6 +40,7 @@
       font-size: 0.7rem;
       color: var(--text3);
       letter-spacing: 0.04em;
+      margin-top: 2px;
     }
 
     .map-legend {
@@ -63,20 +60,11 @@
       white-space: nowrap;
     }
 
-    .legend-dot {
-      width: 11px; height: 11px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
+    .legend-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
 
     .map-frame { flex: 1; position: relative; }
 
-    .map-frame iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
+    .map-frame iframe { width: 100%; height: 100%; border: none; display: block; }
 
     .map-loader {
       position: absolute;
@@ -92,7 +80,7 @@
     .map-loader.hidden { opacity: 0; pointer-events: none; }
 
     .spinner {
-      width: 38px; height: 38px;
+      width: 36px; height: 36px;
       border: 3px solid var(--border2);
       border-top-color: var(--accent);
       border-radius: 50%;
@@ -116,7 +104,7 @@
         <div class="map-toolbar-left">
           <div>
             <h1>AERSI Live Map</h1>
-            <div class="map-meta" id="map-meta">Loading...</div>
+            <div class="map-meta" id="map-meta">547 stations · Updated daily at 10:30 AM IST</div>
           </div>
         </div>
         <div class="map-legend">
@@ -150,11 +138,9 @@
 
     async function initMap() {
       const data = await loadStationData();
-      const el = document.getElementById('map-meta');
       if (data.length) {
-        el.textContent = `${data.length} stations · AERSI = PL × EPF × VSF · Updated daily 10:30 AM IST`;
-      } else {
-        el.textContent = '547 stations · Updated daily at 10:30 AM IST';
+        document.getElementById('map-meta').textContent =
+          `${data.length} stations · AERSI = PL × EPF × VSF · Updated daily 10:30 AM IST`;
       }
     }
     initMap();

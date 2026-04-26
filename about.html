@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — AERSI</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='60' x='10' fill='white' font-weight='bold'>AE</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='55' x='8' fill='white' font-weight='bold'>AE</text></svg>">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/layout.js"></script>
   <script src="js/main.js" defer></script>
@@ -45,13 +45,8 @@
       gap: 0.5rem;
     }
 
-    .about-card p {
-      font-size: 0.875rem;
-      color: var(--text2);
-      line-height: 1.7;
-    }
+    .about-card p { font-size: 0.875rem; color: var(--text2); line-height: 1.7; }
 
-    /* ── Builder section ── */
     .builder-section {
       background: white;
       border: 1px solid var(--border2);
@@ -84,27 +79,12 @@
       font-weight: 800;
       letter-spacing: -0.03em;
       color: var(--text);
-      margin-bottom: 0.25rem;
-    }
-
-    .builder-title {
-      font-size: 0.9rem;
-      color: var(--text3);
       margin-bottom: 1.25rem;
     }
 
-    .builder-bio {
-      font-size: 0.95rem;
-      color: var(--text2);
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-    }
+    .builder-bio { font-size: 0.95rem; color: var(--text2); line-height: 1.75; margin-bottom: 1.5rem; }
 
-    .builder-links {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
+    .builder-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
     .builder-link {
       display: inline-flex;
@@ -117,35 +97,12 @@
       transition: all var(--t) var(--ease);
     }
 
-    .builder-link-linkedin {
-      background: #0077b5;
-      color: white;
-    }
+    .builder-link-linkedin { background: #0077b5; color: white; }
+    .builder-link-linkedin:hover { background: #005885; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,119,181,0.3); }
+    .builder-link-email { background: var(--bg2); color: var(--text); border: 1px solid var(--border2); }
+    .builder-link-email:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
-    .builder-link-linkedin:hover {
-      background: #005885;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0,119,181,0.3);
-    }
-
-    .builder-link-email {
-      background: var(--bg2);
-      color: var(--text);
-      border: 1px solid var(--border2);
-    }
-
-    .builder-link-email:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-soft);
-    }
-
-    /* ── Pipeline ── */
-    .pipeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .pipeline { display: flex; flex-direction: column; gap: 0; }
 
     .pipeline-step {
       display: flex;
@@ -167,29 +124,13 @@
       border-radius: 50%;
       background: white;
       border: 2px solid var(--border2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      flex-shrink: 0;
-      position: relative;
-      z-index: 1;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0; position: relative; z-index: 1;
     }
 
-    .pipe-body h4 {
-      font-weight: 700;
-      font-size: 0.95rem;
-      margin-bottom: 0.25rem;
-      color: var(--text);
-    }
+    .pipe-body h4 { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .pipe-body p { font-size: 0.85rem; color: var(--text2); line-height: 1.65; }
 
-    .pipe-body p {
-      font-size: 0.85rem;
-      color: var(--text2);
-      line-height: 1.65;
-    }
-
-    /* ── Contact section ── */
     .contact-section {
       background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
       border: 1px solid var(--border2);
@@ -205,7 +146,6 @@
       font-weight: 800;
       letter-spacing: -0.03em;
       margin-bottom: 0.75rem;
-      color: var(--text);
     }
 
     .contact-section p {
@@ -213,17 +153,11 @@
       font-size: 1rem;
       margin-bottom: 2rem;
       max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: auto; margin-right: auto;
       line-height: 1.7;
     }
 
-    .contact-options {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .contact-options { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
     .contact-card {
       display: flex;
@@ -234,7 +168,7 @@
       border: 1px solid var(--border2);
       border-radius: var(--radius);
       transition: all var(--t) var(--ease);
-      min-width: 220px;
+      min-width: 200px;
     }
 
     .contact-card:hover {
@@ -243,19 +177,28 @@
       transform: translateY(-2px);
     }
 
-    .contact-icon {
-      width: 42px; height: 42px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
+    .contact-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
     .contact-text { text-align: left; }
     .contact-text-label { font-size: 0.72rem; color: var(--text3); font-weight: 500; letter-spacing: 0.04em; }
     .contact-text-val { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+
+    .resource-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.25rem;
+      background: white;
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      margin-bottom: 0.75rem;
+      transition: all var(--t) var(--ease);
+    }
+
+    .resource-card:hover {
+      border-color: var(--border3);
+      box-shadow: 0 4px 16px rgba(13,110,253,0.07);
+      transform: translateX(3px);
+    }
 
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; }
@@ -272,15 +215,16 @@
 
     <div class="about-hero">
       <div class="container">
-        <div class="anim-fade-up" style="max-width:640px;">
+        <div class="anim-fade-up" style="max-width:680px;">
           <span class="label">About</span>
           <h1 class="display display-xl" style="margin-top:0.6rem;margin-bottom:1rem;">
             What is AERSI?
           </h1>
           <p style="font-size:1.05rem;color:var(--text2);line-height:1.8;">
             AERSI is an independent research project building a better way to understand
-            air pollution exposure in India — going beyond the daily AQI snapshot to
-            capture how intense, persistent, and volatile the exposure truly is.
+            air pollution exposure in <strong>India</strong> — going beyond the daily AQI snapshot to
+            capture how intense, persistent, and volatile the exposure truly is across
+            India's 547 active monitoring stations.
           </p>
         </div>
       </div>
@@ -289,7 +233,6 @@
     <section class="section">
       <div class="container">
 
-        <!-- About cards -->
         <div class="section-header anim-fade-up">
           <span class="label">The Project</span>
           <h2 class="display display-lg" style="margin-top:0.5rem;">Why this exists</h2>
@@ -306,17 +249,16 @@
           </div>
           <div class="about-card">
             <h3>📡 The Data</h3>
-            <p>CPCB monitoring data from 547 stations across India, fetched daily via the Government of India's open data API. Every snapshot is versioned in GitHub. The pipeline runs automatically every morning.</p>
+            <p>CPCB monitoring data from 547 stations across India, fetched daily via the Government of India's open data API. The pipeline runs automatically every morning at 10:30 AM IST.</p>
           </div>
           <div class="about-card">
             <h3>🌱 The Future</h3>
-            <p>As data accumulates, AERSI scores become more statistically stable and meaningful. Long-term plans include seasonal trend analysis, state-level aggregations, and open API access for researchers.</p>
+            <p>Currently covering India only. As data accumulates, AERSI scores become more statistically stable. Long-term plans include seasonal trend analysis, state-level aggregations, and open API access for researchers.</p>
           </div>
         </div>
 
         <hr class="divider" style="margin:3rem 0;">
 
-        <!-- Builder section -->
         <div class="section-header anim-fade-up">
           <span class="label">The Builder</span>
           <h2 class="display display-lg" style="margin-top:0.5rem;">Who made this</h2>
@@ -326,17 +268,17 @@
           <div class="builder-avatar">DC</div>
           <div>
             <div class="builder-name">Dhruva Chakrabarty</div>
-            <div class="builder-title">Builder of AERSI · aersi.live</div>
             <p class="builder-bio">
               AERSI is an independent project — designed, built, and maintained as an
               open research initiative to improve how we understand air quality exposure
               in India. The index, the pipeline, the formula, and the website were
               all built from scratch with the goal of creating something scientifically
-              honest and publicly useful.
+              honest and publicly useful. Currently focused on India, with plans to
+              expand coverage as the project grows.
             </p>
             <div class="builder-links">
               <a href="https://www.linkedin.com/in/dhruva-chakrabarty/" target="_blank" class="builder-link builder-link-linkedin">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 LinkedIn
               </a>
               <a href="mailto:aersi.org@gmail.com" class="builder-link builder-link-email">
@@ -348,7 +290,6 @@
 
         <hr class="divider" style="margin:3rem 0;">
 
-        <!-- Pipeline -->
         <div class="section-header anim-fade-up">
           <span class="label">How It Runs</span>
           <h2 class="display display-lg" style="margin-top:0.5rem;">The Data Pipeline</h2>
@@ -360,7 +301,7 @@
             <div class="pipe-icon">🌐</div>
             <div class="pipe-body">
               <h4>Fetch from CPCB API</h4>
-              <p>Daily snapshot pulled from the Central Pollution Control Board via data.gov.in across all 547 active stations.</p>
+              <p>Daily snapshot pulled from the Central Pollution Control Board via data.gov.in across all 547 active stations in India.</p>
             </div>
           </div>
           <div class="pipeline-step">
@@ -374,59 +315,65 @@
             <div class="pipe-icon">🧮</div>
             <div class="pipe-body">
               <h4>Compute AQI and AERSI</h4>
-              <p>CPCB sub-index AQI computed per station per day. Then PL, EPF, and VSF calculated and multiplied.</p>
+              <p>CPCB sub-index AQI computed per station per day. Then PL, EPF, and VSF calculated and multiplied to produce each station's AERSI score.</p>
             </div>
           </div>
           <div class="pipeline-step">
             <div class="pipe-icon">🗺️</div>
             <div class="pipe-body">
               <h4>Generate map and outputs</h4>
-              <p>Interactive map rebuilt with fresh scores. All outputs committed back to GitHub automatically.</p>
+              <p>Interactive map rebuilt with fresh scores. All outputs committed back to the repository automatically.</p>
             </div>
           </div>
           <div class="pipeline-step">
             <div class="pipe-icon">🌍</div>
             <div class="pipe-body">
               <h4>Site updates live on aersi.live</h4>
-              <p>Vercel serves the latest committed data. No backend — the repository is the database.</p>
+              <p>Vercel serves the latest committed data. No backend required — the data commits are the update mechanism.</p>
             </div>
           </div>
         </div>
 
-        <!-- Links -->
         <div class="anim-fade-up" style="margin-top:2rem;">
           <div class="section-header">
             <span class="label">Links & Data</span>
             <h2 class="display display-md" style="margin-top:0.4rem;">Resources</h2>
           </div>
-          <div style="display:flex;flex-direction:column;gap:0.75rem;">
-            <a href="https://github.com/Dhruva-0206/aersi-air-exposure-index" target="_blank" class="card" style="display:flex;align-items:center;gap:1rem;">
-              <span style="font-size:1.5rem;">🐙</span>
-              <div><div style="font-weight:600;">GitHub Repository</div><div style="font-size:0.8rem;color:var(--text3);">Full source code, pipeline scripts, and all historical snapshots</div></div>
-              <span style="margin-left:auto;color:var(--text3);">→</span>
-            </a>
-            <a href="methodology.html" class="card" style="display:flex;align-items:center;gap:1rem;">
-              <span style="font-size:1.5rem;">📐</span>
-              <div><div style="font-weight:600;">Formula Reference</div><div style="font-size:0.8rem;color:var(--text3);">Complete technical documentation of AERSI, PL, EPF, and VSF</div></div>
-              <span style="margin-left:auto;color:var(--text3);">→</span>
-            </a>
-            <a href="https://data.gov.in" target="_blank" class="card" style="display:flex;align-items:center;gap:1rem;">
-              <span style="font-size:1.5rem;">🏛️</span>
-              <div><div style="font-weight:600;">CPCB Data Source</div><div style="font-size:0.8rem;color:var(--text3);">Real-time AQI from the Central Pollution Control Board via data.gov.in</div></div>
-              <span style="margin-left:auto;color:var(--text3);">→</span>
-            </a>
-          </div>
+          <a href="methodology.html" class="resource-card">
+            <span style="font-size:1.5rem;">📐</span>
+            <div>
+              <div style="font-weight:600;font-size:0.95rem;">Formula Reference</div>
+              <div style="font-size:0.8rem;color:var(--text3);margin-top:2px;">Complete technical documentation of AERSI, PL, EPF, and VSF</div>
+            </div>
+            <span style="margin-left:auto;color:var(--text3);">→</span>
+          </a>
+          <a href="https://data.gov.in" target="_blank" class="resource-card">
+            <span style="font-size:1.5rem;">🏛️</span>
+            <div>
+              <div style="font-weight:600;font-size:0.95rem;">CPCB Data Source</div>
+              <div style="font-size:0.8rem;color:var(--text3);margin-top:2px;">Real-time AQI from the Central Pollution Control Board via data.gov.in</div>
+            </div>
+            <span style="margin-left:auto;color:var(--text3);">→</span>
+          </a>
+          <a href="https://www.who.int/publications/i/item/9789240034228" target="_blank" class="resource-card">
+            <span style="font-size:1.5rem;">🏥</span>
+            <div>
+              <div style="font-weight:600;font-size:0.95rem;">WHO Air Quality Guidelines (2021)</div>
+              <div style="font-size:0.8rem;color:var(--text3);margin-top:2px;">Source for the pollutant safety limits used in PL normalization</div>
+            </div>
+            <span style="margin-left:auto;color:var(--text3);">→</span>
+          </a>
         </div>
 
       </div>
     </section>
 
-    <!-- ── Contact ── -->
+    <!-- Contact -->
     <section class="section-sm" style="background:var(--bg2);">
       <div class="container">
         <div class="contact-section anim-fade-up">
           <h2>Get in touch</h2>
-          <p>Have a question about AERSI, the methodology, or want to collaborate on air quality research? Reach out.</p>
+          <p>Have a question about AERSI, the methodology, or want to collaborate on air quality research in India? Reach out.</p>
           <div class="contact-options">
             <a href="mailto:aersi.org@gmail.com" class="contact-card">
               <div class="contact-icon" style="background:#fef3c7;">✉️</div>
@@ -442,13 +389,6 @@
               <div class="contact-text">
                 <div class="contact-text-label">LinkedIn</div>
                 <div class="contact-text-val">Dhruva Chakrabarty</div>
-              </div>
-            </a>
-            <a href="https://github.com/Dhruva-0206/aersi-air-exposure-index" target="_blank" class="contact-card">
-              <div class="contact-icon" style="background:#f3f4f6;">🐙</div>
-              <div class="contact-text">
-                <div class="contact-text-label">GitHub</div>
-                <div class="contact-text-val">aersi-air-exposure-index</div>
               </div>
             </a>
           </div>

@@ -14,25 +14,22 @@ let _stationData = null;
 
 async function loadStationData() {
   if (_stationData) return _stationData;
-  // Try multiple paths to handle both local and deployed environments
+  // Absolute path from site root works on Vercel; relative fallback for local
   const paths = [
-    'data/processed/aersi_station_scores.csv',
     '/data/processed/aersi_station_scores.csv',
-    './data/processed/aersi_station_scores.csv',
+    'data/processed/aersi_station_scores.csv',
   ];
-  for (const path of paths) {
+  for (const p of paths) {
     try {
-      const res = await fetch(path);
+      const res = await fetch(p, { cache: 'no-store' });
       if (!res.ok) continue;
       const text = await res.text();
-      if (!text || text.trim().length < 10) continue;
-      _stationData = parseCSV(text);
-      if (_stationData.length > 0) return _stationData;
-    } catch (e) {
-      continue;
-    }
+      if (!text || text.trim().length < 20) continue;
+      const parsed = parseCSV(text);
+      if (parsed.length > 0) { _stationData = parsed; return _stationData; }
+    } catch (e) { continue; }
   }
-  console.warn('Could not load station data from any path.');
+  console.warn('AERSI: Could not load station CSV.');
   return [];
 }
 
@@ -41,7 +38,6 @@ function parseCSV(text) {
   if (lines.length < 2) return [];
   const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
   return lines.slice(1).map(line => {
-    // Handle quoted fields with commas inside
     const vals = [];
     let inQuote = false, cur = '';
     for (const ch of line) {
@@ -77,6 +73,8 @@ function fmt(v, d = 2) {
 function openMapOverlay() {
   const overlay = document.getElementById('map-overlay');
   if (!overlay) return;
+  const iframe = document.getElementById('map-iframe');
+  if (iframe && !iframe.src) iframe.src = 'outputs/aersi_map.html';
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -92,8 +90,7 @@ function closeMapOverlay() {
 document.addEventListener('DOMContentLoaded', () => {
   setActiveNav();
 
-  // Mobile menu
-  const menuBtn = document.getElementById('mobile-menu-btn');
+  const menuBtn  = document.getElementById('mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
   if (menuBtn && navLinks) {
     menuBtn.addEventListener('click', () => {
@@ -104,14 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close overlay on backdrop click
   const overlay = document.getElementById('map-overlay');
   if (overlay) {
-    overlay.addEventListener('click', e => {
-      if (e.target === overlay) closeMapOverlay();
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMapOverlay();
-    });
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeMapOverlay(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMapOverlay(); });
   }
 });

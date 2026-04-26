@@ -7,7 +7,6 @@ function renderNav() {
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="map.html">Map</a></li>
       <li><a href="why.html">Why AERSI?</a></li>
       <li><a href="methodology.html">Methodology</a></li>
       <li><a href="about.html">About</a></li>
@@ -53,7 +52,6 @@ function renderFooter() {
           <div class="footer-heading">Data</div>
           <ul class="footer-links">
             <li><a href="https://data.gov.in" target="_blank">CPCB via data.gov.in</a></li>
-            <li><a href="https://github.com/Dhruva-0206/aersi-air-exposure-index" target="_blank">GitHub Repository</a></li>
             <li><a href="methodology.html">Formula Reference</a></li>
           </ul>
         </div>

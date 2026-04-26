@@ -8,40 +8,38 @@
   <meta property="og:title" content="AERSI — Air Exposure Severity Index">
   <meta property="og:description" content="Beyond AQI — tracking intensity, persistence, and volatility of air pollution across India.">
   <meta property="og:url" content="https://www.aersi.live">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='60' x='10' fill='white' font-weight='bold'>AE</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d6efd'/><text y='.9em' font-size='55' x='8' fill='white' font-weight='bold'>AE</text></svg>">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/layout.js"></script>
   <script src="js/main.js" defer></script>
   <style>
-
-    /* ── Hero ──────────────────────────────────────────────────────────── */
+    /* ── Hero ── */
     .hero {
       min-height: calc(100vh - var(--nav-h));
       position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       align-items: center;
       overflow: hidden;
     }
 
-    /* World map background on right */
     .hero-map-bg {
       position: absolute;
       inset: 0;
       z-index: 0;
     }
 
-    .hero-map-bg::before {
+    .hero-map-bg::after {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(
         to right,
-        var(--bg) 42%,
-        rgba(247,248,252,0.85) 58%,
-        rgba(247,248,252,0.3) 100%
+        rgba(247,248,252,1) 35%,
+        rgba(247,248,252,0.88) 55%,
+        rgba(247,248,252,0.25) 100%
       );
       z-index: 2;
+      pointer-events: none;
     }
 
     #world-map-canvas {
@@ -57,46 +55,39 @@
       position: absolute;
       bottom: 2rem;
       right: 2rem;
-      z-index: 3;
+      z-index: 5;
       display: flex;
       align-items: center;
       gap: 0.5rem;
       background: white;
       border: 1px solid var(--border2);
       border-radius: 100px;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.1rem;
       font-size: 0.78rem;
       color: var(--text2);
       font-weight: 500;
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      animation: bounce-hint 2s ease-in-out infinite;
       cursor: pointer;
+      animation: float-hint 3s ease-in-out infinite;
+      transition: all var(--t) var(--ease);
     }
 
-    @keyframes bounce-hint {
+    .hero-map-hint:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    @keyframes float-hint {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
+      50% { transform: translateY(-5px); }
     }
 
     .hero-content {
       position: relative;
       z-index: 3;
-      padding: 5rem 0 5rem 0;
-      grid-column: 1;
-    }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-eyebrow-line {
-      width: 28px;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 2px;
+      padding: 5rem 0;
+      max-width: 600px;
     }
 
     .hero-title {
@@ -113,9 +104,9 @@
     .hero-sub {
       font-size: 1.05rem;
       color: var(--text2);
-      line-height: 1.75;
+      line-height: 1.78;
       margin-bottom: 2.5rem;
-      max-width: 500px;
+      max-width: 480px;
     }
 
     .hero-actions {
@@ -131,7 +122,7 @@
       flex-wrap: wrap;
     }
 
-    /* ── Stat strip ──────────────────────────────────────────────────── */
+    /* ── Stat strip ── */
     .stat-strip {
       background: white;
       border-top: 1px solid var(--border2);
@@ -148,15 +139,12 @@
     .stat-strip-item {
       padding: 0 2rem;
       border-right: 1px solid var(--border2);
-      transition: background var(--t) var(--ease);
     }
 
     .stat-strip-item:first-child { padding-left: 0; }
     .stat-strip-item:last-child { border-right: none; }
 
-    .stat-strip-item:hover { background: var(--bg2); border-radius: var(--radius-sm); }
-
-    /* ── Why section ──────────────────────────────────────────────── */
+    /* ── Why section ── */
     .why-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -204,7 +192,6 @@
       font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.6rem;
-      color: var(--text);
     }
 
     .why-card p {
@@ -213,7 +200,7 @@
       line-height: 1.7;
     }
 
-    /* ── Score guide ──────────────────────────────────────────────── */
+    /* ── Score guide ── */
     .score-guide {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -227,30 +214,15 @@
       padding: 1.5rem 1rem;
       text-align: center;
       transition: all var(--t) var(--ease);
-      cursor: default;
     }
 
-    .score-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
-    }
+    .score-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
 
-    .score-dot {
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      margin: 0 auto 1rem;
-    }
-
-    .score-range {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text3);
-      margin-bottom: 0.35rem;
-    }
-
+    .score-dot { width: 14px; height: 14px; border-radius: 50%; margin: 0 auto 1rem; }
+    .score-range { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3); margin-bottom: 0.35rem; }
     .score-name { font-size: 0.875rem; font-weight: 700; }
 
-    /* ── Top stations ─────────────────────────────────────────────── */
+    /* ── Bottom section ── */
     .bottom-grid {
       display: grid;
       grid-template-columns: 3fr 2fr;
@@ -267,7 +239,6 @@
       border: 1px solid var(--border2);
       border-radius: var(--radius-sm);
       transition: all var(--t) var(--ease);
-      cursor: default;
     }
 
     .station-row:hover {
@@ -276,44 +247,13 @@
       transform: translateX(3px);
     }
 
-    .station-rank {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--text4);
-      width: 18px;
-      flex-shrink: 0;
-    }
-
+    .station-rank { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text4); width: 18px; flex-shrink: 0; }
     .station-info { flex: 1; min-width: 0; }
+    .station-name { font-weight: 600; font-size: 0.875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .station-loc { font-size: 0.73rem; color: var(--text3); margin-top: 1px; }
+    .station-score { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; }
 
-    .station-name {
-      font-weight: 600;
-      font-size: 0.875rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: var(--text);
-    }
-
-    .station-loc {
-      font-size: 0.73rem;
-      color: var(--text3);
-      margin-top: 1px;
-    }
-
-    .station-score {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-    }
-
-    /* ── Formula cards ─────────────────────────────────────────────── */
-    .formula-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+    .formula-cards { display: flex; flex-direction: column; gap: 0.75rem; }
 
     .formula-comp {
       background: white;
@@ -326,10 +266,7 @@
       transition: all var(--t) var(--ease);
     }
 
-    .formula-comp:hover {
-      border-color: var(--accent-mid);
-      background: var(--accent-soft);
-    }
+    .formula-comp:hover { border-color: var(--accent-mid); background: var(--accent-soft); }
 
     .formula-tag {
       font-family: var(--font-mono);
@@ -345,11 +282,8 @@
     }
 
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-content { padding: 3rem 0; }
-      .hero-map-bg::before {
-        background: linear-gradient(to bottom, var(--bg) 50%, rgba(247,248,252,0.4) 100%);
-      }
+      .hero-map-bg::after { background: rgba(247,248,252,0.92); }
       .why-grid { grid-template-columns: 1fr; }
       .score-guide { grid-template-columns: repeat(3, 1fr); }
       .bottom-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -366,7 +300,7 @@
   <div class="overlay" id="map-overlay">
     <div class="overlay-frame">
       <button class="overlay-close" onclick="closeMapOverlay()" title="Close">✕</button>
-      <iframe id="map-iframe" src="" title="AERSI Live Map" loading="lazy"></iframe>
+      <iframe id="map-iframe" src="" title="AERSI Live Map"></iframe>
     </div>
   </div>
 
@@ -380,11 +314,6 @@
 
       <div class="container" style="position:relative;z-index:3;width:100%;">
         <div class="hero-content anim-fade-up">
-          <div class="hero-eyebrow">
-            <span class="hero-eyebrow-line"></span>
-            <span class="label">India · Station-Level · Rolling 30-Day</span>
-          </div>
-
           <h1 class="display display-xl hero-title">
             Air Exposure<br>
             <span class="accent-word">Severity</span> Index
@@ -402,9 +331,7 @@
             <button class="btn btn-primary btn-lg" onclick="openMapOverlay()">
               Explore Live Map →
             </button>
-            <a href="why.html" class="btn btn-outline btn-lg">
-              Why AERSI?
-            </a>
+            <a href="why.html" class="btn btn-outline btn-lg">Why AERSI?</a>
           </div>
 
           <div class="hero-chips">
@@ -588,131 +515,92 @@
     setActiveNav();
 
     // ── World map canvas ──────────────────────────────────────────────────
-    (function() {
+    (function initCanvas() {
       const canvas = document.getElementById('world-map-canvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
 
       function resize() {
-        canvas.width  = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-        drawMap();
+        canvas.width  = canvas.offsetWidth  || window.innerWidth;
+        canvas.height = canvas.offsetHeight || (window.innerHeight - 66);
+        draw();
       }
 
-      function drawMap() {
+      function project(lon, lat, W, H) {
+        const lon0 = 18, lon1 = 115, lat0 = 42, lat1 = -12;
+        return [
+          ((lon - lon0) / (lon1 - lon0)) * W,
+          ((lat0 - lat) / (lat0 - lat1)) * H
+        ];
+      }
+
+      function poly(pts, fill, stroke, lw, W, H) {
+        ctx.beginPath();
+        pts.forEach(([lon, lat], i) => {
+          const [x, y] = project(lon, lat, W, H);
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        if (fill)   { ctx.fillStyle = fill;     ctx.fill(); }
+        if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = lw || 1; ctx.stroke(); }
+      }
+
+      function draw() {
         const W = canvas.width, H = canvas.height;
         ctx.clearRect(0, 0, W, H);
 
-        // Use OpenStreetMap tile via image
-        // We draw a clean ocean + land color background
+        // Ocean
         ctx.fillStyle = '#dbeafe';
         ctx.fillRect(0, 0, W, H);
 
-        // Draw India approximate shape using SVG path projected to canvas
-        // Simplified India outline (key coordinates lon/lat -> canvas)
-        const lon0 = 20, lon1 = 110, lat0 = 40, lat1 = -15;
+        // Asia/Europe landmass
+        poly([
+          [20,60],[30,65],[50,68],[70,68],[90,68],[105,55],[105,45],
+          [100,38],[90,32],[80,25],[75,18],[70,12],[68,8],[68,22],
+          [66,30],[67,36],[70,38],[74,34],[80,30],[86,28],[90,26],[92,24],
+          [90,18],[86,14],[80,8],[76,8],[72,10],[68,22],[66,28],[67,34],
+          [65,37],[60,36],[55,32],[50,28],[44,22],[40,18],[36,14],[34,12],
+          [32,10],[30,14],[28,18],[26,22],[24,28],[22,34],[22,40],[24,44],
+          [26,48],[25,55],[22,60],[20,60]
+        ], '#dde8f5', '#c4d4ea', 0.5, W, H);
 
-        function project(lon, lat) {
-          const x = ((lon - lon0) / (lon1 - lon0)) * W;
-          const y = ((lat0 - lat) / (lat0 - lat1)) * H;
-          return [x, y];
-        }
-
-        // Draw landmass blocks (simplified world continents)
-        ctx.fillStyle = '#e2e8f4';
-        ctx.strokeStyle = '#c8d4e8';
-        ctx.lineWidth = 0.5;
-
-        // Europe/Asia landmass
-        ctx.beginPath();
-        const euroAsia = [
-          [25,70],[30,72],[40,70],[50,68],[60,68],[70,70],[80,70],[90,68],[100,68],[110,68],
-          [110,60],[100,55],[90,50],[80,45],[70,40],[60,38],[55,32],[50,28],[45,22],[40,18],
-          [36,14],[34,12],[32,10],[30,12],[28,16],[26,20],[25,24],[23,28],[22,32],[22,38],
-          [24,42],[25,48],[24,54],[22,60],[20,66],[22,68],[25,70]
-        ];
-        euroAsia.forEach(([lon, lat], i) => {
-          const [x, y] = project(lon, lat);
-          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        });
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-
-        // Africa
-        ctx.beginPath();
-        const africa = [
-          [20,36],[24,32],[28,24],[32,16],[36,10],[40,4],[42,-2],[44,-10],
-          [38,-18],[34,-26],[30,-34],[24,-36],[18,-34],[14,-26],[12,-18],
-          [10,-10],[10,-2],[12,8],[16,16],[20,24],[20,32],[20,36]
-        ];
-        africa.forEach(([lon, lat], i) => {
-          const [x, y] = project(lon, lat);
-          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        });
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-
-        // Highlight India with a warmer tone
-        ctx.fillStyle = '#c7d7f0';
-        ctx.beginPath();
-        const india = [
+        // India highlight
+        poly([
           [68,37],[72,36],[76,34],[80,30],[84,28],[88,26],[92,24],[94,22],
-          [92,18],[88,14],[84,10],[80,8],[76,8],[72,10],[68,22],[66,28],[68,34],[68,37]
-        ];
-        india.forEach(([lon, lat], i) => {
-          const [x, y] = project(lon, lat);
-          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-        });
-        ctx.closePath();
-        ctx.fill();
-        ctx.strokeStyle = '#93b3d8';
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
+          [92,18],[88,14],[84,10],[80,8],[76,8],[72,10],[68,22],[66,28],[67,34],[68,37]
+        ], '#bfd4ef', '#8ab0d8', 1.5, W, H);
 
         // India label
-        const [indX, indY] = project(79, 22);
-        ctx.fillStyle = 'rgba(13,110,253,0.7)';
-        ctx.font = `bold ${Math.max(11, W * 0.012)}px 'JetBrains Mono', monospace`;
+        const [lx, ly] = project(80, 22, W, H);
+        ctx.fillStyle = 'rgba(13,110,253,0.65)';
+        ctx.font = `600 ${Math.max(11, W * 0.011)}px 'JetBrains Mono', monospace`;
         ctx.textAlign = 'center';
-        ctx.fillText('INDIA', indX, indY);
+        ctx.fillText('INDIA', lx, ly);
 
-        // Pulsing dots for major cities
-        const cities = [
-          { name: 'Delhi', lon: 77.2, lat: 28.6 },
-          { name: 'Mumbai', lon: 72.8, lat: 19.1 },
-          { name: 'Kolkata', lon: 88.4, lat: 22.6 },
-          { name: 'Chennai', lon: 80.3, lat: 13.1 },
-          { name: 'Bangalore', lon: 77.6, lat: 12.9 },
-        ];
-
-        cities.forEach(c => {
-          const [cx, cy] = project(c.lon, c.lat);
+        // City dots
+        [
+          [77.2, 28.6], [72.8, 19.1], [88.4, 22.6], [80.3, 13.1], [77.6, 12.9], [72.8, 21.2]
+        ].forEach(([lon, lat]) => {
+          const [cx, cy] = project(lon, lat, W, H);
+          // Outer ring
           ctx.beginPath();
-          ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+          ctx.arc(cx, cy, 7, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(220,38,38,0.12)';
+          ctx.fill();
+          // Inner dot
+          ctx.beginPath();
+          ctx.arc(cx, cy, 3.5, 0, Math.PI * 2);
           ctx.fillStyle = 'rgba(220,38,38,0.8)';
           ctx.fill();
-          ctx.beginPath();
-          ctx.arc(cx, cy, 6, 0, Math.PI * 2);
-          ctx.strokeStyle = 'rgba(220,38,38,0.3)';
-          ctx.lineWidth = 1.5;
-          ctx.stroke();
         });
       }
 
       canvas.addEventListener('click', openMapOverlay);
-      canvas.style.cursor = 'pointer';
 
-      window.addEventListener('resize', resize);
-      resize();
-
-      // Load map iframe lazily when overlay opens
-      document.getElementById('map-overlay').addEventListener('click', () => {
-        const iframe = document.getElementById('map-iframe');
-        if (!iframe.src || iframe.src === window.location.href) {
-          iframe.src = 'outputs/aersi_map.html';
-        }
+      // Ensure canvas has dimensions before drawing
+      requestAnimationFrame(() => {
+        resize();
+        window.addEventListener('resize', resize);
       });
     })();
 
@@ -734,8 +622,7 @@
       document.getElementById('hero-station-count').textContent = data.length;
 
       const top10 = [...data].sort((a, b) => b.AERSI - a.AERSI).slice(0, 10);
-      const list  = document.getElementById('top-stations');
-      list.innerHTML = top10.map((s, i) => {
+      document.getElementById('top-stations').innerHTML = top10.map((s, i) => {
         const cat = aersiCategory(s.AERSI);
         return `
         <div class="station-row">

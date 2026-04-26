@@ -58,6 +58,8 @@ m = folium.Map(
     zoom_start=5,
     tiles=None,
     prefer_canvas=True,
+    max_bounds=True,
+    min_zoom=3,
 )
 
 folium.TileLayer(
@@ -285,6 +287,28 @@ legend_html = """
 """
 
 m.get_root().html.add_child(folium.Element(legend_html))
+
+# Restrict map to one world copy so stations don't ghost at repeated longitudes
+bounds_fix = """
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var checkMap = setInterval(function() {
+    if (window.L) {
+      var maps = [];
+      document.querySelectorAll('.leaflet-container').forEach(function(el) {
+        if (el._leaflet_map) maps.push(el._leaflet_map);
+      });
+      maps.forEach(function(map) {
+        map.setMaxBounds([[-10, 50], [40, 100]]);
+        map.options.maxBoundsViscosity = 1.0;
+        clearInterval(checkMap);
+      });
+    }
+  }, 200);
+});
+</script>
+"""
+m.get_root().html.add_child(folium.Element(bounds_fix))
 
 # ── Save ─────────────────────────────────────────────────────────────────────
 
