@@ -212,22 +212,21 @@
 <body>
   <div id="nav-root"></div>
 
-  <!-- Map overlay -->
-  <div class="overlay" id="map-overlay">
-    <div class="overlay-frame">
-      <button class="overlay-close" onclick="closeMapOverlay()" title="Close">✕</button>
-      <iframe id="map-iframe" src="outputs/aersi_map.html" title="AERSI Live Map"></iframe>
-    </div>
-  </div>
-
   <div class="page">
 
     <!-- ── Hero ── -->
     <section class="hero">
 
-      <!-- Live map preview — click to open fullscreen -->
-      <div class="hero-map-preview" onclick="openMapOverlay()" title="Click to explore live map">
-        <iframe src="outputs/aersi_map.html" tabindex="-1" scrolling="no" aria-hidden="true" loading="lazy"></iframe>
+      <!-- Live map preview — hides legend/status, click navigates to map page -->
+      <div class="hero-map-preview" onclick="window.location.href='map.html'" title="Click to explore live map">
+        <iframe
+          src="outputs/aersi_map.html"
+          tabindex="-1"
+          scrolling="no"
+          aria-hidden="true"
+          loading="lazy"
+          onload="try{this.contentDocument.head.insertAdjacentHTML('beforeend','<style>#aersi-legend,#aersi-status{display:none!important}.leaflet-control-layers,.leaflet-control-zoom{display:none!important}</style>')}catch(e){}"
+        ></iframe>
         <div class="hero-map-mask"></div>
       </div>
 
@@ -247,9 +246,9 @@
           </p>
 
           <div class="hero-actions">
-            <button class="btn btn-primary btn-lg" onclick="openMapOverlay()">
+            <a href="map.html" class="btn btn-primary btn-lg">
               Explore Live Map →
-            </button>
+            </a>
             <a href="why.html" class="btn btn-outline btn-lg">Why AERSI?</a>
           </div>
 
@@ -433,7 +432,6 @@
     loadStationData().then(data => {
       if (!data.length) return;
 
-      // Parse AERSI explicitly to handle any string values from CSV
       const valid = data
         .map(d => ({ ...d, AERSI: parseFloat(d.AERSI) }))
         .filter(d => !isNaN(d.AERSI) && isFinite(d.AERSI));
