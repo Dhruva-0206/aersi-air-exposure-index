@@ -110,7 +110,6 @@ for _, row in df.iterrows():
       font-size: 13px;
       line-height: 1.5;
     ">
-      <!-- Header -->
       <div style="
         background: {color}12;
         border-bottom: 2px solid {color};
@@ -122,7 +121,6 @@ for _, row in df.iterrows():
         <div style="font-size:12px;color:#64748b;">{row.get('city','')}{', ' + row.get('state','') if row.get('city') and row.get('state') else row.get('state','')}</div>
       </div>
 
-      <!-- AERSI Score -->
       <div style="padding:14px 16px;border-bottom:1px solid #f1f5f9;">
         <div style="display:flex;align-items:baseline;justify-content:space-between;">
           <div>
@@ -142,7 +140,6 @@ for _, row in df.iterrows():
         </div>
       </div>
 
-      <!-- Components -->
       <div style="padding:12px 16px;border-bottom:1px solid #f1f5f9;">
         <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:10px;">Components · PL × EPF × VSF</div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
@@ -161,10 +158,8 @@ for _, row in df.iterrows():
         </div>
       </div>
 
-      <!-- Pollutants -->
       {f'<div style="padding:12px 16px;">{pollutant_section}</div>' if pollutant_section else ''}
 
-      <!-- Footer -->
       <div style="padding:8px 16px;background:#f8fafc;border-radius:0 0 8px 8px;border-top:1px solid #f1f5f9;">
         <div style="font-size:10px;color:#94a3b8;text-align:center;">
           AERSI = PL x EPF x VSF · aersi.live
@@ -266,6 +261,31 @@ legend_html = """
 @keyframes pulse-live {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
+}
+
+/* ── Map Mobile Overrides ── */
+@media (max-width: 768px) {
+    #aersi-legend {
+        bottom: 16px;
+        left: 16px;
+        min-width: 150px;
+        padding: 12px 14px;
+        border-radius: 12px;
+    }
+    #aersi-legend-title { font-size: 12px; }
+    #aersi-legend-sub { font-size: 9px; margin-bottom: 8px; }
+    .aersi-legend-row { font-size: 11px; padding: 3px 0; }
+    .aersi-legend-dot { width: 8px; height: 8px; }
+
+    #aersi-status {
+        /* Move status to top right to prevent overlap with legend */
+        bottom: auto;
+        top: 16px;
+        right: 16px;
+        padding: 8px 12px;
+        font-size: 10px;
+        border-radius: 8px;
+    }
 }
 </style>
 
