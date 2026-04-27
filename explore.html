@@ -7,7 +7,7 @@
   <meta name="description" content="Explore AERSI scores across India. Compare stations, states, and pollution patterns.">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js"></script>
-  <script src="js/layout.js" defer></script>
+  <script src="js/layout.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
     .explore-grid {
@@ -384,13 +384,15 @@
       });
     }
 
-    async function init() {
-      allData = await loadStationData();
-      allData.sort((a,b) => b.AERSI - a.AERSI);
-      document.getElementById('filter-count').textContent = `${allData.length} stations`;
+    loadStationData().then(function(raw) {
+      allData = raw
+        .map(function(d) { return Object.assign({}, d, { AERSI: parseFloat(d.AERSI), PL: parseFloat(d.PL), EPF: parseFloat(d.EPF), VSF: parseFloat(d.VSF) }); })
+        .filter(function(d) { return !isNaN(d.AERSI) && isFinite(d.AERSI); })
+        .sort(function(a,b) { return b.AERSI - a.AERSI; });
+      document.getElementById('filter-count').textContent = allData.length + ' stations';
       renderTable(allData);
       buildCharts(allData);
-    }
+    });
 
     init();
   </script>

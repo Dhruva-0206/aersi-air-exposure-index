@@ -8,6 +8,7 @@ function renderNav() {
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="why.html">Why AERSI?</a></li>
+      <li><a href="explore.html">Explore</a></li>
       <li><a href="methodology.html">Methodology</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
