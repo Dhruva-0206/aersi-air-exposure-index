@@ -226,8 +226,10 @@
         text-align: center;
       }
 
-      /* Station rows and formula cards: clip to container */
-      .station-row { overflow: hidden; }
+      /* Hide score on mobile — not enough space */
+      .station-score { display: none; }
+      /* Formula block — shrink font so it fits */
+      .formula-block { font-size: 0.85rem; letter-spacing: 0.02em; }
       .formula-comp > div:last-child { min-width: 0; overflow: hidden; }
       .formula-comp > div:last-child div { white-space: normal; word-break: break-word; }
     }
