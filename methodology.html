@@ -30,12 +30,7 @@
       margin-bottom: 1rem;
     }
 
-    .method-toc ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
+    .method-toc ul { list-style: none; display: flex; flex-direction: column; gap: 0.2rem; }
 
     .method-toc a {
       display: block;
@@ -44,14 +39,10 @@
       padding: 0.35rem 0.75rem;
       border-radius: var(--radius-sm);
       border-left: 2px solid transparent;
-      transition: all var(--transition);
+      transition: all var(--t) var(--ease);
     }
 
-    .method-toc a:hover {
-      color: var(--text);
-      border-left-color: var(--accent);
-      background: var(--surface);
-    }
+    .method-toc a:hover { color: var(--text); border-left-color: var(--accent); background: var(--surface); }
 
     .method-content h2 {
       font-family: var(--font-display);
@@ -59,13 +50,12 @@
       font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 0.75rem;
-      margin-top: 0;
       scroll-margin-top: calc(var(--nav-h) + 2rem);
     }
 
     .method-content h3 {
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       margin: 2rem 0 0.75rem;
       color: var(--accent);
@@ -80,19 +70,12 @@
 
     .method-content section {
       padding: 3rem 0;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border2);
     }
 
-    .method-content section:last-child {
-      border-bottom: none;
-    }
+    .method-content section:last-child { border-bottom: none; }
 
-    .component-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
+    .component-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 
     .component-tag {
       display: inline-flex;
@@ -100,24 +83,13 @@
       justify-content: center;
       width: 48px; height: 48px;
       border-radius: var(--radius-sm);
-      background: var(--accent-glow);
-      border: 1px solid var(--border2);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-mid);
       font-family: var(--font-mono);
-      font-weight: 500;
-      font-size: 0.9rem;
+      font-weight: 600;
+      font-size: 0.85rem;
       color: var(--accent);
       flex-shrink: 0;
-    }
-
-    .info-box {
-      background: var(--bg2);
-      border: 1px solid var(--border2);
-      border-left: 3px solid var(--accent);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      font-size: 0.875rem;
-      color: var(--text2);
-      margin: 1.25rem 0;
     }
 
     .weight-row {
@@ -130,16 +102,43 @@
     }
 
     .weight-row:last-child { border-bottom: none; }
-
-    .weight-name { font-weight: 500; width: 80px; flex-shrink: 0; }
+    .weight-name  { font-weight: 500; width: 80px; flex-shrink: 0; }
     .weight-limit { color: var(--text3); font-family: var(--font-mono); width: 100px; flex-shrink: 0; }
     .weight-bar-bg { flex: 1; height: 6px; background: var(--bg2); border-radius: 3px; overflow: hidden; }
-    .weight-bar { height: 100%; background: var(--accent); border-radius: 3px; }
+    .weight-bar { height: 100%; border-radius: 3px; }
     .weight-val { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); width: 40px; text-align: right; }
+
+    .v3-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.6rem;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-mid);
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
+
+    .confidence-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+
+    .confidence-row:last-child { border-bottom: none; }
 
     @media (max-width: 900px) {
       .method-grid { grid-template-columns: 1fr; }
-      .method-toc { display: none; }
+      .method-toc  { display: none; }
     }
   </style>
 </head>
@@ -150,18 +149,21 @@
     <div class="section">
       <div class="container">
 
-        <div class="section-header animate-fade-up" style="max-width:700px;">
+        <div class="section-header anim-fade-up" style="max-width:700px;">
           <span class="label">Methodology</span>
-          <h1 class="display display-lg" style="margin-top:0.5rem;">How AERSI Works</h1>
+          <h1 class="display display-lg" style="margin-top:0.5rem;">
+            How AERSI Works
+            <span class="v3-badge">v3</span>
+          </h1>
           <p style="color:var(--text2);margin-top:0.75rem;font-size:1rem;line-height:1.7;">
-            A complete reference for the formula, components, weights, and design decisions
-            behind the Air Exposure Severity Index.
+            A complete reference for the AERSI v3 formula — covering pollution load,
+            persistence, variability, and data completeness. Designed to be
+            scientifically honest about what the data can and cannot tell us.
           </p>
         </div>
 
-        <div class="method-grid animate-fade-up delay-1">
+        <div class="method-grid anim-fade-up d1">
 
-          <!-- TOC -->
           <nav class="method-toc">
             <div class="method-toc-title">On this page</div>
             <ul>
@@ -169,56 +171,72 @@
               <li><a href="#pl">Pollution Load (PL)</a></li>
               <li><a href="#epf">Persistence Factor (EPF)</a></li>
               <li><a href="#vsf">Variability Factor (VSF)</a></li>
-              <li><a href="#baseline">Baseline & Scoring</a></li>
+              <li><a href="#cf">Completeness Factor (CF)</a></li>
+              <li><a href="#baseline">Scoring & Confidence</a></li>
               <li><a href="#design">Design Principles</a></li>
               <li><a href="#data">Data Sources</a></li>
             </ul>
           </nav>
 
-          <!-- Content -->
           <div class="method-content">
 
             <section id="formula">
               <h2>Master Formula</h2>
-              <p>AERSI is a multiplicative composite index. Each component amplifies the others — a station with heavy pollution, frequent exceedances, and volatile swings does not score the sum of those problems, but their product.</p>
-              <div class="formula-block" style="font-size:1.4rem;margin:1.5rem 0;">
-                AERSI &nbsp;=&nbsp; PL &nbsp;×&nbsp; EPF &nbsp;×&nbsp; VSF
+              <p>AERSI v3 uses a geometric weighted mean — four components raised to exponents that sum to 1.0. This means all dimensions matter together, and a station that performs badly in multiple dimensions scores more severely than one that is bad in only one.</p>
+
+              <div class="formula-block" style="font-size:1.15rem;margin:1.5rem 0;line-height:2;">
+                AERSI<sub>v3</sub> = PL<sup>0.45</sup> × EPF<sup>0.25</sup> × VSF<sup>0.20</sup> × CF
               </div>
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;">
-                <div class="card" style="text-align:center;padding:1.25rem;">
-                  <div class="label" style="margin-bottom:0.5rem;">PL</div>
-                  <div style="font-size:0.875rem;color:var(--text2);">Pollution Load</div>
-                  <div style="font-size:0.75rem;color:var(--text3);margin-top:0.25rem;">0 → ∞</div>
+
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem;">
+                <div class="card" style="padding:1.25rem;">
+                  <div class="label" style="margin-bottom:0.4rem;">PL — Pollution Load</div>
+                  <div style="font-size:0.83rem;color:var(--text2);">WHO-normalized, log-saturated weighted concentration across all present pollutants. Exponent 0.45 — largest single influence.</div>
                 </div>
-                <div class="card" style="text-align:center;padding:1.25rem;">
-                  <div class="label" style="margin-bottom:0.5rem;">EPF</div>
-                  <div style="font-size:0.875rem;color:var(--text2);">Exposure Persistence</div>
-                  <div style="font-size:0.75rem;color:var(--text3);margin-top:0.25rem;">1.0 → 2.0</div>
+                <div class="card" style="padding:1.25rem;">
+                  <div class="label" style="margin-bottom:0.4rem;">EPF — Exposure Persistence</div>
+                  <div style="font-size:0.83rem;color:var(--text2);">How often AQI exceeded 100 over 30 days, dampened proportionally when data is sparse. Exponent 0.25.</div>
                 </div>
-                <div class="card" style="text-align:center;padding:1.25rem;">
-                  <div class="label" style="margin-bottom:0.5rem;">VSF</div>
-                  <div style="font-size:0.875rem;color:var(--text2);">Variability Severity</div>
-                  <div style="font-size:0.75rem;color:var(--text3);margin-top:0.25rem;">1.0 → 2.0</div>
+                <div class="card" style="padding:1.25rem;">
+                  <div class="label" style="margin-bottom:0.4rem;">VSF — Variability Severity</div>
+                  <div style="font-size:0.83rem;color:var(--text2);">Median day-to-day AQI swing. Robust to single-day spikes. Captures unpredictability that std dev cannot. Exponent 0.20.</div>
                 </div>
+                <div class="card" style="padding:1.25rem;">
+                  <div class="label" style="margin-bottom:0.4rem;">CF — Completeness Factor</div>
+                  <div style="font-size:0.83rem;color:var(--text2);">Direct multiplier on data quality — pollutant coverage, day coverage, sensor quality. Ranges 0.7–1.0. New in v3.</div>
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-top:1.5rem;">
+                <strong>Baseline:</strong> A station at exactly WHO limits for all pollutants, zero exceedances, zero volatility, full data scores AERSI = 1.0. Every point above represents compounding exposure beyond the safety threshold.
               </div>
             </section>
 
             <section id="pl">
-              <h2>Pollution Load (PL)</h2>
+              <h2>Pollution Load (PL_robust)</h2>
               <div class="component-header">
                 <div class="component-tag">PL</div>
-                <p style="margin:0;"><em>How polluted is the air today, across all pollutants combined?</em></p>
+                <p style="margin:0;font-size:0.95rem;"><em>How polluted is the air, across all pollutants combined?</em></p>
               </div>
-              <p>Each pollutant is normalized against its WHO guideline limit, then combined with epidemiologically-derived weights.</p>
 
-              <h3>Step 1 — Normalize</h3>
-              <div class="formula-block" style="font-size:1rem;">N = Observed Concentration / WHO Limit</div>
-              <p style="margin-top:1rem;">A normalized value of 1.0 means exactly at the safe limit. A value of 4.0 means four times the danger threshold.</p>
+              <p>Each pollutant present is normalized against its WHO 2021 guideline limit, soft-saturated to prevent single extreme readings from dominating, then combined using weights renormalized over only the pollutants actually available.</p>
 
-              <h3>Step 2 — Weighted combination</h3>
-              <div class="formula-block" style="font-size:0.9rem;">PL = 0.35·N_PM2.5 + 0.25·N_PM10 + 0.15·N_NO2 + 0.15·N_Ozone + 0.10·N_SO2</div>
+              <h3>Step 1 — WHO normalization</h3>
+              <div class="formula-block" style="font-size:0.95rem;">N_p = C_p / L_p</div>
+              <p style="margin-top:0.75rem;">N_p = 1.0 means exactly at the WHO safe limit. N_p = 4.0 means four times the danger threshold.</p>
 
-              <h3>Pollutant weights & WHO limits</h3>
+              <h3>Step 2 — Soft-saturation transform</h3>
+              <div class="formula-block" style="font-size:0.95rem;">f(N_p) = N_p ^ 0.6</div>
+              <p style="margin-top:0.75rem;">The 0.6 exponent reflects the epidemiological reality that the health dose-response relationship for fine particles is sublinear — doubling the concentration does not double the harm. It also prevents extreme single-pollutant readings from collapsing the score for every other station.</p>
+
+              <h3>Step 3 — Weight renormalization</h3>
+              <p>If some pollutants are missing, weights are renormalized across only the pollutants present:</p>
+              <div class="formula-block" style="font-size:0.9rem;">w_adj_p = w_p / Σ(w_q for all present q)</div>
+
+              <h3>Step 4 — Pollution Load</h3>
+              <div class="formula-block" style="font-size:0.9rem;">PL_robust = Σ w_adj_p × N_p^0.6</div>
+
+              <h3>Pollutant weights & WHO 2021 limits</h3>
               <div style="margin-top:1rem;">
                 <div class="weight-row">
                   <span class="weight-name">PM2.5</span>
@@ -240,7 +258,7 @@
                 </div>
                 <div class="weight-row">
                   <span class="weight-name">Ozone</span>
-                  <span class="weight-limit">100 µg/m³</span>
+                  <span class="weight-limit">60 µg/m³</span>
                   <div class="weight-bar-bg"><div class="weight-bar" style="width:15%;background:#84cc16;"></div></div>
                   <span class="weight-val">0.15</span>
                 </div>
@@ -251,82 +269,152 @@
                   <span class="weight-val">0.10</span>
                 </div>
               </div>
-              <div class="info-box">PM2.5 carries the highest weight (0.35) because fine particles penetrate deepest into the lungs and bloodstream and are most strongly associated with long-term mortality risk in epidemiological literature.</div>
+              <div class="info-box" style="margin-top:1rem;">PM2.5 carries the highest weight (0.35) because fine particles penetrate deepest into the lungs and bloodstream and are most strongly associated with long-term mortality in epidemiological literature. Ozone limit updated to 60 µg/m³ per WHO 2021 peak-season guideline.</div>
             </section>
 
             <section id="epf">
-              <h2>Exposure Persistence Factor (EPF)</h2>
+              <h2>Exposure Persistence Factor (EPF_adj)</h2>
               <div class="component-header">
                 <div class="component-tag">EPF</div>
-                <p style="margin:0;"><em>How often is this station's air unsafe, and how confident are we?</em></p>
+                <p style="margin:0;font-size:0.95rem;"><em>How often has this station's air been unsafe?</em></p>
               </div>
-              <p>EPF counts how many days in the rolling window the AQI exceeded 100 — the CPCB threshold between satisfactory and moderate — then applies a confidence weight based on how much data is available.</p>
 
-              <div class="formula-block" style="font-size:1rem;margin:1.25rem 0;">EPF = 1 + (D_exceed / W) × confidence<br><span style="font-size:0.8rem;opacity:0.7;">confidence = min(W / 30, 1.0)</span></div>
+              <p>EPF counts how many of the 30 rolling days had AQI above 100 — the CPCB threshold between satisfactory and moderate. A single honest dampening term scales the persistence by the square root of data coverage, preventing overconfident scores from sparse stations.</p>
 
-              <p>With only 7 days of data, EPF is shrunk toward neutral (1.0) — we can't yet be confident a pattern has emerged. At 30 days it reaches full strength.</p>
+              <div class="formula-block" style="font-size:0.95rem;margin:1.25rem 0;line-height:2.2;">
+                data_weight = (D_obs / 30)^0.5<br>
+                EPF_adj = 1 + (D_exceed / 30) × data_weight
+              </div>
+
+              <p>Using square root rather than linear dampening means a station with 15 days of data gets weight 0.707 — not the 0.25 that a quadratic term would produce. Proportional, not punishing.</p>
 
               <table class="data-table" style="margin-top:1rem;">
-                <thead><tr><th>Days Collected</th><th>Confidence</th><th>EPF if 50% exceeded</th></tr></thead>
+                <thead><tr><th>Days Observed</th><th>data_weight</th><th>EPF if 80% exceeded</th><th>EPF if 30% exceeded</th></tr></thead>
                 <tbody>
-                  <tr><td>7 days</td><td style="font-family:var(--font-mono);">0.23</td><td style="font-family:var(--font-mono);">1.115</td></tr>
-                  <tr><td>15 days</td><td style="font-family:var(--font-mono);">0.50</td><td style="font-family:var(--font-mono);">1.250</td></tr>
-                  <tr><td>30 days</td><td style="font-family:var(--font-mono);">1.00</td><td style="font-family:var(--font-mono);">1.500</td></tr>
+                  <tr><td>7 days</td><td style="font-family:var(--font-mono);">0.483</td><td style="font-family:var(--font-mono);">1.387</td><td style="font-family:var(--font-mono);">1.145</td></tr>
+                  <tr><td>15 days</td><td style="font-family:var(--font-mono);">0.707</td><td style="font-family:var(--font-mono);">1.566</td><td style="font-family:var(--font-mono);">1.212</td></tr>
+                  <tr><td>22 days</td><td style="font-family:var(--font-mono);">0.856</td><td style="font-family:var(--font-mono);">1.685</td><td style="font-family:var(--font-mono);">1.257</td></tr>
+                  <tr><td>30 days</td><td style="font-family:var(--font-mono);">1.000</td><td style="font-family:var(--font-mono);">1.800</td><td style="font-family:var(--font-mono);">1.300</td></tr>
                 </tbody>
               </table>
             </section>
 
             <section id="vsf">
-              <h2>Variability Severity Factor (VSF)</h2>
+              <h2>Variability Severity Factor (VSF_robust)</h2>
               <div class="component-header">
                 <div class="component-tag">VSF</div>
-                <p style="margin:0;"><em>How wildly does the air quality swing day to day?</em></p>
+                <p style="margin:0;font-size:0.95rem;"><em>How unpredictably does air quality swing day to day?</em></p>
               </div>
-              <p>Volatile air is dangerous in a specific way — people cannot predict or adapt to swings they cannot anticipate. Sudden acute spikes cause health events that consistent (even bad) air does not.</p>
 
-              <div class="formula-block" style="font-size:1rem;margin:1.25rem 0;">VSF = 1 + tanh(σ / 100)</div>
+              <p>Volatile air is dangerous in a specific way — acute spikes cause cardiovascular events, and people cannot adapt to swings they cannot predict. VSF v3 uses the <strong>median absolute day-to-day AQI change</strong> instead of standard deviation, which makes it robust to single sensor spikes or one unusual event.</p>
 
-              <p>The <strong>tanh</strong> function squishes any positive number into the range 0 to 1 — it grows fast initially, then flattens. This means VSF is always between 1.0 and 2.0 regardless of how extreme the volatility gets. It also depends only on the <em>absolute</em> swing in AQI, not on the mean — so a heavily polluted city with stable readings correctly scores VSF ≈ 1.0.</p>
+              <div class="formula-block" style="font-size:0.95rem;margin:1.25rem 0;line-height:2.2;">
+                S = median(|AQI_t − AQI_{t−1}|)<br>
+                VSF_robust = 1 + tanh(S / 45)
+              </div>
+
+              <p>The tanh function keeps VSF bounded between 1.0 and 2.0 regardless of how extreme the swings become. The constant 45 means a median daily swing of 45 AQI points gives tanh(1) ≈ 0.76, placing VSF at 1.76.</p>
 
               <table class="data-table" style="margin-top:1rem;">
-                <thead><tr><th>Std Dev (σ)</th><th>tanh(σ/100)</th><th>VSF</th><th>Interpretation</th></tr></thead>
+                <thead><tr><th>Median Daily Swing (S)</th><th>tanh(S/45)</th><th>VSF</th><th>Interpretation</th></tr></thead>
                 <tbody>
-                  <tr><td>0</td><td style="font-family:var(--font-mono);">0.00</td><td style="font-family:var(--font-mono);">1.00</td><td>Perfectly stable, no penalty</td></tr>
-                  <tr><td>30</td><td style="font-family:var(--font-mono);">0.29</td><td style="font-family:var(--font-mono);">1.29</td><td>Mild swings</td></tr>
-                  <tr><td>60</td><td style="font-family:var(--font-mono);">0.54</td><td style="font-family:var(--font-mono);">1.54</td><td>Moderate variation</td></tr>
-                  <tr><td>100</td><td style="font-family:var(--font-mono);">0.76</td><td style="font-family:var(--font-mono);">1.76</td><td>Large, significant swings</td></tr>
-                  <tr><td>200</td><td style="font-family:var(--font-mono);">0.96</td><td style="font-family:var(--font-mono);">1.96</td><td>Extreme volatility, near ceiling</td></tr>
+                  <tr><td>0</td><td style="font-family:var(--font-mono);">0.00</td><td style="font-family:var(--font-mono);">1.00</td><td>Perfectly stable</td></tr>
+                  <tr><td>15</td><td style="font-family:var(--font-mono);">0.32</td><td style="font-family:var(--font-mono);">1.32</td><td>Mild day-to-day change</td></tr>
+                  <tr><td>30</td><td style="font-family:var(--font-mono);">0.58</td><td style="font-family:var(--font-mono);">1.58</td><td>Moderate swings</td></tr>
+                  <tr><td>45</td><td style="font-family:var(--font-mono);">0.76</td><td style="font-family:var(--font-mono);">1.76</td><td>Large, significant swings</td></tr>
+                  <tr><td>80</td><td style="font-family:var(--font-mono);">0.94</td><td style="font-family:var(--font-mono);">1.94</td><td>Extreme daily volatility</td></tr>
                 </tbody>
               </table>
             </section>
 
+            <section id="cf">
+              <h2>Data Completeness Factor (CF)</h2>
+              <div class="component-header">
+                <div class="component-tag">CF</div>
+                <p style="margin:0;font-size:0.95rem;"><em>How much can we trust this station's score?</em></p>
+              </div>
+
+              <p>New in v3. A station with incomplete pollutant reporting or short history should not be presented with the same confidence as a fully observed one. CF explicitly penalizes gaps while keeping the score usable — not discarding sparse stations, but being honest about them.</p>
+
+              <div class="formula-block" style="font-size:0.9rem;margin:1.25rem 0;line-height:2.2;">
+                CF_pollutant = k / 5 &nbsp;&nbsp;&nbsp; (pollutants present out of 5)<br>
+                CF_day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= D_obs / 30 &nbsp; (days with data)<br>
+                CF_quality &nbsp;= 1.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (sensor metadata, pending)<br><br>
+                CF_data &nbsp;&nbsp;= 0.5 × CF_pollutant + 0.3 × CF_day + 0.2 × CF_quality<br>
+                CF_impact = 0.7 + 0.3 × CF_data
+              </div>
+
+              <p>CF_impact ranges from 0.7 (a station with no data at all) to 1.0 (a perfectly complete station). This means even the worst data station retains 70% of its score — it is not zeroed out, but it is honestly penalized.</p>
+
+              <div class="info-box">CF_quality is set to 1.0 until sensor metadata becomes available in the CPCB data feed. When sensor uptime and anomaly flags are accessible, this will be computed from continuity scores.</div>
+
+              <h3>Confidence labels</h3>
+              <div style="margin-top:0.5rem;">
+                <div class="confidence-row">
+                  <span style="width:160px;font-weight:600;color:var(--very-low);">High Confidence</span>
+                  <span style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text3);">CF_data ≥ 0.85</span>
+                  <span style="font-size:0.83rem;color:var(--text2);">All or nearly all pollutants, near-full history</span>
+                </div>
+                <div class="confidence-row">
+                  <span style="width:160px;font-weight:600;color:var(--low);">Medium Confidence</span>
+                  <span style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text3);">CF_data ≥ 0.65</span>
+                  <span style="font-size:0.83rem;color:var(--text2);">Some pollutants missing or partial history</span>
+                </div>
+                <div class="confidence-row">
+                  <span style="width:160px;font-weight:600;color:var(--moderate);">Low Confidence</span>
+                  <span style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text3);">CF_data ≥ 0.40</span>
+                  <span style="font-size:0.83rem;color:var(--text2);">Significant gaps in data coverage</span>
+                </div>
+                <div class="confidence-row">
+                  <span style="width:160px;font-weight:600;color:var(--extreme);">Provisional</span>
+                  <span style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text3);">CF_data &lt; 0.40</span>
+                  <span style="font-size:0.83rem;color:var(--text2);">Very sparse — treat score as indicative only</span>
+                </div>
+              </div>
+            </section>
+
             <section id="baseline">
-              <h2>Baseline & Score Interpretation</h2>
-              <p>The reference baseline is built into the formula itself. A station sitting exactly at WHO limits for all pollutants, with zero exceedances and zero volatility, scores:</p>
-              <div class="formula-block" style="margin:1.25rem 0;">AERSI = 1.0 × 1.0 × 1.0 = 1.0</div>
-              <p>AERSI = 1.0 is the WHO safety threshold. Every point above it represents compounding exposure beyond safe limits.</p>
+              <h2>Scoring & Confidence</h2>
+              <p>The reference baseline is preserved from earlier versions. A station at exactly WHO limits on all five pollutants, zero exceedances, zero volatility, and full data coverage scores AERSI = 1.0.</p>
+
+              <div class="formula-block" style="margin:1.25rem 0;">
+                1.0^0.45 × 1.0^0.25 × 1.0^0.20 × (0.7 + 0.3×1.0) = 1.0
+              </div>
+
               <table class="data-table" style="margin-top:1rem;">
                 <thead><tr><th>AERSI</th><th>Category</th><th>Meaning</th></tr></thead>
                 <tbody>
-                  <tr><td style="color:#22c55e;font-family:var(--font-mono);">&lt; 0.8</td><td>Very Low</td><td>Cleaner than WHO guidelines</td></tr>
-                  <tr><td style="color:#84cc16;font-family:var(--font-mono);">0.8 – 1.2</td><td>Low</td><td>Near the safety threshold</td></tr>
-                  <tr><td style="color:#eab308;font-family:var(--font-mono);">1.2 – 2.0</td><td>Moderate</td><td>Concerning cumulative exposure</td></tr>
-                  <tr><td style="color:#f97316;font-family:var(--font-mono);">2.0 – 3.0</td><td>High</td><td>Significant exposure risk</td></tr>
-                  <tr><td style="color:#ef4444;font-family:var(--font-mono);">&gt; 3.0</td><td>Extreme</td><td>Persistent, intense, volatile pollution</td></tr>
+                  <tr><td style="color:#16a34a;font-family:var(--font-mono);">&lt; 0.8</td><td>Very Low</td><td>Cleaner than WHO guidelines across all dimensions</td></tr>
+                  <tr><td style="color:#65a30d;font-family:var(--font-mono);">0.8 – 1.2</td><td>Low</td><td>Near the safety threshold, mostly acceptable</td></tr>
+                  <tr><td style="color:#d97706;font-family:var(--font-mono);">1.2 – 2.0</td><td>Moderate</td><td>Regular exceedance — concerning for sensitive groups</td></tr>
+                  <tr><td style="color:#ea580c;font-family:var(--font-mono);">2.0 – 3.0</td><td>High</td><td>Persistent exposure risk for general population</td></tr>
+                  <tr><td style="color:#dc2626;font-family:var(--font-mono);">&gt; 3.0</td><td>Extreme</td><td>Severe, persistent, volatile — among the worst globally</td></tr>
                 </tbody>
               </table>
+
+              <div class="info-box" style="margin-top:1.25rem;">Extreme is intentionally hard to reach. In real-world testing against CPCB data, only stations like Ghaziabad Loni in peak winter reach this threshold. If many stations score Extreme, the label loses its meaning.</div>
             </section>
 
             <section id="design">
               <h2>Design Principles</h2>
+
+              <h3>Data honesty over false precision</h3>
+              <p>V3 explicitly penalizes incomplete data rather than silently ignoring it. A station with two pollutants and 15 days of history will score differently than a fully observed one — and that difference is visible in the confidence label shown alongside the score.</p>
+
+              <h3>Robust to real-world data</h3>
+              <p>Indian monitoring data regularly has sensor downtime, missing pollutants, and station outages. Every design decision in v3 — weight renormalization, sqrt dampening, median absolute change — was chosen to degrade gracefully under these conditions rather than catastrophically.</p>
+
               <h3>Each life matters equally</h3>
-              <p>Population density does not modify AERSI. A remote station with extreme scores is flagged with the same severity as a dense urban one. AERSI measures exposure severity, not public health burden — those are different questions.</p>
-              <h3>Honest under sparse data</h3>
-              <p>The EPF confidence weight prevents overconfident conclusions in the early days of data collection. As snapshots accumulate, scores stabilize and gain full statistical weight automatically.</p>
+              <p>Population density does not modify AERSI. A remote industrial station with extreme scores is flagged identically to a dense urban one. AERSI measures exposure severity per person — not total public health burden.</p>
+
               <h3>Bounded and interpretable</h3>
-              <p>Both EPF and VSF are bounded between 1.0 and 2.0. AERSI has a natural baseline of 1.0. There is no arbitrary normalization step — the meaning is built into the math.</p>
+              <p>EPF is bounded 1.0–2.0. VSF is bounded 1.0–2.0. CF ranges 0.7–1.0. AERSI has a natural baseline of 1.0. No arbitrary normalization step distorts the output — the meaning is built into the mathematics.</p>
+
               <h3>Improves over time</h3>
-              <p>The index is explicitly designed to be early-stage. With 30+ days of consistent data, EPF and VSF gain their full voice. The pipeline runs daily and commits new data automatically.</p>
+              <p>As data accumulates, CF_day rises toward 1.0, EPF reaches full confidence, and VSF stabilizes on a longer sequence of day-to-day changes. The pipeline runs daily and scores become more trustworthy automatically.</p>
+
+              <h3>Remaining limitations</h3>
+              <p>Pollutant weights are judgment-based pending empirical validation. Exponents are heuristic and should eventually be fitted against health outcome data. A publication-grade version should include uncertainty intervals. These are known limitations, not hidden ones.</p>
             </section>
 
             <section id="data">
@@ -335,10 +423,10 @@
               <div class="info-box">
                 <strong>Resource ID:</strong> <span style="font-family:var(--font-mono);">3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69</span><br>
                 <strong>Update frequency:</strong> Daily snapshots at 10:30 AM IST<br>
-                <strong>Coverage:</strong> 547 monitoring stations across India<br>
+                <strong>Coverage:</strong> ~530 active monitoring stations across India<br>
                 <strong>Window:</strong> Rolling 30-day dataset
               </div>
-              <p>WHO guideline limits are from the <strong>WHO Global Air Quality Guidelines (2021)</strong>. Pollutant weights are informed by the Global Burden of Disease study and related epidemiological literature.</p>
+              <p>WHO guideline limits are from the <strong>WHO Global Air Quality Guidelines (2021)</strong>. Pollutant weights are informed by the Global Burden of Disease study and related epidemiological literature. The soft-saturation exponent of 0.6 is consistent with the sublinear exposure-response relationships documented for PM2.5 in peer-reviewed health impact assessments.</p>
             </section>
 
           </div>
