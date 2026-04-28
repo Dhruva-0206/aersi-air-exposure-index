@@ -450,7 +450,7 @@
 
       const valid = data
         .map(d => ({ ...d, AERSI: parseFloat(d.AERSI) }))
-        .filter(d => !isNaN(d.AERSI) && isFinite(d.AERSI) && d.AERSI < 50);
+        .filter(d => !isNaN(d.AERSI) && isFinite(d.AERSI));
 
       if (!valid.length) return;
 
