@@ -24,7 +24,6 @@
       background: var(--bg);
     }
 
-    /* Live map iframe — right side preview */
     .hero-map-preview {
       position: absolute;
       right: 0; top: 0; bottom: 0;
@@ -41,7 +40,6 @@
       pointer-events: none;
     }
 
-    /* Gradient mask so text is always readable */
     .hero-map-mask {
       position: absolute;
       inset: 0;
@@ -197,15 +195,35 @@
       padding: 0.2rem 0.5rem; flex-shrink: 0; margin-top: 2px;
     }
 
+    /* ── Mobile ── */
     @media (max-width: 900px) {
-      .hero { height: auto; min-height: 100svh; }
+      .hero {
+        height: auto;
+        min-height: unset;
+        padding: 3rem 0;
+        align-items: flex-start;
+      }
       .hero-map-preview { display: none; }
-      .hero-content { padding: 3rem 0; }
+      .hero-content {
+        max-width: 100%;
+        padding: 0;
+      }
+      .hero-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .hero-actions a {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
       .why-grid { grid-template-columns: 1fr; }
       .score-guide { grid-template-columns: repeat(3, 1fr); }
       .bottom-grid { grid-template-columns: 1fr; gap: 2rem; }
       .stat-strip-grid { grid-template-columns: repeat(3, 1fr); }
       .stat-strip-item:nth-child(3) { border-right: none; }
+      .stat-strip-item:nth-child(4),
+      .stat-strip-item:nth-child(5) { padding-top: 1.5rem; }
     }
   </style>
 </head>
@@ -217,7 +235,6 @@
     <!-- ── Hero ── -->
     <section class="hero">
 
-      <!-- Live map preview — hides legend/status, click navigates to map page -->
       <div class="hero-map-preview" onclick="window.location.href='map.html'" title="Click to explore live map">
         <iframe
           src="outputs/aersi_map.html"
@@ -230,7 +247,8 @@
         <div class="hero-map-mask"></div>
       </div>
 
-      <div class="container" style="position:relative;z-index:2;width:100%;">
+      <!-- Removed width:100% from inline style — was causing horizontal overflow on mobile -->
+      <div class="container" style="position:relative;z-index:2;">
         <div class="hero-content anim-fade-up">
           <h1 class="display display-xl hero-title">
             Air Exposure<br>
@@ -428,13 +446,12 @@
     document.getElementById('footer-root').innerHTML = renderFooter();
     setActiveNav();
 
-    // ── Live data ─────────────────────────────────────────────────────────
     loadStationData().then(data => {
       if (!data.length) return;
 
       const valid = data
         .map(d => ({ ...d, AERSI: parseFloat(d.AERSI) }))
-        .filter(d => !isNaN(d.AERSI) && isFinite(d.AERSI));
+        .filter(d => !isNaN(d.AERSI) && isFinite(d.AERSI) && d.AERSI < 50);
 
       if (!valid.length) return;
 
