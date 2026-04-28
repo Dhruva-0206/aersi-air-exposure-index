@@ -570,7 +570,9 @@ img { max-width: 100%; display: block; }
 /* ── Responsive — mobile ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   /* Prevent any horizontal overflow */
-  body { overflow-x: hidden; }
+  html, body { overflow-x: hidden; max-width: 100%; }
+  .page { overflow-x: hidden; }
+  .hero { overflow-x: hidden; }
 
   /* Nav */
   .nav { padding: 0 1rem; }
