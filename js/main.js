@@ -1,20 +1,23 @@
 // ── Active nav ─────────────────────────────────────────────────────────────
 function setActiveNav() {
-  const path = window.location.pathname.split('/').pop() || 'index.html';
+  // Works for both /page.html and /page (Vercel cleanUrls)
+  const raw  = window.location.pathname;
+  const page = raw.split('/').pop() || 'index.html';
+  // Normalise: strip .html so we can match both forms
+  const current = page.replace(/\.html$/, '') || 'index';
+
   document.querySelectorAll('.nav-links a').forEach(a => {
-    const href = a.getAttribute('href');
-    if (href === path || (path === '' && href === 'index.html')) {
-      a.classList.add('active');
-    }
+    const href    = (a.getAttribute('href') || '').replace(/\.html$/, '') || 'index';
+    const hPage   = href.split('/').pop();
+    if (hPage === current) a.classList.add('active');
   });
 }
 
-// ── Data loading — XHR avoids fetch/CORS issues on Vercel ─────────────────
+// ── Data loading ───────────────────────────────────────────────────────────
 let _stationData = null;
 
 function loadStationData() {
   if (_stationData) return Promise.resolve(_stationData);
-
   return new Promise((resolve) => {
     const xhr = new XMLHttpRequest();
     const url = window.location.origin + '/data/processed/aersi_station_scores.csv';
@@ -29,10 +32,7 @@ function loadStationData() {
         resolve([]);
       }
     };
-    xhr.onerror = function () {
-      console.warn('AERSI: CSV network error');
-      resolve([]);
-    };
+    xhr.onerror = function () { console.warn('AERSI: CSV network error'); resolve([]); };
     xhr.send();
   });
 }
@@ -59,12 +59,12 @@ function parseCSV(text) {
   }).filter(r => r.station && r.AERSI !== undefined && !isNaN(r.AERSI));
 }
 
-// ── AERSI helpers — recalibrated v3 bands ─────────────────────────────────
+// ── AERSI category — updated bands, CF removed from formula ───────────────
 function aersiCategory(v) {
   if (v < 0.6)  return { label: 'Very Low',  cls: 'very-low',  color: '#16a34a' };
   if (v < 1.0)  return { label: 'Low',       cls: 'low',       color: '#65a30d' };
   if (v < 1.5)  return { label: 'Moderate',  cls: 'moderate',  color: '#d97706' };
-  if (v < 2.2)  return { label: 'High',      cls: 'high',      color: '#ea580c' };
+  if (v < 2.0)  return { label: 'High',      cls: 'high',      color: '#ea580c' };
   return          { label: 'Extreme',    cls: 'extreme',   color: '#dc2626' };
 }
 

@@ -15,7 +15,7 @@ function renderNav() {
     <div class="nav-right">
       <span class="nav-live">
         <span class="nav-live-dot"></span>
-        LIVE · 547 STATIONS
+        LIVE · <span id="nav-station-count">547</span> STATIONS
       </span>
       <a href="map.html" class="nav-cta">View Map →</a>
       <button class="mobile-menu-btn" id="mobile-menu-btn" style="display:none;">☰</button>
