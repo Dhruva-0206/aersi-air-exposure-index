@@ -290,11 +290,11 @@
       // Distribution
       const cats = ['Very Low','Low','Moderate','High','Extreme'];
       const catCounts = [
-        data.filter(d => d.AERSI < 0.8).length,
-        data.filter(d => d.AERSI >= 0.8 && d.AERSI < 1.2).length,
-        data.filter(d => d.AERSI >= 1.2 && d.AERSI < 2.0).length,
-        data.filter(d => d.AERSI >= 2.0 && d.AERSI < 3.0).length,
-        data.filter(d => d.AERSI >= 3.0).length,
+        data.filter(function(d){ return d.AERSI < 0.6; }).length,
+        data.filter(function(d){ return d.AERSI >= 0.6 && d.AERSI < 1.0; }).length,
+        data.filter(function(d){ return d.AERSI >= 1.0 && d.AERSI < 1.5; }).length,
+        data.filter(function(d){ return d.AERSI >= 1.5 && d.AERSI < 2.2; }).length,
+        data.filter(function(d){ return d.AERSI >= 2.2; }).length
       ];
       const catColors = ['#22c55e','#84cc16','#eab308','#f97316','#ef4444'];
 
