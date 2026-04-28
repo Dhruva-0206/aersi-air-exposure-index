@@ -13,7 +13,6 @@
   <script src="js/layout.js"></script>
   <script src="js/main.js"></script>
   <style>
-    /* ── Hero ── */
     .hero {
       height: calc(100vh - var(--nav-h));
       min-height: 600px;
@@ -77,7 +76,6 @@
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
     .hero-chips   { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
-    /* ── Stat strip ── */
     .stat-strip {
       background: white;
       border-top: 1px solid var(--border2);
@@ -98,7 +96,6 @@
     .stat-strip-item:first-child { padding-left: 0; }
     .stat-strip-item:last-child  { border-right: none; }
 
-    /* ── Why cards ── */
     .why-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -141,7 +138,6 @@
     .why-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
     .why-card p  { font-size: 0.875rem; color: var(--text2); line-height: 1.7; }
 
-    /* ── Score guide ── */
     .score-guide { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
 
     .score-item {
@@ -158,7 +154,6 @@
     .score-range { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3); margin-bottom: 0.35rem; }
     .score-name  { font-size: 0.875rem; font-weight: 700; }
 
-    /* ── Bottom ── */
     .bottom-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
 
     .station-row {
@@ -195,35 +190,22 @@
       padding: 0.2rem 0.5rem; flex-shrink: 0; margin-top: 2px;
     }
 
-    /* ── Mobile ── */
     @media (max-width: 900px) {
       .hero {
         height: auto;
         min-height: unset;
         padding: 3rem 0;
-        align-items: flex-start;
       }
       .hero-map-preview { display: none; }
-      .hero-content {
-        max-width: 100%;
-        padding: 0;
-      }
-      .hero-actions {
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-      .hero-actions a {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-      }
+      .hero-content { max-width: 100%; }
+      .hero-actions { flex-direction: column; gap: 0.75rem; }
+      .hero-actions a { width: 100%; justify-content: center; }
       .why-grid { grid-template-columns: 1fr; }
       .score-guide { grid-template-columns: repeat(3, 1fr); }
       .bottom-grid { grid-template-columns: 1fr; gap: 2rem; }
       .stat-strip-grid { grid-template-columns: repeat(3, 1fr); }
       .stat-strip-item:nth-child(3) { border-right: none; }
-      .stat-strip-item:nth-child(4),
-      .stat-strip-item:nth-child(5) { padding-top: 1.5rem; }
+      .stat-strip-item:first-child { padding-left: 1.25rem; }
     }
   </style>
 </head>
@@ -232,7 +214,6 @@
 
   <div class="page">
 
-    <!-- ── Hero ── -->
     <section class="hero">
 
       <div class="hero-map-preview" onclick="window.location.href='map.html'" title="Click to explore live map">
@@ -247,8 +228,7 @@
         <div class="hero-map-mask"></div>
       </div>
 
-      <!-- Removed width:100% from inline style — was causing horizontal overflow on mobile -->
-      <div class="container" style="position:relative;z-index:2;">
+      <div class="container" style="position:relative;z-index:2;width:100%;">
         <div class="hero-content anim-fade-up">
           <h1 class="display display-xl hero-title">
             Air Exposure<br>
@@ -264,9 +244,7 @@
           </p>
 
           <div class="hero-actions">
-            <a href="map.html" class="btn btn-primary btn-lg">
-              Explore Live Map →
-            </a>
+            <a href="map.html" class="btn btn-primary btn-lg">Explore Live Map →</a>
             <a href="why.html" class="btn btn-outline btn-lg">Why AERSI?</a>
           </div>
 
@@ -279,7 +257,6 @@
       </div>
     </section>
 
-    <!-- ── Stat strip ── -->
     <div class="stat-strip">
       <div class="container">
         <div class="stat-strip-grid">
@@ -307,7 +284,6 @@
       </div>
     </div>
 
-    <!-- ── Why section ── -->
     <section class="section" style="background:var(--bg2);">
       <div class="container">
         <div class="section-header anim-fade-up">
@@ -339,7 +315,6 @@
       </div>
     </section>
 
-    <!-- ── Score guide ── -->
     <section class="section">
       <div class="container">
         <div class="section-header anim-fade-up">
@@ -381,7 +356,6 @@
 
     <hr class="divider">
 
-    <!-- ── Bottom ── -->
     <section class="section">
       <div class="container">
         <div class="bottom-grid">
