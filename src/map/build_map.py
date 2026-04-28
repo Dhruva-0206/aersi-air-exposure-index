@@ -31,17 +31,17 @@ print(f"Plotting {len(df)} stations")
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def aersi_color(v):
-    if v < 0.8:   return "#16a34a"
-    elif v < 1.2: return "#65a30d"
-    elif v < 2.0: return "#d97706"
-    elif v < 3.0: return "#ea580c"
-    else:         return "#dc2626"
+    if v < 0.6:   return "#16a34a"   # Very Low  — green
+    elif v < 1.0: return "#65a30d"   # Low       — yellow-green
+    elif v < 1.5: return "#d97706"   # Moderate  — amber
+    elif v < 2.2: return "#ea580c"   # High      — orange-red
+    else:         return "#dc2626"   # Extreme   — red
 
 def aersi_label(v):
-    if v < 0.8:   return "Very Low"
-    elif v < 1.2: return "Low"
-    elif v < 2.0: return "Moderate"
-    elif v < 3.0: return "High"
+    if v < 0.6:   return "Very Low"
+    elif v < 1.0: return "Low"
+    elif v < 1.5: return "Moderate"
+    elif v < 2.2: return "High"
     else:         return "Extreme"
 
 def fmt(v):
@@ -241,26 +241,23 @@ legend_html = """
         max-width: 180px;
         padding: 10px 12px;
         border-radius: 10px;
-        font-size: 11px;
     }
     #aersi-legend-title { font-size: 11px; }
     #aersi-legend-sub   { font-size: 9px; margin-bottom: 8px; }
     .aersi-legend-row   { font-size: 10px; padding: 2px 0; gap: 6px; }
     .aersi-legend-dot   { width: 8px; height: 8px; }
-
-    /* Hide status box on mobile — too cramped */
-    #aersi-status { display: none !important; }
+    #aersi-status       { display: none !important; }
 }
 </style>
 
 <div id="aersi-legend">
   <div id="aersi-legend-title">AERSI Severity</div>
-  <div id="aersi-legend-sub">PL x EPF x VSF</div>
-  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#16a34a;"></div> &lt;0.8 Very Low</div>
-  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#65a30d;"></div> 0.8–1.2 Low</div>
-  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#d97706;"></div> 1.2–2.0 Moderate</div>
-  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#ea580c;"></div> 2.0–3.0 High</div>
-  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#dc2626;"></div> &gt;3.0 Extreme</div>
+  <div id="aersi-legend-sub">PL^0.45 × EPF^0.25 × VSF^0.20 × CF</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#16a34a;"></div> &lt;0.6 &nbsp; Very Low</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#65a30d;"></div> 0.6–1.0 Low</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#d97706;"></div> 1.0–1.5 Moderate</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#ea580c;"></div> 1.5–2.2 High</div>
+  <div class="aersi-legend-row"><div class="aersi-legend-dot" style="background:#dc2626;"></div> &gt;2.2 &nbsp; Extreme</div>
 </div>
 
 <div id="aersi-status">
@@ -269,30 +266,6 @@ legend_html = """
   Rolling 30-day window
 </div>
 """
-
-m.get_root().html.add_child(folium.Element(legend_html))
-
-# Restrict map bounds
-bounds_fix = """
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var checkMap = setInterval(function() {
-    if (window.L) {
-      var maps = [];
-      document.querySelectorAll('.leaflet-container').forEach(function(el) {
-        if (el._leaflet_map) maps.push(el._leaflet_map);
-      });
-      maps.forEach(function(map) {
-        map.setMaxBounds([[-10, 50], [40, 100]]);
-        map.options.maxBoundsViscosity = 1.0;
-        clearInterval(checkMap);
-      });
-    }
-  }, 200);
-});
-</script>
-"""
-m.get_root().html.add_child(folium.Element(bounds_fix))
 
 # ── Save ─────────────────────────────────────────────────────────────────────
 

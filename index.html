@@ -275,8 +275,8 @@
 
           <div class="hero-chips">
             <span class="chip">📊 WHO-normalized PL</span>
-            <span class="chip">📅 30-day rolling EPF</span>
-            <span class="chip">📈 tanh-bounded VSF</span>
+            <span class="chip">📅 Persistence × Data Weight</span>
+            <span class="chip">📈 Median-robust VSF · CF</span>
           </div>
         </div>
       </div>
@@ -352,27 +352,27 @@
         <div class="score-guide anim-fade-up d1">
           <div class="score-item">
             <div class="score-dot" style="background:#16a34a;box-shadow:0 0 10px rgba(22,163,74,0.35);"></div>
-            <div class="score-range">&lt; 0.8</div>
+            <div class="score-range">&lt; 0.6</div>
             <div class="score-name aersi-very-low">Very Low</div>
           </div>
           <div class="score-item">
             <div class="score-dot" style="background:#65a30d;box-shadow:0 0 10px rgba(101,163,13,0.35);"></div>
-            <div class="score-range">0.8 – 1.2</div>
+            <div class="score-range">0.6 – 1.0</div>
             <div class="score-name aersi-low">Low</div>
           </div>
           <div class="score-item">
             <div class="score-dot" style="background:#d97706;box-shadow:0 0 10px rgba(217,119,6,0.35);"></div>
-            <div class="score-range">1.2 – 2.0</div>
+            <div class="score-range">1.0 – 1.5</div>
             <div class="score-name aersi-moderate">Moderate</div>
           </div>
           <div class="score-item">
             <div class="score-dot" style="background:#ea580c;box-shadow:0 0 10px rgba(234,88,12,0.35);"></div>
-            <div class="score-range">2.0 – 3.0</div>
+            <div class="score-range">1.5 – 2.2</div>
             <div class="score-name aersi-high">High</div>
           </div>
           <div class="score-item">
             <div class="score-dot" style="background:#dc2626;box-shadow:0 0 10px rgba(220,38,38,0.35);"></div>
-            <div class="score-range">&gt; 3.0</div>
+            <div class="score-range">&gt; 2.2</div>
             <div class="score-name aersi-extreme">Extreme</div>
           </div>
         </div>
@@ -403,7 +403,7 @@
               <h2 class="display display-md" style="margin-top:0.4rem;">How It's Computed</h2>
             </div>
             <div class="formula-block" style="margin-bottom:1.25rem;font-size:1.1rem;overflow:hidden;">
-              AERSI = PL × EPF × VSF
+              AERSI = PL⁰·⁴⁵ × EPF⁰·²⁵ × VSF⁰·²⁰ × CF
             </div>
             <div class="formula-cards">
               <div class="formula-comp">
@@ -454,9 +454,9 @@
 
       if (!valid.length) return;
 
-      const extreme = valid.filter(d => d.AERSI >= 3).length;
-      const high    = valid.filter(d => d.AERSI >= 2 && d.AERSI < 3).length;
-      const clean   = valid.filter(d => d.AERSI < 0.8).length;
+      const extreme = valid.filter(d => d.AERSI >= 2.2).length;
+      const high    = valid.filter(d => d.AERSI >= 1.5 && d.AERSI < 2.2).length;
+      const clean   = valid.filter(d => d.AERSI < 0.6).length;
       const avg     = valid.reduce((s, d) => s + d.AERSI, 0) / valid.length;
 
       document.getElementById('stat-stations').textContent = valid.length;

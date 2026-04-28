@@ -17,7 +17,6 @@ function loadStationData() {
 
   return new Promise((resolve) => {
     const xhr = new XMLHttpRequest();
-    // Absolute URL using current origin — works on Vercel and locally
     const url = window.location.origin + '/data/processed/aersi_station_scores.csv';
     xhr.open('GET', url, true);
     xhr.setRequestHeader('Accept', 'text/plain, text/csv, */*');
@@ -60,13 +59,13 @@ function parseCSV(text) {
   }).filter(r => r.station && r.AERSI !== undefined && !isNaN(r.AERSI));
 }
 
-// ── AERSI helpers ──────────────────────────────────────────────────────────
+// ── AERSI helpers — recalibrated v3 bands ─────────────────────────────────
 function aersiCategory(v) {
-  if (v < 0.8) return { label: 'Very Low',  cls: 'very-low',  color: '#16a34a' };
-  if (v < 1.2) return { label: 'Low',       cls: 'low',       color: '#65a30d' };
-  if (v < 2.0) return { label: 'Moderate',  cls: 'moderate',  color: '#d97706' };
-  if (v < 3.0) return { label: 'High',      cls: 'high',      color: '#ea580c' };
-  return         { label: 'Extreme',    cls: 'extreme',   color: '#dc2626' };
+  if (v < 0.6)  return { label: 'Very Low',  cls: 'very-low',  color: '#16a34a' };
+  if (v < 1.0)  return { label: 'Low',       cls: 'low',       color: '#65a30d' };
+  if (v < 1.5)  return { label: 'Moderate',  cls: 'moderate',  color: '#d97706' };
+  if (v < 2.2)  return { label: 'High',      cls: 'high',      color: '#ea580c' };
+  return          { label: 'Extreme',    cls: 'extreme',   color: '#dc2626' };
 }
 
 function fmt(v, d = 2) {
@@ -78,6 +77,8 @@ function fmt(v, d = 2) {
 function openMapOverlay() {
   const overlay = document.getElementById('map-overlay');
   if (!overlay) return;
+  const iframe = document.getElementById('map-iframe');
+  if (iframe && !iframe.src) iframe.src = 'outputs/aersi_map.html';
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
