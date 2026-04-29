@@ -168,7 +168,7 @@ for station, group in pl_df.groupby("station"):
         pl = row["PL"]
         if not pd.isna(pl) and pl > 0:
             # CF does NOT multiply — confidence is metadata only
-            aersi = (pl ** 0.50) * (epf ** 0.25) * (vsf ** 0.20)
+            aersi = (pl ** 0.50) * (epf ** 0.25) * (vsf ** 0.25)
         else:
             aersi = np.nan
 
