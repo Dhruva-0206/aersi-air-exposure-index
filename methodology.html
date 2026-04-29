@@ -138,8 +138,8 @@
             How AERSI Works
           </h1>
           <p style="color:var(--text2);margin-top:0.75rem;font-size:1rem;line-height:1.7;">
-            A complete reference for the AERSI v3 formula — covering pollution load,
-            persistence, variability, and data completeness. Designed to be
+            A complete reference for the AERSI formula — covering pollution load,
+            persistence, variability, and data confidence. Designed to be
             scientifically honest about what the data can and cannot tell us.
           </p>
         </div>
@@ -153,8 +153,8 @@
               <li><a href="#pl">Pollution Load (PL)</a></li>
               <li><a href="#epf">Persistence Factor (EPF)</a></li>
               <li><a href="#vsf">Variability Factor (VSF)</a></li>
-              <li><a href="#cf">Completeness Factor (CF)</a></li>
-              <li><a href="#baseline">Scoring & Confidence</a></li>
+              <li><a href="#cf">Data Confidence (CF)</a></li>
+              <li><a href="#baseline">Scoring & Bands</a></li>
               <li><a href="#design">Design Principles</a></li>
               <li><a href="#data">Data Sources</a></li>
             </ul>
@@ -164,7 +164,8 @@
 
             <section id="formula">
               <h2>Master Formula</h2>
-              <p>AERSI v3 uses a geometric weighted mean — four components raised to exponents that sum to 1.0. This means all dimensions matter together, and a station that performs badly in multiple dimensions scores more severely than one that is bad in only one.</p>
+              <!-- FIX 1: removed "four components summing to 1.0" — exponents are 0.95, CF is metadata -->
+              <p>AERSI uses a geometric weighted mean of three components — pollution burden, persistence, and variability — each raised to a calibrated exponent. A station that performs badly across multiple dimensions scores more severely than one that is bad in only one.</p>
 
               <div class="formula-block" style="font-size:1.15rem;margin:1.5rem 0;line-height:2;">
                 AERSI = PL<sup>0.50</sup> × EPF<sup>0.25</sup> × VSF<sup>0.20</sup>
@@ -173,7 +174,8 @@
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem;">
                 <div class="card" style="padding:1.25rem;">
                   <div class="label" style="margin-bottom:0.4rem;">PL — Pollution Load</div>
-                  <div style="font-size:0.83rem;color:var(--text2);">WHO-normalized, log-saturated weighted concentration across all present pollutants. Exponent 0.45 — largest single influence.</div>
+                  <!-- FIX 2: exponent changed from 0.45 to 0.50 -->
+                  <div style="font-size:0.83rem;color:var(--text2);">WHO-normalized, soft-saturated weighted concentration across all present pollutants. Exponent 0.50 — largest single influence.</div>
                 </div>
                 <div class="card" style="padding:1.25rem;">
                   <div class="label" style="margin-bottom:0.4rem;">EPF — Exposure Persistence</div>
@@ -184,13 +186,14 @@
                   <div style="font-size:0.83rem;color:var(--text2);">Median day-to-day AQI swing. Robust to single-day spikes. Captures unpredictability that std dev cannot. Exponent 0.20.</div>
                 </div>
                 <div class="card" style="padding:1.25rem;">
-                  <div class="label" style="margin-bottom:0.4rem;">CF — Completeness Factor</div>
+                  <div class="label" style="margin-bottom:0.4rem;">CF — Data Confidence</div>
+                  <!-- FIX 3: CF described as metadata only -->
                   <div style="font-size:0.83rem;color:var(--text2);">Data completeness score — pollutant coverage, day coverage, sensor quality. Shown as a confidence label alongside the score, not a score multiplier.</div>
                 </div>
               </div>
 
               <div class="info-box" style="margin-top:1.5rem;">
-                <strong>Baseline:</strong> A station at exactly WHO limits for all pollutants, zero exceedances, zero volatility, full data scores AERSI = 1.0. Every point above represents compounding exposure beyond the safety threshold.
+                <strong>Baseline:</strong> A station at exactly WHO limits for all pollutants, zero exceedances, and zero volatility scores AERSI = 1.0. Every point above represents compounding exposure beyond the safety threshold.
               </div>
             </section>
 
@@ -288,7 +291,7 @@
                 <p style="margin:0;font-size:0.95rem;"><em>How unpredictably does air quality swing day to day?</em></p>
               </div>
 
-              <p>Volatile air is dangerous in a specific way — acute spikes cause cardiovascular events, and people cannot adapt to swings they cannot predict. VSF v3 uses the <strong>median absolute day-to-day AQI change</strong> instead of standard deviation, which makes it robust to single sensor spikes or one unusual event.</p>
+              <p>Volatile air is dangerous in a specific way — acute spikes cause cardiovascular events, and people cannot adapt to swings they cannot predict. VSF uses the <strong>median absolute day-to-day AQI change</strong> instead of standard deviation, which makes it robust to single sensor spikes or one unusual event.</p>
 
               <div class="formula-block" style="font-size:0.95rem;margin:1.25rem 0;line-height:2.2;">
                 S = median(|AQI_t − AQI_{t−1}|)<br>
@@ -310,23 +313,24 @@
             </section>
 
             <section id="cf">
-              <h2>Data Completeness Factor (CF)</h2>
+              <h2>Data Confidence (CF)</h2>
               <div class="component-header">
                 <div class="component-tag">CF</div>
                 <p style="margin:0;font-size:0.95rem;"><em>How much can we trust this station's score?</em></p>
               </div>
 
-              <p>New in v3. A station with incomplete pollutant reporting or short history should not be presented with the same confidence as a fully observed one. CF explicitly penalizes gaps while keeping the score usable — not discarding sparse stations, but being honest about them.</p>
+              <!-- FIX 3: CF is metadata only, not a score multiplier -->
+              <p>A station with incomplete pollutant reporting or short history should not be presented with the same confidence as a fully observed one. CF_data is computed for every station and used to generate a confidence label shown alongside the score — it does not multiply into the AERSI score itself.</p>
 
               <div class="formula-block" style="font-size:0.9rem;margin:1.25rem 0;line-height:2.2;">
                 CF_pollutant = k / 5 &nbsp;&nbsp;&nbsp; (pollutants present out of 5)<br>
                 CF_day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= D_obs / 30 &nbsp; (days with data)<br>
                 CF_quality &nbsp;= 1.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (sensor metadata, pending)<br><br>
-                CF_data &nbsp;&nbsp;= 0.5 × CF_pollutant + 0.3 × CF_day + 0.2 × CF_quality<br>
-                CF_impact = 0.7 + 0.3 × CF_data
+                CF_data = 0.5 × CF_pollutant + 0.3 × CF_day + 0.2 × CF_quality
               </div>
 
-              <p>CF_impact ranges from 0.7 (a station with no data at all) to 1.0 (a perfectly complete station). This means even the worst data station retains 70% of its score — it is not zeroed out, but it is honestly penalized.</p>
+              <!-- FIX 3: removed CF_impact formula and "70% of score" language -->
+              <p>CF_data is stored alongside every station score and mapped to one of four confidence labels. This makes data quality visible to the reader without suppressing the score for stations in regions with limited sensor infrastructure.</p>
 
               <div class="info-box">CF_quality is set to 1.0 until sensor metadata becomes available in the CPCB data feed. When sensor uptime and anomaly flags are accessible, this will be computed from continuity scores.</div>
 
@@ -356,8 +360,8 @@
             </section>
 
             <section id="baseline">
-              <h2>Scoring & Confidence</h2>
-              <p>The reference baseline is preserved from earlier versions. A station at exactly WHO limits on all five pollutants, zero exceedances, zero volatility, and full data coverage scores AERSI = 1.0.</p>
+              <h2>Scoring & Bands</h2>
+              <p>The reference baseline is built into the formula. A station at exactly WHO limits on all five pollutants, with zero exceedances and zero volatility, scores AERSI = 1.0.</p>
 
               <div class="formula-block" style="margin:1.25rem 0;">
                 1.0^0.50 × 1.0^0.25 × 1.0^0.20 = 1.0
@@ -373,27 +377,29 @@
                   <tr><td style="color:#dc2626;font-family:var(--font-mono);">&gt; 2.0</td><td>Extreme</td><td>Severe, persistent, volatile — among the worst globally</td></tr>
                 </tbody>
               </table>
-                   <div class="info-box" style="margin-top:1.25rem;">Extreme reflects genuinely severe air quality by WHO standards. Indian cities regularly exceed WHO PM2.5 limits by 3–6× year-round. The Extreme band captures stations where pollution load, persistence, and volatility all compound simultaneously.</div>
-              
+
+              <div class="info-box" style="margin-top:1.25rem;">Extreme reflects genuinely severe air quality by WHO standards. Indian cities regularly exceed WHO PM2.5 limits by 3–6× year-round. The Extreme band captures stations where pollution load, persistence, and volatility all compound simultaneously.</div>
             </section>
 
             <section id="design">
               <h2>Design Principles</h2>
 
               <h3>Data honesty over false precision</h3>
-              <p>V3 explicitly penalizes incomplete data rather than silently ignoring it. A station with two pollutants and 15 days of history will score differently than a fully observed one — and that difference is visible in the confidence label shown alongside the score.</p>
+              <!-- FIX 4: CF doesn't penalize score, it flags confidence -->
+              <p>Incomplete data is flagged rather than silently ignored. A station with two pollutants and 15 days of history receives a lower confidence label than a fully observed one — making data quality visible to the reader without suppressing the score itself.</p>
 
               <h3>Robust to real-world data</h3>
-              <p>Indian monitoring data regularly has sensor downtime, missing pollutants, and station outages. Every design decision in v3 — weight renormalization, sqrt dampening, median absolute change — was chosen to degrade gracefully under these conditions rather than catastrophically.</p>
+              <p>Indian monitoring data regularly has sensor downtime, missing pollutants, and station outages. Every design decision — weight renormalization, sqrt dampening, median absolute change — was chosen to degrade gracefully under these conditions rather than catastrophically.</p>
 
               <h3>Each life matters equally</h3>
               <p>Population density does not modify AERSI. A remote industrial station with extreme scores is flagged identically to a dense urban one. AERSI measures exposure severity per person — not total public health burden.</p>
 
               <h3>Bounded and interpretable</h3>
-              <p>EPF is bounded 1.0–2.0. VSF is bounded 1.0–2.0. CF ranges 0.7–1.0. AERSI has a natural baseline of 1.0. No arbitrary normalization step distorts the output — the meaning is built into the mathematics.</p>
+              <p>EPF is bounded 1.0–2.0. VSF is bounded 1.0–2.0. AERSI has a natural baseline of 1.0. No arbitrary normalization step distorts the output — the meaning is built into the mathematics.</p>
 
               <h3>Improves over time</h3>
-              <p>As data accumulates, CF_day rises toward 1.0, EPF reaches full confidence, and VSF stabilizes on a longer sequence of day-to-day changes. The pipeline runs daily and scores become more trustworthy automatically.</p>
+              <!-- FIX 5: removed CF_day reference -->
+              <p>As data accumulates, EPF reaches full confidence and VSF stabilizes on a longer sequence of day-to-day changes. The pipeline runs daily and scores become more trustworthy automatically.</p>
 
               <h3>Remaining limitations</h3>
               <p>Pollutant weights are judgment-based pending empirical validation. Exponents are heuristic and should eventually be fitted against health outcome data. A publication-grade version should include uncertainty intervals. These are known limitations, not hidden ones.</p>
