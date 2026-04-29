@@ -245,7 +245,7 @@
           </div>
           <div class="about-card">
             <h3>🔬 The Approach</h3>
-            <p>Three components — Pollution Load, Exposure Persistence, and Variability Severity — combined multiplicatively to capture compounding risk. WHO-normalized, confidence-weighted, and bounded to remain interpretable.</p>
+            <p>Three components — Pollution Load, Exposure Persistence, and Variability Severity — combined in a geometric weighted mean. WHO-normalized, soft-saturated, and bounded to remain interpretable.</p>
           </div>
           <div class="about-card">
             <h3>📡 The Data</h3>
@@ -315,7 +315,7 @@
             <div class="pipe-icon">🧮</div>
             <div class="pipe-body">
               <h4>Compute AQI and AERSI</h4>
-              <p>CPCB sub-index AQI computed per station per day. Then PL, EPF, and VSF calculated and multiplied to produce each station's AERSI score.</p>
+              <p>CPCB sub-index AQI computed per station per day. Then PL, EPF, and VSF calculated using the AERSI formula to produce each station's score and confidence label.</p>
             </div>
           </div>
           <div class="pipeline-step">
