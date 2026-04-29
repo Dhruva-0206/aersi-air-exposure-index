@@ -33,15 +33,12 @@
     }
 
     .hero-map-preview iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      pointer-events: none;
+      width: 100%; height: 100%;
+      border: none; pointer-events: none;
     }
 
     .hero-map-mask {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: linear-gradient(to right, var(--bg) 0%, rgba(247,248,252,0.55) 45%, transparent 100%);
       pointer-events: none;
     }
@@ -51,17 +48,14 @@
     .hero-title .accent-word { color: var(--accent); font-style: italic; font-family: var(--font-serif); }
 
     .hero-sub {
-      font-size: 1.05rem;
-      color: var(--text2);
-      line-height: 1.78;
-      margin-bottom: 2.5rem;
-      max-width: 480px;
+      font-size: 1.05rem; color: var(--text2);
+      line-height: 1.78; margin-bottom: 2.5rem; max-width: 480px;
     }
 
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
     .hero-chips   { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
-    /* ── Stat strip ── */
+    /* Stat strip */
     .stat-strip {
       background: white;
       border-top: 1px solid var(--border2);
@@ -69,10 +63,7 @@
       padding: 2rem 0;
     }
 
-    .stat-strip-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-    }
+    .stat-strip-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
 
     .stat-strip-item {
       padding: 0 2rem;
@@ -82,27 +73,20 @@
     .stat-strip-item:first-child { padding-left: 0; }
     .stat-strip-item:last-child  { border-right: none; }
 
-    /* ── Why cards ── */
+    /* Why cards */
     .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 
     .why-card {
-      background: white;
-      border: 1px solid var(--border2);
-      border-radius: var(--radius);
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
+      background: white; border: 1px solid var(--border2);
+      border-radius: var(--radius); padding: 2rem;
+      position: relative; overflow: hidden;
       transition: all var(--t) var(--ease);
     }
 
     .why-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
       background: linear-gradient(90deg, var(--accent), var(--teal));
-      transform: scaleX(0);
-      transform-origin: left;
+      transform: scaleX(0); transform-origin: left;
       transition: transform 0.4s var(--ease);
     }
 
@@ -110,10 +94,8 @@
     .why-card:hover::before { transform: scaleX(1); }
 
     .why-icon {
-      width: 44px; height: 44px;
-      background: var(--accent-soft);
-      border: 1px solid var(--accent-mid);
-      border-radius: 10px;
+      width: 44px; height: 44px; background: var(--accent-soft);
+      border: 1px solid var(--accent-mid); border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.2rem; margin-bottom: 1.25rem;
     }
@@ -121,16 +103,13 @@
     .why-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
     .why-card p  { font-size: 0.875rem; color: var(--text2); line-height: 1.7; }
 
-    /* ── Score guide ── */
+    /* Score guide */
     .score-guide { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
 
     .score-item {
-      background: white;
-      border: 1.5px solid var(--border2);
-      border-radius: var(--radius);
-      padding: 1.5rem 1rem;
-      text-align: center;
-      transition: all var(--t) var(--ease);
+      background: white; border: 1.5px solid var(--border2);
+      border-radius: var(--radius); padding: 1.5rem 1rem;
+      text-align: center; transition: all var(--t) var(--ease);
     }
 
     .score-item:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
@@ -138,21 +117,15 @@
     .score-range { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text3); margin-bottom: 0.35rem; }
     .score-name  { font-size: 0.875rem; font-weight: 700; }
 
-    /* ── Bottom ── */
+    /* Bottom grid */
     .bottom-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
 
     .station-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.875rem 1rem;
-      background: white;
-      border: 1px solid var(--border2);
-      border-radius: var(--radius-sm);
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.875rem 1rem; background: white;
+      border: 1px solid var(--border2); border-radius: var(--radius-sm);
       transition: all var(--t) var(--ease);
-      min-width: 0;
-      width: 100%;
-      box-sizing: border-box;
+      min-width: 0; width: 100%; box-sizing: border-box;
     }
 
     .station-row:hover { border-color: var(--border3); box-shadow: 0 4px 16px rgba(13,110,253,0.07); }
@@ -166,17 +139,11 @@
     .formula-cards { display: flex; flex-direction: column; gap: 0.75rem; }
 
     .formula-comp {
-      background: white;
-      border: 1px solid var(--border2);
-      border-radius: var(--radius-sm);
-      padding: 1rem 1.25rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
+      background: white; border: 1px solid var(--border2);
+      border-radius: var(--radius-sm); padding: 1rem 1.25rem;
+      display: flex; gap: 1rem; align-items: flex-start;
       transition: all var(--t) var(--ease);
-      min-width: 0;
-      width: 100%;
-      box-sizing: border-box;
+      min-width: 0; width: 100%; box-sizing: border-box;
     }
 
     .formula-comp:hover { border-color: var(--accent-mid); background: var(--accent-soft); }
@@ -188,7 +155,34 @@
       padding: 0.2rem 0.5rem; flex-shrink: 0; margin-top: 2px;
     }
 
-    /* ── Mobile ── */
+    /* Formula display — readable on all screens */
+    .formula-display {
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-mid);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+    }
+
+    .formula-display-main {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .formula-display-sub {
+      font-size: 0.75rem;
+      color: var(--text3);
+      margin-top: 0.4rem;
+      font-family: var(--font-mono);
+    }
+
+    /* Mobile */
     @media (max-width: 900px) {
       .hero { height: auto; min-height: unset; padding: 3rem 0; }
       .hero-map-preview { display: none; }
@@ -199,37 +193,15 @@
       .score-guide { grid-template-columns: repeat(3, 1fr); }
       .bottom-grid { grid-template-columns: 1fr; gap: 2rem; }
 
-      /* Stat strip: 2x2 + 1 layout */
-      .stat-strip-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
-      }
-
-      .stat-strip-item {
-        padding: 1.25rem;
-        border-right: 1px solid var(--border2);
-        border-bottom: 1px solid var(--border2);
-      }
-
-      /* Reset first-child override so padding is consistent */
+      .stat-strip-grid { grid-template-columns: 1fr 1fr; gap: 0; }
+      .stat-strip-item { padding: 1.25rem; border-right: 1px solid var(--border2); border-bottom: 1px solid var(--border2); }
       .stat-strip-item:first-child { padding-left: 1.25rem; }
-
-      /* Right column items: no right border */
       .stat-strip-item:nth-child(2),
       .stat-strip-item:nth-child(4) { border-right: none; }
+      .stat-strip-item:nth-child(5) { grid-column: 1 / -1; border-bottom: none; border-right: none; text-align: center; }
 
-      /* Last item: no bottom border, span full width */
-      .stat-strip-item:nth-child(5) {
-        grid-column: 1 / -1;
-        border-bottom: none;
-        border-right: none;
-        text-align: center;
-      }
-
-      /* Hide score on mobile — not enough space */
       .station-score { display: none; }
-      /* Formula block — shrink font so it fits */
-      .formula-block { font-size: 0.85rem; letter-spacing: 0.02em; }
+      .formula-display-main { font-size: 0.82rem; }
       .formula-comp > div:last-child { min-width: 0; overflow: hidden; }
       .formula-comp > div:last-child div { white-space: normal; word-break: break-word; }
     }
@@ -244,10 +216,7 @@
       <div class="hero-map-preview" onclick="window.location.href='map.html'" title="Click to explore live map">
         <iframe
           src="outputs/aersi_map.html"
-          tabindex="-1"
-          scrolling="no"
-          aria-hidden="true"
-          loading="lazy"
+          tabindex="-1" scrolling="no" aria-hidden="true" loading="lazy"
           onload="try{this.contentDocument.head.insertAdjacentHTML('beforeend','<style>#aersi-legend,#aersi-status{display:none!important}.leaflet-control-layers,.leaflet-control-zoom{display:none!important}</style>')}catch(e){}"
         ></iframe>
         <div class="hero-map-mask"></div>
@@ -259,7 +228,6 @@
             Air Exposure<br>
             <span class="accent-word">Severity</span> Index
           </h1>
-
           <p class="hero-sub">
             AERSI moves beyond snapshot AQI to measure how
             <strong>intense</strong>, <strong>persistent</strong>, and
@@ -267,16 +235,14 @@
             across <span id="hero-station-count">547</span> stations in India,
             updated every single day.
           </p>
-
           <div class="hero-actions">
             <a href="map.html" class="btn btn-primary btn-lg">Explore Live Map →</a>
             <a href="why.html" class="btn btn-outline btn-lg">Why AERSI?</a>
           </div>
-
           <div class="hero-chips">
             <span class="chip">📊 WHO-normalized PL</span>
-            <span class="chip">📅 Persistence × Data Weight</span>
-            <span class="chip">📈 Median-robust VSF · CF</span>
+            <span class="chip">📅 30-day Persistence</span>
+            <span class="chip">📈 Median-robust VSF</span>
           </div>
         </div>
       </div>
@@ -367,12 +333,12 @@
           </div>
           <div class="score-item">
             <div class="score-dot" style="background:#ea580c;box-shadow:0 0 10px rgba(234,88,12,0.35);"></div>
-            <div class="score-range">1.5 – 2.2</div>
+            <div class="score-range">1.5 – 2.0</div>
             <div class="score-name aersi-high">High</div>
           </div>
           <div class="score-item">
             <div class="score-dot" style="background:#dc2626;box-shadow:0 0 10px rgba(220,38,38,0.35);"></div>
-            <div class="score-range">&gt; 2.2</div>
+            <div class="score-range">&gt; 2.0</div>
             <div class="score-name aersi-extreme">Extreme</div>
           </div>
         </div>
@@ -402,9 +368,12 @@
               <span class="label">Formula</span>
               <h2 class="display display-md" style="margin-top:0.4rem;">How It's Computed</h2>
             </div>
-            <div class="formula-block" style="margin-bottom:1.25rem;font-size:1.1rem;overflow:hidden;">
-              AERSI = PL⁰·⁴⁵ × EPF⁰·²⁵ × VSF⁰·²⁰ × CF
+
+            <div class="formula-display">
+              <div class="formula-display-main">AERSI = PL<sup>0.50</sup> × EPF<sup>0.25</sup> × VSF<sup>0.20</sup></div>
+              <div class="formula-display-sub">WHO-normalized · 30-day rolling · tanh-bounded</div>
             </div>
+
             <div class="formula-cards">
               <div class="formula-comp">
                 <span class="formula-tag">PL</span>
@@ -417,14 +386,14 @@
                 <span class="formula-tag">EPF</span>
                 <div style="min-width:0;">
                   <div style="font-weight:600;font-size:0.875rem;color:var(--text);">Exposure Persistence Factor</div>
-                  <div style="font-size:0.8rem;color:var(--text2);margin-top:2px;">How often AQI exceeds 100, confidence-weighted over 30 days</div>
+                  <div style="font-size:0.8rem;color:var(--text2);margin-top:2px;">How often AQI exceeds 100 over 30 days</div>
                 </div>
               </div>
               <div class="formula-comp">
                 <span class="formula-tag">VSF</span>
                 <div style="min-width:0;">
                   <div style="font-weight:600;font-size:0.875rem;color:var(--text);">Variability Severity Factor</div>
-                  <div style="font-size:0.8rem;color:var(--text2);margin-top:2px;">Bounded volatility via tanh — always between 1.0 and 2.0</div>
+                  <div style="font-size:0.8rem;color:var(--text2);margin-top:2px;">Median day-to-day AQI swing, tanh-bounded</div>
                 </div>
               </div>
             </div>
@@ -454,8 +423,8 @@
 
       if (!valid.length) return;
 
-      const extreme = valid.filter(d => d.AERSI >= 2.2).length;
-      const high    = valid.filter(d => d.AERSI >= 1.5 && d.AERSI < 2.2).length;
+      const extreme = valid.filter(d => d.AERSI >= 2.0).length;
+      const high    = valid.filter(d => d.AERSI >= 1.5 && d.AERSI < 2.0).length;
       const clean   = valid.filter(d => d.AERSI < 0.6).length;
       const avg     = valid.reduce((s, d) => s + d.AERSI, 0) / valid.length;
 
@@ -465,6 +434,10 @@
       document.getElementById('stat-avg').textContent      = avg.toFixed(2);
       document.getElementById('stat-clean').textContent    = clean;
       document.getElementById('hero-station-count').textContent = valid.length;
+
+      // Update nav station count too
+      const navCount = document.getElementById('nav-station-count');
+      if (navCount) navCount.textContent = valid.length;
 
       const top10 = [...valid].sort((a, b) => b.AERSI - a.AERSI).slice(0, 10);
       document.getElementById('top-stations').innerHTML = top10.map((s, i) => {

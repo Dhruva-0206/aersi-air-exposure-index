@@ -108,23 +108,6 @@
     .weight-bar { height: 100%; border-radius: 3px; }
     .weight-val { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); width: 40px; text-align: right; }
 
-    .v3-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.2rem 0.6rem;
-      background: var(--accent-soft);
-      border: 1px solid var(--accent-mid);
-      border-radius: 100px;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      vertical-align: middle;
-      margin-left: 0.5rem;
-    }
-
     .confidence-row {
       display: flex;
       align-items: center;
@@ -153,7 +136,6 @@
           <span class="label">Methodology</span>
           <h1 class="display display-lg" style="margin-top:0.5rem;">
             How AERSI Works
-            <span class="v3-badge">v3</span>
           </h1>
           <p style="color:var(--text2);margin-top:0.75rem;font-size:1rem;line-height:1.7;">
             A complete reference for the AERSI v3 formula — covering pollution load,
@@ -185,7 +167,7 @@
               <p>AERSI v3 uses a geometric weighted mean — four components raised to exponents that sum to 1.0. This means all dimensions matter together, and a station that performs badly in multiple dimensions scores more severely than one that is bad in only one.</p>
 
               <div class="formula-block" style="font-size:1.15rem;margin:1.5rem 0;line-height:2;">
-                AERSI<sub>v3</sub> = PL<sup>0.45</sup> × EPF<sup>0.25</sup> × VSF<sup>0.20</sup> × CF
+                AERSI = PL<sup>0.50</sup> × EPF<sup>0.25</sup> × VSF<sup>0.20</sup>
               </div>
 
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem;">
@@ -203,7 +185,7 @@
                 </div>
                 <div class="card" style="padding:1.25rem;">
                   <div class="label" style="margin-bottom:0.4rem;">CF — Completeness Factor</div>
-                  <div style="font-size:0.83rem;color:var(--text2);">Direct multiplier on data quality — pollutant coverage, day coverage, sensor quality. Ranges 0.7–1.0. New in v3.</div>
+                  <div style="font-size:0.83rem;color:var(--text2);">Data completeness score — pollutant coverage, day coverage, sensor quality. Shown as a confidence label alongside the score, not a score multiplier.</div>
                 </div>
               </div>
 
@@ -378,21 +360,21 @@
               <p>The reference baseline is preserved from earlier versions. A station at exactly WHO limits on all five pollutants, zero exceedances, zero volatility, and full data coverage scores AERSI = 1.0.</p>
 
               <div class="formula-block" style="margin:1.25rem 0;">
-                1.0^0.45 × 1.0^0.25 × 1.0^0.20 × (0.7 + 0.3×1.0) = 1.0
+                1.0^0.50 × 1.0^0.25 × 1.0^0.20 = 1.0
               </div>
 
               <table class="data-table" style="margin-top:1rem;">
                 <thead><tr><th>AERSI</th><th>Category</th><th>Meaning</th></tr></thead>
                 <tbody>
-                  <tr><td style="color:#16a34a;font-family:var(--font-mono);">&lt; 0.8</td><td>Very Low</td><td>Cleaner than WHO guidelines across all dimensions</td></tr>
-                  <tr><td style="color:#65a30d;font-family:var(--font-mono);">0.8 – 1.2</td><td>Low</td><td>Near the safety threshold, mostly acceptable</td></tr>
-                  <tr><td style="color:#d97706;font-family:var(--font-mono);">1.2 – 2.0</td><td>Moderate</td><td>Regular exceedance — concerning for sensitive groups</td></tr>
-                  <tr><td style="color:#ea580c;font-family:var(--font-mono);">2.0 – 3.0</td><td>High</td><td>Persistent exposure risk for general population</td></tr>
-                  <tr><td style="color:#dc2626;font-family:var(--font-mono);">&gt; 3.0</td><td>Extreme</td><td>Severe, persistent, volatile — among the worst globally</td></tr>
+                  <tr><td style="color:#16a34a;font-family:var(--font-mono);">&lt; 0.6</td><td>Very Low</td><td>Cleaner than WHO guidelines across all dimensions</td></tr>
+                  <tr><td style="color:#65a30d;font-family:var(--font-mono);">0.6 – 1.0</td><td>Low</td><td>Near the safety threshold, mostly acceptable</td></tr>
+                  <tr><td style="color:#d97706;font-family:var(--font-mono);">1.0 – 1.5</td><td>Moderate</td><td>Regular exceedance — concerning for sensitive groups</td></tr>
+                  <tr><td style="color:#ea580c;font-family:var(--font-mono);">1.5 – 2.0</td><td>High</td><td>Persistent exposure risk for general population</td></tr>
+                  <tr><td style="color:#dc2626;font-family:var(--font-mono);">&gt; 2.0</td><td>Extreme</td><td>Severe, persistent, volatile — among the worst globally</td></tr>
                 </tbody>
               </table>
-
-              <div class="info-box" style="margin-top:1.25rem;">Extreme is intentionally hard to reach. In real-world testing against CPCB data, only stations like Ghaziabad Loni in peak winter reach this threshold. If many stations score Extreme, the label loses its meaning.</div>
+                   <div class="info-box" style="margin-top:1.25rem;">Extreme reflects genuinely severe air quality by WHO standards. Indian cities regularly exceed WHO PM2.5 limits by 3–6× year-round. The Extreme band captures stations where pollution load, persistence, and volatility all compound simultaneously.</div>
+              
             </section>
 
             <section id="design">
