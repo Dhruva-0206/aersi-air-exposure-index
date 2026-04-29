@@ -111,8 +111,8 @@
             <div class="legend-item"><div class="legend-dot" style="background:#16a34a;"></div> Very Low &lt;0.6</div>
             <div class="legend-item"><div class="legend-dot" style="background:#65a30d;"></div> Low 0.6–1.0</div>
             <div class="legend-item"><div class="legend-dot" style="background:#d97706;"></div> Moderate 1.0–1.5</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#ea580c;"></div> High 1.5–2.2</div>
-            <div class="legend-item"><div class="legend-dot" style="background:#dc2626;"></div> Extreme &gt;2.2</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#ea580c;"></div> High 1.5–2.0</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#dc2626;"></div> Extreme &gt;2.0</div>
           </div>
       </div>
 
@@ -140,7 +140,7 @@
       const data = await loadStationData();
       if (data.length) {
         document.getElementById('map-meta').textContent =
-          `${data.length} stations · AERSI = PL × EPF × VSF · Updated daily 10:30 AM IST`;
+          `${data.length} stations · AERSI = PL⁰·⁵⁰ × EPF⁰·²⁵ × VSF⁰·²⁵ · Updated daily 10:30 AM IST`;
       }
     }
     initMap();
