@@ -2,7 +2,7 @@ function renderNav() {
   return `
   <nav class="nav">
     <a href="index.html" class="nav-brand">
-      <span class="nav-brand-mark">AE</span>
+      <img src="logo.png" alt="AERSI" style="width:32px;height:32px;border-radius:8px;object-fit:cover;">
       AERSI
     </a>
     <ul class="nav-links">
@@ -30,7 +30,7 @@ function renderFooter() {
       <div class="footer-grid">
         <div>
           <div class="footer-brand">
-            <span class="footer-brand-mark">AE</span>
+            <img src="logo.png" alt="AERSI" style="width:32px;height:32px;border-radius:8px;object-fit:cover;">
             AERSI
           </div>
           <p class="footer-desc">
