@@ -91,9 +91,6 @@ while True:
     page   += 1
     time.sleep(5)
 
-    # Small pause between pages to avoid rate limiting
-    time.sleep(5)
-
 print(f"Total records fetched: {len(all_records)}")
 
 if not all_records:
