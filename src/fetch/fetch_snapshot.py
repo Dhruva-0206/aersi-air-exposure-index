@@ -5,6 +5,7 @@ Skips gracefully if today's snapshot already exists.
 """
 
 import os
+import time
 import requests
 import pandas as pd
 from datetime import datetime, timezone
@@ -48,7 +49,7 @@ offset = 0
 page   = 1
 
 while True:
-    for attempt in range(3):
+    for attempt in range(5):
         try:
             response = requests.get(
                 BASE_URL,
@@ -61,15 +62,17 @@ while True:
                 timeout=90,
             )
             if response.status_code in (502, 503, 504):
-                print(f"  HTTP {response.status_code} on page {page}, attempt {attempt + 1}/3 — retrying...")
-                if attempt == 2:
-                    raise RuntimeError(f"API returned {response.status_code} three times on page {page}.")
+                print(f"  HTTP {response.status_code} on page {page}, attempt {attempt + 1}/5 — retrying in 60s...")
+                if attempt == 4:
+                    raise RuntimeError(f"API returned {response.status_code} five times on page {page}.")
+                time.sleep(60)
                 continue
             break
         except requests.exceptions.ReadTimeout:
-            print(f"  Timeout on page {page}, attempt {attempt + 1}/3 — retrying...")
-            if attempt == 2:
-                raise RuntimeError("API timed out 3 times in a row. Try again later.")
+            print(f"  Timeout on page {page}, attempt {attempt + 1}/5 — retrying in 30s...")
+            if attempt == 4:
+                raise RuntimeError("API timed out 5 times in a row. Try again later.")
+            time.sleep(30)
 
     if response.status_code != 200:
         raise RuntimeError(
@@ -86,6 +89,9 @@ while True:
     print(f"  Page {page}: {len(records)} records")
     offset += PAGE_SIZE
     page   += 1
+
+    # Small pause between pages to avoid rate limiting
+    time.sleep(5)
 
 print(f"Total records fetched: {len(all_records)}")
 
