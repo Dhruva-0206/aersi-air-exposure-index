@@ -89,6 +89,7 @@ while True:
     print(f"  Page {page}: {len(records)} records")
     offset += PAGE_SIZE
     page   += 1
+    time.sleep(5)
 
     # Small pause between pages to avoid rate limiting
     time.sleep(5)

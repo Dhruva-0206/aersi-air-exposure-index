@@ -1,12 +1,13 @@
 """
 AERSI Daily Pipeline Orchestrator
 Runs all steps in order, logs results, exits cleanly on failure.
+Fetch step is non-fatal: falls back to the most recent snapshot within 3 days.
 """
 
 import subprocess
 import sys
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # ── Logging setup ────────────────────────────────────────────────────────────
@@ -28,6 +29,8 @@ logging.basicConfig(
 )
 log = logging.getLogger("pipeline")
 
+SNAPSHOT_DIR = Path("data/snapshots")
+
 # ── Steps ────────────────────────────────────────────────────────────────────
 
 STEPS = [
@@ -38,6 +41,38 @@ STEPS = [
     ("Build interactive map",        "src/map/build_map.py"),
 ]
 
+# ── Helpers ──────────────────────────────────────────────────────────────────
+
+def find_recent_snapshot(max_days_back: int = 3) -> Path | None:
+    """Return the most recent snapshot file within max_days_back days, or None."""
+    today_date = datetime.now(timezone.utc).date()
+    for delta in range(max_days_back + 1):
+        candidate = today_date - timedelta(days=delta)
+        f = SNAPSHOT_DIR / f"cpcb_snapshot_{candidate}.csv"
+        if f.exists():
+            return f
+    return None
+
+def run_step(label: str, script: str) -> bool:
+    """Run a pipeline step. Returns True on success, False on failure."""
+    log.info(f"STEP: {label}")
+    result = subprocess.run(
+        [sys.executable, script],
+        capture_output=True,
+        text=True,
+    )
+    if result.stdout.strip():
+        for line in result.stdout.strip().splitlines():
+            log.info(f"  {line}")
+    if result.returncode != 0:
+        log.error(f"FAILED: {script}")
+        if result.stderr.strip():
+            for line in result.stderr.strip().splitlines():
+                log.error(f"  {line}")
+        return False
+    log.info(f"  OK\n")
+    return True
+
 # ── Run ──────────────────────────────────────────────────────────────────────
 
 def main():
@@ -45,30 +80,28 @@ def main():
     log.info(f"AERSI pipeline started  —  {today}")
     log.info("=" * 60)
 
-    python = sys.executable
-
     for label, script in STEPS:
-        log.info(f"STEP: {label}")
+        success = run_step(label, script)
 
-        result = subprocess.run(
-            [python, script],
-            capture_output=True,
-            text=True,
-        )
-
-        if result.stdout.strip():
-            for line in result.stdout.strip().splitlines():
-                log.info(f"  {line}")
-
-        if result.returncode != 0:
-            log.error(f"FAILED: {script}")
-            if result.stderr.strip():
-                for line in result.stderr.strip().splitlines():
-                    log.error(f"  {line}")
-            log.error("Pipeline halted.")
-            sys.exit(1)
-
-        log.info(f"  OK\n")
+        if not success:
+            # Fetch failure is non-fatal if a recent snapshot exists
+            if script == "src/fetch/fetch_snapshot.py":
+                fallback = find_recent_snapshot(max_days_back=3)
+                if fallback:
+                    log.warning(
+                        f"Fetch failed — falling back to most recent snapshot: {fallback.name}"
+                    )
+                    log.warning(
+                        "Downstream steps will use this snapshot. Score freshness may be 1-3 days old."
+                    )
+                    log.info(f"  OK (fallback)\n")
+                else:
+                    log.error("Fetch failed and no recent snapshot found within 3 days.")
+                    log.error("Pipeline halted.")
+                    sys.exit(1)
+            else:
+                log.error("Pipeline halted.")
+                sys.exit(1)
 
     log.info("=" * 60)
     log.info("Pipeline completed successfully")

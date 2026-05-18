@@ -10,15 +10,16 @@ on:
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
       contents: write  # needed to commit snapshot data back to repo
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -31,6 +32,7 @@ jobs:
         run: python src/pipeline.py
 
       - name: Commit new snapshot and outputs
+        continue-on-error: false
         run: |
           git config user.name  "aersi-bot"
           git config user.email "aersi-bot@users.noreply.github.com"
