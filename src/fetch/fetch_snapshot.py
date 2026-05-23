@@ -48,6 +48,13 @@ all_records = []
 offset = 0
 page   = 1
 
+# Add browser-like headers to avoid being blocked by data.gov.in
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
 while True:
     for attempt in range(5):
         try:
@@ -59,13 +66,17 @@ while True:
                     "limit":   PAGE_SIZE,
                     "offset":  offset,
                 },
+                headers=headers,
                 timeout=90,
             )
-            if response.status_code in (502, 503, 504):
-                print(f"  HTTP {response.status_code} on page {page}, attempt {attempt + 1}/5 — retrying in 60s...")
+            if response.status_code in (429, 502, 503, 504):
+                retry_after = 120
+                if response.status_code == 429:
+                    retry_after = int(response.headers.get("Retry-After", 120))
+                print(f"  HTTP {response.status_code} on page {page}, attempt {attempt + 1}/5 — retrying in {retry_after}s...")
                 if attempt == 4:
                     raise RuntimeError(f"API returned {response.status_code} five times on page {page}.")
-                time.sleep(60)
+                time.sleep(retry_after)
                 continue
             break
         except requests.exceptions.ReadTimeout:
