@@ -213,7 +213,8 @@ print("Score distribution:")
 for label, lo, hi in BANDS:
     count = ((valid["AERSI"] >= lo) & (valid["AERSI"] < hi)).sum()
     pct   = 100 * count / len(valid) if len(valid) else 0
-    print(f"  {label:10s} ({lo}–{hi if hi < 9999 else '∞':>5}) : {count:4d} ({pct:.1f}%)")
+    upper = str(hi) if hi < 9999 else "inf"
+    print(f"  {label:10s} ({lo}–{upper:>5}) : {count:4d} ({pct:.1f}%)")
 
 print()
 print("Confidence (metadata):")
