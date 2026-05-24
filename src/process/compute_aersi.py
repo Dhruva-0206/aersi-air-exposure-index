@@ -53,11 +53,11 @@ WHO_LIMITS = {
 }
 
 WEIGHTS = {
-    "PM2.5": 0.35,
-    "PM10":  0.25,
-    "NO2":   0.15,
-    "OZONE": 0.15,
-    "SO2":   0.10,
+    "PM2.5": 0.40,   # GBD 2019 India: ambient PM2.5 = 31.1M DALYs (dominant share)
+    "PM10":  0.20,   # Coarse PM respiratory morbidity literature
+    "NO2":   0.15,   # Global IER comparative risk — unchanged
+    "OZONE": 0.15,   # GBD 2019 India: ambient ozone = 3.06M DALYs — unchanged
+    "SO2":   0.10,   # Global comparative risk — unchanged
 }
 
 CORE_POLLUTANTS = set(WEIGHTS.keys())

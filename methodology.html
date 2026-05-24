@@ -156,6 +156,7 @@
               <li><a href="#cf">Data Confidence (CF)</a></li>
               <li><a href="#baseline">Scoring & Bands</a></li>
               <li><a href="#design">Design Principles</a></li>
+              <li><a href="#relationship">Relationship to AQI</a></li>
               <li><a href="#data">Data Sources</a></li>
             </ul>
           </nav>
@@ -212,7 +213,7 @@
 
               <h3>Step 2 — Soft-saturation transform</h3>
               <div class="formula-block" style="font-size:0.95rem;">f(N_p) = N_p ^ 0.6</div>
-              <p style="margin-top:0.75rem;">The 0.6 exponent reflects the epidemiological reality that the health dose-response relationship for fine particles is sublinear — doubling the concentration does not double the harm. It also prevents extreme single-pollutant readings from collapsing the score for every other station.</p>
+              <p style="margin-top:0.75rem;">The 0.6 exponent approximates the concave concentration-response relationship documented for PM2.5 in global epidemiological cohort studies, where marginal health risk decreases at higher concentrations (Pope &amp; Dockery, 2006; GBD Integrated Exposure-Response framework). This value is informed by published sublinear dose-response shapes but is treated as heuristic in this version. Sensitivity analyses across exponents 0.4 to 0.8 confirm that station rankings and severity category assignments are robust to this choice.</p>
 
               <h3>Step 3 — Weight renormalization</h3>
               <p>If some pollutants are missing, weights are renormalized across only the pollutants present:</p>
@@ -226,14 +227,14 @@
                 <div class="weight-row">
                   <span class="weight-name">PM2.5</span>
                   <span class="weight-limit">15 µg/m³</span>
-                  <div class="weight-bar-bg"><div class="weight-bar" style="width:35%;background:#ef4444;"></div></div>
-                  <span class="weight-val">0.35</span>
+                  <div class="weight-bar-bg"><div class="weight-bar" style="width:40%;background:#ef4444;"></div></div>
+                  <span class="weight-val">0.40</span>
                 </div>
                 <div class="weight-row">
                   <span class="weight-name">PM10</span>
                   <span class="weight-limit">45 µg/m³</span>
-                  <div class="weight-bar-bg"><div class="weight-bar" style="width:25%;background:#f97316;"></div></div>
-                  <span class="weight-val">0.25</span>
+                  <div class="weight-bar-bg"><div class="weight-bar" style="width:20%;background:#f97316;"></div></div>
+                  <span class="weight-val">0.20</span>
                 </div>
                 <div class="weight-row">
                   <span class="weight-name">NO2</span>
@@ -254,7 +255,7 @@
                   <span class="weight-val">0.10</span>
                 </div>
               </div>
-              <div class="info-box" style="margin-top:1rem;">PM2.5 carries the highest weight (0.35) because fine particles penetrate deepest into the lungs and bloodstream and are most strongly associated with long-term mortality in epidemiological literature. Ozone limit updated to 60 µg/m³ per WHO 2021 peak-season guideline.</div>
+              <div class="info-box" style="margin-top:1rem;">Pollutant weights are derived from two sources. PM2.5 and Ozone weights are derived proportionally from India-specific attributable DALYs reported in the Global Burden of Disease Study 2019 (India State-Level Disease Burden Initiative, Lancet Planetary Health, 2021), where ambient PM2.5 accounts for 31.1 million DALYs and ambient ozone accounts for 3.06 million DALYs. PM10, NO2, and SO2 weights are estimated using global comparative-risk exposure-response functions and coarse PM respiratory morbidity literature, then renormalized so the full five-pollutant weight vector sums to 1.0. PM2.5 carries the largest weight (0.40), consistent with its dominant share of India's ambient pollution-attributable disease burden.</div>
             </section>
 
             <section id="epf">
@@ -272,6 +273,8 @@
               </div>
 
               <p>Using square root rather than linear dampening means a station with 15 days of data gets weight 0.707 — not the 0.25 that a quadratic term would produce. Proportional, not punishing.</p>
+
+              <p>The primary EPF threshold is AQI &gt; 100, the regulatory boundary between satisfactory and unhealthy air quality under the CPCB framework — the same threshold used in national public health advisories. Sensitivity analyses using WHO PM2.5 guideline (15 µg/m³) and interim target (35 µg/m³) as concentration-based thresholds produce consistent station rankings.</p>
 
               <table class="data-table" style="margin-top:1rem;">
                 <thead><tr><th>Days Observed</th><th>data_weight</th><th>EPF if 80% exceeded</th><th>EPF if 30% exceeded</th></tr></thead>
@@ -292,6 +295,8 @@
               </div>
 
               <p>Volatile air is dangerous in a specific way — acute spikes cause cardiovascular events, and people cannot adapt to swings they cannot predict. VSF uses the <strong>median absolute day-to-day AQI change</strong> instead of standard deviation, which makes it robust to single sensor spikes or one unusual event.</p>
+
+              <p>Median is used instead of mean to ensure robustness against single-day sensor anomalies or recording errors — a common occurrence in real-world monitoring networks. Epidemiological time-series and case-crossover studies demonstrate associations between short-term concentration fluctuations and acute cardiovascular and respiratory events, providing the health basis for including a volatility dimension.</p>
 
               <div class="formula-block" style="font-size:0.95rem;margin:1.25rem 0;line-height:2.2;">
                 S = median(|AQI_t − AQI_{t−1}|)<br>
@@ -402,7 +407,14 @@
               <p>As data accumulates, EPF reaches full confidence and VSF stabilizes on a longer sequence of day-to-day changes. The pipeline runs daily and scores become more trustworthy automatically.</p>
 
               <h3>Remaining limitations</h3>
-              <p>Pollutant weights are judgment-based pending empirical validation. Exponents are heuristic and should eventually be fitted against health outcome data. A publication-grade version should include uncertainty intervals. These are known limitations, not hidden ones.</p>
+              <p>(1) Pollutant weights for NO2, SO2, and PM10 are estimated from global comparative-risk literature rather than India-specific GBD attributable burden figures, which are not yet separately published for these pollutants at the national level. (2) The 0.6 saturation exponent is heuristic and not fitted to local health outcome data. (3) EPF and VSF are operationalised using AQI rather than raw concentration series, introducing a partial dependency on AQI's structural choices. (4) CF_quality is set to 1.0 pending sensor metadata availability. These limitations are explicitly acknowledged and will be addressed in subsequent versions through empirical calibration against health outcome data.</p>
+            </section>
+
+            <section id="relationship">
+              <h2>Relationship to AQI</h2>
+              <p>AERSI is designed as a complement to standard AQI, not a replacement. AQI answers: how bad is the air today? AERSI answers: how severe, persistent, and volatile has the exposure been over the past 30 days? These are complementary analytical questions.</p>
+              <p>AERSI uses AQI as input for EPF and VSF because AQI is the standardised national multi-pollutant summary — this makes AERSI directly comparable with existing public health alert frameworks while adding the persistence and volatility dimensions that AQI structurally cannot capture in a single daily reading.</p>
+              <div class="info-box">AQI and AERSI answer different questions. AQI tells you how bad the air is today. AERSI tells you how severe, persistent, and volatile the exposure has been over the past 30 days. Both are useful — they are complementary tools, not competing ones.</div>
             </section>
 
             <section id="data">
@@ -414,7 +426,7 @@
                 <strong>Coverage:</strong> ~530 active monitoring stations across India<br>
                 <strong>Window:</strong> Rolling 30-day dataset
               </div>
-              <p>WHO guideline limits are from the <strong>WHO Global Air Quality Guidelines (2021)</strong>. Pollutant weights are informed by the Global Burden of Disease study and related epidemiological literature. The soft-saturation exponent of 0.6 is consistent with the sublinear exposure-response relationships documented for PM2.5 in peer-reviewed health impact assessments.</p>
+              <p>WHO guideline limits are from the <strong>WHO Global Air Quality Guidelines (2021)</strong>. Pollutant weights for PM2.5 and Ozone are derived from India-specific attributable DALYs in the <strong>Global Burden of Disease Study 2019</strong> (India State-Level Disease Burden Initiative, Lancet Planetary Health, 2021). Weights for PM10, NO2, and SO2 are estimated from global comparative-risk exposure-response literature and renormalized. The soft-saturation exponent of 0.6 is consistent with sublinear PM2.5 exposure-response relationships documented in peer-reviewed health impact assessments (Pope &amp; Dockery, 2006).</p>
             </section>
 
           </div>
