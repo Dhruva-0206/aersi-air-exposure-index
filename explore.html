@@ -150,7 +150,7 @@
           <div class="chart-card">
             <div class="chart-title">Component Breakdown</div>
             <div class="chart-subtitle">Average PL, EPF, VSF across all stations</div>
-            <div class="chart-wrap">
+            <div class="chart-wrap" style="height:320px;">
               <canvas id="chart-components"></canvas>
             </div>
           </div>
@@ -375,12 +375,14 @@
         options: {
           scales: {
             r: {
+              min: 0,
               grid: { color: cd.gridColor },
               ticks: { color: cd.color, backdropColor: 'transparent' },
-              pointLabels: { color: cd.color, font: { size: 12 } }
+              pointLabels: { color: cd.color, font: { size: 12 }, padding: 8 }
             }
           },
-          plugins: { legend: { display: false } }
+          plugins: { legend: { display: false } },
+          layout: { padding: { left: 20, right: 20 } }
         }
       });
     }
