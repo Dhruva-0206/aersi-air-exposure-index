@@ -1,557 +1,556 @@
 station,date,PL,EPF,VSF,CF_data,AERSI,confidence,city,state,latitude,longitude
-"Devaraj Urs Badavane, Davanagere - KSPCB",2026-04-02,1.5317,1.0061,1.0,0.61,1.2395,Low,Davanagere,Karnataka,14.4758,75.9052
 "Mendonsa Colony, Dindigul - TNPCB",2026-05-02,0.86,1.0,1.138,0.42,0.9578,Low,Dindigul,TamilNadu,10.358535,77.984321
-"SIPCOT Nathampannai, Pudukottai - TNPCB",2026-08-02,,1.0,1.0,0.21,,Provisional,Pudukottai,TamilNadu,10.423417,78.784889
-"Velippalayam, Nagapattinam - TNPCB",2026-08-02,1.6567,1.0105,1.9828,0.63,1.5314,Low,Nagapattinam,TamilNadu,10.798548,79.838212
-"Parisutham Nagar, Thanjavur - TNPCB",2026-08-02,1.0531,1.0,1.375,0.63,1.1113,Low,Thanjavur,TamilNadu,10.7654824,79.1389968
+"Parisutham Nagar, Thanjavur - TNPCB",2026-08-02,1.0531,1.0,1.2569,0.62,1.0866,Low,Thanjavur,TamilNadu,10.7654824,79.1389968
+"Velippalayam, Nagapattinam - TNPCB",2026-08-02,1.6567,1.0086,1.9971,0.62,1.5334,Low,Nagapattinam,TamilNadu,10.798548,79.838212
+"SIPCOT Nathampannai, Pudukottai - TNPCB",2026-08-02,,1.0,1.0,0.31,,Provisional,Pudukottai,TamilNadu,10.423417,78.784889
 "Naubad, Bidar - KSPCB",2026-08-04,0.1093,1.0,1.0,0.31,0.3307,Provisional,Bidar,Karnataka,17.930306,77.482194
-"Lal Bahadur Shastri Nagar, Kalaburagi - KSPCB",2026-08-06,1.3289,1.0,1.9108,0.52,1.3553,Low,Kalaburagi,Karnataka,17.321993,76.822628
-"Samanpura, Patna - BSPCB",NaT,1.7371,1.253,1.1506,0.82,1.4442,Medium,Patna,Bihar,25.596727,85.085624
-"DRM Office Danapur, Patna - BSPCB",NaT,2.0124,1.1897,1.9175,0.82,1.7434,Medium,Patna,Bihar,25.586562,85.043586
-"Residency Area, Indore - IMC",NaT,1.4737,1.0439,1.4607,0.83,1.349,Medium,Indore,Madhya Pradesh,22.7084,75.8815
-"Shivaji Nagar, Mumbai - BMC",NaT,1.4949,1.1097,1.9878,0.83,1.4901,Medium,Mumbai,Maharashtra,19.060498,72.923356
-"Ghatkopar, Mumbai - BMC",NaT,1.9524,1.0658,1.4696,0.83,1.5632,Medium,Mumbai,Maharashtra,19.083694,72.920967
-"DTU, Delhi - CPCB",NaT,2.5897,1.253,1.9997,0.82,2.0247,Medium,Delhi,Delhi,28.7500499,77.1112615
-"DM Office_Kasipur, Samastipur - BSPCB",NaT,1.5298,1.1097,1.8126,0.73,1.473,Medium,Samastipur,Bihar,25.859655,85.77944
-"Dwarka-Sector 8, Delhi - DPCC ",NaT,2.7229,1.2633,1.9993,0.83,2.0803,Medium,Delhi,Delhi,28.5710274,77.0719006
-"Dabuna, Nayagarh - OSPCB",NaT,1.3279,1.0365,1.9979,0.44,1.3824,Low,Nayagarh,Odisha,21.847279,85.416905
-"SAC ISRO Bopal, Ahmedabad - IITM",NaT,2.4767,1.1755,1.6304,0.83,1.8517,Medium,Ahmedabad,Gujarat,23.041137,72.456691
-"Dada Peer, Sasaram - BSPCB",NaT,1.0343,1.0211,1.7882,0.62,1.1822,Low,Sasaram,Bihar,24.952822,84.002396
-"General Hospital, Mandikhera(Nuh) - HSPCB",NaT,2.0621,1.1211,1.6831,0.81,1.683,Medium,Mandikhera,Haryana,27.9002,76.9938
-"Forest Rest House, Manguraha - BSPCB",NaT,1.8504,1.0843,1.9471,0.62,1.6397,Low,Manguraha,Bihar,27.308328,84.531742
-"Sahu Nagar, Sawai Madhopur - RSPCB",NaT,2.108,1.1822,1.9954,0.84,1.7993,Medium,Sawai Madhopur,Rajasthan,26.031443,76.359327
-"Victoria, Kolkata - WBPCB",NaT,2.3896,1.2319,1.7956,0.82,1.8852,Medium,Kolkata,West_Bengal,22.5448082,88.3403691
-"Dangi Tola, Rajgir - BSPCB",NaT,1.3331,1.1476,1.8137,0.82,1.3868,Medium,Rajgir,Bihar,25.0328,85.41948
-"SDM Office_Khagra, Kishanganj - BSPCB",NaT,2.6751,1.2108,1.9927,0.82,2.0385,Medium,Kishanganj,Bihar,26.0881305,87.93840336
-"F-Block, Sirsa - HSPCB",NaT,1.3047,1.1817,1.9768,0.81,1.4121,Medium,Sirsa,Haryana,29.5364,75.0158
-"Vaikuntapuram, Tirupati - APPCB",NaT,1.6232,1.0404,1.7293,0.81,1.4755,Medium,Tirupati,Andhra_Pradesh,13.615387,79.40923
-"FTI Kidwai Nagar, Kanpur - UPPCB",NaT,1.4756,1.1536,1.8401,0.83,1.4662,Medium,Kanpur,Uttar_Pradesh,26.428282,80.327067
-"Gavalinagar, Pimpri Chinchwad - MPCB",NaT,1.3939,1.0632,1.4351,0.62,1.3122,Low,Pimpri-Chinchwad,Maharashtra,18.63673,73.82487
-"Sanjay Nagar, Ghaziabad - UPPCB",NaT,2.5034,1.1975,1.982,0.83,1.9639,Medium,Ghaziabad,Uttar_Pradesh,28.685382,77.453839
-"Collectorate, Gaya - BSPCB",NaT,1.6969,1.1278,1.9909,0.59,1.5946,Low,Gaya,Bihar,24.7955,84.9994
-"Fertilizer Township, Rourkela - OSPCB",NaT,2.1572,1.296,1.9795,0.64,1.8588,Low,Rourkela,Odisha,22.18972222,84.86277778
-"Gokul Nagar, Bhiwandi - MPCB",NaT,2.0312,1.0658,1.1674,0.83,1.5052,Medium,Bhiwandi,Maharashtra,19.309073,73.057223
-"Ved Vihar-Loni, Ghaziabad - UPPCB",NaT,3.4295,1.0061,1.0,0.71,1.8547,Medium,Ghaziabad,Uttar_Pradesh,28.739153,77.273668
-"Collectorate, Jodhpur - RSPCB",NaT,1.348,1.1594,1.6204,0.84,1.3593,Medium,Jodhpur,Rajasthan,26.268249,73.0193853
-"SAC ISRO Satellite, Ahmedabad - IITM",NaT,2.0924,1.2414,1.5087,0.83,1.6922,Medium,Ahmedabad,Gujarat,23.023389,72.515201
-"Ferro Chrome Colony, Byasanagar - OSPCB",NaT,2.0032,1.1317,1.9847,0.83,1.7327,Medium,Byasanagar,Odisha,20.94185,86.1151
-"Gobind Pura, Yamuna Nagar - HSPCB",NaT,2.0441,1.2108,1.8972,0.82,1.7601,Medium,Yamuna Nagar,Haryana,30.1480566,77.2893471
-"Sanegurava Halli, Bengaluru - KSPCB",NaT,0.824,1.0,1.0887,0.33,0.9272,Provisional,Bengaluru,Karnataka,12.990328,77.5431385
-"Ghusuri, Howrah - WBPCB",NaT,2.7585,1.2414,1.9641,0.83,2.0754,Medium,Howrah,West_Bengal,22.611968,88.347422
-"Commonwealth Sports Complex, Delhi - DPCC",NaT,2.3512,1.154,1.9677,0.8,1.8823,Medium,Delhi,Delhi,28.615828,77.271992
-"Corporation Ground, Thrissur - Kerala PCB",NaT,1.5685,1.0632,1.3588,0.72,1.373,Medium,Thrissur,Kerala,10.5324,76.2159
-"Vasundhara, Ghaziabad - UPPCB",NaT,2.706,1.2194,1.9972,0.83,2.055,Medium,Ghaziabad,Uttar_Pradesh,28.6603346,77.3572563
-"Shivneri Colony, Amravati - MPCB",NaT,1.8594,1.0632,1.4097,0.82,1.5088,Medium,Amravati,Maharashtra,20.9402359,77.7895248
-"D M Colony, Bihar Sharif - BSPCB",NaT,1.4517,1.1054,1.863,0.82,1.4433,Medium,Bihar Sharif,Bihar,25.204762,85.51496
-"Shivaji University, Kolhapur - MPCB",NaT,1.3224,1.0404,1.7787,0.81,1.3413,Medium,Kolhapur,Maharashtra,16.6870449,74.2505872
-"Girls College, Sivasagar - PCBA",NaT,1.4991,1.0439,1.3954,0.83,1.3451,Medium,Sivasagar,Assam,26.987634,94.636574
-"Samrat Ashok Udhyan, Jodhpur - RSPCB",NaT,1.4937,1.1366,1.5047,0.84,1.3976,Medium,Jodhpur,Rajasthan,26.253384,72.976571
-"Vidayagiri, Bagalkot - KSPCB",NaT,1.0565,1.0,1.0,0.81,1.0279,Medium,Bagalkot,Karnataka,16.172806,75.659694
-"Regional Park, Indore - IMC",NaT,1.6812,1.0878,1.6086,0.83,1.4913,Medium,Indore,Madhya Pradesh,22.678,75.8559
-"DM Office_Kachari Chowk, Bhagalpur - BSPCB",NaT,1.3353,1.1317,1.6282,0.83,1.3463,Medium,Bhagalpur,Bihar,25.251013,86.989001
-"Sanathnagar, Hyderabad - TSPCB",NaT,1.7736,1.0878,1.9695,0.73,1.6112,Medium,Hyderabad,Telangana,17.4559458,78.4332152
-"Revenue Colony-Shivajinagar, Pune - IITM",NaT,1.9014,1.0911,1.9999,0.84,1.6759,Medium,Pune,Maharashtra,18.530085,73.849598
-"Evelyn Lodge, Asansol - WBPCB",NaT,1.7899,1.0843,1.4122,0.82,1.4883,Medium,Asansol,West_Bengal,23.697936,86.944395
-"Sahilara, Maihar - KJS Cements",NaT,1.0932,1.0,1.4805,0.66,1.1533,Medium,Maihar,Madhya Pradesh,24.2613009,80.7231783
-"Digari Kalan, Jodhpur - RSPCB",NaT,1.5103,1.1139,1.8519,0.84,1.4728,Medium,Jodhpur,Rajasthan,26.29581,73.082283
-"GVM Corporation, Visakhapatnam - APPCB",NaT,2.3611,1.2319,1.6041,0.82,1.8218,Medium,Visakhapatnam,Andhra_Pradesh,17.72,83.3
-"Vasundhara Nagar_UIT, Bhiwadi - RSPCB",NaT,2.8092,1.296,1.9944,0.84,2.1252,Medium,Bhiwadi,Rajasthan,28.207266,76.829265
-"Shivaji Nagar, Rishikesh - UKPCB",NaT,0.6516,1.0422,1.4837,0.82,0.9002,Medium,Rishikesh,Uttarakhand,30.075911,78.2859547
-"District Court, Eluru - APPCB",NaT,1.402,1.0807,1.4258,0.81,1.3193,Medium,Eluru,Andhra_Pradesh,16.711754,81.092095
-"Divisional Forest Office, Rairangpur - OSPCB",NaT,1.4823,1.0385,1.4224,0.8,1.3422,Medium,Rairangpur,Odisha,22.265816,86.174829
-"Collectorate Office, Virudhunagar - TNPCB",NaT,1.6097,1.0,1.0,0.41,1.2688,Low,Virudhunagar,TamilNadu,9.559382,77.948828
-"SVPI Airport Hansol, Ahmedabad - IITM",NaT,1.9903,1.1009,1.6304,0.81,1.633,Medium,Ahmedabad,Gujarat,23.076793,72.627874
-"GM Office, Brajrajnagar - OSPCB",NaT,1.5853,1.1594,1.9557,0.84,1.545,Medium,Brajrajnagar,Odisha,21.8004996,83.8396977
-"Diwator Nagar, Koppal - KSPCB",NaT,1.0068,1.0,1.3966,0.39,1.0908,Provisional,Koppal,Karnataka,15.34763,76.181767
-"ECIL Kapra, Hyderabad - TSPCB",NaT,1.2983,1.1366,1.7097,0.84,1.3453,Medium,Hyderabad,Telangana,17.470431,78.566959
-"Dnyaneshwar Nagar, Solapur - MPCB",NaT,1.6349,1.0878,1.9199,0.83,1.5371,Medium,Solapur,Maharashtra,17.6336264,75.9132495
-"Velachery Res. Area, Chennai - CPCB",NaT,0.9425,1.0439,1.4195,0.83,1.0711,Medium,Chennai,TamilNadu,13.0052189,80.2398125
-"SRM University, Modinagar - UPPCB",NaT,3.1549,1.0086,2.0,0.52,2.1168,Low,Modinagar,Uttar_Pradesh,28.798171,77.540243
-"Rohta, Agra - UPPCB",NaT,1.4643,1.2505,1.7045,0.84,1.4621,Medium,Agra,Uttar_Pradesh,27.106972,78.000111
-"Doon University, Dehradun - UKPCB",NaT,2.0446,1.1054,1.9646,0.82,1.7358,Medium,Dehradun,Uttarakhand,30.269444,78.044167
-"Shivapura_Peenya, Bengaluru - KSPCB",NaT,1.1035,1.0,1.8267,0.46,1.2213,Low,Bengaluru,Karnataka,13.0246342,77.5080115
-"GIFT City, Gandhinagar - IITM",NaT,2.035,1.1317,1.311,0.83,1.5744,Medium,Gandhinagar,Gujarat,23.163798,72.677768
-"SIDCO Kurichi, Coimbatore - TNPCB",NaT,1.428,1.0683,1.6666,0.84,1.3804,Medium,Coimbatore,TamilNadu,10.942451,76.978996
-"SIPCOT Industrial Park, Perundurai - TNPCB",NaT,1.6115,1.0228,1.3799,0.74,1.3837,Medium,Perundurai,TamilNadu,11.258242,77.552761
-"Dr. Karni Singh Shooting Range, Delhi - DPCC",NaT,2.4328,1.2108,1.9998,0.82,1.9457,Medium,Delhi,Delhi,28.498571,77.26484
-"GIDC, Ankleshwar - GPCB",NaT,2.3637,1.0913,1.9934,0.79,1.8672,Medium,Ankleshwar,Gujarat,21.613267,73.010555
-"Dhoinda, Rajsamand - RSPCB",NaT,1.8541,1.0878,1.8058,0.83,1.612,Medium,Rajsamand,Rajasthan,25.03636,73.883502
-"Rohini, Delhi - DPCC",NaT,2.8782,1.253,1.9998,0.82,2.1345,Medium,Delhi,Delhi,28.732528,77.11992
-"Eco Herbal Park, Moradabad - UPPCB",NaT,1.6505,1.253,1.912,0.82,1.5984,Medium,Moradabad,Uttar_Pradesh,28.840739,78.697531
-"Dasnagar, Howrah - WBPCB",NaT,1.8386,1.0658,1.6068,0.83,1.5512,Medium,Howrah,West_Bengal,22.6025571,88.3105664
-"GIDC, Nandesari - Nandesari Ind. Association",NaT,3.2002,1.1009,1.6176,0.71,2.0665,Medium,Nandesari,Gujarat,22.410802,73.097923
-"Deen Dayal Nagar, Gwalior - MPPCB",NaT,2.6676,1.1097,1.3707,0.83,1.8138,Medium,Gwalior,Madhya Pradesh,26.259242,78.216432
-"Deen Dayal Nagar, Sagar - MPPCB",NaT,1.8238,1.0272,1.9884,0.65,1.6145,Medium,Sagar,Madhya Pradesh,23.8640158,78.80289321
-"Gangineni Cheruvu, Chittoor - APPCB",NaT,1.5367,1.1975,1.6403,0.83,1.4675,Medium,Chittoor,Andhra_Pradesh,13.20488,79.097889
-"Sadar Bazar, Jaisalmer - RSPCB",NaT,1.7752,1.1822,1.868,0.84,1.6242,Medium,Jaisalmer,Rajasthan,26.912329,70.909168
-"Deonar, Mumbai - IITM",NaT,1.8908,1.0658,1.5071,0.83,1.5481,Medium,Mumbai,Maharashtra,19.04946,72.923
-"Vedhaynath Colony, Sirohi - RSPCB",NaT,1.4738,1.0439,1.4708,0.83,1.3514,Medium,Sirohi,Rajasthan,24.885261,72.857549
-"Gangapur Road, Nashik - MPCB",NaT,1.6019,1.0878,1.6035,0.83,1.4545,Medium,Nashik,Maharashtra,20.0073285,73.7762427
-"Rishi Nagar, Kaithal - HSPCB",NaT,1.5011,1.2319,1.9886,0.82,1.5328,Medium,Kaithal,Haryana,29.8006,76.4155
-"Darshan Nagar, Chhapra - BSPCB",NaT,1.5635,1.1817,1.9899,0.81,1.5484,Medium,Chhapra,Bihar,25.7808257,84.7446768
-"Vibhab Nagar, Firozabad - UPPCB",NaT,1.107,1.0658,1.4068,0.83,1.1643,Medium,Firozabad,Uttar_Pradesh,27.1594,78.3953
-"Ganga Nagar, Meerut - UPPCB",NaT,1.7937,1.2319,1.9,0.82,1.6566,Medium,Meerut,Uttar_Pradesh,28.999264,77.7590354
-"Employment Office, Moradabad - UPPCB",NaT,1.6471,1.2414,1.9696,0.83,1.6048,Medium,Moradabad,Uttar_Pradesh,28.88528,78.7388
-"Sadanand Nagar, Mehsana - Nexteng Enviro",NaT,1.8464,1.2414,1.8481,0.83,1.6723,Medium,Mehsana,Gujarat,23.59315,72.372792
-"Dhankawadi, Pune - IITM",NaT,2.1232,1.0632,1.2605,0.72,1.5678,Medium,Pune,Maharashtra,18.459883,73.852193
-"Fort William, Kolkata - WBPCB",NaT,2.0609,1.0878,1.7043,0.83,1.6751,Medium,Kolkata,West_Bengal,22.55664,88.342674
-"Royapuram, Chennai - TNPCB",NaT,1.5858,1.0658,1.6202,0.83,1.4436,Medium,Chennai,TamilNadu,13.1036,80.2909
-"SFTI Kusdihra, Gaya - BSPCB",NaT,1.4142,1.0658,1.3588,0.83,1.3045,Medium,Gaya,Bihar,24.762518,84.982348
-"Dhanmandi, Kota - RSPCB",NaT,2.0845,1.1139,1.9992,0.84,1.7637,Medium,Kota,Rajasthan,25.16409,75.858137
-"SVSPA Campus, Barrackpore - WBPCB",NaT,1.6843,1.0878,1.7567,0.83,1.5259,Medium,Barrackpore,West_Bengal,22.7605581,88.3617589
-"Gandak Colony, Motihari - BSPCB",NaT,1.5593,1.0843,1.4862,0.62,1.4069,Low,Motihari,Bihar,26.63086,84.90051
-"Deopur, Dhule - MPCB",NaT,1.9631,1.1265,1.4629,0.82,1.5875,Medium,Dhule,Maharashtra,20.918946,74.776388
-"Forest Office, Barbil - OSPCB",NaT,1.8808,1.1822,1.7032,0.84,1.6336,Medium,Barbil,Odisha,22.1166054,85.3945546
-"New Colony, Bundi - RSPCB",NaT,1.8592,1.1097,1.974,0.83,1.6588,Medium,Bundi,Rajasthan,25.435774,75.644272
-"Collector Office, Yadgir - KSPCB",NaT,1.6871,1.0408,1.999,0.75,1.56,Medium,Yadgir,Karnataka,16.7602,77.1428
-"Womens College_City Center, Durgapur - WBPCB",NaT,1.8646,1.2194,1.7826,0.83,1.658,Medium,Durgapur,West_Bengal,23.549395,87.300496
-"Bandra Kurla Complex, Mumbai - IITM",NaT,2.1539,1.073,1.9891,0.69,1.7739,Medium,Mumbai,Maharashtra,19.053536,72.84643
-"Sector-2 Murlipura, Jaipur - RSPCB",NaT,1.6947,1.2414,1.9633,0.83,1.6265,Medium,Jaipur,Rajasthan,26.960669,75.771817
-"Bandhavgar Colony, Satna - Birla Cement",NaT,1.3202,1.0,1.0,0.82,1.149,Medium,Satna,Madhya Pradesh,24.58434363,80.8549414
-"Bamboliya, Baran - RSPCB",NaT,1.4349,1.0911,1.7648,0.84,1.4111,Medium,Baran,Rajasthan,25.106006,76.469948
-"Sector-2, Rourkela - OSPCB",NaT,1.6483,1.0,1.2143,0.63,1.3477,Low,Rourkela,Odisha,22.245,84.88111111
-"Bandra Kurla Complex, Mumbai - MPCB",NaT,2.0504,1.0365,1.208,0.79,1.5147,Medium,Mumbai,Maharashtra,19.065931,72.862131
-"Ballygunge, Kolkata - WBPCB",NaT,2.5507,1.0632,1.4678,0.82,1.7851,Medium,Kolkata,West_Bengal,22.5367507,88.3638022
-"Sector-25, Chandigarh - CPCC",NaT,1.7696,1.1265,1.7934,0.82,1.586,Medium,Chandigarh,Chandigarh,30.751462,76.762879
-"Worli, Mumbai -MPCB",NaT,1.2143,1.0,1.2637,0.71,1.1684,Medium,Mumbai,Maharashtra,18.994218,72.8158167
-"BTM Layout, Bengaluru - CPCB",NaT,1.6945,1.0658,1.5949,0.83,1.4863,Medium,Bengaluru,Karnataka,12.9135218,77.5950804
-"Sector-2E Kalamboli, Navi Mumbai - MPCB",NaT,1.477,1.0596,1.971,0.66,1.461,Medium,Navi Mumbai,Maharashtra,19.02579,73.10297
-"B R Ambedkar University, Lucknow - UPPCB",NaT,1.2626,1.1822,1.8437,0.84,1.3653,Medium,Lucknow,Uttar_Pradesh,26.766433,80.927299
-"Aya Nagar, Delhi - IMD",NaT,2.5273,1.0316,1.9662,0.63,1.8972,Low,Delhi,Delhi,28.4706914,77.1099364
-"BWSSB Kadabesanahalli, Bengaluru - CPCB",NaT,1.8548,1.0658,1.6463,0.73,1.5675,Medium,Bengaluru,Karnataka,12.9352049,77.6814488
-"Bapuji Nagar, Bengaluru - KSPCB",NaT,1.5894,1.0632,1.7796,0.62,1.4786,Low,Bengaluru,Karnataka,12.951913,77.539784
-"Sector-2 Industrial Area, Pithampur - MPPCB",NaT,3.1342,1.2414,1.9598,0.73,2.211,Medium,Pithampur,Madhya Pradesh,22.624758,75.675238
-"Bapunagar, Vadodara - Nexteng Enviro",NaT,2.7463,1.1975,1.9699,0.83,2.0538,Medium,Vadodara,Gujarat,22.320153,73.216285
-"Bhoiwada, Dungarpur - RSPCB",NaT,1.9117,1.0911,1.7931,0.84,1.6352,Medium,Dungarpur,Rajasthan,23.837789,73.714926
-"Sector-116, Noida - UPPCB",NaT,2.3198,1.2194,1.9891,0.83,1.9008,Medium,Noida,Uttar_Pradesh,28.56923,77.393848
-"Bhelupur, Varanasi - UPPCB",NaT,1.9571,1.0658,1.3049,0.83,1.5192,Medium,Varanasi,Uttar_Pradesh,25.301778,82.996789
-"Bhayandar West, Mira-Bhayandar - MPCB",NaT,1.9501,1.0439,1.467,0.83,1.5534,Medium,Mira-Bhayandar,Maharashtra,19.296481,72.840923
-"Sector-12, Karnal - HSPCB",NaT,1.8992,1.253,1.8137,0.82,1.692,Medium,Karnal,Haryana,29.6953,77.0027
-"Bhatagaon New ISBT, Raipur - CECB",NaT,1.4695,1.0219,1.4765,0.83,1.3435,Medium,Raipur,Chhattisgarh,21.219665,81.630094
-"Belur Math, Howrah - WBPCB",NaT,2.4322,1.1317,1.7509,0.83,1.8503,Medium,Howrah,West_Bengal,22.629801,88.352017
-"Sector-18, Panipat - HSPCB",NaT,2.6465,1.2108,1.6039,0.82,1.9204,Medium,Panipat,Haryana,29.432304,76.972765
-"Bawana, Delhi - DPCC",NaT,2.6243,1.2633,1.9976,0.83,2.0418,Medium,Delhi,Delhi,28.7762,77.051074
-"Wazirpur, Delhi - DPCC",NaT,2.9732,1.2853,1.9957,0.83,2.1821,Medium,Delhi,Delhi,28.699793,77.165453
-"Bata Chowk, Nalbari - PCBA",NaT,2.007,1.1317,1.9793,0.83,1.7331,Medium,Nalbari,Assam,26.446912,91.439057
-"Sector-2 IMT, Manesar - HSPCB",NaT,2.2591,1.2414,1.9554,0.83,1.8761,Medium,Manesar,Haryana,28.360699,76.93609
-"Barsua Iron Ore Mines, Tensa - OSPCB",NaT,1.5239,1.0183,1.4485,0.49,1.3604,Low,Tensa,Odisha,21.869985,85.167016
-"Shastri Nagar, Narnaul - HSPCB",NaT,1.7864,1.2414,1.9841,0.83,1.6744,Medium,Narnaul,Haryana,28.060249,76.113115
-"Bardowali, Agartala - Tripura SPCB",NaT,1.0848,1.0689,1.9571,0.78,1.2526,Medium,Agartala,Tripura,23.8175497,91.2726974
-"Aya Nagar, Delhi - IITM",NaT,2.0677,1.1278,1.992,0.69,1.7605,Medium,Delhi,Delhi,28.4706914,77.1099364
-"Ward-32 Bapupara, Siliguri - WBPCB",NaT,2.0376,1.1009,1.9844,0.81,1.7354,Medium,Siliguri,West_Bengal,26.6879226,88.4152495
-"Sector-3B Avas Vikas Colony, Agra - UPPCB",NaT,1.5725,1.1755,1.98,0.83,1.5489,Medium,Agra,Uttar_Pradesh,27.19412,77.96237
-"Ashok Vihar, Delhi - DPCC",NaT,2.7736,1.2853,1.9998,0.83,2.1087,Medium,Delhi,Delhi,28.695381,77.181665
-"Semmandalam, Cuddalore - TNPCB",NaT,0.729,1.0,1.2292,0.49,0.899,Low,Cuddalore,TamilNadu,11.7637683,79.7499835
-"Ambazari, Nagpur - MPCB",NaT,2.5208,1.0911,1.9997,0.84,1.9296,Medium,Nagpur,Maharashtra,21.121801,79.04952
-"Alipur, Delhi - DPCC",NaT,2.797,1.2319,1.9994,0.82,2.0951,Medium,Delhi,Delhi,28.815329,77.15301
-"Zero Point GICI, Gangtok - SSPCB",NaT,1.3811,1.0439,1.3057,0.83,1.2698,Medium,Gangtok,Sikkim,27.33853,88.614099
-"Sewri, Mumbai - BMC",NaT,1.8574,1.0911,1.9984,0.84,1.6561,Medium,Mumbai,Maharashtra,19.000084,72.85673
-"Airport Area, Indore - IMC",NaT,2.5017,1.0745,1.9985,0.76,1.9147,Medium,Indore,Madhya Pradesh,22.7289,75.8076
-"Ambedkar Nagar, Nellore - APPCB ",NaT,1.1545,1.077,1.7318,0.8,1.2557,Medium,Nellore,Andhra_Pradesh,14.438164,79.966814
-"Adarsh Nagar, Jaipur - RSPCB",NaT,2.3527,1.1536,1.9985,0.83,1.8901,Medium,Jaipur,Rajasthan,26.902909,75.836858
-"AIIMS, Raipur - CECB",NaT,1.6455,1.0404,1.4286,0.81,1.4163,Medium,Raipur,Chhattisgarh,21.258815,81.578979
-"32Bungalows, Bhilai - CECB",NaT,1.144,1.0,1.1289,0.83,1.1025,Medium,Bhilai,Chhattisgarh,21.194815,81.31477
-"Shadipur, Delhi - CPCB",NaT,3.0457,1.2633,1.97,0.83,2.192,Medium,Delhi,Delhi,28.6514781,77.1473105
-"15th Mile-Nongthymmai, Byrnihat - Meghalaya PCB",NaT,1.1789,1.1925,1.9921,0.6,1.3479,Low,Byrnihat,Meghalaya,26.05374,91.86796
-" Indira Nagar, Raebareli - NTPC Unchahar",NaT,2.6721,1.073,1.3442,0.59,1.7914,Low,Raebareli,Uttar_Pradesh,26.207781,81.245571
-"Shahjahan Garden, Agra - UPPCB",NaT,1.2524,1.296,1.6281,0.74,1.3488,Medium,Agra,Uttar_Pradesh,27.169338,78.03582
-"Shastri Nagar, Chittorgarh - RSPCB",NaT,2.1452,1.1755,1.9996,0.83,1.8136,Medium,Chittorgarh,Rajasthan,24.892047,74.623527
-"Amity University, Panchgaon - IITM",NaT,1.0508,1.1536,1.5929,0.83,1.1935,Medium,Panchgaon,Haryana,28.3153,76.9143
-"Sector-D Industrial Area, Mandideep - MPPCB",NaT,3.1616,1.2194,1.9986,0.83,2.2217,Medium,Mandideep,Madhya Pradesh,23.10844,77.511428
-"Anand Kala Kshetram, Rajamahendravaram - APPCB",NaT,1.8915,1.0632,1.8844,0.82,1.6362,Medium,Rajamahendravaram,Andhra_Pradesh,16.9872867,81.7363176
-"Shastri Nagar, Jaipur - RSPCB",NaT,2.0574,1.2194,1.977,0.83,1.7873,Medium,Jaipur,Rajasthan,26.9502929,75.730943
-"Ashok Nagar, Udaipur - RSPCB",NaT,2.0298,1.2414,1.926,0.83,1.7716,Medium,Udaipur,Rajasthan,24.5886166,73.6321397
-"Sector-51, Gurugram - HSPCB",NaT,2.7603,1.2414,1.9532,0.83,2.0732,Medium,Gurugram,Haryana,28.4227,77.0667
-"Yamunapuram, Bulandshahr - UPPCB",NaT,1.9439,1.2505,1.9958,0.84,1.7524,Medium,Bulandshahr,Uttar_Pradesh,28.406963,77.849831
-"Asansol Court Area, Asansol - WBPCB",NaT,1.977,1.1317,1.8235,0.83,1.6852,Medium,Asansol,West_Bengal,23.685297,86.945968
-"Arya Nagar, Bahadurgarh - HSPCB",NaT,2.702,1.2414,1.9932,0.83,2.0616,Medium,Bahadurgarh,Haryana,28.6701,76.9254
-"Sector-53, Chandigarh - CPCC",NaT,1.4149,1.0211,1.4779,0.82,1.3184,Medium,Chandigarh,Chandigarh,30.719859,76.738637
-"Arumbakkam, Chennai - TNPCB",NaT,1.7855,1.0911,1.5183,0.74,1.5159,Medium,Chennai,TamilNadu,13.0664,80.2112
-"Ardhali Bazar, Varanasi - UPPCB",NaT,1.5296,1.1975,1.9228,0.83,1.5235,Medium,Varanasi,Uttar_Pradesh,25.3505986,82.9083074
-"Sector-6, Panchkula - HSPCB ",NaT,1.6737,1.1536,1.8567,0.73,1.5651,Medium,Panchkula,Haryana,30.7057778,76.8531805555555
-"Anthoni Pillai Nagar, Gummidipoondi - TNPCB",NaT,3.0015,1.2633,1.9905,0.73,2.1817,Medium,Gummidipoondi,TamilNadu,13.4127,80.1081
-"Anand Vihar, Hapur - UPPCB",NaT,2.4552,1.2414,1.9971,0.83,1.9662,Medium,Hapur,Uttar_Pradesh,28.725645,77.749675
-"Yerramukkapalli, Kadapa - APPCB",NaT,1.6092,1.0843,1.8378,0.82,1.5072,Medium,Kadapa,Andhra_Pradesh,14.465052,78.824187
-"Sector-7, Kurukshetra - HSPCB",NaT,1.7392,1.2633,1.9231,0.83,1.6465,Medium,Kurukshetra,Haryana,29.966942,76.875879
-"Anand Vihar, Delhi - DPCC",NaT,3.0585,1.2319,1.9952,0.82,2.1898,Medium,Delhi,Delhi,28.647622,77.315809
-"Ashta Vinayak Nagar, Hingoli - MPCB",NaT,1.1283,1.0202,1.2605,0.81,1.1311,Medium,Hingoli,Maharashtra,19.710842,77.151824
-"Bhopal Chauraha, Dewas - MPPCB",NaT,2.1614,1.2853,1.4277,0.83,1.7111,Medium,Dewas,Madhya Pradesh,22.9682591,76.064118
-"Bhosari, Pune - IITM",NaT,2.0314,1.0544,1.9838,0.65,1.7141,Medium,Pune,Maharashtra,18.640051,73.848956
-"Sector-10, Gandhinagar - GPCB",NaT,2.2346,1.0878,1.3681,0.83,1.6511,Medium,Gandhinagar,Gujarat,23.221714,72.654328
-"Chhoti Gwaltoli, Indore - MPPCB",NaT,2.3961,1.2853,1.3763,0.83,1.7852,Medium,Indore,Madhya Pradesh,22.431,75.5213
-"Vijay Nagar, Sangli - MPCB",NaT,1.3441,1.0455,1.438,0.84,1.2838,Medium,Sangli,Maharashtra,16.5038,74.3623
-"Savitribai Phule Pune University, Pune - MPCB",NaT,1.6972,1.0606,1.9538,0.81,1.5631,Medium,Pune,Maharashtra,18.547056,73.826908
-"Chhatrapati Shivaji Intl. Airport (T2), Mumbai - MPCB",NaT,1.9311,1.0658,1.8125,0.73,1.6383,Medium,Mumbai,Maharashtra,19.10078,72.87462
-"Chembur, Mumbai - MPCB",NaT,1.7096,1.0658,1.8072,0.83,1.5403,Medium,Mumbai,Maharashtra,19.0364585,72.8954371
-"Savta Mali Nagar, Pimpri-Chinchwad - IITM",NaT,2.1352,1.1139,1.9442,0.74,1.7726,Medium,Pimpri-Chinchwad,Maharashtra,18.614767,73.799516
-"Satyawati Vihar, Karauli - RSPCB",NaT,1.6471,1.0439,1.3799,0.83,1.406,Medium,Karauli,Rajasthan,26.506177,77.025989
-"Chauhan Colony, Chandrapur - MPCB",NaT,1.7823,1.1536,1.4904,0.83,1.5287,Medium,Chandrapur,Maharashtra,19.9629,79.298714
-"Sawe Wadi, Latur - MPCB",NaT,1.8375,1.1097,1.8061,0.83,1.6129,Medium,Latur,Maharashtra,18.39963,76.57452
-"Chandni Chowk, Delhi - IITM",NaT,2.5023,1.2633,1.9945,0.83,1.993,Medium,Delhi,Delhi,28.656756,77.227234
-"Vikas Sadan, Gurugram - HSPCB",NaT,2.9912,1.2319,1.5047,0.82,2.0181,Medium,Gurugram,Haryana,28.4501238,77.0263051
-"Chandkheda, Ahmedabad - IITM",NaT,2.0768,1.0843,1.4932,0.82,1.6256,Medium,Ahmedabad,Gujarat,23.107969,72.574648
-"Science Center, Surat - SMC",NaT,3.7314,1.0219,1.3413,0.73,2.0901,Medium,Surat,Gujarat,21.170046,72.795405
-"Chalai Bazaar, Ramanathapuram - TNPCB",NaT,0.4779,1.0,1.0,0.31,0.6913,Provisional,Ramanathapuram,TamilNadu,9.36399,78.831977
-"Charitra Van, Buxar - BSPCB",NaT,1.5176,1.1413,1.7979,0.81,1.4744,Medium,Buxar,Bihar,25.56752,83.966379
-"Chikkaballapur Rural, Chikkaballapur - KSPCB",NaT,1.5827,1.0422,1.4533,0.82,1.3957,Medium,Chikkaballapur,Karnataka,13.428828,77.731418
-"Chinchpada, Ambernath - MPCB",NaT,1.4669,1.0,1.2186,0.71,1.2725,Medium,Ambernath,Maharashtra,19.215784,73.199781
-"Sardar Patel Nagar, Dhanbad - JSPCB",NaT,2.1193,1.2853,1.7903,0.73,1.793,Medium,Dhanbad,Jharkhand,23.80569,86.44268
-"Colaba, Mumbai - MPCB",NaT,1.7842,1.0243,1.9931,0.54,1.5967,Low,Mumbai,Maharashtra,18.91,72.82
-"Civil Lines, Sagar - MPPCB",NaT,1.9961,1.0219,1.4081,0.83,1.5474,Medium,Sagar,Madhya Pradesh,23.838586,78.759431
-"Civil Lines, Bareilly - UPPCB",NaT,0.8473,1.0228,1.424,0.74,1.0112,Medium,Bareilly,Uttar_Pradesh,28.359581,79.414455
-"Sanjay Palace, Agra - UPPCB",NaT,2.0002,1.1975,1.9979,0.83,1.7589,Medium,Agra,Uttar_Pradesh,27.19865833,78.00598056
-"Civil Lines,  Ajmer - RSPCB",NaT,1.6514,1.1536,1.8406,0.83,1.5513,Medium,Ajmer,Rajasthan,26.470859,74.646594
-"Civil Line, Jalandhar - PPCB",NaT,1.7207,1.2505,1.9433,0.84,1.6378,Medium,Jalandhar,Punjab,31.321907,75.578914
-"Sanpada, Navi Mumbai - MPCB",NaT,2.1521,1.1139,1.9299,0.84,1.7763,Medium,Navi Mumbai,Maharashtra,19.0575752,73.0151367
-"Civic Center, Bhilai - Bhilai Steel Plant",NaT,1.3295,1.0,1.4888,0.73,1.2737,Medium,Bhilai,Chhattisgarh,21.185571,81.343175
-"Shivaji Nagar, Jhansi - UPPCB",NaT,1.1492,1.0219,1.4081,0.83,1.1741,Medium,Jhansi,Uttar_Pradesh,25.4547,78.6039
-"Vijay Nagar, Ramanagara - KSPCB",NaT,1.4067,1.0658,1.6085,0.73,1.3571,Medium,Ramanagara,Karnataka,12.733409,77.298051
-"City Railway Station, Bengaluru - KSPCB",NaT,1.2649,1.1278,1.0516,0.59,1.1737,Low,Bengaluru,Karnataka,12.9756843,77.5660749
-"City Center, Gwalior - MPPCB",NaT,2.4701,1.0658,1.719,0.83,1.8285,Medium,Gwalior,Madhya Pradesh,26.203442,78.193251
-"Sardar Patel Inter College, Baghpat - UPPCB",NaT,2.0148,1.2733,1.9987,0.84,1.7928,Medium,Baghpat,Uttar_Pradesh,28.964949,77.278761
-"Christianpatty, Nagaon - PCBA",NaT,1.8113,1.1097,1.9468,0.83,1.6317,Medium,Nagaon,Assam,26.349082,92.68449
-"Chitragupta Nagar, Siwan - BSPCB",NaT,1.3433,1.1211,1.9828,0.81,1.4152,Medium,Siwan,Bihar,26.2271665,84.3570427
-"Chakala-Andheri East, Mumbai - IITM",NaT,2.2639,1.0658,1.6834,0.83,1.7414,Medium,Mumbai,Maharashtra,19.11074,72.86084
-"Shastripuram, Agra - UPPCB",NaT,1.443,1.1139,1.6385,0.84,1.3962,Medium,Agra,Uttar_Pradesh,27.19862,77.92066
-"Vile Parle West, Mumbai - MPCB",NaT,1.96,1.0596,1.9971,0.66,1.6886,Medium,Mumbai,Maharashtra,19.10861,72.83622
-"Central University, Hyderabad - TSPCB",NaT,1.4063,1.0606,1.9265,0.81,1.4178,Medium,Hyderabad,Telangana,17.460103,78.334361
-"Sector 22, Chandigarh - CPCC",NaT,1.5633,1.0632,1.521,0.82,1.41,Medium,Chandigarh,Chandigarh,30.735567,76.775714
-"Borivali East, Mumbai - MPCB",NaT,1.214,1.0161,1.7708,0.57,1.2761,Low,Mumbai,Maharashtra,19.2243333,72.8658113
-"Borivali East, Mumbai - IITM",NaT,2.007,1.0439,1.3174,0.73,1.5341,Medium,Mumbai,Maharashtra,19.23241,72.86895
-"Sector 30, Faridabad - HSPCB",NaT,1.8199,1.2853,1.9196,0.83,1.6907,Medium,Faridabad,Haryana,28.4417,77.3217
-"Bombay Castel, Ooty - TNPCB",NaT,1.178,1.0,1.0,0.71,1.0853,Medium,Ooty,TamilNadu,11.4068288,76.7138973
-"Bollaram Industrial Area, Hyderabad - TSPCB",NaT,2.0084,1.0365,1.9601,0.64,1.692,Low,Hyderabad,Telangana,17.540891,78.358528
-"Bolinj, Virar - MPCB",NaT,2.2637,1.1139,1.8803,0.84,1.81,Medium,Virar,Maharashtra,19.445821,72.7988231
-"Shastri Nagar, Tonk - RSPCB",NaT,2.5357,1.1476,1.9986,0.82,1.9596,Medium,Tonk,Rajasthan,26.159933,75.780517
-"Bir, Beed - MPCB",NaT,1.005,1.0,1.208,0.81,1.051,Medium,Beed,Maharashtra,18.988474,75.753873
-"Vivek Vihar, Delhi - DPCC",NaT,2.6978,1.2319,1.8757,0.82,2.0251,Medium,Delhi,Delhi,28.672342,77.31526
-"Bidhannagar, Kolkata - WBPCB",NaT,1.979,1.0658,1.6901,0.83,1.6298,Medium,Kolkata,West_Bengal,22.58157048,88.41002457
-"Sector-1, Noida - UPPCB",NaT,2.564,1.2319,1.9914,0.82,2.004,Medium,Noida,Uttar_Pradesh,28.5898,77.3101
-"Bhumkar Nagar, Pune - IITM",NaT,1.7857,1.0105,1.5551,0.33,1.4962,Provisional,Pune,Maharashtra,18.60577,73.749976
-"Bhumkar Nagar, Pimpri-Chinchwad - IITM",NaT,1.8718,1.0183,1.2744,0.69,1.4602,Medium,Pimpri-Chinchwad,Maharashtra,18.60577,73.749976
-"Bhosari,Pimpri-Chinchwad - IITM",NaT,1.4439,1.0,1.1974,0.69,1.257,Medium,Pimpri-Chinchwad,Maharashtra,18.640051,73.848956
-"Botanical Garden, Howrah - WBPCB",NaT,1.8626,1.0658,1.7402,0.83,1.5927,Medium,Howrah,West_Bengal,22.554954,88.292568
-"Vidhyanagar, Bhavnagar - Nexteng Enviro",NaT,2.5956,1.1265,1.9506,0.82,1.9615,Medium,Bhavnagar,Gujarat,21.755417,72.139056
-"Vithalwadi, Ulhasnagar - MPCB",NaT,1.0785,1.0,1.1107,0.8,1.0661,Medium,Ulhasnagar,Maharashtra,19.2307571,73.155192
-"Sector 11, Faridabad - HSPCB",NaT,3.361,1.2633,1.7779,0.83,2.2443,Medium,Faridabad,Haryana,28.376058,77.315741
-"Central Academy for SFS, Byrnihat - PCBA",NaT,2.2401,1.253,1.4066,0.82,1.7245,Medium,Byrnihat,Assam,26.071318,91.87488
-"Secretariat, Amaravati - APPCB",NaT,1.7509,1.0658,1.7373,0.83,1.5435,Medium,Amaravati,Andhra_Pradesh,16.5150833,80.5181667
-"Cantonment Area, Delhi - DPCC ",NaT,1.4231,1.0404,1.4527,0.71,1.3227,Medium,Delhi,Delhi,28.594169,77.1251
-"CRRI Mathura Road, Delhi - IMD",NaT,2.4231,1.0544,1.9998,0.65,1.8758,Medium,Delhi,Delhi,28.5512005,77.2735737
-"CRRI Mathura Road, Delhi - IITM",NaT,2.2325,1.1461,1.9919,0.69,1.8366,Medium,Delhi,Delhi,28.5512005,77.2735737
-"Sector - 125, Noida - UPPCB",NaT,2.5353,1.222,1.9628,0.81,1.9815,Medium,Noida,Uttar_Pradesh,28.5447608,77.3231257
-"CDA Area, Cuttack - OSPCB",NaT,2.5833,1.0911,1.9977,0.84,1.9529,Medium,Cuttack,Odisha,20.48891,85.84768
-"CBD Belapur, Belapur - MPCB",NaT,2.212,1.0878,1.5718,0.83,1.7007,Medium,Belapur,Maharashtra,19.0243902,73.0406721
-"Vinoba Nagara, Shivamogga - KSPCB",NaT,1.2043,1.0,1.3817,0.83,1.1898,Medium,Shivamogga,Karnataka,13.94,75.555917
-"Sector - 62, Noida - IITM",NaT,2.6596,1.1643,1.98,0.69,2.0095,Medium,Noida,Uttar_Pradesh,28.6245479,77.3577104
-"Byculla, Mumbai - BMC",NaT,0.9,1.0439,1.2605,0.83,1.0161,Medium,Mumbai,Maharashtra,18.9767,72.838
-"Sector - 62, Noida - IMD",NaT,2.1965,1.0544,1.9995,0.65,1.7859,Medium,Noida,Uttar_Pradesh,28.6245479,77.3577104
-"Burari Crossing, Delhi - IMD",NaT,2.9232,1.0544,2.0,0.65,2.0603,Medium,Delhi,Delhi,28.7256504,77.2011573
-"Burari Crossing, Delhi - IITM",NaT,2.6084,1.1643,1.5116,0.69,1.8602,Medium,Delhi,Delhi,28.7256504,77.2011573
-"Buddhi Vihar, Moradabad - UPPCB",NaT,1.3387,1.0878,1.6919,0.83,1.3477,Medium,Moradabad,Uttar_Pradesh,28.83526,78.7446
-"Buddha Colony, Muzaffarpur - BSPCB",NaT,2.0479,1.2633,1.8856,0.83,1.7778,Medium,Muzaffarpur,Bihar,26.11442,85.39813
-"Rati Talai, Banswara - RSPCB",NaT,1.7942,1.2049,1.4442,0.84,1.5384,Medium,Banswara,Rajasthan,23.55519,74.44001
-"Hardev Nagar, Bathinda - PPCB",NaT,1.1617,1.2049,1.9204,0.74,1.3293,Medium,Bathinda,Punjab,30.233011,74.907758
-"Urja Nagar, Korba - CECB",NaT,2.3752,1.0632,1.5787,0.82,1.7542,Medium,Korba,Chhattisgarh,22.348441,82.549611
-"Patia, Bhubaneswar - OSPCB",NaT,1.9969,1.0911,1.9918,0.84,1.7158,Medium,Bhubaneswar,Odisha,20.34652,85.8163
-"Maharaj Bada, Gwalior - MPPCB",NaT,2.3934,1.1975,1.8912,0.83,1.8978,Medium,Gwalior,Madhya Pradesh,26.200388,78.147714
-"Mahape, Navi Mumbai - MPCB",NaT,1.7289,1.0683,1.5574,0.84,1.4933,Medium,Navi Mumbai,Maharashtra,19.1135051,73.008978
-"Patparganj, Delhi - DPCC",NaT,2.6901,1.2633,1.9997,0.83,2.0678,Medium,Delhi,Delhi,28.623763,77.287209
-"Mahal, Nagpur - MPCB",NaT,2.8883,1.1822,1.7879,0.84,2.0492,Medium,Nagpur,Maharashtra,21.14472,79.107595
-"Mahabir Colliery, Asansol - WBPCB",NaT,2.1427,1.0843,1.627,0.82,1.687,Medium,Asansol,West_Bengal,23.618183,87.105718
-"Talcher Coalfields,Talcher - OSPCB",NaT,2.7122,1.2505,1.9946,0.84,2.0696,Medium,Talcher,Odisha,20.9360711,85.1707021
-"Silk Board, Bengaluru - KSPCB",NaT,1.5914,1.1265,1.8854,0.72,1.5229,Medium,Bengaluru,Karnataka,12.917348,77.622813
-"Maguda Nagar, Indore - IMC",NaT,1.6262,1.0404,1.7929,0.81,1.4903,Medium,Indore,Madhya Pradesh,22.7524,75.8872
-"Patti Mehar, Ambala - HSPCB",NaT,2.0582,1.2414,1.9001,0.83,1.7779,Medium,Ambala,Haryana,30.379589,76.778328
-"Madan Mohan Malaviya University of Technology, Gorakhpur - UPPCB",NaT,1.5693,1.1139,1.9206,0.84,1.515,Medium,Gorakhpur,Uttar_Pradesh,26.730136,83.433859
-"Peenya, Bengaluru - CPCB",NaT,1.2498,1.0422,1.8877,0.72,1.324,Medium,Bengaluru,Karnataka,13.0270199,77.494094
-"MM Ground, Bikaner - RSPCB",NaT,2.0037,1.2733,1.9264,0.84,1.7715,Medium,Bikaner,Rajasthan,28.018792,73.292658
-"MIT-Daudpur Kothi, Muzaffarpur - BSPCB",NaT,1.666,1.1054,1.8647,0.82,1.5466,Medium,Muzaffarpur,Bihar,26.1403345,85.3650192
-"Perungudi, Chennai - TNPCB",NaT,1.4735,1.0683,1.7557,0.84,1.4206,Medium,Chennai,TamilNadu,12.9533,80.2357
-"Mahashweta Nagar, Ujjain - MPPCB",NaT,2.1012,1.1009,1.9924,0.81,1.7641,Medium,Ujjain,Madhya Pradesh,23.1633321,75.800225
-"MIET College, Meerut - UPPCB",NaT,3.53,1.0061,1.0,0.71,1.8817,Medium,Meerut,Uttar_Pradesh,28.972677,77.641018
-"Mahatma Basaveswar Colony, Kalaburgi - KSPCB",NaT,1.2067,1.0,1.4446,0.83,1.2043,Medium,Kalaburagi,Karnataka,17.336318,76.847397
-"Mahesh Nagar, Malegaon - MPCB",NaT,1.9217,1.0577,1.8946,0.7,1.6493,Medium,Malegaon,Maharashtra,20.555712,74.529236
-"Panchal Nagar, Gadag - KSPCB",NaT,0.4598,1.0,1.0831,0.75,0.6917,Medium,Gadag,Karnataka,15.411456,75.638133
-"Mandor, Jodhpur - RSPCB",NaT,1.3738,1.1317,1.9466,0.83,1.4279,Medium,Jodhpur,Rajasthan,26.358805,73.047444
-"Mandir Marg, Delhi - DPCC",NaT,2.2576,1.2194,1.6981,0.83,1.8024,Medium,Delhi,Delhi,28.636429,77.201067
-"Siltara Phase-II, Raipur - CECB",NaT,1.5231,1.1054,1.9419,0.82,1.4938,Medium,Raipur,Chhattisgarh,21.371751,81.664929
-"Suryakiran Bhawan NCL, Singrauli - MPPCB",NaT,2.785,1.2633,1.9556,0.73,2.0923,Medium,Singrauli,Madhya Pradesh,24.10897,82.64558
-"Manali, Chennai - CPCB",NaT,0.9236,1.0439,1.5529,0.83,1.0844,Medium,Chennai,TamilNadu,13.164544,80.26285
-"Panchawati_Pashan, Pune - IITM",NaT,1.9602,1.0911,1.9992,0.74,1.7015,Medium,Pune,Maharashtra,18.536457,73.805454
-"Manali Village, Chennai - TNPCB",NaT,1.389,1.0455,1.521,0.84,1.3235,Medium,Chennai,TamilNadu,13.1662,80.2584
-"Maldahiya, Varanasi - UPPCB",NaT,1.3021,1.0632,1.4821,0.82,1.2785,Medium,Varanasi,Uttar_Pradesh,25.32393,82.99687
-"Pandav Nagari, Nashik - MPCB",NaT,0.9995,1.0683,1.4654,0.84,1.1183,Medium,Nashik,Maharashtra,19.9591346,73.7788008
-"Malad West, Mumbai - IITM",NaT,2.0814,1.0658,1.2811,0.83,1.5596,Medium,Mumbai,Maharashtra,19.19709,72.82204
-"Major Dhyan Chand National Stadium, Delhi - DPCC",NaT,2.408,1.2108,1.9962,0.82,1.9349,Medium,Delhi,Delhi,28.611281,77.237738
-"Park Street Wakad, Pimpri Chinchwad - MPCB",NaT,2.0307,1.0632,1.8306,0.72,1.6832,Medium,Pimpri-Chinchwad,Maharashtra,18.59051,73.77946
-"Mahishkapur Road_B-Zone, Durgapur - WBPCB",NaT,1.6013,1.1097,1.4681,0.83,1.4297,Medium,Durgapur,West_Bengal,23.567923,87.306843
-"T T Nagar, Bhopal - MPPCB",NaT,1.7715,1.1317,1.7873,0.83,1.5873,Medium,Bhopal,Madhya Pradesh,23.233584,77.400574
-"Paryavaran Parisar, Bhopal - MPPCB",NaT,1.8846,1.0632,1.8337,0.82,1.6222,Medium,Bhopal,Madhya Pradesh,23.210494,77.425409
-"Mangala, Bilaspur - NTPC",NaT,1.9024,1.1155,1.8311,0.7,1.6489,Medium,Bilaspur,Chhattisgarh,22.08815,82.13737
-"MIDC Khutala, Chandrapur - MPCB",NaT,2.1237,1.0658,1.3704,0.83,1.6021,Medium,Chandrapur,Maharashtra,19.9775302,79.2337086
-"Talkatora District Industries Center, Lucknow - CPCB",NaT,1.8891,1.2277,1.971,0.84,1.7143,Medium,Lucknow,Uttar_Pradesh,26.83399722,80.8917361
-"Kukrail Picnic Spot-1, Lucknow - UPPCB",NaT,1.0343,1.1366,1.8322,0.84,1.2217,Medium,Lucknow,Uttar_Pradesh,26.90723,80.98579
-"Krishna Nagar, Bharatpur - RSPCB",NaT,1.4234,1.1594,1.9347,0.84,1.4601,Medium,Bharatpur,Rajasthan,27.215415,77.50873
-"Police Commissionerate, Jaipur - RSPCB",NaT,2.0922,1.2414,1.9969,0.83,1.815,Medium,Jaipur,Rajasthan,26.9164092,75.7994901
-"Krishak Nagar, Raipur - CECB",NaT,1.4731,1.0658,1.3256,0.83,1.3233,Medium,Raipur,Chhattisgarh,21.237755,81.705301
-"Koyana Nagar, Satara - MPCB",NaT,1.4913,1.0365,1.3014,0.79,1.3161,Medium,Satara,Maharashtra,17.696651,74.003387
-"Police Line, Saharsa - BSPCB",NaT,1.8043,1.1897,1.8675,0.82,1.64,Medium,Saharsa,Bihar,25.892357,86.590325
-"Kopripada-Vashi, Navi Mumbai - MPCB",NaT,1.8095,1.1139,1.4879,0.84,1.5263,Medium,Navi Mumbai,Maharashtra,19.090337,73.014232
-"Police Line, Sri Vijaya Puram - ANPCC",NaT,1.1049,1.0,1.0,0.41,1.0512,Low,Sri Vijaya Puram,Andaman and Nicobar,11.654054,92.734055
-"Kompally Municipal Office, Hyderabad - TSPCB",NaT,1.4871,1.0228,1.0887,0.84,1.2527,Medium,Hyderabad,Telangana,17.544899,78.486949
-"Tarapur, Silchar - PCBA",NaT,1.3453,1.0219,1.3588,0.83,1.2591,Medium,Silchar,Assam,24.82827,92.79525
-"Kokapet, Hyderabad - TSPCB",NaT,1.4653,1.1755,1.2797,0.83,1.3406,Medium,Hyderabad,Telangana,17.393559,78.339194
-"Police Lines, Jind - HSPCB",NaT,1.9395,1.2414,1.8458,0.83,1.7134,Medium,Jind,Haryana,29.307814,76.337619
-"Kodungaiyur, Chennai - TNPCB",NaT,1.6634,1.0878,1.6999,0.83,1.504,Medium,Chennai,TamilNadu,13.1278,80.2642
-"Knowledge Park - V, Greater Noida - UPPCB",NaT,2.7159,1.296,1.9974,0.84,2.0904,Medium,Greater Noida,Uttar_Pradesh,28.557054,77.453663
-"Powai, Mumbai - MPCB",NaT,1.3691,1.0385,1.5236,0.7,1.3123,Medium,Mumbai,Maharashtra,19.1375,72.915056
-"Kurla, Mumbai - MPCB",NaT,1.7896,1.0913,1.8908,0.79,1.6033,Medium,Mumbai,Maharashtra,19.0863,72.8888
-"MIDC Chilkalthana, Aurangabad - MPCB",NaT,1.8944,1.1054,1.9546,0.72,1.6687,Medium,Aurangabad,Maharashtra,19.87562,75.38731
-"Tarakpur, Ahmednagar - MPCB",NaT,1.7284,1.0606,1.9006,0.81,1.5665,Medium,Ahmednagar,Maharashtra,19.10122,74.73339
-"LGBI Airport, Guwahati - PCBA",NaT,1.5841,1.1265,1.9103,0.82,1.5244,Medium,Guwahati,Assam,26.10887,91.589544
-"Phase-1 GIDC, Vapi - GPCB",NaT,1.4842,1.1755,1.8404,0.83,1.4775,Medium,Vapi,Gujarat,20.362421,72.918013
-"MIDC Ambad, Nashik - MPCB",NaT,1.4565,1.0683,1.4821,0.84,1.3538,Medium,Nashik,Maharashtra,19.95022,73.73148
-"MD University, Rohtak - HSPCB",NaT,2.0995,1.1755,1.9277,0.83,1.7778,Medium,Rohtak,Haryana,28.52123,76.37138
-"Phase-4 GIDC, Vatva - GPCB",NaT,2.4694,1.2853,1.5929,0.83,1.8797,Medium,Vatva,Gujarat,22.969611,72.6435
-"Lumpyngngad, Shillong - Meghalaya PCB",NaT,0.7147,1.0,1.5754,0.55,0.9471,Low,Shillong,Meghalaya,25.5586,91.8985
-"Loni, Ghaziabad - UPPCB",NaT,3.0067,1.2505,1.9968,0.84,2.1797,Medium,Ghaziabad,Uttar_Pradesh,28.757294,77.278792
-"Lohiyanagar, Begusarai - BSPCB",NaT,1.7769,1.1975,1.9936,0.83,1.6569,Medium,Begusarai,Bihar,25.42742023,86.13886079
-"Talkatora Garden, Delhi - DPCC",NaT,2.1004,1.1155,1.9978,0.8,1.7707,Medium,Delhi,Delhi,28.62181,77.1944633
-"Pimpleshwar Mandir, Kalyan - MPCB",NaT,1.9001,1.0365,1.2913,0.79,1.4827,Medium,Kalyan,Maharashtra,19.192056,72.9585188
-"Lodhi Road, Delhi - IMD",NaT,2.0982,1.0544,1.9955,0.65,1.7446,Medium,Delhi,Delhi,28.5918245,77.2273074
-"Lingraj Mandir, Bhubaneswar - OSPCB",NaT,2.1284,1.1317,1.9997,0.83,1.7893,Medium,Bhubaneswar,Odisha,20.24079,85.836784
-"Lingaraj Nagar, Hubballi - KSPCB",NaT,1.1768,1.0,1.2318,0.83,1.1428,Medium,Hubballi,Karnataka,15.3714823,75.1160168
-"Plammoodu, Thiruvananthapuram - Kerala PCB",NaT,1.5809,1.0,1.2362,0.72,1.3258,Medium,Thiruvananthapuram,Kerala,8.5149093,76.9435879
-"Lalbagh, Lucknow - CPCB",NaT,2.63,1.1536,1.8502,0.83,1.9602,Medium,Lucknow,Uttar_Pradesh,26.8458805,80.9365541
-"Sikulpuikawn, Aizawl - Mizoram PCB",NaT,1.2434,1.0219,1.7416,0.73,1.2879,Medium,Aizawl,Mizoram,23.7176342,92.7192841
-"Polayathode, Kollam - Kerala PCB",NaT,1.2588,1.0298,1.9999,0.46,1.3441,Low,Kollam,Kerala,8.8787,76.6073
-"Knowledge Park - III, Greater Noida - UPPCB",NaT,2.087,1.2505,1.9996,0.84,1.8166,Medium,Greater Noida,Uttar_Pradesh,28.47272,77.482
-"Maninagar, Ahmedabad - GPCB",NaT,2.3777,1.2633,1.9264,0.83,1.9259,Medium,Ahmedabad,Gujarat,23.002657,72.591912
-"Manoharpur, Agra - UPPCB",NaT,1.3958,1.2049,1.4606,0.84,1.3608,Medium,Agra,Uttar_Pradesh,27.23711,78.01936
-"Nagar Nigam, Prayagraj - UPPCB",NaT,1.2658,1.0211,1.2397,0.82,1.1934,Medium,Prayagraj,Uttar_Pradesh,25.44919916,81.82735986
-"Sonia Vihar, Delhi - DPCC",NaT,2.734,1.2414,1.9999,0.83,2.0755,Medium,Delhi,Delhi,28.710508,77.249485
-"Sirifort, Delhi - CPCB",NaT,2.7111,1.253,1.9993,0.82,2.0715,Medium,Delhi,Delhi,28.5504249,77.2159377
-"Nacharam_TSIIC IALA, Hyderabad - TSPCB",NaT,1.3393,1.0683,1.1491,0.84,1.2181,Medium,Hyderabad,Telangana,17.429398,78.569354
-"NSUT Jaffarpur, Delhi - DPCC",NaT,2.7837,1.222,1.962,0.81,2.0761,Medium,Delhi,Delhi,28.594004,76.909423
-"OMC Colony, Suakati - OSPCB",NaT,1.7104,1.0632,1.6302,0.82,1.5006,Medium,Suakati,Odisha,21.606865,85.510538
-"NSIT Dwarka, Delhi - CPCB",NaT,2.3361,1.253,1.2799,0.82,1.72,Medium,Delhi,Delhi,28.60909,77.0325413
-"NSI Kalyanpur, Kanpur - UPPCB",NaT,1.3511,1.0911,1.4821,0.84,1.3108,Medium,Kanpur,Uttar_Pradesh,26.509954,80.249612
-"OP Jindal Industrial Park, Tumidih - CECB",NaT,1.6827,1.1687,1.4039,0.82,1.4681,Medium,Tumidih,Chhattisgarh,22.06631475,83.33820077
-"NISE Gwal Pahari, Gurugram - IMD",NaT,2.4817,1.0544,2.0,0.65,1.8984,Medium,Gurugram,Haryana,28.422681,77.148944
-"NISE Gwal Pahari, Gurugram - IITM",NaT,2.278,1.1278,1.9687,0.69,1.8424,Medium,Gurugram,Haryana,28.422681,77.148944
-"Sri Aurobindo Marg, Delhi - DPCC",NaT,2.0549,1.2194,1.9915,0.83,1.7895,Medium,Delhi,Delhi,28.531346,77.190156
-"Muzaffarpur Collectorate, Muzaffarpur - BSPCB",NaT,1.6909,1.1925,1.859,0.7,1.5867,Medium,Muzaffarpur,Bihar,26.1209,85.3647
-"OP Jindal School, Kunjemura - CECB",NaT,1.5541,1.0878,1.4905,0.83,1.4067,Medium,Kunjemura,Chhattisgarh,22.12665,83.483212
-"Murthal, Sonipat - HSPCB",NaT,2.0246,1.1817,1.9425,0.81,1.7514,Medium,Sonipat,Haryana,29.0272,77.0621
-"North Campus, DU, Delhi - IMD",NaT,2.517,1.0544,2.0,0.65,1.9118,Medium,Delhi,Delhi,28.6573814,77.1585447
-"Muradpur, Patna - BSPCB",NaT,1.6031,1.2853,1.4583,0.83,1.4815,Medium,Patna,Bihar,25.619651,85.147382
-"Nagla Bhau, Firozabad - UPPCB",NaT,1.4929,1.0455,1.4527,0.84,1.3564,Medium,Firozabad,Uttar_Pradesh,27.168897,78.37696
-"Naharlagun, Naharlagun - APSPCB",NaT,2.4294,1.0606,1.9984,0.81,1.8806,Medium,Naharlagun,Arunachal_Pradesh,27.103358,93.679645
-"Nerul, Navi Mumbai - MPCB",NaT,1.5938,1.0878,1.9978,0.53,1.5328,Low,Navi Mumbai,Maharashtra,19.008751,73.01662
-"New DM Office, Arrah - BSPCB",NaT,1.5693,1.0219,1.3069,0.83,1.3467,Medium,Arrah,Bihar,25.5626095,84.663264
-"Nehru Nagar, Kanpur - UPPCB",NaT,1.5694,1.2049,1.8905,0.84,1.5391,Medium,Kanpur,Uttar_Pradesh,26.4703136,80.3229863
-"Nehru Nagar, Delhi - DPCC",NaT,2.8278,1.2319,1.9997,0.82,2.1067,Medium,Delhi,Delhi,28.56789,77.250515
-"New Industrial Town, Faridabad - HSPCB",NaT,2.5378,1.2319,1.778,0.82,1.938,Medium,Faridabad,Haryana,28.39072,77.30059
-"Nayapura, Kota - RSPCB",NaT,1.9901,1.1822,1.9978,0.84,1.7488,Medium,Kota,Rajasthan,25.196024,75.855668
-"Nawapara SECL Colony, Chhal - CECB",NaT,1.3122,1.0658,1.4527,0.83,1.2778,Medium,Chhal,Chhattisgarh,22.118125,83.140608
-"New Malakpet, Hyderabad - TSPCB",NaT,1.5866,1.1139,1.8313,0.84,1.5053,Medium,Hyderabad,Telangana,17.37206,78.50864
-"Navy Nagar-Colaba, Mumbai - IITM",NaT,2.4821,1.1317,1.8754,0.73,1.9016,Medium,Mumbai,Maharashtra,18.897756,72.81332
-"Somajiguda, Hyderabad - TSPCB",NaT,1.4779,1.1366,1.6403,0.84,1.4206,Medium,Hyderabad,Telangana,17.417094,78.457437
-"Nathu Colony, Ballabgarh - HSPCB",NaT,2.6359,1.2633,1.9909,0.83,2.0446,Medium,Ballabgarh,Haryana,28.3419248,77.319699
-"New Mandi, Muzaffarnagar - UPPCB",NaT,2.203,1.2633,1.9444,0.83,1.8582,Medium,Muzaffarnagar,Uttar_Pradesh,29.4723508,77.7194031
-"Narela, Delhi - DPCC",NaT,2.794,1.2414,1.9947,0.83,2.0968,Medium,Delhi,Delhi,28.822836,77.101981
-"New Moti Bagh, Delhi - MHUA",NaT,2.3629,1.0172,1.9672,0.42,1.8283,Low,Delhi,Delhi,28.57834,77.184
-"Najafgarh, Delhi - DPCC",NaT,1.9986,1.2194,1.9995,0.83,1.7666,Medium,Delhi,Delhi,28.570173,76.933762
-"North Campus, DU, Delhi - IITM",NaT,2.5991,1.1643,1.9981,0.69,1.991,Medium,Delhi,Delhi,28.6573814,77.1585447
-"Pan Bazaar, Guwahati - PCBA",NaT,3.0971,1.0632,1.7896,0.72,2.067,Medium,Guwahati,Assam,26.1875,91.744194
-"Okhla Phase-2, Delhi - DPCC",NaT,2.661,1.2414,1.9995,0.83,2.0475,Medium,Delhi,Delhi,28.530785,77.271255
-"Mundka, Delhi - DPCC",NaT,3.0267,1.2633,1.9993,0.83,2.1932,Medium,Delhi,Delhi,28.684678,77.076574
-"PSG College of Arts and Science, Coimbatore - TNPCB",NaT,1.4841,1.0807,1.9795,0.71,1.4733,Medium,Coimbatore,TamilNadu,11.0328,77.0349
-"Meelavittan, Thoothukudi - TNPCB",NaT,0.6785,1.0228,1.1974,0.74,0.8665,Medium,Thoothukudi,TamilNadu,8.816428,78.099039
-"Subash Chowk, Churu - RSPCB",NaT,1.6709,1.2633,1.9957,0.83,1.6288,Medium,Churu,Rajasthan,28.296139,74.961696
-"Mazgaon, Mumbai - IITM",NaT,2.1287,1.0878,1.5721,0.83,1.6684,Medium,Mumbai,Maharashtra,18.96702,72.84214
-"PWD Junction, Kohima - NPCB",NaT,1.3332,1.0,1.6092,0.84,1.3005,Medium,Kohima,Nagaland,25.6635413,94.0989878
-"Mayaganj, Bhagalpur - BSPCB",NaT,1.0726,1.1536,1.4741,0.83,1.1827,Medium,Bhagalpur,Bihar,25.265194,87.012947
-"Mavdi, Rajkot - Nexteng Enviro ",NaT,2.764,1.1687,1.6537,0.82,1.9602,Medium,Rajkot,Gujarat,22.248853,70.776774
-"Padmapukur, Howrah - WBPCB",NaT,2.3512,1.0632,1.1633,0.82,1.6171,Medium,Howrah,West_Bengal,22.5687319,88.2797276
-"Masoom Colony, Parbhani - MPCB",NaT,1.3541,1.1594,1.9698,0.84,1.4305,Medium,Parbhani,Maharashtra,19.265594,76.761463
-"Mariam Nagar, Purnia - BSPCB",NaT,1.6845,1.1732,1.8137,0.8,1.5676,Medium,Purnia,Bihar,25.366336,87.117468
-"Sinchan Bhavan, Kolhapur - MPCB",NaT,1.3559,1.0483,1.9834,0.67,1.3983,Medium,Kolhapur,Maharashtra,16.7143745,74.2426398
-"Marhatal, Jabalpur - MPPCB",NaT,2.0144,1.1536,1.8484,0.83,1.7151,Medium,Jabalpur,Madhya Pradesh,23.168606,79.932247
-"Pallavpuram Phase 2, Meerut - UPPCB",NaT,2.1196,1.2414,1.9735,0.83,1.8214,Medium,Meerut,Uttar_Pradesh,29.06351,77.709723
-"Suhagi, Jabalpur - JMC",NaT,1.5874,1.0439,1.4445,0.83,1.3961,Medium,Jabalpur,Madhya Pradesh,23.218135,79.95777
-"Mansarovar Sector-12, Jaipur - RSPCB",NaT,2.0734,1.2049,1.996,0.84,1.7932,Medium,Jaipur,Rajasthan,26.843698,75.766894
-"Meher Colony, Baripada - OSPCB",NaT,1.5476,1.1009,1.9857,0.81,1.5127,Medium,Baripada,Odisha,21.941841,86.728318
-"Municipal Corporation Office, Dharuhera -  HSPCB",NaT,2.1378,1.2853,1.9103,0.83,1.8303,Medium,Dharuhera,Haryana,28.2068,76.7997
-"Mhada Colony, Pune - IITM",NaT,2.4574,1.1139,1.9999,0.74,1.9151,Medium,Pune,Maharashtra,18.57304,73.927715
-"Mindspace-Malad West, Mumbai - MPCB",NaT,1.9206,1.0658,1.6672,0.83,1.6001,Medium,Mumbai,Maharashtra,19.1878657,72.8304069
-"Srinivas Nagar Colony, Machilipatnam - APPCB",NaT,1.2081,1.0962,1.1707,0.8,1.1699,Medium,Machilipatnam,Andhra_Pradesh,16.186555,81.13219
-"Old City, Sri Ganganagar - RSPCB",NaT,2.2041,1.2049,1.9999,0.84,1.8497,Medium,Sri Ganganagar,Rajasthan,29.931624,73.864511
-"Mulund West, Mumbai - MPCB",NaT,1.8209,1.0422,1.3478,0.52,1.469,Low,Mumbai,Maharashtra,19.175,72.9419
-"Mudtra Sili, Jalore - RSPCB",NaT,1.8366,1.1594,1.6114,0.84,1.5844,Medium,Jalore,Rajasthan,25.344694,72.626208
-"Old MIDC, Jalna - MPCB",NaT,1.5247,1.0219,1.4585,0.83,1.3643,Medium,Jalna,Maharashtra,19.854616,75.905894
-"Motilal Nehru NIT, Prayagraj - UPPCB",NaT,1.4073,1.0632,1.2605,0.82,1.2764,Medium,Prayagraj,Uttar_Pradesh,25.494,81.863
-"Sion, Mumbai - MPCB",NaT,1.8763,1.0683,1.9354,0.74,1.6425,Medium,Mumbai,Maharashtra,19.047,72.8746
-"Moti Doongri, Alwar - RSPCB",NaT,1.7897,1.1822,1.9673,0.84,1.6521,Medium,Alwar,Rajasthan,27.554793,76.611536
-"More Chowk Waluj, Aurangabad - MPCB",NaT,2.0136,1.0807,1.8512,0.81,1.6876,Medium,Aurangabad,Maharashtra,19.8389439,75.244448
-"Omex Eternity, Vrindavan - UPPCB",NaT,1.3673,1.0843,1.4881,0.82,1.3179,Medium,Vrindavan,Uttar_Pradesh,27.571409,77.655757
-"Model Town, Patiala - PPCB",NaT,1.2982,1.0911,1.6017,0.84,1.31,Medium,Patiala,Punjab,30.349388,76.366642
-"Stuart Hill, Madikeri - KSPCB",NaT,1.6113,1.0219,1.4125,0.73,1.3913,Medium,Madikeri,Karnataka,12.415911,75.73505
-"Mirchaibari, Katihar - BSPCB",NaT,1.5138,1.0658,1.667,0.83,1.4205,Medium,Katihar,Bihar,25.560083,87.553265
-"Opp GPO Civil Lines, Nagpur - MPCB",NaT,2.4784,1.0878,1.411,0.83,1.7523,Medium,Nagpur,Maharashtra,21.152875,79.0517531
-"Mini Secretariat, Charkhi Dadri - HSPCB",NaT,2.2937,1.2853,1.8034,0.83,1.8687,Medium,Charkhi Dadri,Haryana,28.593883,76.270653
-"PCBL Residential Complex, Durgapur - WBPCB",NaT,2.2083,1.0843,1.8737,0.82,1.7742,Medium,Durgapur,West_Bengal,23.508764,87.35444
-"Golden Temple, Amritsar - PPCB",NaT,1.7952,1.2505,1.8295,0.84,1.6478,Medium,Amritsar,Punjab,31.62,74.876512
-"Tata Stadium, Jorapokhar - JSPCB",NaT,1.4066,1.077,1.1348,0.8,1.247,Medium,Jorapokhar,Jharkhand,23.707909,86.41467
-"Shasthri Nagar, Ratlam - IPCA Lab",NaT,1.9609,1.0878,1.3789,0.73,1.5497,Medium,Ratlam,Madhya Pradesh,23.331731,75.045981
-"IGSC Planetarium Complex, Patna - BSPCB",NaT,1.9686,1.1687,1.9852,0.72,1.7316,Medium,Patna,Bihar,25.610369,85.132568
-"Rajbansi Nagar, Patna - BSPCB",NaT,1.8474,1.1536,1.7595,0.83,1.6224,Medium,Patna,Bihar,25.599486,85.113666
-"IGNOU_Maidan Garhi, Delhi - DPCC",NaT,2.3345,1.1817,1.9989,0.81,1.8942,Medium,Delhi,Delhi,28.493624,77.201159
-"Trivenidevi Bhalotia College, Asansol - WBPCB",NaT,1.937,1.0632,1.7899,0.82,1.6347,Medium,Asansol,West_Bengal,23.616515,87.119133
-"IGI Airport (T3), Delhi - IMD",NaT,2.3337,1.0544,1.9996,0.65,1.8408,Medium,Delhi,Delhi,28.5627763,77.1180053
-"IGI Airport (T3), Delhi - IITM",NaT,2.3407,1.1278,1.9303,0.69,1.8584,Medium,Delhi,Delhi,28.5627763,77.1180053
-"Rajendra Nagar North, Guntur - APPCB",NaT,1.6231,1.1817,1.3875,0.81,1.4416,Medium,Guntur,Andhra_Pradesh,16.316553,80.413302
-"IESD Banaras Hindu University, Varanasi - UPPCB",NaT,1.0435,1.0219,1.4355,0.83,1.1242,Medium,Varanasi,Uttar_Pradesh,25.262326,82.995408
-"IDA Pashamylaram, Hyderabad - TSPCB",NaT,1.6902,1.0658,1.6612,0.83,1.4997,Medium,Hyderabad,Telangana,17.5316895,78.218939
-"Shrinath Puram, Kota - RSPCB",NaT,2.0858,1.2194,1.9948,0.83,1.8036,Medium,Kota,Rajasthan,25.14389,75.821256
-"ICRISAT Patancheru, Hyderabad - TSPCB",NaT,1.5034,1.0843,1.9974,0.82,1.4875,Medium,Hyderabad,Telangana,17.5184,78.278777
-"Rajendra Nagar, Bareilly - UPPCB",NaT,1.134,1.0228,1.3413,0.74,1.1525,Medium,Bareilly,Uttar_Pradesh,28.38910936,79.42963708
-"Uchapatti, Madurai - TNPCB",NaT,0.0857,1.0,1.0279,0.36,0.2948,Provisional,Madurai,TamilNadu,9.865935,78.022669
-"Huda Sector, Fatehabad - HSPCB",NaT,1.1474,1.2414,1.8705,0.83,1.3223,Medium,Fatehabad,Haryana,29.503664,75.467934
-"Udyogamandal, Eloor - Kerala PCB",NaT,2.0931,1.0172,1.1523,0.72,1.5053,Medium,Eloor,Kerala,10.073232,76.302765
-"IHBAS, Dilshad Garden, Delhi - CPCB",NaT,2.2433,1.2319,1.9358,0.82,1.8612,Medium,Delhi,Delhi,28.6811736,77.3025234
-"Housing Board, Hanumangarh - RSPCB",NaT,1.5449,1.1594,1.9418,0.84,1.5225,Medium,Hanumangarh,Rajasthan,29.61075,74.283608
-"Rajbagh, Srinagar - JKPCC",NaT,0.791,1.0,1.208,0.73,0.9324,Medium,Srinagar,Jammu_and_Kashmir,34.066206,74.81982
-"IIT Delhi, Delhi - IITM",NaT,2.3633,1.2414,1.9985,0.73,1.9294,Medium,Delhi,Delhi,28.54246,77.191651
-"Indirapuram, Ghaziabad - UPPCB",NaT,2.7734,1.2733,1.9921,0.84,2.1017,Medium,Ghaziabad,Uttar_Pradesh,28.646233,77.358075
-"Raikhad, Ahmedabad - IITM",NaT,2.1794,1.0878,1.7443,0.83,1.7326,Medium,Ahmedabad,Gujarat,23.020509,72.579261
-"Indira Colony Vistar, Pali - RSPCB",NaT,1.993,1.2633,1.9608,0.83,1.7711,Medium,Pali,Rajasthan,25.771061,73.340227
-"Idgah Hills, Bhopal - MPPCB",NaT,1.9353,1.0606,1.7131,0.81,1.6151,Medium,Bhopal,Madhya Pradesh,23.264759,77.381568
-"Shrivastav Colony, Damoh - MPPCB",NaT,1.753,1.0843,1.3146,0.62,1.4467,Low,Damoh,Madhya Pradesh,23.81748678,79.446246
-"Ibrahimpur, Vijayapura - KSPCB",NaT,1.0294,1.0,1.0,0.82,1.0146,Medium,Vijayapura,Karnataka,16.802639,75.722694
-"Railway Colony, Barmer - RSPCB",NaT,1.3829,1.2505,1.7507,0.84,1.4304,Medium,Barmer,Rajasthan,25.747299,71.393989
-"Transport Nagar-Nigdi, Pimpri-Chinchwad- IITM",NaT,1.4916,1.0,1.1759,0.68,1.2718,Medium,Pimpri-Chinchwad,Maharashtra,18.664282,73.763966
-"ITO, Delhi - CPCB",NaT,2.5491,1.222,1.9999,0.81,1.9962,Medium,Delhi,Delhi,28.628624,77.24106
-"IMD Lodhi Road, Delhi - IITM",NaT,2.6827,1.1643,1.9962,0.69,2.0223,Medium,Delhi,Delhi,28.5918245,77.2273074
-"Railway Colony, Guwahati - PCBA",NaT,3.0241,1.1897,2.0,0.62,2.1598,Low,Guwahati,Assam,26.181742,91.78063
-"IITH Kandi, Hyderabad - TSPCB",NaT,1.4803,1.1594,1.6066,0.84,1.4214,Medium,Hyderabad,Telangana,17.585705,78.126199
-"Transport Nagar-Nigdi, Pune - IITM",NaT,2.4346,1.0596,2.0,0.56,1.8826,Low,Pune,Maharashtra,18.664282,73.763966
-"IITG, Guwahati - PCBA",NaT,1.0204,1.0,1.2036,0.71,1.058,Medium,Guwahati,Assam,26.2028636,91.70046436
-"Raja Ganj, Dholpur - RSPCB",NaT,1.9156,1.1317,1.9457,0.83,1.686,Medium,Dholpur,Rajasthan,26.699557,77.898881
-"IIPHG Lekawada, Gandhinagar - IITM",NaT,1.79,1.0878,1.7566,0.83,1.573,Medium,Gandhinagar,Gujarat,23.243639,72.68994
-"Transport Nagar, Moradabad - UPPCB",NaT,1.3975,1.1265,1.4394,0.82,1.334,Medium,Moradabad,Uttar_Pradesh,28.802625,78.753728
-"Rajiv Gandhi Park, Vijayawada - APPCB",NaT,1.535,1.1897,1.5419,0.82,1.4419,Medium,Vijayawada,Andhra_Pradesh,16.509717,80.612222
-"Hirawadi, Nashik - MPCB",NaT,1.7124,1.0658,1.6039,0.73,1.4963,Medium,Nashik,Maharashtra,20.021503,73.813844
-"Gupteshwar, Jabalpur - JMC",NaT,1.4348,1.073,1.4265,0.79,1.3323,Medium,Jabalpur,Madhya Pradesh,23.142888,79.916147
-"Ramdaspeth, Akola - MPCB",NaT,1.6325,1.0658,1.3936,0.83,1.4106,Medium,Akola,Maharashtra,20.719516,77.000253
-"Gulzarpet, Anantapur - APPCB",NaT,1.5105,1.1317,1.9008,0.83,1.4884,Medium,Anantapur,Andhra_Pradesh,14.675886,77.593027
-"Govt. Higher Secondary School, Milupara - CECB",NaT,1.3379,1.1097,1.6986,0.83,1.3553,Medium,Milupara,Chhattisgarh,22.1910172,83.5197009
-"Rampur, Korba - CECB",NaT,1.5331,1.0202,1.3477,0.81,1.3408,Medium,Korba,Chhattisgarh,22.368195,82.746431
-"Govt. High School Shikarpur, Patna - BSPCB",NaT,2.0595,1.2853,1.4631,0.83,1.6805,Medium,Patna,Bihar,25.592539,85.227158
-"Urban, Chamarajanagar - KSPCB",NaT,1.1715,1.0,1.1769,0.83,1.1273,Medium,Chamarajanagar,Karnataka,11.55358,76.55521
-"Ramteerth Nagar, Belgaum - KSPCB",NaT,1.54,1.0183,1.192,0.79,1.3026,Medium,Belgaum,Karnataka,15.888653,74.541751
-"Govt. Girls Inter College, Kashipur - UKPCB",NaT,1.6802,1.1155,1.9911,0.8,1.5824,Medium,Kashipur,Uttarakhand,29.2124114,78.9611753
-"Govindpuram, Ghaziabad - UPPCB",NaT,3.0135,1.1095,1.9276,0.79,2.0993,Medium,Ghaziabad,Uttar_Pradesh,28.694528,77.494705
-"Ratandeep Housing Society, Solapur - MPCB",NaT,1.9169,1.0911,1.995,0.84,1.6817,Medium,Solapur,Maharashtra,17.65439,75.90649
-"Govindh Bhavan Colony, Jabalpur - JMC",NaT,1.2377,1.0422,1.391,0.82,1.2207,Medium,Jabalpur,Madhya Pradesh,23.163174,79.973061
-"Gomti Nagar, Lucknow - UPPCB",NaT,1.9622,1.2733,1.7213,0.84,1.7044,Medium,Lucknow,Uttar_Pradesh,26.86812,81.005119
-"Ratanpura, Rupnagar - Ambuja Cements",NaT,1.2162,1.2414,1.943,0.73,1.3743,Medium,Rupnagar,Punjab,31.0325454,76.5623046
-"Gole Bazar, Katni - MPPCB",NaT,2.2769,1.1755,1.5331,0.83,1.7484,Medium,Katni,Madhya Pradesh,23.50016,80.23284
-"Gurdeo Nagar, Aurangabad - BSPCB",NaT,1.1859,1.0,1.6385,0.5,1.232,Low,Aurangabad,Bihar,24.75746,84.366208
-"Hombegowda Nagar, Bengaluru - KSPCB",NaT,1.2582,1.0658,1.6879,0.83,1.2991,Medium,Bengaluru,Karnataka,12.938539,77.5901
-"Shri Shivaji Science College, Amravati - MPCB",NaT,2.0461,1.0439,1.2153,0.83,1.5181,Medium,Amravati,Maharashtra,20.939198,77.765701
-"Ramachandrapuram, Hyderabad - TSPCB",NaT,1.3277,1.0,1.1856,0.84,1.2024,Medium,Hyderabad,Telangana,17.528544,78.286195
-"Rajiv Nagar, Vijayawada - APPCB",NaT,1.5126,1.2194,1.7802,0.83,1.4929,Medium,Vijayawada,Andhra_Pradesh,16.554731,80.64911
-"Hebbal, Bengaluru - KSPCB",NaT,1.4302,1.0644,1.9988,0.77,1.4443,Medium,Bengaluru,Karnataka,13.029152,77.585901
-"Hebbal 1st Stage, Mysuru - KSPCB",NaT,1.4991,1.0658,1.8534,0.83,1.4515,Medium,Mysuru,Karnataka,12.21041,76.37376
-"Rajlaxmi Nagar, Jhalawar - RSPCB",NaT,2.0779,1.1097,1.9957,0.83,1.7585,Medium,Jhalawar,Rajasthan,24.588397,76.172782
-"Hathkhoj, Bhilai - CECB",NaT,1.5998,1.0,1.341,0.83,1.3611,Medium,Bhilai,Chhattisgarh,21.224231,81.40835
-"Upvan Fort, Thane - MPCB",NaT,1.4417,1.0911,1.3852,0.84,1.3313,Medium,Thane,Maharashtra,19.222279,72.957979
-"Sneh Nagar, Nanded - MPCB",NaT,1.9699,1.0439,1.4113,0.83,1.5463,Medium,Nanded,Maharashtra,19.173852,77.296291
-"Rakhial, Ahmedabad - IITM",NaT,2.232,1.1054,1.6793,0.82,1.7439,Medium,Ahmedabad,Gujarat,23.016834,72.625775
-"Hakimapada, Angul - OSPCB",NaT,2.3025,1.3188,1.9641,0.84,1.925,Medium,Angul,Odisha,20.832874,85.104082
-"Hadapsar, Pune - IITM",NaT,1.9781,1.0447,1.9981,0.46,1.6905,Low,Pune,Maharashtra,18.501793,73.927532
-"HIMUDA Complex Phase-1, Baddi - HPPCB",NaT,2.5021,1.2633,1.9942,0.83,1.9928,Medium,Baddi,Himachal Pradesh,30.943887,76.801991
-"Ram Nagar, Nagpur - MPCB",NaT,2.5048,1.1317,1.8913,0.83,1.9143,Medium,Nagpur,Maharashtra,21.143383,79.048912
-"HB Colony, Vijayawada - APPCB",NaT,1.4815,1.1975,1.7873,0.83,1.4722,Medium,Vijayawada,Andhra_Pradesh,16.536107,80.594233
-"H.B. Colony, Bhiwani - HSPCB",NaT,2.2663,1.2319,1.7642,0.82,1.8278,Medium,Bhiwani,Haryana,28.806223,76.141105
-"Urban Estate-II, Hisar - HSPCB",NaT,1.4277,1.1095,1.7876,0.79,1.418,Medium,Hisar,Haryana,29.14056,75.744941
-"Gyaspur, Ahmedabad - IITM",NaT,2.7109,1.1317,1.3532,0.83,1.8316,Medium,Ahmedabad,Gujarat,22.977134,72.553024
-"Khunmoh, Srinagar - JKPCC",NaT,1.1069,1.0,1.4265,0.61,1.1498,Low,Srinagar,Jammu_and_Kashmir,34.06313,74.96017
-"Indra Nagar, Jhunjhunu - RSPCB",NaT,1.6781,1.1975,1.8838,0.83,1.5876,Medium,Jhunjhunu,Rajasthan,28.108988,75.386577
-"Industrial Area, Hajipur - BSPCB",NaT,2.511,1.2414,1.9569,0.83,1.9783,Medium,Hajipur,Bihar,25.697189,85.2459
-"Kasturi Nagar, Bengaluru - KSPCB",NaT,1.4945,1.0,1.5888,0.74,1.3725,Medium,Bengaluru,Karnataka,13.003872,77.664217
-"Kashiram Nagar, Moradabad - UPPCB",NaT,1.4962,1.2194,1.5478,0.83,1.4337,Medium,Moradabad,Uttar_Pradesh,28.849399,78.742362
-"Kasarvadavali, Thane - MPCB",NaT,1.4481,1.1594,1.3621,0.84,1.349,Medium,Thane,Maharashtra,19.26777,72.97182
+"Lal Bahadur Shastri Nagar, Kalaburagi - KSPCB",2026-09-06,0.5326,1.0,1.9108,0.33,0.8581,Provisional,Kalaburagi,Karnataka,17.321993,76.822628
 "Punjab Agricultural University, Ludhiana - PPCB",NaT,1.7024,1.2633,1.6888,0.83,1.5769,Medium,Ludhiana,Punjab,30.9028,75.8086
-"Karni Colony, Nagaur - RSPCB",NaT,1.5538,1.1536,1.8678,0.83,1.5102,Medium,Nagaur,Rajasthan,27.213494,73.734444
-"Kariavattom, Thiruvananthapuram - Kerala PCB",NaT,2.3085,1.0632,1.7139,0.82,1.7653,Medium,Thiruvananthapuram,Kerala,8.5637,76.8865
-"Punjabi Bagh, Delhi - DPCC",NaT,2.7599,1.2633,1.9988,0.83,2.0942,Medium,Delhi,Delhi,28.674045,77.131023
-"Kareemganj, Gaya - BSPCB",NaT,1.6293,1.2633,1.7757,0.83,1.5621,Medium,Gaya,Bihar,24.792403,84.992416
-"Thavakkara, Kannur - Kerala PCB",NaT,1.6892,1.1536,1.7282,0.83,1.5444,Medium,Kannur,Kerala,11.875,75.3732
-"Kanuru, Vijayawada - APPCB",NaT,1.4844,1.1615,1.3541,0.81,1.3644,Medium,Vijayawada,Andhra_Pradesh,16.486692,80.699436
-"Siddharth Nagar-Worli, Mumbai - IITM",NaT,2.2114,1.0658,1.7616,0.73,1.7407,Medium,Mumbai,Maharashtra,19.000083,72.813993
-"Kandivali West, Mumbai - BMC",NaT,1.9072,1.1097,1.9584,0.83,1.6768,Medium,Mumbai,Maharashtra,19.215859,72.831718
-"Pusa, Delhi - DPCC",NaT,2.7886,1.2108,1.9982,0.82,2.0827,Medium,Delhi,Delhi,28.639652,77.146275
-"Kandivali East, Mumbai - MPCB",NaT,1.2384,1.0316,1.2802,0.73,1.193,Medium,Mumbai,Maharashtra,19.2058,72.8682
-"Kamble Tarf Birwadi, Mahad - MPCB",NaT,2.0105,1.1211,1.9898,0.81,1.7329,Medium,Mahad,Maharashtra,18.1023399,73.4783687
-"Priyambada Housing Estate, Haldia - WBPCB",NaT,2.1161,1.0658,1.837,0.83,1.7208,Medium,Haldia,West_Bengal,22.06047,88.109737
-"Kamalnath Nagar, Bettiah - BSPCB",NaT,1.4914,1.0878,1.7777,0.73,1.4401,Medium,Bettiah,Bihar,26.80365,84.51954
+"Madan Mohan Malaviya University of Technology, Gorakhpur - UPPCB",NaT,1.5693,1.0911,1.4868,0.84,1.4138,Medium,Gorakhpur,Uttar_Pradesh,26.730136,83.433859
+"Narela, Delhi - DPCC",NaT,2.794,1.2414,1.9513,0.83,2.0853,Medium,Delhi,Delhi,28.822836,77.101981
+"OP Jindal Industrial Park, Tumidih - CECB",NaT,1.6827,1.1975,1.609,0.83,1.5283,Medium,Tumidih,Chhattisgarh,22.06631475,83.33820077
+"Okhla Phase-2, Delhi - DPCC",NaT,2.661,1.2414,1.9991,0.83,2.0474,Medium,Delhi,Delhi,28.530785,77.271255
+"Yamunapuram, Bulandshahr - UPPCB",NaT,1.9439,1.2505,1.7116,0.84,1.6864,Medium,Bulandshahr,Uttar_Pradesh,28.406963,77.849831
+"Adarsh Nagar, Jaipur - RSPCB",NaT,2.3527,1.1536,1.9998,0.83,1.8904,Medium,Jaipur,Rajasthan,26.902909,75.836858
+"Punjabi Bagh, Delhi - DPCC",NaT,2.7599,1.2414,1.9947,0.83,2.084,Medium,Delhi,Delhi,28.674045,77.131023
+"Maguda Nagar, Indore - IMC",NaT,1.6262,1.0385,1.8031,0.8,1.4917,Medium,Indore,Madhya Pradesh,22.7524,75.8872
+"Pusa, Delhi - DPCC",NaT,2.7886,1.2108,1.9571,0.82,2.0719,Medium,Delhi,Delhi,28.639652,77.146275
+"Vasundhara, Ghaziabad - UPPCB",NaT,2.706,1.1975,1.9092,0.83,2.0228,Medium,Ghaziabad,Uttar_Pradesh,28.6603346,77.3572563
+"MM Ground, Bikaner - RSPCB",NaT,2.0037,1.2733,1.9231,0.84,1.7707,Medium,Bikaner,Rajasthan,28.018792,73.292658
+"Vasundhara Nagar_UIT, Bhiwadi - RSPCB",NaT,2.8092,1.296,1.9944,0.84,2.1252,Medium,Bhiwadi,Rajasthan,28.207266,76.829265
+"Bapunagar, Vadodara - Nexteng Enviro",NaT,2.7463,1.1975,1.4773,0.83,1.9112,Medium,Vadodara,Gujarat,22.320153,73.216285
+"Bardowali, Agartala - Tripura SPCB",NaT,1.0848,1.0861,1.9035,0.78,1.2489,Medium,Agartala,Tripura,23.8175497,91.2726974
+"Nathu Colony, Ballabgarh - HSPCB",NaT,2.6359,1.2633,1.9892,0.83,2.0441,Medium,Ballabgarh,Haryana,28.3419248,77.319699
+"Ved Vihar-Loni, Ghaziabad - UPPCB",NaT,3.4295,1.0061,1.0,0.71,1.8547,Medium,Ghaziabad,Uttar_Pradesh,28.739153,77.273668
+"Barsua Iron Ore Mines, Tensa - OSPCB",NaT,1.5239,1.0183,1.3304,0.49,1.3318,Low,Tensa,Odisha,21.869985,85.167016
+"Najafgarh, Delhi - DPCC",NaT,1.9986,1.2194,1.817,0.83,1.7248,Medium,Delhi,Delhi,28.570173,76.933762
+"MIT-Daudpur Kothi, Muzaffarpur - BSPCB",NaT,1.666,1.0843,1.5007,0.82,1.4578,Medium,Muzaffarpur,Bihar,26.1403345,85.3650192
+"OP Jindal School, Kunjemura - CECB",NaT,1.5541,1.0658,1.5802,0.83,1.4202,Medium,Kunjemura,Chhattisgarh,22.12665,83.483212
+"Mirchaibari, Katihar - BSPCB",NaT,1.5138,1.0439,1.446,0.83,1.3638,Medium,Katihar,Bihar,25.560083,87.553265
+"AIIMS, Raipur - CECB",NaT,1.6455,1.0422,1.3193,0.82,1.389,Medium,Raipur,Chhattisgarh,21.258815,81.578979
+"Nehru Nagar, Delhi - DPCC",NaT,2.8278,1.2319,1.9919,0.82,2.1047,Medium,Delhi,Delhi,28.56789,77.250515
+"New Moti Bagh, Delhi - MHUA",NaT,2.3629,1.0172,1.9672,0.42,1.8283,Low,Delhi,Delhi,28.57834,77.184
+"Bhatagaon New ISBT, Raipur - CECB",NaT,1.4695,1.0219,1.514,0.83,1.352,Medium,Raipur,Chhattisgarh,21.219665,81.630094
+"New Mandi, Muzaffarnagar - UPPCB",NaT,2.203,1.2633,1.9032,0.83,1.8482,Medium,Muzaffarnagar,Uttar_Pradesh,29.4723508,77.7194031
+"Urban, Chamarajanagar - KSPCB",NaT,1.1715,1.0,1.1512,0.83,1.1211,Medium,Chamarajanagar,Karnataka,11.55358,76.55521
+"Rabindra Sarobar, Kolkata - WBPCB",NaT,2.3844,1.0439,1.414,0.83,1.702,Medium,Kolkata,West_Bengal,22.51106,88.35142
+"Zero Point GICI, Gangtok - SSPCB",NaT,1.3811,1.0439,1.2494,0.83,1.2559,Medium,Gangtok,Sikkim,27.33853,88.614099
+"Lingaraj Nagar, Hubballi - KSPCB",NaT,1.1768,1.0,1.1307,0.83,1.1186,Medium,Hubballi,Karnataka,15.3714823,75.1160168
+"15th Mile-Nongthymmai, Byrnihat - Meghalaya PCB",NaT,1.1789,1.222,1.9866,0.61,1.3553,Low,Byrnihat,Meghalaya,26.05374,91.86796
+"Lalbagh, Lucknow - CPCB",NaT,2.63,1.1536,1.8502,0.83,1.9602,Medium,Lucknow,Uttar_Pradesh,26.8458805,80.9365541
+"Nehru Nagar, Kanpur - UPPCB",NaT,1.5694,1.1822,1.6829,0.84,1.4878,Medium,Kanpur,Uttar_Pradesh,26.4703136,80.3229863
+"Rachnakar Colony, Aurangabad - MPCB",NaT,2.0044,1.0658,1.6316,0.83,1.6258,Medium,Aurangabad,Maharashtra,19.863756,75.321188
+"Lingraj Mandir, Bhubaneswar - OSPCB",NaT,2.1284,1.1097,1.6209,0.83,1.6895,Medium,Bhubaneswar,Odisha,20.24079,85.836784
+"Bhayandar West, Mira-Bhayandar - MPCB",NaT,1.9501,1.0439,1.467,0.83,1.5534,Medium,Mira-Bhayandar,Maharashtra,19.296481,72.840923
+"LGBI Airport, Guwahati - PCBA",NaT,1.5841,1.1054,1.8191,0.82,1.4988,Medium,Guwahati,Assam,26.10887,91.589544
+" Indira Nagar, Raebareli - NTPC Unchahar",NaT,2.6721,1.077,1.3988,0.6,1.811,Low,Raebareli,Uttar_Pradesh,26.207781,81.245571
+"Urban Estate-II, Hisar - HSPCB",NaT,1.4277,1.1095,1.8599,0.69,1.4321,Medium,Hisar,Haryana,29.14056,75.744941
+"Radhakishan Pura, Sikar - RSPCB",NaT,1.9277,1.2505,1.9921,0.84,1.7443,Medium,Sikar,Rajasthan,27.608912,75.153302
+"Kurla, Mumbai - MPCB",NaT,1.7896,1.0689,1.2776,0.78,1.4461,Medium,Mumbai,Maharashtra,19.0863,72.8888
+"Nerul, Navi Mumbai - MPCB",NaT,1.5938,1.0658,1.0702,0.53,1.3047,Low,Navi Mumbai,Maharashtra,19.008751,73.01662
+"Kukrail Picnic Spot-1, Lucknow - UPPCB",NaT,1.0343,1.1594,1.691,0.84,1.2034,Medium,Lucknow,Uttar_Pradesh,26.90723,80.98579
+"Bhelupur, Varanasi - UPPCB",NaT,1.9571,1.0878,1.3001,0.83,1.5256,Medium,Varanasi,Uttar_Pradesh,25.301778,82.996789
+"New Colony, Bundi - RSPCB",NaT,1.8592,1.0878,1.9461,0.83,1.6447,Medium,Bundi,Rajasthan,25.435774,75.644272
+"Raghunathpali, Rourkela - OSPCB",NaT,1.9004,1.1615,1.9658,0.81,1.6946,Medium,Rourkela,Odisha,22.220833,84.809444
+"New Industrial Town, Faridabad - HSPCB",NaT,2.5378,1.2319,1.779,0.82,1.9383,Medium,Faridabad,Haryana,28.39072,77.30059
+"Krishna Nagar, Bharatpur - RSPCB",NaT,1.4234,1.1366,1.9347,0.84,1.4529,Medium,Bharatpur,Rajasthan,27.215415,77.50873
+"New Malakpet, Hyderabad - TSPCB",NaT,1.5866,1.1139,1.8313,0.84,1.5053,Medium,Hyderabad,Telangana,17.37206,78.50864
+"Pusa, Delhi - IITM",NaT,2.254,1.154,1.992,0.7,1.8486,Medium,Delhi,Delhi,28.63611,77.173332
+"Lodhi Road, Delhi - IMD",NaT,2.0982,1.0365,1.9823,0.64,1.7342,Low,Delhi,Delhi,28.5918245,77.2273074
+"Nayapura, Kota - RSPCB",NaT,1.9901,1.1822,1.9456,0.84,1.7373,Medium,Kota,Rajasthan,25.196024,75.855668
+"Pusa, Delhi - IMD",NaT,2.7283,1.0316,1.9218,0.63,1.96,Low,Delhi,Delhi,28.63611,77.173332
+"MIET College, Meerut - UPPCB",NaT,3.53,1.0061,1.0,0.71,1.8817,Medium,Meerut,Uttar_Pradesh,28.972677,77.641018
+"MIDC Khutala, Chandrapur - MPCB",NaT,2.1237,1.0439,1.2973,0.83,1.5721,Medium,Chandrapur,Maharashtra,19.9775302,79.2337086
+"Navy Nagar-Colaba, Mumbai - IITM",NaT,2.4821,1.1317,1.7882,0.73,1.8791,Medium,Mumbai,Maharashtra,18.897756,72.81332
+"MIDC Chilkalthana, Aurangabad - MPCB",NaT,1.8944,1.0807,1.8793,0.71,1.6431,Medium,Aurangabad,Maharashtra,19.87562,75.38731
+"Bata Chowk, Nalbari - PCBA",NaT,2.007,1.1317,1.9458,0.83,1.7257,Medium,Nalbari,Assam,26.446912,91.439057
+"OMC Colony, Suakati - OSPCB",NaT,1.7104,1.0632,1.4224,0.82,1.4503,Medium,Suakati,Odisha,21.606865,85.510538
+"R K Puram, Delhi - DPCC",NaT,2.6917,1.2414,1.9979,0.83,2.0589,Medium,Delhi,Delhi,28.563262,77.186937
+"MIDC Ambad, Nashik - MPCB",NaT,1.4565,1.0455,1.4821,0.84,1.3465,Medium,Nashik,Maharashtra,19.95022,73.73148
+"Vaikuntapuram, Tirupati - APPCB",NaT,1.6232,1.0202,1.7293,0.81,1.4683,Medium,Tirupati,Andhra_Pradesh,13.615387,79.40923
+"Yerramukkapalli, Kadapa - APPCB",NaT,1.6092,1.0632,1.7711,0.82,1.486,Medium,Kadapa,Andhra_Pradesh,14.465052,78.824187
+"RIICO Ind. Area III, Bhiwadi - RSPCB",NaT,2.4599,1.2733,1.8676,0.84,1.9476,Medium,Bhiwadi,Rajasthan,28.194909,76.862296
+"Rabindra Bharati University, Kolkata - WBPCB",NaT,2.9464,1.1054,1.5419,0.82,1.9613,Medium,Kolkata,West_Bengal,22.627847,88.380669
+"MD University, Rohtak - HSPCB",NaT,2.0995,1.1755,1.9277,0.83,1.7778,Medium,Rohtak,Haryana,28.52123,76.37138
+"Lumpyngngad, Shillong - Meghalaya PCB",NaT,0.7147,1.0,1.6251,0.54,0.9545,Low,Shillong,Meghalaya,25.5586,91.8985
+"North Campus, DU, Delhi - IMD",NaT,2.517,1.0365,2.0,0.64,1.9037,Low,Delhi,Delhi,28.6573814,77.1585447
+"Bawana, Delhi - DPCC",NaT,2.6243,1.2633,1.9921,0.83,2.0404,Medium,Delhi,Delhi,28.7762,77.051074
+"Mahabir Colliery, Asansol - WBPCB",NaT,2.1427,1.0632,1.457,0.82,1.6331,Medium,Asansol,West_Bengal,23.618183,87.105718
+"RIICO Sitapura, Jaipur - RSPCB",NaT,2.5169,1.1476,1.9862,0.82,1.9493,Medium,Jaipur,Rajasthan,26.786682,75.827928
+"Loni, Ghaziabad - UPPCB",NaT,3.0067,1.2505,1.9959,0.84,2.1794,Medium,Ghaziabad,Uttar_Pradesh,28.757294,77.278792
+"32Bungalows, Bhilai - CECB",NaT,1.144,1.0,1.1289,0.83,1.1025,Medium,Bhilai,Chhattisgarh,21.194815,81.31477
+"RIMT University, Mandi Gobindgarh - PPCB",NaT,2.9583,1.0487,1.586,0.74,1.9533,Medium,Mandi Gobindgarh,Punjab,30.649961,76.331442
+"Belur Math, Howrah - WBPCB",NaT,2.4322,1.1097,1.5296,0.83,1.7801,Medium,Howrah,West_Bengal,22.629801,88.352017
+"Urja Nagar, Korba - CECB",NaT,2.3752,1.0422,1.4355,0.82,1.7045,Medium,Korba,Chhattisgarh,22.348441,82.549611
+"RVCE-Mailasandra, Bengaluru - KSPCB",NaT,2.0128,1.0243,2.0,0.64,1.6973,Low,Bengaluru,Karnataka,12.921418,77.502466
+"Lohiyanagar, Begusarai - BSPCB",NaT,1.7769,1.1975,1.9936,0.83,1.6569,Medium,Begusarai,Bihar,25.42742023,86.13886079
+"Nawapara SECL Colony, Chhal - CECB",NaT,1.3122,1.0422,1.5376,0.82,1.2888,Medium,Chhal,Chhattisgarh,22.118125,83.140608
+"North Campus, DU, Delhi - IITM",NaT,2.5991,1.1925,1.9949,0.7,2.0022,Medium,Delhi,Delhi,28.6573814,77.1585447
+"Ambazari, Nagpur - MPCB",NaT,2.5208,1.0683,1.5888,0.84,1.8122,Medium,Nagpur,Maharashtra,21.121801,79.04952
+"Priyambada Housing Estate, Haldia - WBPCB",NaT,2.1161,1.0439,1.3039,0.83,1.5712,Medium,Haldia,West_Bengal,22.06047,88.109737
+"Peenya, Bengaluru - CPCB",NaT,1.2498,1.0404,1.8957,0.71,1.3248,Medium,Bengaluru,Karnataka,13.0270199,77.494094
+"Masoom Colony, Parbhani - MPCB",NaT,1.3541,1.1366,1.9698,0.84,1.4234,Medium,Parbhani,Maharashtra,19.265594,76.761463
+"Anand Vihar, Hapur - UPPCB",NaT,2.4552,1.2414,1.9963,0.83,1.966,Medium,Hapur,Uttar_Pradesh,28.725645,77.749675
+"Pallavpuram Phase 2, Meerut - UPPCB",NaT,2.1196,1.2414,1.9735,0.83,1.8214,Medium,Meerut,Uttar_Pradesh,29.06351,77.709723
+"Ashok Vihar, Delhi - DPCC",NaT,2.7736,1.2853,1.9694,0.83,2.1007,Medium,Delhi,Delhi,28.695381,77.181665
+"Perungudi, Chennai - TNPCB",NaT,1.4735,1.0683,1.537,0.84,1.3741,Medium,Chennai,TamilNadu,12.9533,80.2357
+"Vijay Nagar, Ramanagara - KSPCB",NaT,1.4067,1.0439,1.3115,0.73,1.2829,Medium,Ramanagara,Karnataka,12.733409,77.298051
+"Vivek Vihar, Delhi - DPCC",NaT,2.6978,1.2319,1.3532,0.82,1.8663,Medium,Delhi,Delhi,28.672342,77.31526
+"Mulund West, Mumbai - MPCB",NaT,1.8209,1.0422,1.3478,0.52,1.469,Low,Mumbai,Maharashtra,19.175,72.9419
+"Marhatal, Jabalpur - MPPCB",NaT,2.0144,1.1317,1.8097,0.83,1.6979,Medium,Jabalpur,Madhya Pradesh,23.168606,79.932247
+"Mundka, Delhi - DPCC",NaT,3.0267,1.2633,1.989,0.83,2.1904,Medium,Delhi,Delhi,28.684678,77.076574
+"Phase-1 GIDC, Vapi - GPCB",NaT,1.4842,1.1975,1.8702,0.83,1.4903,Medium,Vapi,Gujarat,20.362421,72.918013
+"Mansarovar Sector-12, Jaipur - RSPCB",NaT,2.0734,1.2049,1.4355,0.84,1.6513,Medium,Jaipur,Rajasthan,26.843698,75.766894
+"Mudtra Sili, Jalore - RSPCB",NaT,1.8366,1.1594,1.6114,0.84,1.5844,Medium,Jalore,Rajasthan,25.344694,72.626208
+"Padmapukur, Howrah - WBPCB",NaT,2.3512,1.0422,1.1633,0.82,1.609,Medium,Howrah,West_Bengal,22.5687319,88.2797276
+"Anand Vihar, Delhi - DPCC",NaT,3.0585,1.2319,1.9742,0.82,2.184,Medium,Delhi,Delhi,28.647622,77.315809
+"Phase-4 GIDC, Vatva - GPCB",NaT,2.4694,1.2853,1.5704,0.83,1.873,Medium,Vatva,Gujarat,22.969611,72.6435
+"Aya Nagar, Delhi - IITM",NaT,2.0677,1.154,1.9813,0.7,1.7682,Medium,Delhi,Delhi,28.4706914,77.1099364
+"Manoharpur, Agra - UPPCB",NaT,1.3958,1.1822,1.4606,0.84,1.3543,Medium,Agra,Uttar_Pradesh,27.23711,78.01936
+"Municipal Corporation Office, Dharuhera -  HSPCB",NaT,2.1378,1.2853,1.6193,0.83,1.7562,Medium,Dharuhera,Haryana,28.2068,76.7997
+"Vidhyanagar, Bhavnagar - Nexteng Enviro",NaT,2.5956,1.1265,1.9383,0.82,1.9584,Medium,Bhavnagar,Gujarat,21.755417,72.139056
+"PWD Junction, Kohima - NPCB",NaT,1.3332,1.0,1.4224,0.84,1.2609,Medium,Kohima,Nagaland,25.6635413,94.0989878
+"Pimpleshwar Mandir, Kalyan - MPCB",NaT,1.9001,1.0183,1.1558,0.79,1.4357,Medium,Kalyan,Maharashtra,19.192056,72.9585188
+"Maninagar, Ahmedabad - GPCB",NaT,2.3777,1.2633,1.9208,0.83,1.9245,Medium,Ahmedabad,Gujarat,23.002657,72.591912
+"Aya Nagar, Delhi - IMD",NaT,2.5273,1.0172,1.7514,0.62,1.8367,Low,Delhi,Delhi,28.4706914,77.1099364
+"Ward-32 Bapupara, Siliguri - WBPCB",NaT,2.0376,1.1009,1.873,0.81,1.7105,Medium,Siliguri,West_Bengal,26.6879226,88.4152495
+"Muradpur, Patna - BSPCB",NaT,1.6031,1.2853,1.2743,0.83,1.4323,Medium,Patna,Bihar,25.619651,85.147382
+"Plammoodu, Thiruvananthapuram - Kerala PCB",NaT,1.5809,1.0,1.2186,0.72,1.3211,Medium,Thiruvananthapuram,Kerala,8.5149093,76.9435879
+"Ashta Vinayak Nagar, Hingoli - MPCB",NaT,1.1283,1.0211,1.2811,0.82,1.136,Medium,Hingoli,Maharashtra,19.710842,77.151824
+"Mangala, Bilaspur - NTPC",NaT,1.9024,1.1155,1.7651,0.7,1.6338,Medium,Bilaspur,Chhattisgarh,22.08815,82.13737
+"Ashok Nagar, Udaipur - RSPCB",NaT,2.0298,1.2414,1.926,0.83,1.7716,Medium,Udaipur,Rajasthan,24.5886166,73.6321397
+"Mayaganj, Bhagalpur - BSPCB",NaT,1.0726,1.1317,1.4527,0.83,1.1727,Medium,Bhagalpur,Bihar,25.265194,87.012947
+"Mini Secretariat, Charkhi Dadri - HSPCB",NaT,2.2937,1.2853,1.7521,0.83,1.8553,Medium,Charkhi Dadri,Haryana,28.593883,76.270653
+"Arumbakkam, Chennai - TNPCB",NaT,1.7855,1.0683,1.4173,0.74,1.4823,Medium,Chennai,TamilNadu,13.0664,80.2112
+"Vinoba Nagara, Shivamogga - KSPCB",NaT,1.2043,1.0,1.2771,0.83,1.1666,Medium,Shivamogga,Karnataka,13.94,75.555917
+"Park Street Wakad, Pimpri Chinchwad - MPCB",NaT,2.0307,1.0422,1.1687,0.72,1.497,Medium,Pimpri-Chinchwad,Maharashtra,18.59051,73.77946
+"Model Town, Patiala - PPCB",NaT,1.2982,1.0911,1.6017,0.84,1.31,Medium,Patiala,Punjab,30.349388,76.366642
+"Mindspace-Malad West, Mumbai - MPCB",NaT,1.9206,1.0439,1.263,0.83,1.485,Medium,Mumbai,Maharashtra,19.1878657,72.8304069
+"Arya Nagar, Bahadurgarh - HSPCB",NaT,2.702,1.2414,1.9783,0.83,2.0577,Medium,Bahadurgarh,Haryana,28.6701,76.9254
+"Panchawati_Pashan, Pune - IITM",NaT,1.9602,1.0683,1.5908,0.74,1.5985,Medium,Pune,Maharashtra,18.536457,73.805454
+"Ardhali Bazar, Varanasi - UPPCB",NaT,1.5296,1.2194,1.9372,0.83,1.5333,Medium,Varanasi,Uttar_Pradesh,25.3505986,82.9083074
+"Vile Parle West, Mumbai - MPCB",NaT,1.96,1.0408,1.9973,0.65,1.6811,Medium,Mumbai,Maharashtra,19.10861,72.83622
+"Paryavaran Parisar, Bhopal - MPPCB",NaT,1.8846,1.0404,1.6385,0.81,1.5686,Medium,Bhopal,Madhya Pradesh,23.210494,77.425409
+"Mhada Colony, Pune - IITM",NaT,2.4574,1.0911,1.8696,0.74,1.8734,Medium,Pune,Maharashtra,18.57304,73.927715
+"More Chowk Waluj, Aurangabad - MPCB",NaT,2.0136,1.0606,1.8512,0.81,1.6797,Medium,Aurangabad,Maharashtra,19.8389439,75.244448
+"Mavdi, Rajkot - Nexteng Enviro ",NaT,2.764,1.1476,1.6537,0.82,1.9513,Medium,Rajkot,Gujarat,22.248853,70.776774
+"Vikas Sadan, Gurugram - HSPCB",NaT,2.9912,1.2319,1.2464,0.82,1.9252,Medium,Gurugram,Haryana,28.4501238,77.0263051
+"Meher Colony, Baripada - OSPCB",NaT,1.5476,1.1009,1.9416,0.81,1.5042,Medium,Baripada,Odisha,21.941841,86.728318
+"Moti Doongri, Alwar - RSPCB",NaT,1.7897,1.1594,1.9544,0.84,1.6413,Medium,Alwar,Rajasthan,27.554793,76.611536
+"Meelavittan, Thoothukudi - TNPCB",NaT,0.6785,1.0228,1.3988,0.74,0.9008,Medium,Thoothukudi,TamilNadu,8.816428,78.099039
+"Panchal Nagar, Gadag - KSPCB",NaT,0.4598,1.0,1.0278,0.76,0.6827,Medium,Gadag,Karnataka,15.411456,75.638133
+"Asansol Court Area, Asansol - WBPCB",NaT,1.977,1.1317,1.7793,0.83,1.6749,Medium,Asansol,West_Bengal,23.685297,86.945968
+"Vithalwadi, Ulhasnagar - MPCB",NaT,1.0785,1.0,1.0997,0.81,1.0635,Medium,Ulhasnagar,Maharashtra,19.2307571,73.155192
+"Patparganj, Delhi - DPCC",NaT,2.6901,1.2633,1.9962,0.83,2.0669,Medium,Delhi,Delhi,28.623763,77.287209
+"Mazgaon, Mumbai - IITM",NaT,2.1287,1.0658,1.2811,0.83,1.5772,Medium,Mumbai,Maharashtra,18.96702,72.84214
+"Anthoni Pillai Nagar, Gummidipoondi - TNPCB",NaT,3.0015,1.2414,1.9813,0.73,2.1696,Medium,Gummidipoondi,TamilNadu,13.4127,80.1081
+"Motilal Nehru NIT, Prayagraj - UPPCB",NaT,1.4073,1.0632,1.2605,0.82,1.2764,Medium,Prayagraj,Uttar_Pradesh,25.494,81.863
+"Vijay Nagar, Sangli - MPCB",NaT,1.3441,1.0228,1.3799,0.84,1.2636,Medium,Sangli,Maharashtra,16.5038,74.3623
+"Pan Bazaar, Guwahati - PCBA",NaT,3.0971,1.0422,1.6861,0.72,2.0262,Medium,Guwahati,Assam,26.1875,91.744194
+"Patti Mehar, Ambala - HSPCB",NaT,2.0582,1.2414,1.8909,0.83,1.7758,Medium,Ambala,Haryana,30.379589,76.778328
+"Patia, Bhubaneswar - OSPCB",NaT,1.9969,1.0683,1.5047,0.84,1.5912,Medium,Bhubaneswar,Odisha,20.34652,85.8163
+"Airport Area, Indore - IMC",NaT,2.5017,1.0596,1.9993,0.66,1.9082,Medium,Indore,Madhya Pradesh,22.7289,75.8076
+"Anand Kala Kshetram, Rajamahendravaram - APPCB",NaT,1.8915,1.0422,1.3588,0.82,1.5003,Medium,Rajamahendravaram,Andhra_Pradesh,16.9872867,81.7363176
+"Murthal, Sonipat - HSPCB",NaT,2.0246,1.2108,1.9103,0.82,1.7548,Medium,Sonipat,Haryana,29.0272,77.0621
+"Womens College_City Center, Durgapur - WBPCB",NaT,1.8646,1.1975,1.5609,0.83,1.5966,Medium,Durgapur,West_Bengal,23.549395,87.300496
+"Mahishkapur Road_B-Zone, Durgapur - WBPCB",NaT,1.6013,1.0878,1.3608,0.83,1.3958,Medium,Durgapur,West_Bengal,23.567923,87.306843
+"Prabhat Colony, Jalgaon - MPCB",NaT,2.1406,1.0658,1.4048,0.83,1.6184,Medium,Jalgaon,Maharashtra,21.001264,75.565602
+"Bandhavgar Colony, Satna - Birla Cement",NaT,1.3202,1.0,1.0,0.82,1.149,Medium,Satna,Madhya Pradesh,24.58434363,80.8549414
+"Pandav Nagari, Nashik - MPCB",NaT,0.9995,1.0455,1.4261,0.84,1.1048,Medium,Nashik,Maharashtra,19.9591346,73.7788008
+"Mahesh Nagar, Malegaon - MPCB",NaT,1.9217,1.0385,1.8201,0.7,1.6254,Medium,Malegaon,Maharashtra,20.555712,74.529236
+"NSUT Jaffarpur, Delhi - DPCC",NaT,2.7837,1.253,1.7259,0.82,2.0233,Medium,Delhi,Delhi,28.594004,76.909423
+"Velachery Res. Area, Chennai - CPCB",NaT,0.9425,1.0455,1.279,0.84,1.044,Medium,Chennai,TamilNadu,13.0052189,80.2398125
+"Pragati Nagar, Pratapgarh - RSPCB",NaT,1.7618,1.1139,1.4173,0.84,1.4878,Medium,Pratapgarh,Rajasthan,24.041198,74.780702
+"Nacharam_TSIIC IALA, Hyderabad - TSPCB",NaT,1.3393,1.0911,1.2776,0.84,1.2575,Medium,Hyderabad,Telangana,17.429398,78.569354
+"Mahatma Basaveswar Colony, Kalaburgi - KSPCB",NaT,1.2067,1.0,1.3596,0.83,1.1862,Medium,Kalaburagi,Karnataka,17.336318,76.847397
+"Old MIDC, Jalna - MPCB",NaT,1.5247,1.0,1.3256,0.82,1.3249,Medium,Jalna,Maharashtra,19.854616,75.905894
+"Mahashweta Nagar, Ujjain - MPPCB",NaT,2.1012,1.0807,1.7383,0.81,1.697,Medium,Ujjain,Madhya Pradesh,23.1633321,75.800225
+"Bamboliya, Baran - RSPCB",NaT,1.4349,1.0911,1.5828,0.84,1.3732,Medium,Baran,Rajasthan,25.106006,76.469948
+"Alipur, Delhi - DPCC",NaT,2.797,1.2319,1.9959,0.82,2.0942,Medium,Delhi,Delhi,28.815329,77.15301
+"Bandra Kurla Complex, Mumbai - IITM",NaT,2.1539,1.0548,1.9729,0.79,1.7627,Medium,Mumbai,Maharashtra,19.053536,72.84643
+"Nagar Nigam, Prayagraj - UPPCB",NaT,1.2658,1.0211,1.2397,0.82,1.1934,Medium,Prayagraj,Uttar_Pradesh,25.44919916,81.82735986
+"Bandra Kurla Complex, Mumbai - MPCB",NaT,2.0504,1.0172,1.1107,0.78,1.4763,Medium,Mumbai,Maharashtra,19.065931,72.862131
+"Maharaj Bada, Gwalior - MPPCB",NaT,2.3934,1.1975,1.717,0.83,1.8525,Medium,Gwalior,Madhya Pradesh,26.200388,78.147714
+"Old City, Sri Ganganagar - RSPCB",NaT,2.2041,1.1822,1.9998,0.84,1.8409,Medium,Sri Ganganagar,Rajasthan,29.931624,73.864511
+"Worli, Mumbai -MPCB",NaT,1.2143,1.0,1.2186,0.72,1.1578,Medium,Mumbai,Maharashtra,18.994218,72.8158167
+"Vedhaynath Colony, Sirohi - RSPCB",NaT,1.4738,1.0658,1.4761,0.83,1.3596,Medium,Sirohi,Rajasthan,24.885261,72.857549
+"Pratap Nagar, Bhilwara - RSPCB",NaT,1.8537,1.1822,1.7107,0.84,1.6236,Medium,Bhilwara,Rajasthan,25.339605,74.618883
+"Mahape, Navi Mumbai - MPCB",NaT,1.7289,1.0455,1.5035,0.84,1.4723,Medium,Navi Mumbai,Maharashtra,19.1135051,73.008978
+"Nagla Bhau, Firozabad - UPPCB",NaT,1.4929,1.0455,1.4527,0.84,1.3564,Medium,Firozabad,Uttar_Pradesh,27.168897,78.37696
+"Mahal, Nagpur - MPCB",NaT,2.8883,1.1594,1.5419,0.84,1.9651,Medium,Nagpur,Maharashtra,21.14472,79.107595
+"Bapuji Nagar, Bengaluru - KSPCB",NaT,1.5894,1.0422,1.7796,0.62,1.4712,Low,Bengaluru,Karnataka,12.951913,77.539784
+"Naharlagun, Naharlagun - APSPCB",NaT,2.4294,1.0404,1.6803,0.81,1.7922,Medium,Naharlagun,Arunachal_Pradesh,27.103358,93.679645
+"Prashant Garden, Khora - UPPCB",NaT,3.8483,1.1925,1.7813,0.8,2.3683,Medium,Khora,Uttar_Pradesh,28.61119,77.34206
+"B R Ambedkar University, Lucknow - UPPCB",NaT,1.2626,1.2049,1.7908,0.84,1.3619,Medium,Lucknow,Uttar_Pradesh,26.766433,80.927299
+"Omex Eternity, Vrindavan - UPPCB",NaT,1.3673,1.0632,1.4881,0.82,1.3114,Medium,Vrindavan,Uttar_Pradesh,27.571409,77.655757
+"Major Dhyan Chand National Stadium, Delhi - DPCC",NaT,2.408,1.2108,1.9333,0.82,1.9194,Medium,Delhi,Delhi,28.611281,77.237738
+"Vidayagiri, Bagalkot - KSPCB",NaT,1.0565,1.0,1.0,0.8,1.0279,Medium,Bagalkot,Karnataka,16.172806,75.659694
+"PSG College of Arts and Science, Coimbatore - TNPCB",NaT,1.4841,1.0606,1.9443,0.71,1.4599,Medium,Coimbatore,TamilNadu,11.0328,77.0349
+"Mandor, Jodhpur - RSPCB",NaT,1.3738,1.1317,1.9466,0.83,1.4279,Medium,Jodhpur,Rajasthan,26.358805,73.047444
+"Amity University, Panchgaon - IITM",NaT,1.0508,1.1755,1.5929,0.83,1.1992,Medium,Panchgaon,Haryana,28.3153,76.9143
+"Polayathode, Kollam - Kerala PCB",NaT,1.2588,1.0136,1.9911,0.25,1.3373,Provisional,Kollam,Kerala,8.8787,76.6073
+"Mandir Marg, Delhi - DPCC",NaT,2.2576,1.2194,1.6981,0.83,1.8024,Medium,Delhi,Delhi,28.636429,77.201067
+"Muzaffarpur Collectorate, Muzaffarpur - BSPCB",NaT,1.6909,1.1925,1.859,0.7,1.5867,Medium,Muzaffarpur,Bihar,26.1209,85.3647
+"BTM Layout, Bengaluru - CPCB",NaT,1.6945,1.0439,1.2045,0.83,1.3784,Medium,Bengaluru,Karnataka,12.9135218,77.5950804
+"NISE Gwal Pahari, Gurugram - IITM",NaT,2.278,1.154,1.9593,0.7,1.8507,Medium,Gurugram,Haryana,28.422681,77.148944
+"Police Commissionerate, Jaipur - RSPCB",NaT,2.0922,1.2414,1.9969,0.83,1.815,Medium,Jaipur,Rajasthan,26.9164092,75.7994901
+"Manali, Chennai - CPCB",NaT,0.9236,1.0219,1.328,0.83,1.0373,Medium,Chennai,TamilNadu,13.164544,80.26285
+"Victoria, Kolkata - WBPCB",NaT,2.3896,1.2319,1.7213,0.82,1.8654,Medium,Kolkata,West_Bengal,22.5448082,88.3403691
+"Manali Village, Chennai - TNPCB",NaT,1.389,1.0683,1.5527,0.84,1.3375,Medium,Chennai,TamilNadu,13.1662,80.2584
+"NSIT Dwarka, Delhi - CPCB",NaT,2.3361,1.253,1.2977,0.82,1.7259,Medium,Delhi,Delhi,28.60909,77.0325413
+"Wazirpur, Delhi - DPCC",NaT,2.9732,1.2853,1.9812,0.83,2.1782,Medium,Delhi,Delhi,28.699793,77.165453
+"BWSSB Kadabesanahalli, Bengaluru - CPCB",NaT,1.8548,1.0439,1.5881,0.63,1.5454,Low,Bengaluru,Karnataka,12.9352049,77.6814488
+"Police Line, Saharsa - BSPCB",NaT,1.8043,1.1687,1.9992,0.82,1.6607,Medium,Saharsa,Bihar,25.892357,86.590325
+"NISE Gwal Pahari, Gurugram - IMD",NaT,2.4817,1.0365,2.0,0.64,1.8903,Low,Gurugram,Haryana,28.422681,77.148944
+"Police Line, Sri Vijaya Puram - ANPCC",NaT,1.1049,1.0,1.0,0.41,1.0512,Low,Sri Vijaya Puram,Andaman and Nicobar,11.654054,92.734055
+"Maldahiya, Varanasi - UPPCB",NaT,1.3021,1.0843,1.5751,0.82,1.3045,Medium,Varanasi,Uttar_Pradesh,25.32393,82.99687
+"Ballygunge, Kolkata - WBPCB",NaT,2.5507,1.0422,1.3256,0.82,1.7315,Medium,Kolkata,West_Bengal,22.5367507,88.3638022
+"NSI Kalyanpur, Kanpur - UPPCB",NaT,1.3511,1.0911,1.4821,0.84,1.3108,Medium,Kanpur,Uttar_Pradesh,26.509954,80.249612
+"Ambedkar Nagar, Nellore - APPCB ",NaT,1.1545,1.1009,1.8785,0.81,1.2885,Medium,Nellore,Andhra_Pradesh,14.438164,79.966814
+"Opp GPO Civil Lines, Nagpur - MPCB",NaT,2.4784,1.0658,1.3528,0.83,1.7251,Medium,Nagpur,Maharashtra,21.152875,79.0517531
+"Vibhab Nagar, Firozabad - UPPCB",NaT,1.107,1.0878,1.377,0.83,1.164,Medium,Firozabad,Uttar_Pradesh,27.1594,78.3953
+"Police Lines, Jind - HSPCB",NaT,1.9395,1.2414,1.8267,0.83,1.709,Medium,Jind,Haryana,29.307814,76.337619
+"Malad West, Mumbai - IITM",NaT,2.0814,1.0439,1.2811,0.73,1.5515,Medium,Mumbai,Maharashtra,19.19709,72.82204
+"Powai, Mumbai - MPCB",NaT,1.3691,1.0404,1.3165,0.71,1.2658,Medium,Mumbai,Maharashtra,19.1375,72.915056
+"PCBL Residential Complex, Durgapur - WBPCB",NaT,2.2083,1.0632,1.5376,0.82,1.6803,Medium,Durgapur,West_Bengal,23.508764,87.35444
+"Mariam Nagar, Purnia - BSPCB",NaT,1.6845,1.1732,1.8137,0.8,1.5676,Medium,Purnia,Bihar,25.366336,87.117468
+"Karni Colony, Nagaur - RSPCB",NaT,1.5538,1.1317,1.7985,0.83,1.4889,Medium,Nagaur,Rajasthan,27.213494,73.734444
+"Raikhad, Ahmedabad - IITM",NaT,2.1794,1.0658,1.6968,0.83,1.712,Medium,Ahmedabad,Gujarat,23.020509,72.579261
+"Sector 30, Faridabad - HSPCB",NaT,1.8199,1.2853,1.7643,0.83,1.6554,Medium,Faridabad,Haryana,28.4417,77.3217
+"Gulzarpet, Anantapur - APPCB",NaT,1.5105,1.1097,1.9008,0.83,1.4812,Medium,Anantapur,Andhra_Pradesh,14.675886,77.593027
+"Sion, Mumbai - MPCB",NaT,1.8763,1.0455,1.7822,0.74,1.6004,Medium,Mumbai,Maharashtra,19.047,72.8746
+"Gupteshwar, Jabalpur - JMC",NaT,1.4348,1.073,1.3423,0.79,1.3122,Medium,Jabalpur,Madhya Pradesh,23.142888,79.916147
+"Collectorate Office, Virudhunagar - TNPCB",NaT,1.6097,1.0,1.0,0.41,1.2688,Low,Virudhunagar,TamilNadu,9.559382,77.948828
+"Collector Office, Yadgir - KSPCB",NaT,1.6871,1.0243,1.9988,0.74,1.5537,Medium,Yadgir,Karnataka,16.7602,77.1428
+"Sector 22, Chandigarh - CPCC",NaT,1.5633,1.0422,1.4173,0.82,1.3784,Medium,Chandigarh,Chandigarh,30.735567,76.775714
+"Colaba, Mumbai - MPCB",NaT,1.7842,1.0105,1.8888,0.53,1.57,Low,Mumbai,Maharashtra,18.91,72.82
+"Gurdeo Nagar, Aurangabad - BSPCB",NaT,1.1859,1.0,1.4355,0.5,1.192,Low,Aurangabad,Bihar,24.75746,84.366208
+"Sector 11, Faridabad - HSPCB",NaT,3.361,1.2633,1.6904,0.83,2.2162,Medium,Faridabad,Haryana,28.376058,77.315741
+"Sirifort, Delhi - CPCB",NaT,2.7111,1.253,1.999,0.82,2.0714,Medium,Delhi,Delhi,28.5504249,77.2159377
+"Civil Lines, Sagar - MPPCB",NaT,1.9961,1.0219,1.3608,0.83,1.5342,Medium,Sagar,Madhya Pradesh,23.838586,78.759431
+"Gyaspur, Ahmedabad - IITM",NaT,2.7109,1.1097,1.3532,0.83,1.8226,Medium,Ahmedabad,Gujarat,22.977134,72.553024
+"Sector - 62, Noida - IMD",NaT,2.1965,1.0365,2.0,0.64,1.7783,Low,Noida,Uttar_Pradesh,28.6245479,77.3577104
+"H.B. Colony, Bhiwani - HSPCB",NaT,2.2663,1.2633,1.5587,0.83,1.7833,Medium,Bhiwani,Haryana,28.806223,76.141105
+"Sector - 62, Noida - IITM",NaT,2.6596,1.1925,1.973,0.7,2.0198,Medium,Noida,Uttar_Pradesh,28.6245479,77.3577104
+"Civil Lines, Bareilly - UPPCB",NaT,0.8473,1.0455,1.3771,0.74,1.0083,Medium,Bareilly,Uttar_Pradesh,28.359581,79.414455
+"Govt. Higher Secondary School, Milupara - CECB",NaT,1.3379,1.1097,1.861,0.43,1.3866,Low,Milupara,Chhattisgarh,22.1910172,83.5197009
+"HB Colony, Vijayawada - APPCB",NaT,1.4815,1.2194,1.7026,0.83,1.4611,Medium,Vijayawada,Andhra_Pradesh,16.536107,80.594233
+"Collectorate, Gaya - BSPCB",NaT,1.6969,1.1278,1.8662,0.59,1.569,Low,Gaya,Bihar,24.7955,84.9994
+"Govt. High School Shikarpur, Patna - BSPCB",NaT,2.0595,1.2853,1.6224,0.83,1.7245,Medium,Patna,Bihar,25.592539,85.227158
+"Sector-2 IMT, Manesar - HSPCB",NaT,2.2591,1.2414,1.9554,0.83,1.8761,Medium,Manesar,Haryana,28.360699,76.93609
+"Corporation Ground, Thrissur - Kerala PCB",NaT,1.5685,1.0422,1.1856,0.72,1.3204,Medium,Thrissur,Kerala,10.5324,76.2159
+"Golden Temple, Amritsar - PPCB",NaT,1.7952,1.2505,1.8211,0.84,1.6459,Medium,Amritsar,Punjab,31.62,74.876512
+"Sector-18, Panipat - HSPCB",NaT,2.6465,1.2108,1.102,0.82,1.7484,Medium,Panipat,Haryana,29.432304,76.972765
+"Silk Board, Bengaluru - KSPCB",NaT,1.5914,1.1054,1.8854,0.72,1.5157,Medium,Bengaluru,Karnataka,12.917348,77.622813
+"Gole Bazar, Katni - MPPCB",NaT,2.2769,1.1536,1.5331,0.83,1.7401,Medium,Katni,Madhya Pradesh,23.50016,80.23284
+"Sector-12, Karnal - HSPCB",NaT,1.8992,1.253,1.9221,0.82,1.7168,Medium,Karnal,Haryana,29.6953,77.0027
+"Commonwealth Sports Complex, Delhi - DPCC",NaT,2.3512,1.1817,1.9948,0.81,1.9,Medium,Delhi,Delhi,28.615828,77.271992
+"Gomti Nagar, Lucknow - UPPCB",NaT,1.9622,1.2733,1.5828,0.84,1.669,Medium,Lucknow,Uttar_Pradesh,26.86812,81.005119
+"Govindh Bhavan Colony, Jabalpur - JMC",NaT,1.2377,1.0211,1.344,0.82,1.2041,Medium,Jabalpur,Madhya Pradesh,23.163174,79.973061
+"Sector-116, Noida - UPPCB",NaT,2.3198,1.2194,1.9704,0.83,1.8963,Medium,Noida,Uttar_Pradesh,28.56923,77.393848
+"Siltara Phase-II, Raipur - CECB",NaT,1.5231,1.1054,1.6959,0.82,1.4441,Medium,Raipur,Chhattisgarh,21.371751,81.664929
+"Govindpuram, Ghaziabad - UPPCB",NaT,3.0135,1.1155,1.9264,0.8,2.1018,Medium,Ghaziabad,Uttar_Pradesh,28.694528,77.494705
+"Collectorate, Jodhpur - RSPCB",NaT,1.348,1.1366,1.6204,0.84,1.3525,Medium,Jodhpur,Rajasthan,26.268249,73.0193853
+"Govt. Girls Inter College, Kashipur - UKPCB",NaT,1.6802,1.1155,1.973,0.8,1.5788,Medium,Kashipur,Uttarakhand,29.2124114,78.9611753
+"Sinchan Bhavan, Kolhapur - MPCB",NaT,1.3559,1.0298,1.9703,0.46,1.3898,Low,Kolhapur,Maharashtra,16.7143745,74.2426398
+"Sector-10, Gandhinagar - GPCB",NaT,2.2346,1.0658,1.3115,0.83,1.6254,Medium,Gandhinagar,Gujarat,23.221714,72.654328
+"Sector-1, Noida - UPPCB",NaT,2.564,1.2319,1.9169,0.82,1.985,Medium,Noida,Uttar_Pradesh,28.5898,77.3101
+"Sector - 125, Noida - UPPCB",NaT,2.5353,1.222,1.9391,0.81,1.9755,Medium,Noida,Uttar_Pradesh,28.5447608,77.3231257
+"Sneh Nagar, Nanded - MPCB",NaT,1.9699,1.0439,1.3348,0.83,1.5249,Medium,Nanded,Maharashtra,19.173852,77.296291
+"HIMUDA Complex Phase-1, Baddi - HPPCB",NaT,2.5021,1.2633,1.924,0.83,1.9751,Medium,Baddi,Himachal Pradesh,30.943887,76.801991
+"Sardar Patel Nagar, Dhanbad - JSPCB",NaT,2.1193,1.2853,1.8386,0.73,1.805,Medium,Dhanbad,Jharkhand,23.80569,86.44268
+"Sri Aurobindo Marg, Delhi - DPCC",NaT,2.0549,1.2194,1.9243,0.83,1.7742,Medium,Delhi,Delhi,28.531346,77.190156
+"City Center, Gwalior - MPPCB",NaT,2.4701,1.0439,1.3671,0.83,1.7178,Medium,Gwalior,Madhya Pradesh,26.203442,78.193251
+"Huda Sector, Fatehabad - HSPCB",NaT,1.1474,1.2633,1.6829,0.83,1.2934,Medium,Fatehabad,Haryana,29.503664,75.467934
+"ICRISAT Patancheru, Hyderabad - TSPCB",NaT,1.5034,1.0632,1.4879,0.82,1.3751,Medium,Hyderabad,Telangana,17.5184,78.278777
+"Sardar Patel Inter College, Baghpat - UPPCB",NaT,2.0148,1.2733,1.993,0.84,1.7915,Medium,Baghpat,Uttar_Pradesh,28.964949,77.278761
+"Christianpatty, Nagaon - PCBA",NaT,1.8113,1.0878,1.7594,0.83,1.583,Medium,Nagaon,Assam,26.349082,92.68449
+"IDA Pashamylaram, Hyderabad - TSPCB",NaT,1.6902,1.0439,1.4963,0.83,1.4534,Medium,Hyderabad,Telangana,17.5316895,78.218939
+"Srinivas Nagar Colony, Machilipatnam - APPCB",NaT,1.2081,1.1009,1.1416,0.81,1.1638,Medium,Machilipatnam,Andhra_Pradesh,16.186555,81.13219
+"IESD Banaras Hindu University, Varanasi - UPPCB",NaT,1.0435,1.0219,1.4474,0.83,1.1265,Medium,Varanasi,Uttar_Pradesh,25.262326,82.995408
+"Sanpada, Navi Mumbai - MPCB",NaT,2.1521,1.0911,1.9221,0.84,1.7654,Medium,Navi Mumbai,Maharashtra,19.0575752,73.0151367
+"Chitragupta Nagar, Siwan - BSPCB",NaT,1.3433,1.1211,1.9866,0.81,1.4158,Medium,Siwan,Bihar,26.2271665,84.3570427
+"IGI Airport (T3), Delhi - IITM",NaT,2.3407,1.154,1.9239,0.7,1.8676,Medium,Delhi,Delhi,28.5627763,77.1180053
+"IGI Airport (T3), Delhi - IMD",NaT,2.3337,1.0365,1.9992,0.64,1.8329,Low,Delhi,Delhi,28.5627763,77.1180053
+"Sanjay Palace, Agra - UPPCB",NaT,2.0002,1.1975,1.8411,0.83,1.7233,Medium,Agra,Uttar_Pradesh,27.19865833,78.00598056
+"IGNOU_Maidan Garhi, Delhi - DPCC",NaT,2.3345,1.2108,1.9962,0.82,1.9051,Medium,Delhi,Delhi,28.493624,77.201159
+"Stuart Hill, Madikeri - KSPCB",NaT,1.6113,1.0219,1.2825,0.73,1.3582,Medium,Madikeri,Karnataka,12.415911,75.73505
+"Housing Board, Hanumangarh - RSPCB",NaT,1.5449,1.1594,1.5527,0.84,1.4397,Medium,Hanumangarh,Rajasthan,29.61075,74.283608
+"Satyawati Vihar, Karauli - RSPCB",NaT,1.6471,1.0658,1.4355,0.83,1.4273,Medium,Karauli,Rajasthan,26.506177,77.025989
+"Hombegowda Nagar, Bengaluru - KSPCB",NaT,1.2582,1.0658,1.4216,0.83,1.2445,Medium,Bengaluru,Karnataka,12.938539,77.5901
+"City Railway Station, Bengaluru - KSPCB",NaT,1.2649,1.1278,1.3636,0.59,1.2525,Low,Bengaluru,Karnataka,12.9756843,77.5660749
+"Hadapsar, Pune - IITM",NaT,1.9781,1.0408,1.9998,0.55,1.6893,Low,Pune,Maharashtra,18.501793,73.927532
+"Secretariat, Amaravati - APPCB",NaT,1.7509,1.0439,1.6339,0.83,1.5121,Medium,Amaravati,Andhra_Pradesh,16.5150833,80.5181667
+"Civil Lines,  Ajmer - RSPCB",NaT,1.6514,1.1536,1.7715,0.83,1.5365,Medium,Ajmer,Rajasthan,26.470859,74.646594
+"Hakimapada, Angul - OSPCB",NaT,2.3025,1.3188,1.9729,0.84,1.9272,Medium,Angul,Odisha,20.832874,85.104082
+"Science Center, Surat - SMC",NaT,3.7314,1.0219,1.3413,0.73,2.0901,Medium,Surat,Gujarat,21.170046,72.795405
+"Hardev Nagar, Bathinda - PPCB",NaT,1.1617,1.2277,1.9204,0.74,1.3356,Medium,Bathinda,Punjab,30.233011,74.907758
+"Somajiguda, Hyderabad - TSPCB",NaT,1.4779,1.1594,1.7865,0.84,1.4584,Medium,Hyderabad,Telangana,17.417094,78.457437
+"Civil Line, Jalandhar - PPCB",NaT,1.7207,1.2505,1.8967,0.84,1.6279,Medium,Jalandhar,Punjab,31.321907,75.578914
+"Gokul Nagar, Bhiwandi - MPCB",NaT,2.0312,1.0439,1.1201,0.83,1.482,Medium,Bhiwandi,Maharashtra,19.309073,73.057223
+"Hathkhoj, Bhilai - CECB",NaT,1.5998,1.0,1.3389,0.83,1.3606,Medium,Bhilai,Chhattisgarh,21.224231,81.40835
+"Hebbal 1st Stage, Mysuru - KSPCB",NaT,1.4991,1.0658,1.7423,0.83,1.4293,Medium,Mysuru,Karnataka,12.21041,76.37376
+"Civic Center, Bhilai - Bhilai Steel Plant",NaT,1.3295,1.0,1.2302,0.73,1.2143,Medium,Bhilai,Chhattisgarh,21.185571,81.343175
+"New DM Office, Arrah - BSPCB",NaT,1.5693,1.0219,1.3335,0.83,1.3535,Medium,Arrah,Bihar,25.5626095,84.663264
+"Savta Mali Nagar, Pimpri-Chinchwad - IITM",NaT,2.1352,1.0911,1.9071,0.74,1.755,Medium,Pimpri-Chinchwad,Maharashtra,18.614767,73.799516
+"Hebbal, Bengaluru - KSPCB",NaT,1.4302,1.0483,1.9989,0.67,1.4388,Medium,Bengaluru,Karnataka,13.029152,77.585901
+"Sonia Vihar, Delhi - DPCC",NaT,2.734,1.2414,1.9919,0.83,2.0735,Medium,Delhi,Delhi,28.710508,77.249485
+"Savitribai Phule Pune University, Pune - MPCB",NaT,1.6972,1.0385,1.6997,0.8,1.5016,Medium,Pune,Maharashtra,18.547056,73.826908
+"Hirawadi, Nashik - MPCB",NaT,1.7124,1.0439,1.4261,0.73,1.4455,Medium,Nashik,Maharashtra,20.021503,73.813844
+"Sawe Wadi, Latur - MPCB",NaT,1.8375,1.0878,1.4243,0.83,1.5123,Medium,Latur,Maharashtra,18.39963,76.57452
+"IGSC Planetarium Complex, Patna - BSPCB",NaT,1.9686,1.1476,1.9852,0.72,1.7237,Medium,Patna,Bihar,25.610369,85.132568
+"Gobind Pura, Yamuna Nagar - HSPCB",NaT,2.0441,1.2108,1.8972,0.82,1.7601,Medium,Yamuna Nagar,Haryana,30.1480566,77.2893471
+"Sector-2 Industrial Area, Pithampur - MPPCB",NaT,3.1342,1.2414,1.9138,0.73,2.1979,Medium,Pithampur,Madhya Pradesh,22.624758,75.675238
+"ECIL Kapra, Hyderabad - TSPCB",NaT,1.2983,1.1139,1.3621,0.84,1.2646,Medium,Hyderabad,Telangana,17.470431,78.566959
+"Eco Herbal Park, Moradabad - UPPCB",NaT,1.6505,1.253,1.912,0.82,1.5984,Medium,Moradabad,Uttar_Pradesh,28.840739,78.697531
+"Shivneri Colony, Amravati - MPCB",NaT,1.8594,1.0422,1.378,0.82,1.4927,Medium,Amravati,Maharashtra,20.9402359,77.7895248
+"Shastri Nagar, Chittorgarh - RSPCB",NaT,2.1452,1.1755,1.8537,0.83,1.7795,Medium,Chittorgarh,Rajasthan,24.892047,74.623527
+"Employment Office, Moradabad - UPPCB",NaT,1.6471,1.2414,1.9612,0.83,1.6031,Medium,Moradabad,Uttar_Pradesh,28.88528,78.7388
+"Deen Dayal Nagar, Sagar - MPPCB",NaT,1.8238,1.0243,1.9893,0.54,1.6135,Low,Sagar,Madhya Pradesh,23.8640158,78.80289321
+"Evelyn Lodge, Asansol - WBPCB",NaT,1.7899,1.0632,1.193,0.82,1.4198,Medium,Asansol,West_Bengal,23.697936,86.944395
+"Shasthri Nagar, Ratlam - IPCA Lab",NaT,1.9609,1.0658,1.2709,0.73,1.5107,Medium,Ratlam,Madhya Pradesh,23.331731,75.045981
+"F-Block, Sirsa - HSPCB",NaT,1.3047,1.1615,1.9239,0.81,1.3966,Medium,Sirsa,Haryana,29.5364,75.0158
+"Shri Shivaji Science College, Amravati - MPCB",NaT,2.0461,1.0219,1.2153,0.83,1.5101,Medium,Amravati,Maharashtra,20.939198,77.765701
+"Deen Dayal Nagar, Gwalior - MPPCB",NaT,2.6676,1.1097,1.3451,0.83,1.8053,Medium,Gwalior,Madhya Pradesh,26.259242,78.216432
+"FTI Kidwai Nagar, Kanpur - UPPCB",NaT,1.4756,1.1822,1.8423,0.84,1.4757,Medium,Kanpur,Uttar_Pradesh,26.428282,80.327067
+"Shahjahan Garden, Agra - UPPCB",NaT,1.2524,1.296,1.5933,0.74,1.3415,Medium,Agra,Uttar_Pradesh,27.169338,78.03582
+"Ferro Chrome Colony, Byasanagar - OSPCB",NaT,2.0032,1.1054,1.9831,0.82,1.7222,Medium,Byasanagar,Odisha,20.94185,86.1151
+"Dasnagar, Howrah - WBPCB",NaT,1.8386,1.0439,1.2216,0.83,1.4409,Medium,Howrah,West_Bengal,22.6025571,88.3105664
+"Shadipur, Delhi - CPCB",NaT,3.0457,1.2633,1.9545,0.83,2.1876,Medium,Delhi,Delhi,28.6514781,77.1473105
+"Fertilizer Township, Rourkela - OSPCB",NaT,2.1572,1.296,1.9489,0.64,1.8516,Low,Rourkela,Odisha,22.18972222,84.86277778
+"Deonar, Mumbai - IITM",NaT,1.8908,1.0658,1.5291,0.83,1.5537,Medium,Mumbai,Maharashtra,19.04946,72.923
+"Forest Office, Barbil - OSPCB",NaT,1.8808,1.1822,1.5574,0.84,1.5975,Medium,Barbil,Odisha,22.1166054,85.3945546
+"Shastri Nagar, Jaipur - RSPCB",NaT,2.0574,1.2194,1.977,0.83,1.7873,Medium,Jaipur,Rajasthan,26.9502929,75.730943
+"Deopur, Dhule - MPCB",NaT,1.9631,1.1265,1.3413,0.82,1.5534,Medium,Dhule,Maharashtra,20.918946,74.776388
+"Digari Kalan, Jodhpur - RSPCB",NaT,1.5103,1.1139,1.8519,0.84,1.4728,Medium,Jodhpur,Rajasthan,26.29581,73.082283
+"Dhoinda, Rajsamand - RSPCB",NaT,1.8541,1.0878,1.7414,0.83,1.5974,Medium,Rajsamand,Rajasthan,25.03636,73.883502
+"District Court, Eluru - APPCB",NaT,1.402,1.0843,1.2084,0.82,1.2668,Medium,Eluru,Andhra_Pradesh,16.711754,81.092095
+"Shivaji Nagar, Jhansi - UPPCB",NaT,1.1492,1.0219,1.2843,0.83,1.1474,Medium,Jhansi,Uttar_Pradesh,25.4547,78.6039
+"Divisional Forest Office, Rairangpur - OSPCB",NaT,1.4823,1.0385,1.4224,0.8,1.3422,Medium,Rairangpur,Odisha,22.265816,86.174829
+"Shivaji Nagar, Rishikesh - UKPCB",NaT,0.6516,1.0422,1.2027,0.82,0.8541,Medium,Rishikesh,Uttarakhand,30.075911,78.2859547
+"Dhanmandi, Kota - RSPCB",NaT,2.0845,1.0911,1.83,0.84,1.7162,Medium,Kota,Rajasthan,25.16409,75.858137
+"Diwator Nagar, Koppal - KSPCB",NaT,1.0068,1.0,1.4313,0.4,1.0975,Low,Koppal,Karnataka,15.34763,76.181767
+"Shastripuram, Agra - UPPCB",NaT,1.443,1.1139,1.6385,0.84,1.3962,Medium,Agra,Uttar_Pradesh,27.19862,77.92066
+"Dhankawadi, Pune - IITM",NaT,2.1232,1.0658,1.2708,0.73,1.572,Medium,Pune,Maharashtra,18.459883,73.852193
+"Dnyaneshwar Nagar, Solapur - MPCB",NaT,1.6349,1.0658,1.805,0.83,1.5059,Medium,Solapur,Maharashtra,17.6336264,75.9132495
+"Doon University, Dehradun - UKPCB",NaT,2.0446,1.0843,1.9259,0.82,1.7189,Medium,Dehradun,Uttarakhand,30.269444,78.044167
+"Shivaji University, Kolhapur - MPCB",NaT,1.3224,1.0192,1.4959,0.8,1.2779,Medium,Kolhapur,Maharashtra,16.6870449,74.2505872
+"Shastri Nagar, Tonk - RSPCB",NaT,2.5357,1.1476,1.9954,0.82,1.9588,Medium,Tonk,Rajasthan,26.159933,75.780517
+"Dr. Karni Singh Shooting Range, Delhi - DPCC",NaT,2.4328,1.2108,1.9985,0.82,1.9453,Medium,Delhi,Delhi,28.498571,77.26484
+"Shivapura_Peenya, Bengaluru - KSPCB",NaT,1.1035,1.0,1.3894,0.35,1.1405,Provisional,Bengaluru,Karnataka,13.0246342,77.5080115
+"Shastri Nagar, Narnaul - HSPCB",NaT,1.7864,1.2414,1.9841,0.83,1.6744,Medium,Narnaul,Haryana,28.060249,76.113115
+"Dwarka-Sector 8, Delhi - DPCC ",NaT,2.7229,1.2633,1.9975,0.83,2.0798,Medium,Delhi,Delhi,28.5710274,77.0719006
+"Sewri, Mumbai - BMC",NaT,1.8574,1.0683,1.8854,0.84,1.6236,Medium,Mumbai,Maharashtra,19.000084,72.85673
+"Shrinath Puram, Kota - RSPCB",NaT,2.0858,1.2194,1.9869,0.83,1.8019,Medium,Kota,Rajasthan,25.14389,75.821256
+"Darshan Nagar, Chhapra - BSPCB",NaT,1.5635,1.2018,1.9645,0.81,1.55,Medium,Chhapra,Bihar,25.7808257,84.7446768
+"Gangapur Road, Nashik - MPCB",NaT,1.6019,1.0658,1.2077,0.83,1.3481,Medium,Nashik,Maharashtra,20.0073285,73.7762427
+"DRM Office Danapur, Patna - BSPCB",NaT,2.0124,1.2194,1.8662,0.83,1.7423,Medium,Patna,Bihar,25.586562,85.043586
+"Sector-3B Avas Vikas Colony, Agra - UPPCB",NaT,1.5725,1.1755,1.9425,0.83,1.5415,Medium,Agra,Uttar_Pradesh,27.19412,77.96237
+"Gangineni Cheruvu, Chittoor - APPCB",NaT,1.5367,1.1975,1.6621,0.83,1.4724,Medium,Chittoor,Andhra_Pradesh,13.20488,79.097889
+"DM Office_Kasipur, Samastipur - BSPCB",NaT,1.5298,1.0878,1.7464,0.73,1.4521,Medium,Samastipur,Bihar,25.859655,85.77944
+"Sector-2E Kalamboli, Navi Mumbai - MPCB",NaT,1.477,1.0408,1.9317,0.65,1.4472,Medium,Navi Mumbai,Maharashtra,19.02579,73.10297
+"Gavalinagar, Pimpri Chinchwad - MPCB",NaT,1.3939,1.0422,1.3014,0.62,1.2741,Low,Pimpri-Chinchwad,Maharashtra,18.63673,73.82487
+"Sector-25, Chandigarh - CPCC",NaT,1.7696,1.1265,1.7346,0.82,1.5728,Medium,Chandigarh,Chandigarh,30.751462,76.762879
+"Sidhi Vinayak Nagar, Ulhasnagar - MPCB",NaT,2.0077,1.0455,1.5421,0.84,1.5967,Medium,Ulhasnagar,Maharashtra,19.235581,73.159121
+"General Hospital, Mandikhera(Nuh) - HSPCB",NaT,2.0621,1.1211,1.7601,0.81,1.702,Medium,Mandikhera,Haryana,27.9002,76.9938
+"Sector-2, Rourkela - OSPCB",NaT,1.6483,1.0,1.2143,0.63,1.3477,Low,Rourkela,Odisha,22.245,84.88111111
+"DM Office_Kachari Chowk, Bhagalpur - BSPCB",NaT,1.3353,1.1097,1.7877,0.83,1.3714,Medium,Bhagalpur,Bihar,25.251013,86.989001
+"Ghatkopar, Mumbai - BMC",NaT,1.9524,1.0439,1.2066,0.83,1.4803,Medium,Mumbai,Maharashtra,19.083694,72.920967
+"Ghusuri, Howrah - WBPCB",NaT,2.7585,1.2414,1.9234,0.83,2.0646,Medium,Howrah,West_Bengal,22.611968,88.347422
+"Sector-2 Murlipura, Jaipur - RSPCB",NaT,1.6947,1.2414,1.9633,0.83,1.6265,Medium,Jaipur,Rajasthan,26.960669,75.771817
+"Girls College, Sivasagar - PCBA",NaT,1.4991,1.0219,1.2306,0.83,1.2966,Medium,Sivasagar,Assam,26.987634,94.636574
+"Sikulpuikawn, Aizawl - Mizoram PCB",NaT,1.2434,1.0219,1.7705,0.83,1.2932,Medium,Aizawl,Mizoram,23.7176342,92.7192841
+"Siddharth Nagar-Worli, Mumbai - IITM",NaT,2.2114,1.0439,1.5661,0.73,1.6815,Medium,Mumbai,Maharashtra,19.000083,72.813993
+"Sector-51, Gurugram - HSPCB",NaT,2.7603,1.2414,1.8989,0.83,2.0586,Medium,Gurugram,Haryana,28.4227,77.0667
+"Ganga Nagar, Meerut - UPPCB",NaT,1.7937,1.2319,1.9,0.82,1.6566,Medium,Meerut,Uttar_Pradesh,28.999264,77.7590354
+"Gandak Colony, Motihari - BSPCB",NaT,1.5593,1.0632,1.1759,0.62,1.3204,Low,Motihari,Bihar,26.63086,84.90051
+"Forest Rest House, Manguraha - BSPCB",NaT,1.8504,1.0606,1.9443,0.61,1.6301,Low,Manguraha,Bihar,27.308328,84.531742
+"Fort William, Kolkata - WBPCB",NaT,2.0609,1.0658,1.5891,0.83,1.6377,Medium,Kolkata,West_Bengal,22.55664,88.342674
+"Semmandalam, Cuddalore - TNPCB",NaT,0.729,1.0,1.1974,0.5,0.8932,Low,Cuddalore,TamilNadu,11.7637683,79.7499835
+"Dangi Tola, Rajgir - BSPCB",NaT,1.3331,1.1687,1.6128,0.82,1.3529,Medium,Rajgir,Bihar,25.0328,85.41948
+"GIDC, Ankleshwar - GPCB",NaT,2.3637,1.0913,1.9663,0.79,1.8608,Medium,Ankleshwar,Gujarat,21.613267,73.010555
+"Sector-D Industrial Area, Mandideep - MPPCB",NaT,3.1616,1.1975,1.9897,0.83,2.2091,Medium,Mandideep,Madhya Pradesh,23.10844,77.511428
+"Shrivastav Colony, Damoh - MPPCB",NaT,1.753,1.0807,1.4961,0.61,1.493,Low,Damoh,Madhya Pradesh,23.81748678,79.446246
+"GIDC, Nandesari - Nandesari Ind. Association",NaT,3.2002,1.1054,1.5419,0.72,2.044,Medium,Nandesari,Gujarat,22.410802,73.097923
+"D M Colony, Bihar Sharif - BSPCB",NaT,1.4517,1.0843,1.6528,0.82,1.394,Medium,Bihar Sharif,Bihar,25.204762,85.51496
+"Sector-7, Kurukshetra - HSPCB",NaT,1.7392,1.2633,1.9511,0.83,1.6524,Medium,Kurukshetra,Haryana,29.966942,76.875879
+"GIFT City, Gandhinagar - IITM",NaT,2.035,1.1097,1.2947,0.83,1.5618,Medium,Gandhinagar,Gujarat,23.163798,72.677768
+"GM Office, Brajrajnagar - OSPCB",NaT,1.5853,1.1366,1.8244,0.84,1.5109,Medium,Brajrajnagar,Odisha,21.8004996,83.8396977
+"Sector-6, Panchkula - HSPCB ",NaT,1.6737,1.1317,1.9095,0.73,1.5685,Medium,Panchkula,Haryana,30.7057778,76.8531805555555
+"Shyam Nagar, Palwal - HSPCB",NaT,1.3316,1.1536,1.7583,0.83,1.3772,Medium,Palwal,Haryana,28.1485564,77.3320667
+"GVM Corporation, Visakhapatnam - APPCB",NaT,2.3611,1.2319,1.3267,0.82,1.7374,Medium,Visakhapatnam,Andhra_Pradesh,17.72,83.3
+"Sector-53, Chandigarh - CPCC",NaT,1.4149,1.0219,1.5049,0.83,1.3246,Medium,Chandigarh,Chandigarh,30.719859,76.738637
+"Dabuna, Nayagarh - OSPCB",NaT,1.3279,1.0365,1.9979,0.64,1.3824,Low,Nayagarh,Odisha,21.847279,85.416905
+"DTU, Delhi - CPCB",NaT,2.5897,1.253,1.9977,0.82,2.0242,Medium,Delhi,Delhi,28.7500499,77.1112615
+"Dada Peer, Sasaram - BSPCB",NaT,1.0343,1.0422,1.7882,0.62,1.1883,Low,Sasaram,Bihar,24.952822,84.002396
+"Upvan Fort, Thane - MPCB",NaT,1.4417,1.0683,1.1122,0.84,1.2536,Medium,Thane,Maharashtra,19.222279,72.957979
+"Sanjay Nagar, Ghaziabad - UPPCB",NaT,2.5034,1.1975,1.9636,0.83,1.9593,Medium,Ghaziabad,Uttar_Pradesh,28.685382,77.453839
+"IHBAS, Dilshad Garden, Delhi - CPCB",NaT,2.2433,1.2633,1.9045,0.83,1.8654,Medium,Delhi,Delhi,28.6811736,77.3025234
+"Ramdaspeth, Akola - MPCB",NaT,1.6325,1.0439,1.2066,0.83,1.3536,Medium,Akola,Maharashtra,20.719516,77.000253
+"Thimmalapura, Tumakuru - KSPCB",NaT,2.1238,1.0243,1.9899,0.44,1.7413,Low,Tumakuru,Karnataka,13.377516,77.099072
+"Buddha Colony, Muzaffarpur - BSPCB",NaT,2.0479,1.2414,1.9971,0.83,1.7957,Medium,Muzaffarpur,Bihar,26.11442,85.39813
+"Kasturi Nagar, Bengaluru - KSPCB",NaT,1.4945,1.0,1.5764,0.73,1.3698,Medium,Bengaluru,Karnataka,13.003872,77.664217
 "Katargam, Surat - Nexteng Enviro",NaT,3.0693,1.1975,1.988,0.83,2.1762,Medium,Surat,Gujarat,21.217779,72.834787
-"Katraj Dairy, Pune - MPCB",NaT,1.6613,1.0632,1.4027,0.82,1.4244,Medium,Pune,Maharashtra,18.45445,73.854155
-"Khrew, Pampore - JKPCC",NaT,1.2329,1.0192,1.5746,0.7,1.2498,Medium,Pampore,Jammu_and_Kashmir,34.031606,75.009712
-"Prabhat Colony, Jalgaon - MPCB",NaT,2.1406,1.0878,1.7535,0.83,1.7194,Medium,Jalgaon,Maharashtra,21.001264,75.565602
-"Khindipada-Bhandup West, Mumbai - IITM",NaT,1.3123,1.0422,1.4879,0.72,1.2783,Medium,Mumbai,Maharashtra,19.1653323,72.922099
-"Sidhi Vinayak Nagar, Ulhasnagar - MPCB",NaT,2.0077,1.0683,1.7542,0.84,1.6578,Medium,Ulhasnagar,Maharashtra,19.235581,73.159121
-"Kherwadi_Bandra East, Mumbai - MPCB",NaT,2.0848,1.0658,1.4533,0.83,1.6108,Medium,Mumbai,Maharashtra,19.0632143,72.8456324
-"Khatikan Mohalla, Dausa - RSPCB",NaT,1.4489,1.0683,1.4355,0.84,1.3395,Medium,Dausa,Rajasthan,26.895552,76.334753
-"Pragati Nagar, Pratapgarh - RSPCB",NaT,1.7618,1.1366,1.8101,0.84,1.5897,Medium,Pratapgarh,Rajasthan,24.041198,74.780702
-"Kharahiya Basti, Araria - BSPCB",NaT,1.768,1.1317,1.8793,0.83,1.6057,Medium,Araria,Bihar,26.146529,87.454184
-"Tata Township, Bileipada - OSPCB",NaT,1.8438,1.2108,1.9962,0.82,1.6931,Medium,Bileipada,Odisha,22.06156703,85.47409613
-"Khaira, Boisar - MPCB",NaT,1.677,1.0632,1.4978,0.82,1.4547,Medium,Boisar,Maharashtra,19.786089,72.757971
-"Prashant Garden, Khora - UPPCB",NaT,3.8483,1.1643,1.9748,0.79,2.4157,Medium,Khora,Uttar_Pradesh,28.61119,77.34206
-"Khadakpada, Kalyan - MPCB",NaT,1.7777,1.0365,1.9977,0.64,1.5994,Low,Kalyan,Maharashtra,19.25292,73.142019
-"Kendriya Vidyalaya, Lucknow - CPCB",NaT,1.9436,1.2853,1.776,0.83,1.7136,Medium,Lucknow,Uttar_Pradesh,26.906111,80.948222
-"Katrap, Badlapur - MPCB",NaT,1.8131,1.1097,1.5553,0.83,1.5434,Medium,Badlapur,Maharashtra,19.16485,73.23409
-"Pratap Nagar, Bhilwara - RSPCB",NaT,1.8537,1.1822,1.9649,0.84,1.6809,Medium,Bhilwara,Rajasthan,25.339605,74.618883
-"Teri Gram, Gurugram - HSPCB",NaT,2.5655,1.077,1.9991,0.6,1.9402,Low,Gurugram,Haryana,28.4275,77.1465
-"Raghunathpali, Rourkela - OSPCB",NaT,1.9004,1.1615,1.9671,0.81,1.6948,Medium,Rourkela,Odisha,22.220833,84.809444
-"Pusa, Delhi - IITM",NaT,2.254,1.1278,1.9928,0.69,1.8382,Medium,Delhi,Delhi,28.63611,77.173332
-"Pusa, Delhi - IMD",NaT,2.7283,1.0487,1.9554,0.64,1.9766,Low,Delhi,Delhi,28.63611,77.173332
-"Tondare-Taloja, Navi Mumbai - MPCB",NaT,1.9879,1.0447,2.0,0.76,1.6951,Medium,Navi Mumbai,Maharashtra,19.063,73.1209
-"Shyam Nagar, Palwal - HSPCB",NaT,1.3316,1.1536,1.8537,0.83,1.3955,Medium,Palwal,Haryana,28.1485564,77.3320667
-"Jawaharlal Nehru Stadium, Delhi - DPCC",NaT,2.5496,1.2194,1.9994,0.83,1.9953,Medium,Delhi,Delhi,28.58028,77.233829
-"Rabindra Bharati University, Kolkata - WBPCB",NaT,2.9464,1.1265,1.5638,0.82,1.9775,Medium,Kolkata,West_Bengal,22.627847,88.380669
-"Jawahar Nagar, Puducherry - PPCC",NaT,1.3558,1.0228,1.3767,0.84,1.2684,Medium,Puducherry,Puducherry,11.9309,79.8027
-"Jai Bhim Nagar, Meerut - UPPCB",NaT,1.8956,1.2277,1.9896,0.84,1.7212,Medium,Meerut,Uttar_Pradesh,28.9535882,77.7622941
-"Rabindra Sarobar, Kolkata - WBPCB",NaT,2.3844,1.0658,1.5398,0.83,1.7477,Medium,Kolkata,West_Bengal,22.51106,88.35142
-"Jahangirpuri, Delhi - DPCC",NaT,3.1728,1.2853,1.9994,0.83,2.2552,Medium,Delhi,Delhi,28.73282,77.170633
-"Town Hall, Munger - BSPCB",NaT,1.5797,1.1155,1.9632,0.8,1.5289,Medium,Munger,Bihar,25.376776,86.471523
-"Jagamohanpur, Keonjhar - OSPCB",NaT,1.4372,1.0606,1.4788,0.81,1.3416,Medium,Keonjhar,Odisha,21.6439,85.599355
-"Rachnakar Colony, Aurangabad - MPCB",NaT,2.0044,1.0878,1.8813,0.83,1.6933,Medium,Aurangabad,Maharashtra,19.863756,75.321188
-"Jadavpur, Kolkata - WBPCB",NaT,2.6865,1.0658,1.6893,0.83,1.8986,Medium,Kolkata,West_Bengal,22.49929,88.36917
-"JNU, Delhi - DPCC",NaT,2.2653,1.1817,1.9184,0.81,1.8468,Medium,Delhi,Delhi,28.540721,77.168544
-"Radhakishan Pura, Sikar - RSPCB",NaT,1.9277,1.2505,1.9997,0.84,1.7459,Medium,Sikar,Rajasthan,27.608912,75.153302
-"JN Stadium, Shillong - Meghalaya PCB",NaT,0.6429,1.0,1.1244,0.61,0.8257,Low,Shillong,Meghalaya,25.5803419,91.8942571
-"Jayanagar 5th Block, Bengaluru - KSPCB",NaT,1.3949,1.0878,1.7645,0.73,1.3901,Medium,Bengaluru,Karnataka,12.920984,77.584908
-"Kalyana Nagara, Chikkamagaluru - KSPCB",NaT,1.3079,1.0,1.7958,0.6,1.3239,Low,Chikkamagaluru,Karnataka,13.328028,75.797056
-"Jhalamand, Jodhpur - RSPCB",NaT,1.4306,1.1366,1.7961,0.84,1.4297,Medium,Jodhpur,Rajasthan,26.215415,73.070156
-"Jhunsi, Prayagraj - UPPCB",NaT,1.3831,1.0439,1.4806,0.83,1.3113,Medium,Prayagraj,Uttar_Pradesh,25.425602,81.917152
-"Kalu Nagar, Dombivli - MPCB",NaT,1.1945,1.0,1.0887,0.81,1.1164,Medium,Dombivli,Maharashtra,19.2268427,73.0788456
-"Thergaon, Pimpri Chinchwad - MPCB",NaT,1.7737,1.0911,1.7423,0.74,1.5638,Medium,Pimpri-Chinchwad,Maharashtra,18.616318,73.765797
-"Kalindi Kunj, Khurja - UPPCB",NaT,1.2539,1.1366,1.9502,0.84,1.3663,Medium,Khurja,Uttar_Pradesh,28.2348927,77.8683002
-"R K Puram, Delhi - DPCC",NaT,2.6917,1.2414,1.9993,0.83,2.0593,Medium,Delhi,Delhi,28.563262,77.186937
-"Thimmalapura, Tumakuru - KSPCB",NaT,2.1238,1.0365,1.9984,0.64,1.7483,Low,Tumakuru,Karnataka,13.377516,77.099072
-"Kalidaspur, Balasore - OSPCB",NaT,2.5866,1.1139,1.7796,0.84,1.9083,Medium,Balasore,Odisha,21.51161,86.89088
+"Ramachandrapuram, Hyderabad - TSPCB",NaT,1.3277,1.0,1.1416,0.84,1.191,Medium,Hyderabad,Telangana,17.528544,78.286195
+"Botanical Garden, Howrah - WBPCB",NaT,1.8626,1.0439,1.3588,0.83,1.4894,Medium,Howrah,West_Bengal,22.554954,88.292568
+"Katraj Dairy, Pune - MPCB",NaT,1.6613,1.0422,1.2605,0.82,1.3799,Medium,Pune,Maharashtra,18.45445,73.854155
+"Ram Nagar, Nagpur - MPCB",NaT,2.5048,1.1097,1.6314,0.83,1.8358,Medium,Nagpur,Maharashtra,21.143383,79.048912
+"Toll Gate, Tirumala - APPCB",NaT,1.3807,1.0422,1.1803,0.82,1.2375,Medium,Tirumala,Andhra_Pradesh,13.67,79.35
+"Katrap, Badlapur - MPCB",NaT,1.8131,1.0878,1.4995,0.83,1.5217,Medium,Badlapur,Maharashtra,19.16485,73.23409
+"Tondare-Taloja, Navi Mumbai - MPCB",NaT,1.9879,1.0272,2.0,0.75,1.688,Medium,Navi Mumbai,Maharashtra,19.063,73.1209
+"Kendriya Vidyalaya, Lucknow - CPCB",NaT,1.9436,1.2853,1.7204,0.83,1.7,Medium,Lucknow,Uttar_Pradesh,26.906111,80.948222
+"Borivali East, Mumbai - MPCB",NaT,1.214,1.0149,1.4708,0.56,1.2179,Low,Mumbai,Maharashtra,19.2243333,72.8658113
+"Rakhial, Ahmedabad - IITM",NaT,2.232,1.1054,1.3988,0.82,1.666,Medium,Ahmedabad,Gujarat,23.016834,72.625775
+"Khadakpada, Kalyan - MPCB",NaT,1.7777,1.0211,1.9931,0.63,1.5925,Low,Kalyan,Maharashtra,19.25292,73.142019
+"Borivali East, Mumbai - IITM",NaT,2.007,1.0439,1.193,0.73,1.4966,Medium,Mumbai,Maharashtra,19.23241,72.86895
+"Kashiram Nagar, Moradabad - UPPCB",NaT,1.4962,1.2194,1.5478,0.83,1.4337,Medium,Moradabad,Uttar_Pradesh,28.849399,78.742362
+"Khaira, Boisar - MPCB",NaT,1.677,1.0422,1.2931,0.82,1.3952,Medium,Boisar,Maharashtra,19.786089,72.757971
+"Thergaon, Pimpri Chinchwad - MPCB",NaT,1.7737,1.0683,1.6104,0.74,1.5253,Medium,Pimpri-Chinchwad,Maharashtra,18.616318,73.765797
+"Rampur, Korba - CECB",NaT,1.5331,1.0202,1.3071,0.81,1.3306,Medium,Korba,Chhattisgarh,22.368195,82.746431
+"Byculla, Mumbai - BMC",NaT,0.9,1.0219,1.208,0.83,1.0,Medium,Mumbai,Maharashtra,18.9767,72.838
+"Kamble Tarf Birwadi, Mahad - MPCB",NaT,2.0105,1.1211,1.9238,0.81,1.7183,Medium,Mahad,Maharashtra,18.1023399,73.4783687
+"Rati Talai, Banswara - RSPCB",NaT,1.7942,1.2049,1.6532,0.84,1.5913,Medium,Banswara,Rajasthan,23.55519,74.44001
+"Teri Gram, Gurugram - HSPCB",NaT,2.5655,1.0577,1.9769,0.5,1.9261,Low,Gurugram,Haryana,28.4275,77.1465
+"Kandivali East, Mumbai - MPCB",NaT,1.2384,1.0172,1.3532,0.72,1.2054,Medium,Mumbai,Maharashtra,19.2058,72.8682
+"Kandivali West, Mumbai - BMC",NaT,1.9072,1.0878,1.6671,0.83,1.6026,Medium,Mumbai,Maharashtra,19.215859,72.831718
+"Ratanpura, Rupnagar - Ambuja Cements",NaT,1.2162,1.2414,1.9241,0.73,1.371,Medium,Rupnagar,Punjab,31.0325454,76.5623046
+"Burari Crossing, Delhi - IMD",NaT,2.9232,1.0365,1.9999,0.64,2.0515,Low,Delhi,Delhi,28.7256504,77.2011573
+"Kanuru, Vijayawada - APPCB",NaT,1.4844,1.1817,1.2509,0.81,1.3434,Medium,Vijayawada,Andhra_Pradesh,16.486692,80.699436
+"Ratandeep Housing Society, Solapur - MPCB",NaT,1.9169,1.0683,1.6717,0.84,1.6005,Medium,Solapur,Maharashtra,17.65439,75.90649
+"Thavakkara, Kannur - Kerala PCB",NaT,1.6892,1.1317,1.7282,0.83,1.537,Medium,Kannur,Kerala,11.875,75.3732
+"Burari Crossing, Delhi - IITM",NaT,2.6084,1.1925,1.6829,0.7,1.9222,Medium,Delhi,Delhi,28.7256504,77.2011573
+"Kareemganj, Gaya - BSPCB",NaT,1.6293,1.2633,1.8269,0.83,1.5733,Medium,Gaya,Bihar,24.792403,84.992416
+"Kariavattom, Thiruvananthapuram - Kerala PCB",NaT,2.3085,1.0422,1.4154,0.82,1.6744,Medium,Thiruvananthapuram,Kerala,8.5637,76.8865
+"Buddhi Vihar, Moradabad - UPPCB",NaT,1.3387,1.1097,1.6919,0.83,1.3544,Medium,Moradabad,Uttar_Pradesh,28.83526,78.7446
+"Ramteerth Nagar, Belgaum - KSPCB",NaT,1.54,1.0183,1.0279,0.79,1.2552,Medium,Belgaum,Karnataka,15.888653,74.541751
+"Shivaji Nagar, Mumbai - BMC",NaT,1.4949,1.0843,1.9598,0.82,1.4762,Medium,Mumbai,Maharashtra,19.060498,72.923356
+"Kasarvadavali, Thane - MPCB",NaT,1.4481,1.1594,1.3621,0.84,1.349,Medium,Thane,Maharashtra,19.26777,72.97182
+"Rajlaxmi Nagar, Jhalawar - RSPCB",NaT,2.0779,1.0878,1.9777,0.83,1.7458,Medium,Jhalawar,Rajasthan,24.588397,76.172782
+"Town Hall, Munger - BSPCB",NaT,1.5797,1.0962,1.9314,0.8,1.5161,Medium,Munger,Bihar,25.376776,86.471523
+"Kharahiya Basti, Araria - BSPCB",NaT,1.768,1.1097,1.8793,0.83,1.5979,Medium,Araria,Bihar,26.146529,87.454184
+"Rajbagh, Srinagar - JKPCC",NaT,0.791,1.0,1.1764,0.73,0.9263,Medium,Srinagar,Jammu_and_Kashmir,34.066206,74.81982
+"Trivenidevi Bhalotia College, Asansol - WBPCB",NaT,1.937,1.0422,1.5638,0.82,1.5725,Medium,Asansol,West_Bengal,23.616515,87.119133
+"Kodungaiyur, Chennai - TNPCB",NaT,1.6634,1.0658,1.4068,0.83,1.4272,Medium,Chennai,TamilNadu,13.1278,80.2642
+"Raja Ganj, Dholpur - RSPCB",NaT,1.9156,1.1317,1.9457,0.83,1.686,Medium,Dholpur,Rajasthan,26.699557,77.898881
+"Bhosari,Pimpri-Chinchwad - IITM",NaT,1.4439,1.0,1.1759,0.7,1.2513,Medium,Pimpri-Chinchwad,Maharashtra,18.640051,73.848956
+"Kokapet, Hyderabad - TSPCB",NaT,1.4653,1.1975,1.2797,0.83,1.3468,Medium,Hyderabad,Telangana,17.393559,78.339194
+"Bhosari, Pune - IITM",NaT,2.0314,1.0365,1.3468,0.64,1.5493,Low,Pune,Maharashtra,18.640051,73.848956
+"Kompally Municipal Office, Hyderabad - TSPCB",NaT,1.4871,1.0228,1.0887,0.84,1.2527,Medium,Hyderabad,Telangana,17.544899,78.486949
+"Railway Colony, Guwahati - PCBA",NaT,3.0241,1.1687,1.9519,0.62,2.1371,Low,Guwahati,Assam,26.181742,91.78063
+"Uchapatti, Madurai - TNPCB",NaT,0.0857,1.0,1.644,0.25,0.3315,Provisional,Madurai,TamilNadu,9.865935,78.022669
+"Udyogamandal, Eloor - Kerala PCB",NaT,2.0931,1.0061,1.0,0.71,1.4489,Medium,Eloor,Kerala,10.073232,76.302765
+"Bhopal Chauraha, Dewas - MPPCB",NaT,2.1614,1.2853,1.1477,0.83,1.6202,Medium,Dewas,Madhya Pradesh,22.9682591,76.064118
+"Kopripada-Vashi, Navi Mumbai - MPCB",NaT,1.8095,1.0911,1.4033,0.84,1.4963,Medium,Navi Mumbai,Maharashtra,19.090337,73.014232
+"Koyana Nagar, Satara - MPCB",NaT,1.4913,1.0385,1.3215,0.8,1.3217,Medium,Satara,Maharashtra,17.696651,74.003387
+"Railway Colony, Barmer - RSPCB",NaT,1.3829,1.2733,1.7507,0.84,1.4369,Medium,Barmer,Rajasthan,25.747299,71.393989
+"Bhoiwada, Dungarpur - RSPCB",NaT,1.9117,1.0683,1.537,0.84,1.5652,Medium,Dungarpur,Rajasthan,23.837789,73.714926
+"Krishak Nagar, Raipur - CECB",NaT,1.4731,1.0658,1.3256,0.83,1.3233,Medium,Raipur,Chhattisgarh,21.237755,81.705301
+"Bhumkar Nagar, Pimpri-Chinchwad - IITM",NaT,1.8718,1.0192,1.2917,0.7,1.4655,Medium,Pimpri-Chinchwad,Maharashtra,18.60577,73.749976
+"Knowledge Park - V, Greater Noida - UPPCB",NaT,2.7159,1.296,1.9974,0.84,2.0904,Medium,Greater Noida,Uttar_Pradesh,28.557054,77.453663
+"Bhumkar Nagar, Pune - IITM",NaT,1.7857,1.0086,1.68,0.32,1.5246,Provisional,Pune,Maharashtra,18.60577,73.749976
+"Rajbansi Nagar, Patna - BSPCB",NaT,1.8474,1.1536,1.7599,0.83,1.6224,Medium,Patna,Bihar,25.599486,85.113666
+"Rajiv Nagar, Vijayawada - APPCB",NaT,1.5126,1.1975,1.7802,0.83,1.4861,Medium,Vijayawada,Andhra_Pradesh,16.554731,80.64911
+"Bombay Castel, Ooty - TNPCB",NaT,1.178,1.0,1.0,0.71,1.0853,Medium,Ooty,TamilNadu,11.4068288,76.7138973
+"Bollaram Industrial Area, Hyderabad - TSPCB",NaT,2.0084,1.0316,1.8833,0.73,1.6732,Medium,Hyderabad,Telangana,17.540891,78.358528
+"Bolinj, Virar - MPCB",NaT,2.2637,1.0911,1.715,0.84,1.7597,Medium,Virar,Maharashtra,19.445821,72.7988231
+"Khatikan Mohalla, Dausa - RSPCB",NaT,1.4489,1.0911,1.5474,0.84,1.3721,Medium,Dausa,Rajasthan,26.895552,76.334753
+"Rajiv Gandhi Park, Vijayawada - APPCB",NaT,1.535,1.1687,1.4862,0.82,1.4223,Medium,Vijayawada,Andhra_Pradesh,16.509717,80.612222
+"Transport Nagar, Moradabad - UPPCB",NaT,1.3975,1.1476,1.6051,0.82,1.3772,Medium,Moradabad,Uttar_Pradesh,28.802625,78.753728
+"Kherwadi_Bandra East, Mumbai - MPCB",NaT,2.0848,1.0439,1.1759,0.83,1.5198,Medium,Mumbai,Maharashtra,19.0632143,72.8456324
+"Kamalnath Nagar, Bettiah - BSPCB",NaT,1.4914,1.0658,1.6878,0.73,1.4143,Medium,Bettiah,Bihar,26.80365,84.51954
+"Khindipada-Bhandup West, Mumbai - IITM",NaT,1.3123,1.0211,1.2605,0.82,1.2202,Medium,Mumbai,Maharashtra,19.1653323,72.922099
+"Bir, Beed - MPCB",NaT,1.005,1.0,1.1759,0.82,1.0439,Medium,Beed,Maharashtra,18.988474,75.753873
+"Khrew, Pampore - JKPCC",NaT,1.2329,1.0202,1.5273,0.71,1.2406,Medium,Pampore,Jammu_and_Kashmir,34.031606,75.009712
+"Transport Nagar-Nigdi, Pimpri-Chinchwad- IITM",NaT,1.4916,1.0,1.1325,0.69,1.2599,Medium,Pimpri-Chinchwad,Maharashtra,18.664282,73.763966
+"Rajendra Nagar North, Guntur - APPCB",NaT,1.6231,1.2108,1.4122,0.82,1.4568,Medium,Guntur,Andhra_Pradesh,16.316553,80.413302
+"Khunmoh, Srinagar - JKPCC",NaT,1.1069,1.0,1.4879,0.61,1.162,Low,Srinagar,Jammu_and_Kashmir,34.06313,74.96017
+"Transport Nagar-Nigdi, Pune - IITM",NaT,2.4346,1.0408,2.0,0.65,1.8742,Medium,Pune,Maharashtra,18.664282,73.763966
+"Bidhannagar, Kolkata - WBPCB",NaT,1.979,1.0439,1.3809,0.83,1.5414,Medium,Kolkata,West_Bengal,22.58157048,88.41002457
+"Knowledge Park - III, Greater Noida - UPPCB",NaT,2.087,1.2505,1.9826,0.84,1.8128,Medium,Greater Noida,Uttar_Pradesh,28.47272,77.482
+"Rajendra Nagar, Bareilly - UPPCB",NaT,1.134,1.0228,1.5272,0.74,1.1905,Medium,Bareilly,Uttar_Pradesh,28.38910936,79.42963708
+"Chinchpada, Ambernath - MPCB",NaT,1.4669,1.0,1.1107,0.72,1.2433,Medium,Ambernath,Maharashtra,19.215784,73.199781
+"Regional Park, Indore - IMC",NaT,1.6812,1.0658,1.6086,0.83,1.4837,Medium,Indore,Madhya Pradesh,22.678,75.8559
+"Tata Township, Bileipada - OSPCB",NaT,1.8438,1.1817,1.9941,0.81,1.6823,Medium,Bileipada,Odisha,22.06156703,85.47409613
+"Chembur, Mumbai - MPCB",NaT,1.7096,1.0422,1.5532,0.82,1.4748,Medium,Mumbai,Maharashtra,19.0364585,72.8954371
+"Indira Colony Vistar, Pali - RSPCB",NaT,1.993,1.2414,1.8738,0.83,1.7434,Medium,Pali,Rajasthan,25.771061,73.340227
+"Chauhan Colony, Chandrapur - MPCB",NaT,1.7823,1.1317,1.2809,0.83,1.4649,Medium,Chandrapur,Maharashtra,19.9629,79.298714
+"Sadanand Nagar, Mehsana - Nexteng Enviro",NaT,1.8464,1.2414,1.7817,0.83,1.6571,Medium,Mehsana,Gujarat,23.59315,72.372792
+"Indirapuram, Ghaziabad - UPPCB",NaT,2.7734,1.2733,1.971,0.84,2.0961,Medium,Ghaziabad,Uttar_Pradesh,28.646233,77.358075
+"Indra Nagar, Jhunjhunu - RSPCB",NaT,1.6781,1.1975,1.5382,0.83,1.5091,Medium,Jhunjhunu,Rajasthan,28.108988,75.386577
+"T T Nagar, Bhopal - MPPCB",NaT,1.7715,1.1097,1.7605,0.83,1.5736,Medium,Bhopal,Madhya Pradesh,23.233584,77.400574
+"SVSPA Campus, Barrackpore - WBPCB",NaT,1.6843,1.0658,1.3256,0.83,1.415,Medium,Barrackpore,West_Bengal,22.7605581,88.3617589
+"Industrial Area, Hajipur - BSPCB",NaT,2.511,1.2414,1.99,0.83,1.9866,Medium,Hajipur,Bihar,25.697189,85.2459
+"Charitra Van, Buxar - BSPCB",NaT,1.5176,1.1211,1.7882,0.81,1.4659,Medium,Buxar,Bihar,25.56752,83.966379
+"JN Stadium, Shillong - Meghalaya PCB",NaT,0.6429,1.0,1.1289,0.62,0.8265,Low,Shillong,Meghalaya,25.5803419,91.8942571
+"SVPI Airport Hansol, Ahmedabad - IITM",NaT,1.9903,1.1009,1.765,0.81,1.6657,Medium,Ahmedabad,Gujarat,23.076793,72.627874
+"JNU, Delhi - DPCC",NaT,2.2653,1.2108,1.8834,0.82,1.8496,Medium,Delhi,Delhi,28.540721,77.168544
+"SRM University, Modinagar - UPPCB",NaT,3.1549,1.0086,2.0,0.52,2.1168,Low,Modinagar,Uttar_Pradesh,28.798171,77.540243
+"SIPCOT Industrial Park, Perundurai - TNPCB",NaT,1.6115,1.0228,1.3799,0.74,1.3837,Medium,Perundurai,TamilNadu,11.258242,77.552761
+"Talcher Coalfields,Talcher - OSPCB",NaT,2.7122,1.2505,1.9806,0.84,2.066,Medium,Talcher,Odisha,20.9360711,85.1707021
+"Chandni Chowk, Delhi - IITM",NaT,2.5023,1.2633,1.9945,0.83,1.993,Medium,Delhi,Delhi,28.656756,77.227234
+"Sadar Bazar, Jaisalmer - RSPCB",NaT,1.7752,1.1822,1.7669,0.84,1.6017,Medium,Jaisalmer,Rajasthan,26.912329,70.909168
+"Jadavpur, Kolkata - WBPCB",NaT,2.6865,1.0439,1.4377,0.83,1.8142,Medium,Kolkata,West_Bengal,22.49929,88.36917
+"Suryakiran Bhawan NCL, Singrauli - MPPCB",NaT,2.785,1.2633,1.9882,0.73,2.1009,Medium,Singrauli,Madhya Pradesh,24.10897,82.64558
+"Sahilara, Maihar - KJS Cements",NaT,1.0932,1.0,1.4805,0.66,1.1533,Medium,Maihar,Madhya Pradesh,24.2613009,80.7231783
+"Sanegurava Halli, Bengaluru - KSPCB",NaT,0.824,1.0,1.1543,0.22,0.9409,Provisional,Bengaluru,Karnataka,12.990328,77.5431385
+"Chikkaballapur Rural, Chikkaballapur - KSPCB",NaT,1.5827,1.0211,1.2811,0.82,1.3454,Medium,Chikkaballapur,Karnataka,13.428828,77.731418
+"Sanathnagar, Hyderabad - TSPCB",NaT,1.7736,1.0658,1.1321,0.73,1.3958,Medium,Hyderabad,Telangana,17.4559458,78.4332152
+"IIPHG Lekawada, Gandhinagar - IITM",NaT,1.79,1.0658,1.4963,0.83,1.5035,Medium,Gandhinagar,Gujarat,23.243639,72.68994
+"Subash Chowk, Churu - RSPCB",NaT,1.6709,1.2633,1.9764,0.83,1.6249,Medium,Churu,Rajasthan,28.296139,74.961696
+"IIT Delhi, Delhi - IITM",NaT,2.3633,1.2414,1.9895,0.73,1.9272,Medium,Delhi,Delhi,28.54246,77.191651
+"Samrat Ashok Udhyan, Jodhpur - RSPCB",NaT,1.4937,1.1594,1.5047,0.84,1.4046,Medium,Jodhpur,Rajasthan,26.253384,72.976571
+"Chhoti Gwaltoli, Indore - MPPCB",NaT,2.3961,1.2853,1.4081,0.83,1.7954,Medium,Indore,Madhya Pradesh,22.431,75.5213
+"IITG, Guwahati - PCBA",NaT,1.0204,1.0,1.1856,0.72,1.054,Medium,Guwahati,Assam,26.2028636,91.70046436
+"IITH Kandi, Hyderabad - TSPCB",NaT,1.4803,1.1366,1.391,0.84,1.3643,Medium,Hyderabad,Telangana,17.585705,78.126199
+"Samanpura, Patna - BSPCB",NaT,1.7371,1.253,1.1506,0.82,1.4442,Medium,Patna,Bihar,25.596727,85.085624
+"Suhagi, Jabalpur - JMC",NaT,1.5874,1.0219,1.3201,0.83,1.3578,Medium,Jabalpur,Madhya Pradesh,23.218135,79.95777
+"IMD Lodhi Road, Delhi - IITM",NaT,2.6827,1.1925,1.9941,0.7,2.0339,Medium,Delhi,Delhi,28.5918245,77.2273074
+"Sahu Nagar, Sawai Madhopur - RSPCB",NaT,2.108,1.1822,1.994,0.84,1.799,Medium,Sawai Madhopur,Rajasthan,26.031443,76.359327
+"Chhatrapati Shivaji Intl. Airport (T2), Mumbai - MPCB",NaT,1.9311,1.0439,1.6357,0.73,1.5885,Medium,Mumbai,Maharashtra,19.10078,72.87462
+"ITO, Delhi - CPCB",NaT,2.5491,1.222,1.9997,0.81,1.9962,Medium,Delhi,Delhi,28.628624,77.24106
+"Ibrahimpur, Vijayapura - KSPCB",NaT,1.0294,1.0,1.0,0.83,1.0146,Medium,Vijayapura,Karnataka,16.802639,75.722694
+"Idgah Hills, Bhopal - MPPCB",NaT,1.9353,1.0807,1.6307,0.81,1.6028,Medium,Bhopal,Madhya Pradesh,23.264759,77.381568
+"Jagamohanpur, Keonjhar - OSPCB",NaT,1.4372,1.0404,1.2569,0.81,1.282,Medium,Keonjhar,Odisha,21.6439,85.599355
+"Chandkheda, Ahmedabad - IITM",NaT,2.0768,1.0632,1.3988,0.82,1.5915,Medium,Ahmedabad,Gujarat,23.107969,72.574648
+"SIDCO Kurichi, Coimbatore - TNPCB",NaT,1.428,1.0455,1.5992,0.84,1.3589,Medium,Coimbatore,TamilNadu,10.942451,76.978996
+"Rohta, Agra - UPPCB",NaT,1.4643,1.2505,1.5196,0.84,1.4207,Medium,Agra,Uttar_Pradesh,27.106972,78.000111
+"Kadri, Mangalore - KSPCB",NaT,1.2261,1.0,1.2397,0.62,1.1684,Low,Mangalore,Karnataka,12.88925,74.853
+"Tarapur, Silchar - PCBA",NaT,1.3453,1.0219,1.4224,0.83,1.2736,Medium,Silchar,Assam,24.82827,92.79525
+"Kalabhavan, Dharwad - KSPCB",NaT,1.7551,1.1265,1.2945,0.82,1.4558,Medium,Dharwad,Karnataka,15.459706,75.008381
+"Rohini, Delhi - DPCC",NaT,2.8782,1.253,1.9992,0.82,2.1343,Medium,Delhi,Delhi,28.732528,77.11992
+"CRRI Mathura Road, Delhi - IMD",NaT,2.4231,1.0365,1.9999,0.64,1.8678,Low,Delhi,Delhi,28.5512005,77.2735737
 "Kalal Majra, Khanna - PPCB",NaT,1.7358,1.2108,1.2945,0.82,1.4741,Medium,Khanna,Punjab,30.736056,76.209694
-"RIICO Ind. Area III, Bhiwadi - RSPCB",NaT,2.4599,1.2733,1.8693,0.84,1.9481,Medium,Bhiwadi,Rajasthan,28.194909,76.862296
-"Kalabhavan, Dharwad - KSPCB",NaT,1.7551,1.1476,1.2945,0.82,1.4626,Medium,Dharwad,Karnataka,15.459706,75.008381
-"Kadri, Mangalore - KSPCB",NaT,1.2261,1.0,1.2605,0.62,1.1733,Low,Mangalore,Karnataka,12.88925,74.853
-"RIICO Sitapura, Jaipur - RSPCB",NaT,2.5169,1.1476,1.9999,0.82,1.9527,Medium,Jaipur,Rajasthan,26.786682,75.827928
-"Jigar Colony, Moradabad - UPPCB",NaT,1.5222,1.1476,1.5194,0.82,1.4177,Medium,Moradabad,Uttar_Pradesh,28.856664,78.772638
-"RIMT University, Mandi Gobindgarh - PPCB",NaT,2.9583,1.068,1.5644,0.75,1.9555,Medium,Mandi Gobindgarh,Punjab,30.649961,76.331442
-"Jigani, Bengaluru - KSPCB",NaT,1.4534,1.0272,1.9969,0.75,1.4427,Medium,Bengaluru,Karnataka,12.7816279,77.6299145
-"Toll Gate, Tirumala - APPCB",NaT,1.3807,1.0632,1.4879,0.82,1.3178,Medium,Tirumala,Andhra_Pradesh,13.67,79.35
-"RVCE-Mailasandra, Bengaluru - KSPCB",NaT,2.0128,1.0408,2.0,0.75,1.7041,Medium,Bengaluru,Karnataka,12.921418,77.502466
-"Zoo Park, Hyderabad - TSPCB",NaT,1.9393,1.0878,1.9994,0.83,1.6911,Medium,Hyderabad,Telangana,17.349694,78.451437
+"CRRI Mathura Road, Delhi - IITM",NaT,2.2325,1.1732,1.9885,0.7,1.8466,Medium,Delhi,Delhi,28.5512005,77.2735737
+"Rishi Nagar, Kaithal - HSPCB",NaT,1.5011,1.2319,1.9886,0.82,1.5328,Medium,Kaithal,Haryana,29.8006,76.4155
+"Tata Stadium, Jorapokhar - JSPCB",NaT,1.4066,1.1009,1.177,0.81,1.2654,Medium,Jorapokhar,Jharkhand,23.707909,86.41467
+"Kalidaspur, Balasore - OSPCB",NaT,2.5866,1.1139,1.5532,0.84,1.8445,Medium,Balasore,Odisha,21.51161,86.89088
+"Revenue Colony-Shivajinagar, Pune - IITM",NaT,1.9014,1.0683,1.6981,0.84,1.6003,Medium,Pune,Maharashtra,18.530085,73.849598
+"CDA Area, Cuttack - OSPCB",NaT,2.5833,1.0683,1.664,0.84,1.8559,Medium,Cuttack,Odisha,20.48891,85.84768
+"Kalindi Kunj, Khurja - UPPCB",NaT,1.2539,1.1366,1.9449,0.84,1.3654,Medium,Khurja,Uttar_Pradesh,28.2348927,77.8683002
+"Kalu Nagar, Dombivli - MPCB",NaT,1.1945,1.0,1.0887,0.82,1.1164,Medium,Dombivli,Maharashtra,19.2268427,73.0788456
+"CBD Belapur, Belapur - MPCB",NaT,2.212,1.0878,1.3528,0.83,1.6381,Medium,Belapur,Maharashtra,19.0243902,73.0406721
+"Residency Area, Indore - IMC",NaT,1.4737,1.0439,1.4607,0.83,1.349,Medium,Indore,Madhya Pradesh,22.7084,75.8815
+"Cantonment Area, Delhi - DPCC ",NaT,1.4231,1.0422,1.4527,0.72,1.3232,Medium,Delhi,Delhi,28.594169,77.1251
+"Jigar Colony, Moradabad - UPPCB",NaT,1.5222,1.1476,1.6014,0.82,1.4365,Medium,Moradabad,Uttar_Pradesh,28.856664,78.772638
+"Jigani, Bengaluru - KSPCB",NaT,1.4534,1.0243,1.9979,0.74,1.4419,Medium,Bengaluru,Karnataka,12.7816279,77.6299145
+"Royapuram, Chennai - TNPCB",NaT,1.5858,1.0658,1.4831,0.83,1.412,Medium,Chennai,TamilNadu,13.1036,80.2909
+"Jahangirpuri, Delhi - DPCC",NaT,3.1728,1.2853,1.9866,0.83,2.2516,Medium,Delhi,Delhi,28.73282,77.170633
+"SFTI Kusdihra, Gaya - BSPCB",NaT,1.4142,1.0658,1.2744,0.83,1.2838,Medium,Gaya,Bihar,24.762518,84.982348
+"Talkatora District Industries Center, Lucknow - CPCB",NaT,1.8891,1.2277,1.9867,0.84,1.7177,Medium,Lucknow,Uttar_Pradesh,26.83399722,80.8917361
+"Jai Bhim Nagar, Meerut - UPPCB",NaT,1.8956,1.2277,1.825,0.84,1.6845,Medium,Meerut,Uttar_Pradesh,28.9535882,77.7622941
+"Chalai Bazaar, Ramanathapuram - TNPCB",NaT,0.4779,1.0,1.0,0.51,0.6913,Low,Ramanathapuram,TamilNadu,9.36399,78.831977
+"Chakala-Andheri East, Mumbai - IITM",NaT,2.2639,1.0439,1.6096,0.83,1.713,Medium,Mumbai,Maharashtra,19.11074,72.86084
+"Jawahar Nagar, Puducherry - PPCC",NaT,1.3558,1.0228,1.3347,0.84,1.2586,Medium,Puducherry,Puducherry,11.9309,79.8027
+"SDM Office_Khagra, Kishanganj - BSPCB",NaT,2.6751,1.2319,1.9927,0.82,2.0473,Medium,Kishanganj,Bihar,26.0881305,87.93840336
+"Kalyana Nagara, Chikkamagaluru - KSPCB",NaT,1.3079,1.0,1.3511,0.6,1.233,Low,Chikkamagaluru,Karnataka,13.328028,75.797056
+"Jawaharlal Nehru Stadium, Delhi - DPCC",NaT,2.5496,1.2194,1.9161,0.83,1.9742,Medium,Delhi,Delhi,28.58028,77.233829
+"SAC ISRO Satellite, Ahmedabad - IITM",NaT,2.0924,1.2414,1.5419,0.83,1.7014,Medium,Ahmedabad,Gujarat,23.023389,72.515201
+"Central University, Hyderabad - TSPCB",NaT,1.4063,1.0404,1.7269,0.81,1.3729,Medium,Hyderabad,Telangana,17.460103,78.334361
+"Jayanagar 5th Block, Bengaluru - KSPCB",NaT,1.3949,1.0658,1.523,0.73,1.3331,Medium,Bengaluru,Karnataka,12.920984,77.584908
+"SAC ISRO Bopal, Ahmedabad - IITM",NaT,2.4767,1.1755,1.5436,0.83,1.8265,Medium,Ahmedabad,Gujarat,23.041137,72.456691
+"Jhalamand, Jodhpur - RSPCB",NaT,1.4306,1.1139,1.7961,0.84,1.4225,Medium,Jodhpur,Rajasthan,26.215415,73.070156
+"Jhunsi, Prayagraj - UPPCB",NaT,1.3831,1.0439,1.5104,0.83,1.3178,Medium,Prayagraj,Uttar_Pradesh,25.425602,81.917152
+"Tarakpur, Ahmednagar - MPCB",NaT,1.7284,1.0404,1.7339,0.81,1.5236,Medium,Ahmednagar,Maharashtra,19.10122,74.73339
+"Central Academy for SFS, Byrnihat - PCBA",NaT,2.2401,1.253,1.4066,0.82,1.7245,Medium,Byrnihat,Assam,26.071318,91.87488
+"Talkatora Garden, Delhi - DPCC",NaT,2.1004,1.1413,1.9849,0.81,1.778,Medium,Delhi,Delhi,28.62181,77.1944633
+"Zoo Park, Hyderabad - TSPCB",NaT,1.9393,1.0658,1.771,0.83,1.6323,Medium,Hyderabad,Telangana,17.349694,78.451437
