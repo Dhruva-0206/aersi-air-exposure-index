@@ -2,18 +2,20 @@
 Step 4 — Compute AERSI station scores
 
 Formula:
-    AERSI = PL_robust^0.50 × EPF_adj^0.25 × VSF_robust^0.20
+    AERSI = PL_robust^0.50 × EPF_adj^0.25 × VSF_robust^0.25
 
     PL_robust  = Σ w_p_adj × (C_p / L_p)^0.6
+                 C_p = mean concentration across the rolling window.
                  WHO-normalized, soft-saturated, weight-renormalized
                  over only the pollutants actually present.
 
-    EPF_adj    = 1 + (D_exceed / W) × (D_obs/30)^0.5
-                 Persistence of AQI > 100, dampened by sqrt of data coverage.
+    EPF_adj    = 1 + (D_exceed / D_obs) × (D_obs/30)^0.5
+                 Persistence of AQI > 100 over observed days,
+                 dampened by sqrt of data coverage.
 
     VSF_robust = 1 + tanh(S / 45)
-                 S = median |AQI_t - AQI_{t-1}|
-                 Robust to sensor spikes.
+                 S = median |AQI_t - AQI_{t-1}| over consecutive
+                 calendar days only. Robust to sensor spikes.
 
     CF_data and confidence label are computed and stored separately
     but do NOT affect the AERSI score — they are metadata only.
@@ -72,13 +74,15 @@ BANDS = [
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
-def compute_pl_robust(group: pd.DataFrame) -> tuple:
-    present = {}
-    for _, row in group.iterrows():
-        p = row["pollutant_id"]
-        c = row["avg_value"]
-        if p in CORE_POLLUTANTS and not pd.isna(c) and c >= 0:
-            present[p] = c
+def compute_pl_robust(mean_conc: pd.Series) -> tuple:
+    """PL from per-pollutant MEAN concentrations across the rolling window.
+
+    mean_conc: Series indexed by pollutant_id, values = 30-day mean µg/m³.
+    Weight renormalization runs over whichever core pollutants are present
+    anywhere in the window.
+    """
+    present = {p: c for p, c in mean_conc.items()
+               if p in CORE_POLLUTANTS and not pd.isna(c) and c >= 0}
     if not present:
         return np.nan, 0
     weight_sum = sum(WEIGHTS[p] for p in present)
@@ -92,14 +96,28 @@ def compute_epf_adj(aqi_series: pd.Series, d_obs: int) -> float:
         return 1.0
     d_exceed    = (aqi_series > AQI_THRESHOLD).sum()
     data_weight = (min(d_obs, TARGET_WINDOW) / TARGET_WINDOW) ** 0.5
-    return float(1.0 + (d_exceed / TARGET_WINDOW) * data_weight)
+    # Persistence fraction uses actual observed days, not the 30-day target:
+    # dividing by 30 when only e.g. 15 days exist understates persistence and
+    # double-penalizes sparse stations (data_weight already handles sparsity).
+    return float(1.0 + (d_exceed / max(d_obs, 1)) * data_weight)
 
 
 def compute_vsf_robust(aqi_series: pd.Series) -> float:
+    """S = median |AQI_t - AQI_{t-1}| over CONSECUTIVE calendar days only.
+
+    aqi_series is indexed by ISO date strings. Observation pairs more than
+    one day apart (window gaps, outages) are excluded — a diff spanning a
+    week is not a day-to-day change and would inflate volatility.
+    """
     if len(aqi_series) < 2:
         return 1.0
-    s = aqi_series.diff().dropna().abs().median()
-    return 1.0 + float(np.tanh(s / 45.0))
+    dates   = pd.to_datetime(pd.Index(aqi_series.index), format="%Y-%m-%d", errors="coerce")
+    day_gap = pd.Series(dates).diff().dt.days
+    diffs   = aqi_series.reset_index(drop=True).diff().abs()
+    consecutive = diffs[day_gap == 1].dropna()
+    if len(consecutive) == 0:
+        return 1.0
+    return 1.0 + float(np.tanh(consecutive.median() / 45.0))
 
 
 def compute_cf(n_pollutants: int, d_obs: int) -> tuple:
@@ -133,69 +151,75 @@ df["AQI"]          = pd.to_numeric(df["AQI"], errors="coerce")
 
 print(f"Loaded {len(df)} rows across {df['station'].nunique()} stations")
 
-# ── Step 1: PL per station-day ───────────────────────────────────────────────
+# ── Step 1: 30-day mean concentration per station-pollutant ─────────────────
+# PL is computed from the MEAN concentration of each pollutant across all
+# available days in the rolling window, so AERSI is a true 30-day composite
+# (previously PL used only the single most recent day). Readings are averaged
+# within each date first, so duplicate rows from repeated snapshots do not
+# double-count a day.
 
-print("Computing PL per station-day")
-pl_rows = []
-for (station, date), group in df.groupby(["station", "date"]):
-    meta = group.iloc[0]
-    pl, n_poll = compute_pl_robust(group)
-    pl_rows.append({
-        "station": station, "date": date,
-        "PL": pl, "n_pollutants": n_poll,
-        "AQI": meta["AQI"], "city": meta["city"], "state": meta["state"],
-        "latitude": meta["latitude"], "longitude": meta["longitude"],
-    })
+print("Computing 30-day mean concentrations per station")
 
-pl_df = pd.DataFrame(pl_rows)
+core_rows = df[
+    df["pollutant_id"].isin(CORE_POLLUTANTS)
+    & df["avg_value"].notna()
+    & (df["avg_value"] >= 0)
+]
+daily_means  = core_rows.groupby(["station", "pollutant_id", "date"])["avg_value"].mean()
+window_means = daily_means.groupby(["station", "pollutant_id"]).mean()
+conc_by_station = {st: s.droplevel(0) for st, s in window_means.groupby(level=0)}
 
-# ── Step 2: EPF, VSF, CF per station ─────────────────────────────────────────
+# One AQI value per station-day, indexed by date (chronological ISO strings)
+aqi_by_day     = df.groupby(["station", "date"])["AQI"].first()
+aqi_by_station = {st: s.droplevel(0) for st, s in aqi_by_day.groupby(level=0)}
 
-print("Computing EPF, VSF, CF per station")
+station_meta = (
+    df.sort_values("date")
+    .groupby("station")
+    .tail(1)
+    .set_index("station")[["city", "state", "latitude", "longitude"]]
+)
+last_date = df.groupby("station")["date"].max()
+
+# ── Step 2: PL, EPF, VSF, CF, AERSI per station ──────────────────────────────
+
+print("Computing PL, EPF, VSF, CF per station")
 results = []
 
-for station, group in pl_df.groupby("station"):
-    group      = group.sort_values("date")
-    aqi_series = group["AQI"].dropna()
+for station in sorted(df["station"].unique()):
+    conc       = conc_by_station.get(station, pd.Series(dtype=float))
+    pl, n_poll = compute_pl_robust(conc)
+
+    aqi_series = aqi_by_station.get(station, pd.Series(dtype=float)).dropna()
     d_obs      = len(aqi_series)
-    n_poll_avg = int(group["n_pollutants"].median()) if len(group) > 0 else 0
 
-    epf    = compute_epf_adj(aqi_series, d_obs)
-    vsf    = compute_vsf_robust(aqi_series)
-    cf_data = compute_cf(n_poll_avg, d_obs)
+    epf     = compute_epf_adj(aqi_series, d_obs)
+    vsf     = compute_vsf_robust(aqi_series)
+    cf_data = compute_cf(n_poll, d_obs)
 
-    for _, row in group.iterrows():
-        pl = row["PL"]
-        if not pd.isna(pl) and pl > 0:
-            # CF does NOT multiply — confidence is metadata only
-            aersi = (pl ** 0.50) * (epf ** 0.25) * (vsf ** 0.25)
-        else:
-            aersi = np.nan
+    if not pd.isna(pl) and pl > 0:
+        # CF does NOT multiply — confidence is metadata only
+        aersi = (pl ** 0.50) * (epf ** 0.25) * (vsf ** 0.25)
+    else:
+        aersi = np.nan
 
-        results.append({
-            "station":    station,
-            "date":       row["date"],
-            "PL":         round(pl,      4) if not pd.isna(pl)    else np.nan,
-            "EPF":        round(epf,     4),
-            "VSF":        round(vsf,     4),
-            "CF_data":    round(cf_data, 4),
-            "AERSI":      round(aersi,   4) if not pd.isna(aersi) else np.nan,
-            "confidence": confidence_label(cf_data),
-            "city":       row["city"],
-            "state":      row["state"],
-            "latitude":   row["latitude"],
-            "longitude":  row["longitude"],
-        })
+    m = station_meta.loc[station]
+    results.append({
+        "station":    station,
+        "date":       last_date[station],
+        "PL":         round(pl,      4) if not pd.isna(pl)    else np.nan,
+        "EPF":        round(epf,     4),
+        "VSF":        round(vsf,     4),
+        "CF_data":    round(cf_data, 4),
+        "AERSI":      round(aersi,   4) if not pd.isna(aersi) else np.nan,
+        "confidence": confidence_label(cf_data),
+        "city":       m["city"],
+        "state":      m["state"],
+        "latitude":   m["latitude"],
+        "longitude":  m["longitude"],
+    })
 
 final_df = pd.DataFrame(results)
-
-# ── Step 3: Most recent row per station ──────────────────────────────────────
-
-final_df = (
-    final_df.sort_values("date")
-    .groupby("station", as_index=False).tail(1)
-    .reset_index(drop=True)
-)
 
 # ── Save ─────────────────────────────────────────────────────────────────────
 
@@ -207,7 +231,7 @@ final_df.to_csv(OUTPUT_FILE, index=False)
 valid = final_df.dropna(subset=["AERSI"])
 print(f"\nAERSI computation complete")
 print(f"Stations scored: {len(valid)} / {len(final_df)}")
-print(f"Window days:     {pl_df['date'].nunique()} / {TARGET_WINDOW}")
+print(f"Window days:     {df['date'].nunique()} / {TARGET_WINDOW}")
 print()
 print("Score distribution:")
 for label, lo, hi in BANDS:
