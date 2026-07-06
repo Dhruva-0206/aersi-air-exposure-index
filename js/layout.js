@@ -62,6 +62,7 @@ function renderFooter() {
             <li><a href="about.html">About the Project</a></li>
             <li><a href="mailto:aersi.org@gmail.com">aersi.org@gmail.com</a></li>
             <li><a href="https://www.linkedin.com/in/dhruva-chakrabarty/" target="_blank">LinkedIn</a></li>
+            <li><a href="privacy.html">Privacy & Disclaimer</a></li>
           </ul>
         </div>
       </div>

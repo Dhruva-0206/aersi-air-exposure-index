@@ -52,6 +52,13 @@ def esc(v):
 
 # ── Map ───────────────────────────────────────────────────────────────────────
 
+# Known limitation: folium's default CDN tags (Leaflet, jQuery, Bootstrap,
+# awesome-markers) are emitted via branca.element.JavascriptLink/CssLink,
+# whose templates hardcode `<script src=...>` / `<link href=...>` with no
+# parameter to attach `integrity`/`crossorigin`. Adding SRI hashes here would
+# require subclassing those branca internals or post-processing the rendered
+# HTML string on every run — both fragile against upstream folium/branca
+# version bumps. Left unmitigated; revisit if folium adds SRI support.
 m = folium.Map(
     location=[22.5, 82.0],
     zoom_start=5,

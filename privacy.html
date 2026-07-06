@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy & Disclaimer — AERSI</title>
+  <meta name="description" content="AERSI privacy notice, data disclaimer, and licensing information.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <style>
+    .privacy-content section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border2);
+    }
+
+    .privacy-content section:first-child { padding-top: 0; }
+    .privacy-content section:last-child { border-bottom: none; }
+
+    .privacy-content h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .privacy-content p {
+      color: var(--text2);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .privacy-content ul {
+      margin: 0 0 1rem 1.25rem;
+      color: var(--text2);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .privacy-content li { margin-bottom: 0.25rem; }
+    .privacy-content strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <div class="page">
+    <div class="section">
+      <div class="container-narrow">
+
+        <div class="section-header anim-fade-up">
+          <span class="label">Legal</span>
+          <h1 class="display display-lg" style="margin-top:0.5rem;">Privacy & Disclaimer</h1>
+          <p style="color:var(--text2);margin-top:0.75rem;font-size:1rem;line-height:1.7;">
+            What AERSI is, how the data behind it should be interpreted, what
+            (if anything) is collected about visitors, and how the code and
+            dataset are licensed.
+          </p>
+        </div>
+
+        <div class="privacy-content anim-fade-up d1">
+
+          <section>
+            <h2>What AERSI Is</h2>
+            <div class="info-box">
+              AERSI (Air Exposure Severity Index) is an independent research
+              index providing informational air quality analysis. It is not
+              medical advice. Scores are derived from CPCB monitoring data
+              which may contain gaps, sensor errors, or delays. Do not make
+              health or safety decisions based solely on AERSI scores. Always
+              refer to official government advisories for health guidance.
+            </div>
+          </section>
+
+          <section>
+            <h2>Data Disclaimer</h2>
+            <p>
+              Air quality data is sourced from the Central Pollution Control
+              Board (CPCB) via data.gov.in. The AERSI pipeline has documented
+              data gaps (105 missing days between January and May 2026 due to
+              API infrastructure issues). Scores reflect the most recent
+              available 30-day window and may not reflect current conditions
+              if the pipeline has not run recently. AERSI scores are provided
+              as-is with no warranty of accuracy or completeness.
+            </p>
+          </section>
+
+          <section>
+            <h2>Privacy Notice</h2>
+            <p>
+              This website does not collect, store, or process any personal
+              data directly. No cookies, analytics, login, or user tracking of
+              any kind. However, the following third-party services process
+              visitor data as part of serving this website:
+            </p>
+            <ul>
+              <li><strong>Vercel</strong> (hosting) — logs request metadata including IP addresses</li>
+              <li><strong>Cloudflare cdnjs</strong> — serves Chart.js; may log visitor IPs</li>
+              <li><strong>CARTO tile servers</strong> — serves the interactive map tiles; sees every map pan and zoom including IP address</li>
+              <li><strong>jsDelivr</strong> — serves mapping libraries; may log visitor IPs</li>
+            </ul>
+            <p>
+              Under India's Digital Personal Data Protection Act 2023 and GDPR
+              for EU visitors, IP addresses may qualify as personal data.
+              These services have their own privacy policies. If you prefer
+              not to have your IP logged by tile servers, you may disable
+              JavaScript.
+            </p>
+          </section>
+
+          <section>
+            <h2>License</h2>
+            <p>
+              The AERSI codebase is open source under the MIT License. The
+              derived AERSI dataset is available under Creative Commons
+              Attribution 4.0 (CC BY 4.0). Raw CPCB data is under
+              GODL-India. See the
+              <a href="https://github.com/Dhruva-0206/aersi-air-exposure-index/blob/master/LICENSE" target="_blank">LICENSE file</a>
+              for full terms.
+            </p>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script>
+    document.getElementById('nav-root').innerHTML = renderNav();
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    setActiveNav();
+  </script>
+</body>
+</html>
