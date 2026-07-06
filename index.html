@@ -447,8 +447,8 @@
         <div class="station-row">
           <span class="station-rank">${i + 1}</span>
           <div class="station-info">
-            <div class="station-name">${s.station}</div>
-            <div class="station-loc">${s.city || ''}${s.city && s.state ? ', ' : ''}${s.state || ''}</div>
+            <div class="station-name">${escapeHtml(s.station)}</div>
+            <div class="station-loc">${escapeHtml(s.city)}${s.city && s.state ? ', ' : ''}${escapeHtml(s.state)}</div>
           </div>
           <span class="badge badge-${cat.cls}">${cat.label}</span>
           <span class="station-score" style="color:${cat.color};">${fmt(s.AERSI)}</span>

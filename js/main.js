@@ -73,6 +73,14 @@ function fmt(v, d = 2) {
   return parseFloat(v).toFixed(d);
 }
 
+// Escapes HTML entities in CSV-sourced strings (station/city/state) before
+// they are inserted via innerHTML template literals.
+function escapeHtml(v) {
+  return String(v ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
 // ── Map overlay ────────────────────────────────────────────────────────────
 function openMapOverlay() {
   const overlay = document.getElementById('map-overlay');

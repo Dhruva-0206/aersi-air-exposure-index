@@ -2,6 +2,7 @@
 Step 5 — Build AERSI interactive station map
 """
 
+import html
 import math
 import pandas as pd
 import folium
@@ -44,6 +45,11 @@ def fmt(v):
     except:
         return "—"
 
+def esc(v):
+    if pd.isna(v):
+        return ""
+    return html.escape(str(v))
+
 # ── Map ───────────────────────────────────────────────────────────────────────
 
 m = folium.Map(
@@ -68,6 +74,16 @@ for _, row in df.iterrows():
     color  = aersi_color(aersi)
     label  = aersi_label(aersi)
     radius = min(12, 4.5 + math.sqrt(max(aersi, 0)) * 2.0)
+
+    station_esc = esc(row["station"])
+    city_val    = row.get("city", "")
+    state_val   = row.get("state", "")
+    city_esc    = esc(city_val)
+    state_esc   = esc(state_val)
+    if city_val and state_val:
+        location_esc = f"{city_esc}, {state_esc}"
+    else:
+        location_esc = city_esc if city_val else state_esc
 
     # Confidence badge if available
     conf_html = ""
@@ -99,8 +115,8 @@ for _, row in df.iterrows():
     popup_html = f"""
     <div style="font-family:system-ui,-apple-system,sans-serif;min-width:260px;max-width:320px;font-size:13px;line-height:1.5;">
       <div style="background:{color}12;border-bottom:2px solid {color};padding:14px 16px;margin:-8px -8px 0 -8px;border-radius:8px 8px 0 0;">
-        <div style="font-weight:700;font-size:15px;color:#0f1629;margin-bottom:2px;">{row['station']}</div>
-        <div style="font-size:12px;color:#64748b;">{row.get('city','')}{', ' + str(row.get('state','')) if row.get('city') and row.get('state') else row.get('state','')}</div>
+        <div style="font-weight:700;font-size:15px;color:#0f1629;margin-bottom:2px;">{station_esc}</div>
+        <div style="font-size:12px;color:#64748b;">{location_esc}</div>
       </div>
       <div style="padding:14px 16px;border-bottom:1px solid #f1f5f9;">
         <div style="display:flex;align-items:baseline;justify-content:space-between;">
@@ -141,7 +157,7 @@ for _, row in df.iterrows():
         color=color, fill=True, fill_color=color,
         fill_opacity=0.65, weight=1.2,
         popup=folium.Popup(popup_html, max_width=340),
-        tooltip=f"<b>{row['station']}</b> — AERSI {fmt(aersi)} ({label})",
+        tooltip=f"<b>{station_esc}</b> — AERSI {fmt(aersi)} ({label})",
     ).add_to(m)
 
 # ── Legend ────────────────────────────────────────────────────────────────────
