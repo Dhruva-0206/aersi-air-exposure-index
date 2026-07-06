@@ -205,15 +205,15 @@
                 <p style="margin:0;font-size:0.95rem;"><em>How polluted is the air, across all pollutants combined?</em></p>
               </div>
 
-              <p>Each pollutant present is normalized against its WHO 2021 guideline limit, soft-saturated to prevent single extreme readings from dominating, then combined using weights renormalized over only the pollutants actually available.</p>
+              <p>Each pollutant's concentration is first averaged across all available days in the 30-day rolling window — not taken from the most recent day's reading — before WHO normalization is applied. The averaged concentration is then soft-saturated to prevent single extreme readings from dominating, then combined using weights renormalized over only the pollutants actually available. The formula structure itself (normalize → saturate → renormalize weights → weighted sum) is unchanged; only the input concentration changed from a single day to the 30-day window mean.</p>
 
               <h3>Step 1 — WHO normalization</h3>
-              <div class="formula-block" style="font-size:0.95rem;">N_p = C_p / L_p</div>
-              <p style="margin-top:0.75rem;">N_p = 1.0 means exactly at the WHO safe limit. N_p = 4.0 means four times the danger threshold.</p>
+              <div class="formula-block" style="font-size:0.95rem;">C_p = mean(C_p over all available days in the 30-day window)<br>N_p = C_p / L_p</div>
+              <p style="margin-top:0.75rem;">C_p is the window-mean concentration, not the most recent day's reading — this is what makes PL an exposure measure rather than a one-day snapshot. N_p = 1.0 means exactly at the WHO safe limit. N_p = 4.0 means four times the danger threshold.</p>
 
               <h3>Step 2 — Soft-saturation transform</h3>
               <div class="formula-block" style="font-size:0.95rem;">f(N_p) = N_p ^ 0.6</div>
-              <p style="margin-top:0.75rem;">The 0.6 exponent approximates the concave concentration-response relationship documented for PM2.5 in global epidemiological cohort studies, where marginal health risk decreases at higher concentrations (Pope &amp; Dockery, 2006; GBD Integrated Exposure-Response framework). This value is informed by published sublinear dose-response shapes but is treated as heuristic in this version. Sensitivity analyses across exponents 0.4 to 0.8 confirm that station rankings and severity category assignments are robust to this choice.</p>
+              <p style="margin-top:0.75rem;">The 0.6 exponent approximates the concave concentration-response relationship documented for PM2.5 in global epidemiological cohort studies, where marginal health risk decreases at higher concentrations (Pope &amp; Dockery, 2006; GBD Integrated Exposure-Response framework). This value is informed by published sublinear dose-response shapes but is treated as heuristic in this version. Sensitivity analyses across exponents 0.4 to 0.8 confirm that station rankings and severity category assignments are robust to this choice (Spearman r = 0.993–0.999).</p>
 
               <h3>Step 3 — Weight renormalization</h3>
               <p>If some pollutants are missing, weights are renormalized across only the pollutants present:</p>
@@ -265,16 +265,18 @@
                 <p style="margin:0;font-size:0.95rem;"><em>How often has this station's air been unsafe?</em></p>
               </div>
 
-              <p>EPF counts how many of the 30 rolling days had AQI above 100 — the CPCB threshold between satisfactory and moderate. A single honest dampening term scales the persistence by the square root of data coverage, preventing overconfident scores from sparse stations.</p>
+              <p>EPF counts how many of the observed rolling-window days had AQI above 100 — the CPCB threshold between satisfactory and moderate. A single honest dampening term scales the persistence by the square root of data coverage, preventing overconfident scores from sparse stations.</p>
 
               <div class="formula-block" style="font-size:0.95rem;margin:1.25rem 0;line-height:2.2;">
                 data_weight = (D_obs / 30)^0.5<br>
-                EPF_adj = 1 + (D_exceed / 30) × data_weight
+                EPF_adj = 1 + (D_exceed / D_obs) × data_weight
               </div>
+
+              <p>The persistence fraction divides by D_obs — the number of days actually observed — rather than by a fixed 30. Dividing by 30 regardless of how many days were observed would double-penalize sparse stations: data_weight already scales down the contribution of stations with limited history, so also shrinking the numerator's denominator was redundant dampening, not additional honesty.</p>
 
               <p>Using square root rather than linear dampening means a station with 15 days of data gets weight 0.707 — not the 0.25 that a quadratic term would produce. Proportional, not punishing.</p>
 
-              <p>The primary EPF threshold is AQI &gt; 100, the regulatory boundary between satisfactory and unhealthy air quality under the CPCB framework — the same threshold used in national public health advisories. Sensitivity analyses using WHO PM2.5 guideline (15 µg/m³) and interim target (35 µg/m³) as concentration-based thresholds produce consistent station rankings.</p>
+              <p>The primary EPF threshold is AQI &gt; 100, the regulatory boundary between satisfactory and unhealthy air quality under the CPCB framework — the same threshold used in national public health advisories. Sensitivity analyses using WHO PM2.5 guideline (15 µg/m³) and interim target (35 µg/m³) as concentration-based thresholds produce consistent station rankings (Spearman r = 0.987–0.990).</p>
 
               <table class="data-table" style="margin-top:1rem;">
                 <thead><tr><th>Days Observed</th><th>data_weight</th><th>EPF if 80% exceeded</th><th>EPF if 30% exceeded</th></tr></thead>
@@ -302,6 +304,8 @@
                 S = median(|AQI_t − AQI_{t−1}|)<br>
                 VSF_robust = 1 + tanh(S / 45)
               </div>
+
+              <p>Only consecutive calendar-day pairs (observations exactly one day apart) are included in the median calculation. Gap-spanning differences are excluded to prevent API outage periods from artificially inflating volatility scores.</p>
 
               <p>The tanh function keeps VSF bounded between 1.0 and 2.0 regardless of how extreme the swings become. The constant 45 means a median daily swing of 45 AQI points gives tanh(1) ≈ 0.76, placing VSF at 1.76.</p>
 
@@ -407,7 +411,7 @@
               <p>As data accumulates, EPF reaches full confidence and VSF stabilizes on a longer sequence of day-to-day changes. The pipeline runs daily and scores become more trustworthy automatically.</p>
 
               <h3>Remaining limitations</h3>
-              <p>(1) Pollutant weights for NO2, SO2, and PM10 are estimated from global comparative-risk literature rather than India-specific GBD attributable burden figures, which are not yet separately published for these pollutants at the national level. (2) The 0.6 saturation exponent is heuristic and not fitted to local health outcome data. (3) EPF and VSF are operationalised using AQI rather than raw concentration series, introducing a partial dependency on AQI's structural choices. (4) CF_quality is set to 1.0 pending sensor metadata availability. These limitations are explicitly acknowledged and will be addressed in subsequent versions through empirical calibration against health outcome data.</p>
+              <p>(1) Pollutant weights for NO2, SO2, and PM10 are estimated from global comparative-risk literature rather than India-specific GBD attributable burden figures, which are not yet separately published for these pollutants at the national level. (2) The 0.6 saturation exponent is heuristic and not fitted to local health outcome data. (3) EPF and VSF are operationalised using AQI rather than raw concentration series, introducing a partial dependency on AQI's structural choices. (4) CF_quality is set to 1.0 pending sensor metadata availability. (5) PL and EPF share a 30-day observation window, resulting in moderate collinearity (Spearman r = 0.89). This is a structural feature of the composite design — PL captures absolute concentration burden while EPF captures the frequency distribution of exceedances — rather than redundancy. These limitations are explicitly acknowledged and will be addressed in subsequent versions through empirical calibration against health outcome data.</p>
             </section>
 
             <section id="relationship">

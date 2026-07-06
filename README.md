@@ -1,101 +1,75 @@
 # AERSI — Air Exposure Severity Index
 
-Station-level rolling air exposure severity index for India.
-Moves beyond snapshot AQI to capture **intensity, persistence, and volatility**
-of pollution exposure over a 30-day rolling window.
-
----
+AERSI is a station-level, daily-updating air quality severity index for India. It complements standard AQI — which reports a single day's conditions — by combining WHO-normalized pollution load, 30-day exposure persistence, and day-to-day volatility into one composite severity score across CPCB monitoring stations nationwide. AERSI is live at [aersi.live](https://www.aersi.live).
 
 ## Formula
 
 ```
-AERSI = PL × EPF × VSF
+AERSI = PL^0.50 × EPF^0.25 × VSF^0.25
 ```
 
-| Component | Meaning | Range |
-|-----------|---------|-------|
-| **PL** — Pollution Load | WHO-normalized weighted pollutant concentration | 0 → ∞ |
-| **EPF** — Exposure Persistence Factor | How often AQI > 100, confidence-weighted | 1.0 → 2.0 |
-| **VSF** — Variability Severity Factor | Daily AQI swing via tanh-bounded std dev | 1.0 → 2.0 |
+- **PL — Pollution Load**: WHO-normalized, soft-saturated, weight-renormalized pollutant concentration, computed from the 30-day rolling window mean per pollutant.
+- **EPF — Exposure Persistence Factor**: how often AQI exceeded 100 over the observed rolling window, dampened by data coverage.
+- **VSF — Variability Severity Factor**: median absolute day-to-day AQI change over consecutive calendar-day pairs, tanh-bounded.
 
-**Baseline:** AERSI = 1.0 means exactly at WHO thresholds, no exceedances, zero volatility.
+Pollutant weights (PM2.5 0.40, PM10 0.20, NO2 0.15, Ozone 0.15, SO2 0.10) are derived from India-specific attributable DALYs in the Global Burden of Disease Study 2019 for PM2.5 and ozone, with the remaining pollutants estimated from global comparative-risk literature and renormalized. Full derivation in [methodology.html](methodology.html).
 
----
+## Live System
 
-## Project Structure
+- 543 stations scored daily across India
+- Automated pipeline via GitHub Actions — updated 10:30 AM IST
+- Interactive map, station explorer, and full methodology reference at [aersi.live](https://www.aersi.live)
+
+## Data Source
+
+CPCB via data.gov.in (Resource ID: `3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69`)
+Rolling 30-day window · ~530 active monitoring stations
+
+## Validation
+
+- Formula reconstruction error < 0.001 across all stations
+- Spearman(AERSI, latest-day AQI) = 0.719 — genuinely complementary, not redundant
+- Exponent sensitivity: r = 0.993–0.999 across alpha 0.4–0.8
+- EPF threshold sensitivity: r = 0.987–0.990 across WHO and CPCB thresholds
+- Geographic validation: NCR belt (1.79) consistently above southern states (1.08)
+
+## Repository Structure
 
 ```
-aersi/
-├── .github/workflows/daily_pipeline.yml   ← automated daily run
+aersi-station-timeseries/
+├── data/
+│   ├── snapshots/       raw daily CPCB CSVs (dated, immutable)
+│   ├── rolling/         merged 30-day rolling dataset
+│   └── processed/       final scored output (aersi_station_scores.csv)
 ├── src/
-│   ├── pipeline.py                        ← orchestrator
-│   ├── fetch/fetch_snapshot.py            ← CPCB API fetch
-│   ├── process/
-│   │   ├── build_rolling.py               ← merge 30-day window
-│   │   ├── compute_aqi.py                 ← CPCB AQI calculation
-│   │   └── compute_aersi.py               ← new formula
-│   └── map/build_map.py                   ← interactive map
-├── data/snapshots/                        ← daily CSVs (committed)
-├── outputs/                               ← map HTML
-├── logs/                                  ← daily run logs
-├── requirements.txt
-└── .env                                   ← API key (never commit)
+│   ├── fetch/           Step 1 — CPCB API ingestion
+│   ├── process/         Steps 2–4 — rolling window, AQI, AERSI computation
+│   ├── map/             Step 5 — interactive map generation
+│   ├── analysis/        sensitivity analysis and regression test suite
+│   └── pipeline.py      orchestrator — runs all steps in sequence
+├── outputs/             generated interactive map (aersi_map.html)
+├── css/, js/            frontend styles and shared layout/logic
+├── *.html               website pages (index, map, explore, why,
+│                        methodology, about, privacy)
+└── .github/workflows/   daily pipeline CI/CD
 ```
 
----
+## License
 
-## Setup
+- **Code**: MIT License
+- **Dataset** (`data/processed/`): CC BY 4.0
+- **Raw CPCB data**: GODL-India
 
-### 1. Clone and install
+See [LICENSE](LICENSE) for full terms.
 
-```bash
-git clone https://github.com/YOUR_USERNAME/aersi.git
-cd aersi
-pip install -r requirements.txt
-```
+## Citation
 
-### 2. Add your API key
-
-Create a `.env` file in the project root:
+If you use AERSI or this dataset in your research, please cite:
 
 ```
-DATA_GOV_API_KEY=your_key_here
+[placeholder — DOI will be added after Zenodo upload]
 ```
 
-Get your key at: https://data.gov.in → Register → API Key
+Also cite the IEEE survey paper:
 
-### 3. Run manually
-
-```bash
-python src/pipeline.py
-```
-
----
-
-## GitHub Actions — Automated Daily Run
-
-The pipeline runs automatically every day at **10:30 AM IST** via GitHub Actions.
-
-### Setup (one time only)
-
-1. Push this repo to GitHub
-2. Go to **Settings → Secrets and variables → Actions**
-3. Click **New repository secret**
-4. Name: `DATA_GOV_API_KEY` — Value: your API key
-5. Done. The Action runs daily and commits new snapshots back to the repo.
-
-### Manual trigger
-
-Go to **Actions → AERSI Daily Pipeline → Run workflow**
-
----
-
-## Score Reference
-
-| AERSI | Category | Meaning |
-|-------|----------|---------|
-| < 0.8 | Very Low | Cleaner than WHO guidelines |
-| 0.8 – 1.2 | Low | Near safety threshold |
-| 1.2 – 2.0 | Moderate | Concerning cumulative exposure |
-| 2.0 – 3.0 | High | Significant exposure risk |
-| > 3.0 | Extreme | Persistent, intense, volatile pollution |
+> Marne P.M., Bhosale S.N., Chakrabarty D. "Air Quality Index in the Era of Data Science: A Survey of Methods, Technologies and Exposure Trends." INDIACom 2026. DOI: 10.23919/INDIACom70271.2026.11526638

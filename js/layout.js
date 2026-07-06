@@ -25,9 +25,17 @@ function renderNav() {
 
 function renderFooter() {
   return `
+  <style>
+    /* Footer now has 3 columns (was 4) — override .footer-grid's column
+       count at each breakpoint the site already uses, without touching
+       css/style.css. */
+    .footer-grid-3 { grid-template-columns: 2fr 1fr 1fr; }
+    @media (max-width: 1024px) { .footer-grid-3 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 768px)  { .footer-grid-3 { grid-template-columns: 1fr; } }
+  </style>
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-grid footer-grid-3">
         <div>
           <div class="footer-brand">
             <img src="logo.png" alt="AERSI" style="width:32px;height:32px;border-radius:8px;object-fit:cover;">
@@ -38,10 +46,7 @@ function renderFooter() {
             that captures the intensity, persistence, and volatility of
             air pollution exposure across India. Updated daily.
           </p>
-        </div>
-        <div>
-          <div class="footer-heading">Navigate</div>
-          <ul class="footer-links">
+          <ul class="footer-links" style="margin-top:1.25rem;">
             <li><a href="index.html">Home</a></li>
             <li><a href="map.html">Live Map</a></li>
             <li><a href="why.html">Why AERSI?</a></li>
@@ -50,25 +55,23 @@ function renderFooter() {
           </ul>
         </div>
         <div>
-          <div class="footer-heading">Data</div>
+          <div class="footer-heading">Contact</div>
           <ul class="footer-links">
-            <li><a href="https://data.gov.in" target="_blank">CPCB via data.gov.in</a></li>
-            <li><a href="methodology.html">Formula Reference</a></li>
+            <li><a href="mailto:aersi.org@gmail.com">aersi.org@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/dhruva-chakrabarty/" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
         <div>
-          <div class="footer-heading">Contact</div>
+          <div class="footer-heading">Legal</div>
           <ul class="footer-links">
-            <li><a href="about.html">About the Project</a></li>
-            <li><a href="mailto:aersi.org@gmail.com">aersi.org@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/dhruva-chakrabarty/" target="_blank">LinkedIn</a></li>
             <li><a href="privacy.html">Privacy & Disclaimer</a></li>
+            <li>MIT License · CC BY 4.0 Dataset</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 AERSI · aersi.live · Built by Dhruva Chakrabarty</span>
-        <span>Data: CPCB · Updated daily 10:30 AM IST</span>
+        <span>Data: CPCB via data.gov.in · WHO AQG 2021 · Updated daily 10:30 AM IST</span>
+        <span>© 2026 Dhruva Chakrabarty · MIT License</span>
       </div>
     </div>
   </footer>`;
