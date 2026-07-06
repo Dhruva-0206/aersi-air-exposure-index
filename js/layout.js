@@ -46,13 +46,6 @@ function renderFooter() {
             that captures the intensity, persistence, and volatility of
             air pollution exposure across India. Updated daily.
           </p>
-          <ul class="footer-links" style="margin-top:1.25rem;">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="map.html">Live Map</a></li>
-            <li><a href="why.html">Why AERSI?</a></li>
-            <li><a href="methodology.html">Methodology</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
         </div>
         <div>
           <div class="footer-heading">Contact</div>
