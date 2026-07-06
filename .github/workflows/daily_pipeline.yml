@@ -31,6 +31,9 @@ jobs:
           DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
         run: python src/pipeline.py
 
+      - name: Run regression tests
+        run: python src/analysis/pipeline_tests.py
+
       - name: Commit new snapshot and outputs
         continue-on-error: false
         run: |
