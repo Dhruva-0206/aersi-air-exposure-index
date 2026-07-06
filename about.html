@@ -111,23 +111,6 @@
       position: relative;
     }
 
-    .pipeline-step:not(:last-child)::before {
-      content: '';
-      position: absolute;
-      left: 19px; top: 42px; bottom: 0;
-      width: 2px;
-      background: var(--border2);
-    }
-
-    .pipe-icon {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: white;
-      border: 2px solid var(--border2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; flex-shrink: 0; position: relative; z-index: 1;
-    }
-
     .pipe-body h4 { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.25rem; }
     .pipe-body p { font-size: 0.85rem; color: var(--text2); line-height: 1.65; }
 
@@ -216,8 +199,7 @@
     <div class="about-hero">
       <div class="container">
         <div class="anim-fade-up" style="max-width:680px;">
-          <span class="label">About</span>
-          <h1 class="display display-xl" style="margin-top:0.6rem;margin-bottom:1rem;">
+          <h1 class="display display-xl" style="margin-bottom:1rem;">
             What is AERSI?
           </h1>
           <p style="font-size:1.05rem;color:var(--text2);line-height:1.8;">
@@ -234,25 +216,24 @@
       <div class="container">
 
         <div class="section-header anim-fade-up">
-          <span class="label">The Project</span>
-          <h2 class="display display-lg" style="margin-top:0.5rem;">Why this exists</h2>
+          <h2 class="display display-lg">Why this exists</h2>
         </div>
 
         <div class="about-grid anim-fade-up d1">
           <div class="about-card">
-            <h3>🎯 The Goal</h3>
+            <h3>The Goal</h3>
             <p>To build an open, scientifically grounded index that complements standard AQI — capturing what AQI structurally cannot in a single daily reading: how intense, persistent, and volatile pollution exposure has been over the past 30 days. Pollutant weights are derived from GBD 2019 India-specific attributable DALYs for PM2.5 and ozone.</p>
           </div>
           <div class="about-card">
-            <h3>🔬 The Approach</h3>
+            <h3>The Approach</h3>
             <p>Three components — Pollution Load, Exposure Persistence, and Variability Severity — combined in a geometric weighted mean. WHO-normalized, soft-saturated, and bounded to remain interpretable. Currently a prototype: health validation against outcome data is the next research phase.</p>
           </div>
           <div class="about-card">
-            <h3>📡 The Data</h3>
+            <h3>The Data</h3>
             <p>CPCB monitoring data from 547 stations across India, fetched daily via the Government of India's open data API. The pipeline runs automatically every morning at 10:30 AM IST.</p>
           </div>
           <div class="about-card">
-            <h3>🌱 The Future</h3>
+            <h3>The Future</h3>
             <p>Currently covering India only. As data accumulates, AERSI scores become more statistically stable. Long-term plans include seasonal trend analysis, state-level aggregations, and open API access for researchers.</p>
           </div>
         </div>
@@ -260,8 +241,7 @@
         <hr class="divider" style="margin:3rem 0;">
 
         <div class="section-header anim-fade-up">
-          <span class="label">The Builder</span>
-          <h2 class="display display-lg" style="margin-top:0.5rem;">Who made this</h2>
+          <h2 class="display display-lg">Who made this</h2>
         </div>
 
         <div class="builder-section anim-fade-up d1">
@@ -291,42 +271,36 @@
         <hr class="divider" style="margin:3rem 0;">
 
         <div class="section-header anim-fade-up">
-          <span class="label">How It Runs</span>
-          <h2 class="display display-lg" style="margin-top:0.5rem;">The Data Pipeline</h2>
+          <h2 class="display display-lg">The Data Pipeline</h2>
           <p style="color:var(--text2);margin-top:0.5rem;font-size:0.95rem;">Fully automated. Runs every day at 10:30 AM IST without any manual intervention.</p>
         </div>
 
         <div class="pipeline anim-fade-up d1">
           <div class="pipeline-step">
-            <div class="pipe-icon">🌐</div>
             <div class="pipe-body">
               <h4>Fetch from CPCB API</h4>
               <p>Daily snapshot pulled from the Central Pollution Control Board via data.gov.in across all 547 active stations in India.</p>
             </div>
           </div>
           <div class="pipeline-step">
-            <div class="pipe-icon">📦</div>
             <div class="pipe-body">
               <h4>Build 30-day rolling dataset</h4>
               <p>New snapshot merged with previous 29 days. Missing days detected and flagged. Confidence weight calculated.</p>
             </div>
           </div>
           <div class="pipeline-step">
-            <div class="pipe-icon">🧮</div>
             <div class="pipe-body">
               <h4>Compute AQI and AERSI</h4>
               <p>CPCB sub-index AQI computed per station per day. Then PL, EPF, and VSF calculated using the AERSI formula to produce each station's score and confidence label.</p>
             </div>
           </div>
           <div class="pipeline-step">
-            <div class="pipe-icon">🗺️</div>
             <div class="pipe-body">
               <h4>Generate map and outputs</h4>
               <p>Interactive map rebuilt with fresh scores. All outputs committed back to the repository automatically.</p>
             </div>
           </div>
           <div class="pipeline-step">
-            <div class="pipe-icon">🌍</div>
             <div class="pipe-body">
               <h4>Site updates live on aersi.live</h4>
               <p>Vercel serves the latest committed data. No backend required — the data commits are the update mechanism.</p>
@@ -336,11 +310,9 @@
 
         <div class="anim-fade-up" style="margin-top:2rem;">
           <div class="section-header">
-            <span class="label">Links & Data</span>
-            <h2 class="display display-md" style="margin-top:0.4rem;">Resources</h2>
+            <h2 class="display display-md">Resources</h2>
           </div>
           <a href="methodology.html" class="resource-card">
-            <span style="font-size:1.5rem;">📐</span>
             <div>
               <div style="font-weight:600;font-size:0.95rem;">Formula Reference</div>
               <div style="font-size:0.8rem;color:var(--text3);margin-top:2px;">Complete technical documentation of AERSI, PL, EPF, and VSF</div>
@@ -348,7 +320,6 @@
             <span style="margin-left:auto;color:var(--text3);">→</span>
           </a>
           <a href="https://data.gov.in" target="_blank" class="resource-card">
-            <span style="font-size:1.5rem;">🏛️</span>
             <div>
               <div style="font-weight:600;font-size:0.95rem;">CPCB Data Source</div>
               <div style="font-size:0.8rem;color:var(--text3);margin-top:2px;">Real-time AQI from the Central Pollution Control Board via data.gov.in</div>
@@ -356,7 +327,6 @@
             <span style="margin-left:auto;color:var(--text3);">→</span>
           </a>
           <a href="https://www.who.int/publications/i/item/9789240034228" target="_blank" class="resource-card">
-            <span style="font-size:1.5rem;">🏥</span>
             <div>
               <div style="font-weight:600;font-size:0.95rem;">WHO Air Quality Guidelines (2021)</div>
               <div style="font-size:0.8rem;color:var(--text3);margin-top:2px;">Source for the pollutant safety limits used in PL normalization</div>

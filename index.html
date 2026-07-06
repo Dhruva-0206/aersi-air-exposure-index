@@ -93,13 +93,6 @@
     .why-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(13,110,253,0.09); }
     .why-card:hover::before { transform: scaleX(1); }
 
-    .why-icon {
-      width: 44px; height: 44px; background: var(--accent-soft);
-      border: 1px solid var(--accent-mid); border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem; margin-bottom: 1.25rem;
-    }
-
     .why-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; }
     .why-card p  { font-size: 0.875rem; color: var(--text2); line-height: 1.7; }
 
@@ -240,11 +233,6 @@
             <a href="map.html" class="btn btn-primary btn-lg">Explore Live Map →</a>
             <a href="why.html" class="btn btn-outline btn-lg">Why AERSI?</a>
           </div>
-          <div class="hero-chips">
-            <span class="chip">📊 WHO-normalized PL</span>
-            <span class="chip">📅 30-day Persistence</span>
-            <span class="chip">📈 Median-robust VSF</span>
-          </div>
         </div>
       </div>
     </section>
@@ -279,24 +267,20 @@
     <section class="section" style="background:var(--bg2);">
       <div class="container">
         <div class="section-header anim-fade-up">
-          <span class="label">Why AERSI?</span>
-          <h2 class="display display-lg" style="margin-top:0.5rem;max-width:560px;">
+          <h2 class="display display-lg" style="max-width:560px;">
             AQI tells you the moment.<br>AERSI tells you the story.
           </h2>
         </div>
         <div class="why-grid">
           <div class="why-card anim-fade-up d1">
-            <div class="why-icon">📊</div>
             <h3>Pollution Load</h3>
             <p>WHO-normalized weighted index across PM2.5, PM10, NO2, Ozone, and SO2. Fine particulates get the weight they deserve based on epidemiological evidence.</p>
           </div>
           <div class="why-card anim-fade-up d2">
-            <div class="why-icon">📅</div>
             <h3>Exposure Persistence</h3>
             <p>How often does a station cross the unsafe threshold over 30 days? Persistent pollution is fundamentally more damaging than rare spikes of equal magnitude.</p>
           </div>
           <div class="why-card anim-fade-up d3">
-            <div class="why-icon">📈</div>
             <h3>Volatility Severity</h3>
             <p>Unpredictable swings cause acute health events. A station jumping from clean to toxic without warning is penalized — people can't adapt to what they can't predict.</p>
           </div>
@@ -310,8 +294,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header anim-fade-up">
-          <span class="label">Score Reference</span>
-          <h2 class="display display-lg" style="margin-top:0.5rem;">Reading the Index</h2>
+          <h2 class="display display-lg">Reading the Index</h2>
           <p style="color:var(--text2);margin-top:0.6rem;font-size:0.95rem;max-width:500px;">
             AERSI = 1.0 is the baseline — a station exactly at WHO limits, zero exceedances, zero volatility.
           </p>
@@ -353,8 +336,7 @@
         <div class="bottom-grid">
           <div>
             <div class="section-header anim-fade-up">
-              <span class="label">Today's Data</span>
-              <h2 class="display display-md" style="margin-top:0.4rem;">Most Affected Stations</h2>
+              <h2 class="display display-md">Most Affected Stations</h2>
             </div>
             <div style="display:flex;flex-direction:column;gap:0.5rem;min-width:0;" id="top-stations">
               <div style="color:var(--text3);font-size:0.875rem;padding:1rem 0;">Loading station data...</div>
@@ -366,8 +348,7 @@
 
           <div class="anim-fade-up d2" style="min-width:0;">
             <div class="section-header">
-              <span class="label">Formula</span>
-              <h2 class="display display-md" style="margin-top:0.4rem;">How It's Computed</h2>
+              <h2 class="display display-md">How It's Computed</h2>
             </div>
 
             <div class="formula-display">
