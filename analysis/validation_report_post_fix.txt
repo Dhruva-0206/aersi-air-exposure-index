@@ -1,0 +1,251 @@
+==============================================================================
+AERSI DATA VALIDATION REPORT — POST-FIX DATASET
+Generated: 2026-07-07 | Methodology: post 2026-07-06 fixes
+(windowed PL, EPF denominator = observed days, consecutive-day VSF,
+ pinned date format in compute_aqi.py)
+==============================================================================
+
+SECTION 1 — DATASET SUMMARY
+------------------------------------------------------------------------------
+Stations in scored output           : 542
+Stations with valid AERSI           : 542 (100.0%)
+Stations with NaN AERSI (no core    : 0
+  pollutant data in window)
+Rolling window rows                 : 105,474
+Distinct dates in rolling window    : 28 (target 30; 10 calendar days in span have no snapshot)
+Date range                          : 2026-05-30 to 2026-07-06 (calendar span 38 days)
+All pollutant IDs present in data   : CO, NH3, NO2, OZONE, PM10, PM2.5, SO2
+
+Core pollutant coverage (stations with >=1 valid reading in window):
+  PM2.5 :  534 stations (98.5%)
+  PM10  :  531 stations (98.0%)
+  NO2   :  532 stations (98.2%)
+  OZONE :  519 stations (95.8%)
+  SO2   :  507 stations (93.5%)
+
+DATA CONSISTENCY NOTE (affects Sections 7, 9, 12)
+------------------------------------------------------------------------------
+The scores file was generated from a rolling window that includes the
+2026-07-07 snapshot (491 stations carry last-observation date 2026-07-07),
+but the on-disk rolling file ends at the 2026-07-06 snapshot. The two
+committed artifacts are one pipeline run out of sync. Cross-file metrics
+(mean window AQI, D_obs, pollutant counts) therefore use a window shifted
+one snapshot earlier than the scores' actual input — 29 of 30 snapshot
+days overlap, so station-level effects are marginal.
+Stations only in scores file  : 1 ['Anand Nagar, Raebareli - UPPCB']
+Stations only in rolling file : 1 ['Sanegurava Halli, Bengaluru - KSPCB']
+
+SECTION 2 — SCORE DISTRIBUTION ACROSS BANDS
+------------------------------------------------------------------------------
+Band       Range         Count  Percent
+Very Low   < 0.6             1     0.2%
+Low        0.6-1.0          61    11.3%
+Moderate   1.0-1.5         318    58.7%
+High       1.5-2.0         140    25.8%
+Extreme    > 2.0            22     4.1%
+TOTAL                      542   100.0%
+
+AERSI summary stats: min=0.5996  median=1.2600  mean=1.3459  max=2.1816  std=0.3327
+
+SECTION 3 — MEAN AERSI BY STATE (RANKED)
+------------------------------------------------------------------------------
+Note: raw state label variant(s) ['Uttar_Pradesh'] merged into their
+canonical spelling before aggregation (underscore -> space).
+
+Rank  State                           Mean  Median  Stations
+1     Haryana                       1.8837  1.8983        30
+2     Himachal Pradesh              1.8510  1.8510         1
+3     Delhi                         1.8063  1.8440        47
+4     Punjab                        1.6214  1.5468         8
+5     Uttar Pradesh                 1.5686  1.5890        63
+6     Bihar                         1.4149  1.4264        34
+7     Jharkhand                     1.3967  1.3967         2
+8     Andhra Pradesh                1.3702  1.4005        17
+9     Rajasthan                     1.3694  1.3199        47
+10    Meghalaya                     1.3522  1.3621         4
+11    Tripura                       1.3381  1.3381         1
+12    Uttarakhand                   1.3136  1.3089         3
+13    Assam                         1.3101  1.2825         9
+14    Odisha                        1.3041  1.2723        19
+15    Gujarat                       1.3037  1.2602        21
+16    Madhya Pradesh                1.2479  1.2087        26
+17    West Bengal                   1.1920  1.1612        22
+18    Chandigarh                    1.1841  1.0789         3
+19    Telangana                     1.1511  1.1565        13
+20    Tamil Nadu                    1.1459  1.1178        14
+21    Kerala                        1.1065  1.0911         5
+22    Chhattisgarh                  1.1021  1.0456        14
+23    Jammu and Kashmir             1.0787  1.1116         3
+24    Maharashtra                   1.0685  1.0644        97
+25    Karnataka                     1.0466  1.0446        34
+26    Arunachal Pradesh             1.0060  1.0060         1
+27    Sikkim                        0.9799  0.9799         1
+28    Puducherry                    0.9758  0.9758         1
+29    Nagaland                      0.9019  0.9019         1
+30    Mizoram                       0.7035  0.7035         1
+
+SECTION 4 — TOP 10 STATIONS BY AERSI
+------------------------------------------------------------------------------
+#   Station                                          State          
+      AERSI      PL     EPF     VSF  Driver (log contribution)
+1   SRM University, Modinagar - UPPCB                Uttar Pradesh  
+     2.1816  2.7252  1.7071  1.7868  PL (PL:0.501 EPF:0.134 VSF:0.145)
+2   Sector-18, Panipat - HSPCB                       Haryana        
+     2.1504  2.5111  1.8756  1.8079  PL (PL:0.460 EPF:0.157 VSF:0.148)
+3   Vikas Sadan, Gurugram - HSPCB                    Haryana        
+     2.1462  2.7301  1.8165  1.5672  PL (PL:0.502 EPF:0.149 VSF:0.112)
+4   MIET College, Meerut - UPPCB                     Uttar Pradesh  
+     2.1231  3.1061  1.7528  1.2015  PL (PL:0.567 EPF:0.140 VSF:0.046)
+5   Ratanpura, Rupnagar - Ambuja Cements             Punjab         
+     2.0999  2.3952  1.8398  1.8420  PL (PL:0.437 EPF:0.152 VSF:0.153)
+6   Anand Vihar, Delhi - DPCC                        Delhi          
+     2.0894  2.2389  1.9487  1.9511  PL (PL:0.403 EPF:0.167 VSF:0.167)
+7   Sector 11, Faridabad - HSPCB                     Haryana        
+     2.0861  2.4979  1.9487  1.5575  PL (PL:0.458 EPF:0.167 VSF:0.111)
+8   15th Mile-Nongthymmai, Byrnihat - Meghalaya PCB  Meghalaya      
+     2.0849  2.5385  1.6055  1.8264  PL (PL:0.466 EPF:0.118 VSF:0.151)
+9   Sector-12, Karnal - HSPCB                        Haryana        
+     2.0593  2.2183  1.9487  1.8755  PL (PL:0.398 EPF:0.167 VSF:0.157)
+10  Sector-51, Gurugram - HSPCB                      Haryana        
+     2.0555  2.6945  1.8563  1.3244  PL (PL:0.496 EPF:0.155 VSF:0.070)
+
+SECTION 5 — BOTTOM 10 STATIONS BY AERSI
+------------------------------------------------------------------------------
+#   Station                                          State          
+      AERSI      PL     EPF     VSF Conf        
+1   Lumpyngngad, Shillong - Meghalaya PCB            Meghalaya      
+     0.5996  0.3595  1.0000  1.0000 Low         
+2   Sikulpuikawn, Aizawl - Mizoram PCB               Mizoram        
+     0.7035  0.4743  1.0000  1.0887 High        
+3   Devaraj Urs Badavane, Davanagere - KSPCB         Karnataka      
+     0.7333  0.5377  1.0000  1.0000 Provisional 
+4   Shivapura_Peenya, Bengaluru - KSPCB              Karnataka      
+     0.7913  0.6262  1.0000  1.0000 Provisional 
+5   RVCE-Mailasandra, Bengaluru - KSPCB              Karnataka      
+     0.7956  0.6330  1.0000  1.0000 Provisional 
+6   Kalu Nagar, Dombivli - MPCB                      Maharashtra    
+     0.8160  0.6516  1.0000  1.0444 High        
+7   Uchapatti, Madurai - TNPCB                       Tamil Nadu     
+     0.8191  0.6617  1.0000  1.0279 Low         
+8   Semmandalam, Cuddalore - TNPCB                   Tamil Nadu     
+     0.8574  0.6908  1.0000  1.1325 Low         
+9   Borivali East, Mumbai - MPCB                     Maharashtra    
+     0.8643  0.7418  1.0000  1.0139 Medium      
+10  Chinchpada, Ambernath - MPCB                     Maharashtra    
+     0.8654  0.7327  1.0000  1.0444 High        
+
+SECTION 6 — SPEARMAN CORRELATION: AERSI vs COMPONENTS
+------------------------------------------------------------------------------
+Spearman(AERSI, PL ) = 0.9830
+Spearman(AERSI, EPF) = 0.9374
+Spearman(AERSI, VSF) = 0.8269
+
+SECTION 7 — SPEARMAN CORRELATION: AERSI vs MEAN WINDOW AQI
+------------------------------------------------------------------------------
+Stations with both AERSI and mean AQI : 538
+Spearman(AERSI, mean window AQI)      = 0.9629
+(Mean AQI = mean of per-station-day AQI over all AQI-observed days
+ in the 30-day rolling window.)
+
+SECTION 8 — VARIANCE DECOMPOSITION OF ln(AERSI)
+------------------------------------------------------------------------------
+ln(AERSI) = 0.50*ln(PL) + 0.25*ln(EPF) + 0.25*ln(VSF)
+Stations used: 542   Var[ln(AERSI)] = 0.057952
+
+Covariance-based shares (Cov(term, ln AERSI)/Var(ln AERSI); sums to 100%,
+attributes cross-covariance proportionally):
+  PL  :  59.41%
+  EPF :  22.99%
+  VSF :  17.59%
+
+Raw variance shares (Var(term)/sum of Var(term); ignores covariance):
+  PL  :  78.23%   (Var = 0.021689)
+  EPF :  12.85%   (Var = 0.003563)
+  VSF :   8.92%   (Var = 0.002473)
+
+SECTION 9 — TOP 10 RANK DIVERGENCE CASES (AERSI RANK vs MEAN-AQI RANK)
+------------------------------------------------------------------------------
+Ranks computed over 538 stations; rank 1 = most severe.
+rank_diff = AQI rank - AERSI rank (positive: AERSI places station worse).
+
+1. RVCE-Mailasandra, Bengaluru - KSPCB (Karnataka)
+   AERSI=0.7956 (rank 536)  mean AQI=94.9 (rank 247)  diff=-289
+   PL=0.6330  EPF=1.0000  VSF=1.0000  D_obs=1/30
+   -> AERSI ranks BETTER than mean AQI: AQI standing (p54) exceeds WHO-normalized load (PL p1) — AQI likely driven by a single dominant pollutant while combined window-mean load is moderate; few exceedance days (EPF=1.000, p16); stable day-to-day (VSF=1.000, p2); sparse coverage (D_obs=1/30) dampens EPF
+
+2. Uchapatti, Madurai - TNPCB (Tamil Nadu)
+   AERSI=0.8191 (rank 534)  mean AQI=70.2 (rank 368)  diff=-166
+   PL=0.6617  EPF=1.0000  VSF=1.0279  D_obs=8/30
+   -> AERSI ranks BETTER than mean AQI: AQI standing (p32) exceeds WHO-normalized load (PL p1) — AQI likely driven by a single dominant pollutant while combined window-mean load is moderate; few exceedance days (EPF=1.000, p16); stable day-to-day (VSF=1.028, p5); sparse coverage (D_obs=8/30) dampens EPF
+
+3. Dadupura, Fatehpur Sikri - UPPCB (Uttar Pradesh)
+   AERSI=1.4852 (rank 169)  mean AQI=311.0 (rank 10)  diff=-159
+   PL=2.0283  EPF=1.1826  VSF=1.0000  D_obs=1/30
+   -> AERSI ranks BETTER than mean AQI: stable day-to-day (VSF=1.000, p2); sparse coverage (D_obs=1/30) dampens EPF
+
+4. Evelyn Lodge, Asansol - WBPCB (West Bengal)
+   AERSI=1.0713 (rank 419)  mean AQI=91.0 (rank 264)  diff=-155
+   PL=1.1321  EPF=1.0000  VSF=1.0279  D_obs=25/30
+   -> AERSI ranks BETTER than mean AQI: AQI standing (p51) exceeds WHO-normalized load (PL p30) — AQI likely driven by a single dominant pollutant while combined window-mean load is moderate; few exceedance days (EPF=1.000, p16); stable day-to-day (VSF=1.028, p5)
+
+5. Mulund West, Mumbai - MPCB (Maharashtra)
+   AERSI=1.1197 (rank 375)  mean AQI=38.3 (rank 523)  diff=+148
+   PL=1.0879  EPF=1.0000  VSF=1.3281  D_obs=19/30
+   -> AERSI ranks WORSE than mean AQI: multi-pollutant WHO-normalized load is high (PL p25) relative to its AQI standing (mean-AQI p3) — AQI's max-sub-index masks combined load
+
+6. Krishna Nagar, Bharatpur - RSPCB (Rajasthan)
+   AERSI=1.0607 (rank 429)  mean AQI=86.5 (rank 287)  diff=-142
+   PL=0.9932  EPF=1.0351  VSF=1.2397  D_obs=27/30
+   -> AERSI ranks BETTER than mean AQI: AQI standing (p47) exceeds WHO-normalized load (PL p16) — AQI likely driven by a single dominant pollutant while combined window-mean load is moderate
+
+7. Sahu Nagar, Sawai Madhopur - RSPCB (Rajasthan)
+   AERSI=1.1422 (rank 353)  mean AQI=101.5 (rank 225)  diff=-128
+   PL=1.0439  EPF=1.2191  VSF=1.2811  D_obs=25/30
+   -> AERSI ranks BETTER than mean AQI: AQI standing (p58) exceeds WHO-normalized load (PL p20) — AQI likely driven by a single dominant pollutant while combined window-mean load is moderate
+
+8. Indira Nagar, Raebareli - NTPC Unchahar (Uttar Pradesh)
+   AERSI=1.4011 (rank 199)  mean AQI=78.7 (rank 325)  diff=+126
+   PL=1.4049  EPF=1.0816  VSF=1.8050  D_obs=6/30
+   -> AERSI ranks WORSE than mean AQI: multi-pollutant WHO-normalized load is high (PL p60) relative to its AQI standing (mean-AQI p40) — AQI's max-sub-index masks combined load; high day-to-day volatility (VSF=1.805, p88)
+
+9. Tata Township, Bileipada - OSPCB (Odisha)
+   AERSI=1.3787 (rank 210)  mean AQI=172.9 (rank 85)  diff=-125
+   PL=1.4909  EPF=1.2582  VSF=1.2917  D_obs=18/30
+   -> AERSI ranks BETTER than mean AQI: AQI standing (p84) exceeds WHO-normalized load (PL p67) — AQI likely driven by a single dominant pollutant while combined window-mean load is moderate
+
+10. Khrew, Pampore - JKPCC (Jammu and Kashmir)
+   AERSI=1.1591 (rank 332)  mean AQI=54.5 (rank 457)  diff=+125
+   PL=1.1858  EPF=1.0000  VSF=1.2837  D_obs=25/30
+   -> AERSI ranks WORSE than mean AQI: multi-pollutant WHO-normalized load is high (PL p37) relative to its AQI standing (mean-AQI p15) — AQI's max-sub-index masks combined load
+
+SECTION 10 — EPF vs VSF INDEPENDENCE
+------------------------------------------------------------------------------
+Spearman(EPF, VSF) = 0.7725
+
+SECTION 11 — CONFIDENCE LABEL DISTRIBUTION (all stations)
+------------------------------------------------------------------------------
+  High        :  480 (88.6%)
+  Medium      :   52 (9.6%)
+  Low         :    7 (1.3%)
+  Provisional :    3 (0.6%)
+
+SECTION 12 — DATA QUALITY
+------------------------------------------------------------------------------
+Stations with all 5 core pollutants   : 476 / 542 (87.8%)
+Average core pollutants per station   : 4.84
+Distribution of core pollutant count (from on-disk rolling window):
+  0 pollutants:    1 stations (0.2%)  <- station(s) present only in the newer scores window
+  1 pollutants:    1 stations (0.2%)
+  2 pollutants:    3 stations (0.6%)
+  3 pollutants:    8 stations (1.5%)
+  4 pollutants:   53 stations (9.8%)
+  5 pollutants:  476 stations (87.8%)
+
+Window completeness (D_obs/30, D_obs = days with valid AQI — pipeline def):
+  median = 0.833   mean = 0.766   median D_obs = 25/30
+Window presence (days with any row in window / 30):
+  median = 0.900   mean = 0.857
+
+==============================================================================
+END OF REPORT
+==============================================================================
