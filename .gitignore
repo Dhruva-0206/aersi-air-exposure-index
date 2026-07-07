@@ -12,7 +12,9 @@ venv/
 .venv/
 
 # Data — keep snapshots, ignore rolling intermediates
-data/rolling/
+# (except last_30_days_with_aqi.csv, published for the aersi-ml repo via raw URL)
+data/rolling/*
+!data/rolling/last_30_days_with_aqi.csv
 
 # Outputs are committed by the GitHub Action
 # Remove this line if you want to track them locally too
