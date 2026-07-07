@@ -377,3 +377,4 @@ regression-tests all of the above and exits nonzero on failure.
 8. **.env file:** Is it definitively gitignored? Check .gitignore explicitly.
 9. **GitHub Actions secret masking:** Is the API key properly masked in all log outputs?
 10. **HTML injection:** Does build_map.py sanitize station names and city names before injecting into popup HTML f-strings?
+
