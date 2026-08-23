@@ -64,12 +64,10 @@ See [LICENSE](LICENSE) for full terms.
 
 ## Citation
 
-If you use AERSI or this dataset in your research, please cite:
+If you use this code or dataset in your research, please cite:
 
-```
-[placeholder — DOI will be added after Zenodo upload]
-```
+**Dataset:**
+Chakrabarty D. (2026). AERSI — Air Exposure Severity Index Dataset v1.0 (May 24 – August 23, 2026). Zenodo. https://doi.org/10.5281/zenodo.22065550
 
-Also cite the IEEE survey paper:
-
-> Marne P.M., Bhosale S.N., Chakrabarty D. "Air Quality Index in the Era of Data Science: A Survey of Methods, Technologies and Exposure Trends." INDIACom 2026. DOI: 10.23919/INDIACom70271.2026.11526638
+**Survey paper:**
+Marne P.M., Bhosale S.N., Chakrabarty D. (2026). Air Quality Index in the Era of Data Science: A Survey of Methods, Technologies and Exposure Trends. IEEE INDIACom 2026. DOI: 10.23919/INDIACom70271.2026.11526638
