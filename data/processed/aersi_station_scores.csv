@@ -1,539 +1,539 @@
 station,date,PL,EPF,VSF,CF_data,AERSI,confidence,city,state,latitude,longitude
-" Indira Nagar, Raebareli - NTPC Unchahar",2026-08-31,1.199,1.0,1.0299,0.95,1.1031,High,Raebareli,Uttar Pradesh,26.207781,81.245571
-"15th Mile-Nongthymmai, Byrnihat -Meghalaya PCB",2026-08-31,2.0063,1.7121,1.9629,0.79,1.9178,Medium,Byrnihat,Meghalaya,26.079047,91.875185
-"32Bungalows, Bhilai - CECB",2026-08-31,0.7617,1.0,1.1471,1.0,0.9032,High,Bhilai,Chhattisgarh,21.194815,81.31477
-"AIIMS, Raipur - CECB",2026-08-31,0.7757,1.0,1.1471,1.0,0.9115,High,Raipur,Chhattisgarh,21.258815,81.578979
-"Adarsh Nagar, Jaipur - RSPCB",2026-08-31,1.35,1.1523,1.1633,0.93,1.2502,High,Jaipur,Rajasthan,26.902909,75.836858
-"Airport Area, Indore - IMC",2026-08-31,1.1556,1.0745,1.3588,0.94,1.1817,High,Indore,Madhya Pradesh,22.7289,75.8076
-"Alipur, Delhi - DPCC",2026-08-31,1.5326,1.6336,1.4228,0.94,1.5286,High,Delhi,Delhi,28.815329,77.15301
-"Ambazari, Nagpur - MPCB",2026-08-31,1.0598,1.0,1.2201,0.99,1.0819,High,Nagpur,Maharashtra,21.121801,79.04952
-"Ambedkar Nagar, Nellore - APPCB ",2026-08-31,1.4018,1.1333,1.2393,1.0,1.2889,High,Nellore,Andhra Pradesh,14.438164,79.966814
-"Amity University, Panchgaon - IITM",2026-08-31,1.2294,1.246,1.2917,0.97,1.2488,High,Panchgaon,Haryana,28.3153,76.9143
-"Anand Kala Kshetram, Rajamahendravaram - APPCB",2026-08-31,1.0028,1.0333,1.2913,1.0,1.0763,High,Rajamahendravaram,Andhra Pradesh,16.9872867,81.7363176
-"Anand Nagar, Raebareli - UPPCB",2026-08-31,1.5738,1.2532,1.2864,0.83,1.4136,Medium,Raebareli,Uttar Pradesh,26.219512,81.237648
-"Anand Vihar, Delhi - DPCC",2026-08-31,2.5725,1.9493,1.4578,0.99,2.0825,High,Delhi,Delhi,28.647622,77.315809
-"Anand Vihar, Hapur - UPPCB",2026-08-31,1.4677,1.4188,1.4261,0.93,1.4449,High,Hapur,Uttar Pradesh,28.725645,77.749675
-"Anthoni Pillai Nagar, Gummidipoondi - TNPCB",2026-08-31,2.2491,2.0,1.4373,0.9,1.9528,High,Gummidipoondi,Tamil Nadu,13.4127,80.1081
-"Ardhali Bazar, Varanasi - UPPCB",2026-08-31,1.1917,1.0389,1.206,0.92,1.155,High,Varanasi,Uttar Pradesh,25.3505986,82.9083074
-"Arumbakkam, Chennai - TNPCB",2026-08-31,1.2886,1.0667,1.2708,0.9,1.2249,High,Chennai,Tamil Nadu,13.0664,80.2112
-"Arya Nagar, Bahadurgarh - HSPCB",2026-08-31,1.4037,1.2333,1.3167,1.0,1.3374,High,Bahadurgarh,Haryana,28.6701,76.9254
-"Asansol Court Area, Asansol - WBPCB",2026-08-31,1.1488,1.0,1.2314,0.99,1.1291,High,Asansol,West Bengal,23.685297,86.945968
-"Ashok Nagar, Udaipur - RSPCB",2026-08-31,1.5611,1.6781,1.4862,0.99,1.5701,High,Udaipur,Rajasthan,24.5886166,73.6321397
-"Ashok Vihar, Delhi - DPCC",2026-08-31,1.5468,1.6781,1.6621,0.99,1.6072,High,Delhi,Delhi,28.695381,77.181665
-"Ashta Vinayak Nagar, Hingoli - MPCB",2026-08-31,1.1139,1.2,1.2501,1.0,1.168,High,Hingoli,Maharashtra,19.710842,77.151824
-"Aya Nagar, Delhi - IITM",2026-08-31,1.4066,1.2333,1.2875,0.9,1.3314,High,Delhi,Delhi,28.4706914,77.1099364
-"B R Ambedkar University, Lucknow - UPPCB",2026-08-31,1.3685,1.4407,1.4087,0.99,1.3963,High,Lucknow,Uttar Pradesh,26.766433,80.927299
-"BTM Layout, Bengaluru - CPCB",2026-08-06,1.1588,1.0,1.0666,0.74,1.094,Medium,Bengaluru,Karnataka,12.9135218,77.5950804
-"Ballygunge, Kolkata - WBPCB",2026-08-31,1.0716,1.0,1.2201,1.0,1.0879,High,Kolkata,West Bengal,22.5367507,88.3638022
-"Bamboliya, Baran - RSPCB",2026-08-31,0.9491,1.0,1.1867,0.99,1.0168,High,Baran,Rajasthan,25.106006,76.469948
-"Bandhavgar Colony, Satna - Birla Cement",2026-08-31,1.3257,1.0,1.0,1.0,1.1514,High,Satna,Madhya Pradesh,24.58434363,80.8549414
-"Bandra Kurla Complex, Mumbai - IITM",2026-08-31,0.973,1.0,1.1107,0.9,1.0126,High,Mumbai,Maharashtra,19.053536,72.84643
-"Bandra Kurla Complex, Mumbai - MPCB",2026-08-31,0.987,1.0,1.2186,0.95,1.0438,High,Mumbai,Maharashtra,19.065931,72.862131
-"Bapuji Nagar, Bengaluru - KSPCB",2026-08-31,1.088,1.0,1.0887,0.98,1.0655,High,Bengaluru,Karnataka,12.951913,77.539784
-"Bapunagar, Vadodara - Nexteng Enviro",2026-08-31,1.1795,1.0,1.1491,1.0,1.1244,High,Vadodara,Gujarat,22.320153,73.216285
-"Bardowali, Agartala - Tripura SPCB",2026-08-31,1.1107,1.0,1.1663,1.0,1.0952,High,Agartala,Tripura,23.8175497,91.2726974
-"Barsua Iron Ore Mines, Tensa - OSPCB",2026-08-31,0.8123,1.0,1.0527,0.87,0.9129,High,Tensa,Odisha,21.869985,85.167016
-"Bata Chowk, Nalbari - PCBA",2026-08-31,1.3305,1.4568,1.5419,0.93,1.4121,High,Nalbari,Assam,26.446912,91.439057
-"Bawana, Delhi - DPCC",2026-08-31,1.959,1.6938,1.4778,0.95,1.7605,High,Delhi,Delhi,28.7762,77.051074
-"Belur Math, Howrah - WBPCB",2026-08-31,1.129,1.1,1.3507,1.0,1.1731,High,Howrah,West Bengal,22.629801,88.352017
-"Bhatagaon New ISBT, Raipur - CECB",2026-08-31,0.6585,1.0333,1.1507,1.0,0.8474,High,Raipur,Chhattisgarh,21.219665,81.630094
-"Bhayandar West, Mira-Bhayandar - MPCB",2026-08-31,0.8282,1.0,1.0739,1.0,0.9264,High,Mira-Bhayandar,Maharashtra,19.296481,72.840923
-"Bhelupur, Varanasi - UPPCB",2026-08-31,1.3226,1.2712,1.306,0.99,1.3055,High,Varanasi,Uttar Pradesh,25.301778,82.996789
-"Bhoiwada, Dungarpur - RSPCB",2026-08-31,1.224,1.1,1.2505,1.0,1.1982,High,Dungarpur,Rajasthan,23.837789,73.714926
-"Bhopal Chauraha, Dewas - MPPCB",2026-08-31,1.5312,1.1667,1.1536,1.0,1.3328,High,Dewas,Madhya Pradesh,22.9682591,76.064118
-"Bhosari, Pune - IITM",2026-08-31,1.1972,1.0,1.1974,0.88,1.1445,High,Pimpri-Chinchwad,Maharashtra,18.640051,73.848956
-"Bhumkar Nagar, Pune - IITM",2026-08-31,1.2023,1.0,1.1227,0.64,1.1287,Low,Pimpri-Chinchwad,Maharashtra,18.60577,73.749976
-"Bidhannagar, Kolkata - WBPCB",2026-08-31,0.9819,1.0,1.1974,0.98,1.0366,High,Kolkata,West Bengal,22.58157048,88.41002457
-"Bir, Beed - MPCB",2026-08-31,0.8959,1.0,1.1107,1.0,0.9717,High,Beed,Maharashtra,18.988474,75.753873
-"Bolinj, Virar - MPCB",2026-08-31,0.854,1.0,1.1107,0.96,0.9487,High,Virar,Maharashtra,19.445821,72.7988231
-"Bollaram Industrial Area, Hyderabad - TSPCB",2026-08-31,0.9512,1.0,1.0555,0.78,0.9885,Medium,Hyderabad,Telangana,17.518,78.383
-"Borivali East, Mumbai - IITM",2026-08-31,1.1549,1.0,1.075,0.9,1.0942,High,Mumbai,Maharashtra,19.23241,72.86895
-"Borivali East, Mumbai - MPCB",2026-08-31,0.9348,1.0,1.0352,0.84,0.9752,Medium,Mumbai,Maharashtra,19.2243333,72.8658113
-"Botanical Garden, Howrah - WBPCB",2026-08-31,1.1233,1.1,1.3467,1.0,1.1693,High,Howrah,West Bengal,22.554954,88.292568
-"Buddha Colony, Muzaffarpur - BSPCB",2026-08-31,1.1663,1.1333,1.368,1.0,1.2051,High,Muzaffarpur,Bihar,26.11442,85.39813
-"Buddhi Vihar, Moradabad - UPPCB",2026-08-31,1.1691,1.0,1.1236,0.98,1.1132,High,Moradabad,Uttar Pradesh,28.83526,78.7446
-"Burari Crossing, Delhi - IITM",2026-08-31,1.5124,1.3729,1.4481,0.89,1.4603,High,Delhi,Delhi,28.7256504,77.2011573
-"Byculla, Mumbai - BMC",2026-08-31,0.7722,1.0,1.0629,1.0,0.8922,High,Mumbai,Maharashtra,18.9767,72.838
-"CBD Belapur, Belapur - MPCB",2026-08-31,0.9752,1.0,1.2064,0.97,1.0349,High,Belapur,Maharashtra,19.0243902,73.0406721
-"CDA Area, Cuttack - OSPCB",2026-08-31,1.0516,1.0,1.2045,0.98,1.0743,High,Cuttack,Odisha,20.48891,85.84768
-"CRRI Mathura Road, Delhi - IITM",2026-08-31,1.5731,1.5,1.2827,0.9,1.4772,High,Delhi,Delhi,28.5512005,77.2735737
-"Cantonment Area, Delhi - DPCC",2026-08-31,0.8604,1.0,1.2292,0.99,0.9767,High,Delhi,Delhi,28.594169,77.1251
-"Central Academy for SFS, Byrnihat - PCBA",2026-08-31,1.7491,1.9661,1.3621,0.98,1.6919,High,Byrnihat,Assam,26.071318,91.87488
-"Central University, Hyderabad - TSPCB",2026-08-31,0.7387,1.0,1.1107,1.0,0.8823,High,Hyderabad,Telangana,17.460103,78.334361
-"Chakala-Andheri East, Mumbai - IITM",2026-08-31,0.86,1.0,1.0887,1.0,0.9473,High,Mumbai,Maharashtra,19.11074,72.86084
+" Indira Nagar, Raebareli - NTPC Unchahar",2026-09-01,1.2017,1.0,1.0375,0.96,1.1064,High,Raebareli,Uttar Pradesh,26.207781,81.245571
+"15th Mile-Nongthymmai, Byrnihat -Meghalaya PCB",2026-09-01,1.9488,1.6702,1.9744,0.79,1.8812,Medium,Byrnihat,Meghalaya,26.079047,91.875185
+"32Bungalows, Bhilai - CECB",2026-09-01,0.7752,1.0,1.1471,1.0,0.9112,High,Bhilai,Chhattisgarh,21.194815,81.31477
+"AIIMS, Raipur - CECB",2026-09-01,0.7882,1.0,1.1471,1.0,0.9188,High,Raipur,Chhattisgarh,21.258815,81.578979
+"Adarsh Nagar, Jaipur - RSPCB",2026-09-01,1.3502,1.1491,1.1506,0.94,1.246,High,Jaipur,Rajasthan,26.902909,75.836858
+"Airport Area, Indore - IMC",2026-09-01,1.1726,1.0745,1.3588,0.94,1.1903,High,Indore,Madhya Pradesh,22.7289,75.8076
+"Alipur, Delhi - DPCC",2026-09-01,1.5382,1.6091,1.4551,0.93,1.5342,High,Delhi,Delhi,28.815329,77.15301
+"Ambazari, Nagpur - MPCB",2026-09-01,1.0662,1.0,1.2022,0.99,1.0812,High,Nagpur,Maharashtra,21.121801,79.04952
+"Ambedkar Nagar, Nellore - APPCB ",2026-09-01,1.407,1.1667,1.2569,1.0,1.3053,High,Nellore,Andhra Pradesh,14.438164,79.966814
+"Amity University, Panchgaon - IITM",2026-09-01,1.2512,1.2811,1.3588,0.97,1.2848,High,Panchgaon,Haryana,28.3153,76.9143
+"Anand Kala Kshetram, Rajamahendravaram - APPCB",2026-09-01,1.0074,1.0333,1.2811,1.0,1.0766,High,Rajamahendravaram,Andhra Pradesh,16.9872867,81.7363176
+"Anand Nagar, Raebareli - UPPCB",2026-09-01,1.5512,1.244,1.0757,0.84,1.3396,Medium,Raebareli,Uttar Pradesh,26.219512,81.237648
+"Anand Vihar, Delhi - DPCC",2026-09-01,2.6038,1.9316,1.4542,0.98,2.089,High,Delhi,Delhi,28.647622,77.315809
+"Anand Vihar, Hapur - UPPCB",2026-09-01,1.472,1.4472,1.4478,0.94,1.4597,High,Hapur,Uttar Pradesh,28.725645,77.749675
+"Anthoni Pillai Nagar, Gummidipoondi - TNPCB",2026-09-01,2.2541,2.0,1.5348,0.9,1.9873,High,Gummidipoondi,Tamil Nadu,13.4127,80.1081
+"Ardhali Bazar, Varanasi - UPPCB",2026-09-01,1.1816,1.0389,1.206,0.92,1.15,High,Varanasi,Uttar Pradesh,25.3505986,82.9083074
+"Arumbakkam, Chennai - TNPCB",2026-09-01,1.2904,1.0667,1.2913,0.9,1.2306,High,Chennai,Tamil Nadu,13.0664,80.2112
+"Arya Nagar, Bahadurgarh - HSPCB",2026-09-01,1.4038,1.2333,1.3053,1.0,1.3346,High,Bahadurgarh,Haryana,28.6701,76.9254
+"Asansol Court Area, Asansol - WBPCB",2026-09-01,1.151,1.0,1.2314,0.99,1.1301,High,Asansol,West Bengal,23.685297,86.945968
+"Ashok Nagar, Udaipur - RSPCB",2026-09-01,1.562,1.6781,1.4862,0.99,1.5706,High,Udaipur,Rajasthan,24.5886166,73.6321397
+"Ashok Vihar, Delhi - DPCC",2026-09-01,1.5489,1.712,1.568,0.99,1.593,High,Delhi,Delhi,28.695381,77.181665
+"Ashta Vinayak Nagar, Hingoli - MPCB",2026-09-01,1.1166,1.2,1.2292,1.0,1.1645,High,Hingoli,Maharashtra,19.710842,77.151824
+"Aya Nagar, Delhi - IITM",2026-09-01,1.4157,1.2333,1.267,0.9,1.3303,High,Delhi,Delhi,28.4706914,77.1099364
+"B R Ambedkar University, Lucknow - UPPCB",2026-09-01,1.347,1.4407,1.3436,0.99,1.369,High,Lucknow,Uttar Pradesh,26.766433,80.927299
+"BTM Layout, Bengaluru - CPCB",2026-08-06,1.1589,1.0,1.0666,0.74,1.094,Medium,Bengaluru,Karnataka,12.9135218,77.5950804
+"Ballygunge, Kolkata - WBPCB",2026-09-01,1.0678,1.0,1.2201,1.0,1.086,High,Kolkata,West Bengal,22.5367507,88.3638022
+"Bamboliya, Baran - RSPCB",2026-09-01,0.9559,1.0,1.1974,0.98,1.0228,High,Baran,Rajasthan,25.106006,76.469948
+"Bandhavgar Colony, Satna - Birla Cement",2026-09-01,1.3266,1.0,1.0,1.0,1.1518,High,Satna,Madhya Pradesh,24.58434363,80.8549414
+"Bandra Kurla Complex, Mumbai - IITM",2026-09-01,0.9524,1.0,1.1107,0.89,1.0018,High,Mumbai,Maharashtra,19.053536,72.84643
+"Bandra Kurla Complex, Mumbai - MPCB",2026-09-01,0.9797,1.0,1.2186,0.95,1.0399,High,Mumbai,Maharashtra,19.065931,72.862131
+"Bapuji Nagar, Bengaluru - KSPCB",2026-09-01,1.0896,1.0,1.0887,0.99,1.0663,High,Bengaluru,Karnataka,12.951913,77.539784
+"Bapunagar, Vadodara - Nexteng Enviro",2026-09-01,1.1824,1.0,1.1491,1.0,1.1258,High,Vadodara,Gujarat,22.320153,73.216285
+"Bardowali, Agartala - Tripura SPCB",2026-09-01,1.1095,1.0,1.1726,1.0,1.0961,High,Agartala,Tripura,23.8175497,91.2726974
+"Barsua Iron Ore Mines, Tensa - OSPCB",2026-09-01,0.8119,1.0,1.0472,0.87,0.9115,High,Tensa,Odisha,21.869985,85.167016
+"Bata Chowk, Nalbari - PCBA",2026-09-01,1.3563,1.4949,1.5933,0.93,1.4468,High,Nalbari,Assam,26.446912,91.439057
+"Bawana, Delhi - DPCC",2026-09-01,1.9534,1.6938,1.4212,0.95,1.7409,High,Delhi,Delhi,28.7762,77.051074
+"Belur Math, Howrah - WBPCB",2026-09-01,1.1228,1.1,1.3507,1.0,1.1699,High,Howrah,West Bengal,22.629801,88.352017
+"Bhatagaon New ISBT, Raipur - CECB",2026-09-01,0.6698,1.0333,1.1507,1.0,0.8546,High,Raipur,Chhattisgarh,21.219665,81.630094
+"Bhayandar West, Mira-Bhayandar - MPCB",2026-09-01,0.8174,1.0,1.0739,1.0,0.9204,High,Mira-Bhayandar,Maharashtra,19.296481,72.840923
+"Bhelupur, Varanasi - UPPCB",2026-09-01,1.3078,1.2712,1.306,0.99,1.2981,High,Varanasi,Uttar Pradesh,25.301778,82.996789
+"Bhoiwada, Dungarpur - RSPCB",2026-09-01,1.2231,1.1,1.2505,1.0,1.1977,High,Dungarpur,Rajasthan,23.837789,73.714926
+"Bhopal Chauraha, Dewas - MPPCB",2026-09-01,1.531,1.1667,1.1513,1.0,1.332,High,Dewas,Madhya Pradesh,22.9682591,76.064118
+"Bhosari, Pune - IITM",2026-09-01,1.1956,1.0,1.1974,0.88,1.1438,High,Pimpri-Chinchwad,Maharashtra,18.640051,73.848956
+"Bhumkar Nagar, Pune - IITM",2026-09-01,1.2395,1.0,1.2022,0.65,1.1657,Medium,Pimpri-Chinchwad,Maharashtra,18.60577,73.749976
+"Bidhannagar, Kolkata - WBPCB",2026-09-01,0.9753,1.0,1.1974,0.98,1.033,High,Kolkata,West Bengal,22.58157048,88.41002457
+"Bir, Beed - MPCB",2026-09-01,0.8906,1.0,1.1107,1.0,0.9688,High,Beed,Maharashtra,18.988474,75.753873
+"Bolinj, Virar - MPCB",2026-09-01,0.8507,1.0,1.0813,0.96,0.9405,High,Virar,Maharashtra,19.445821,72.7988231
+"Bollaram Industrial Area, Hyderabad - TSPCB",2026-09-01,0.9514,1.0,1.0555,0.78,0.9886,Medium,Hyderabad,Telangana,17.518,78.383
+"Borivali East, Mumbai - IITM",2026-09-01,1.1402,1.0,1.075,0.9,1.0873,High,Mumbai,Maharashtra,19.23241,72.86895
+"Borivali East, Mumbai - MPCB",2026-09-01,0.9161,1.0,1.0352,0.84,0.9655,Medium,Mumbai,Maharashtra,19.2243333,72.8658113
+"Botanical Garden, Howrah - WBPCB",2026-09-01,1.1247,1.1,1.3467,1.0,1.17,High,Howrah,West Bengal,22.554954,88.292568
+"Buddha Colony, Muzaffarpur - BSPCB",2026-09-01,1.159,1.1333,1.3181,1.0,1.1902,High,Muzaffarpur,Bihar,26.11442,85.39813
+"Buddhi Vihar, Moradabad - UPPCB",2026-09-01,1.1817,1.0,1.1651,0.98,1.1294,High,Moradabad,Uttar Pradesh,28.83526,78.7446
+"Burari Crossing, Delhi - IITM",2026-09-01,1.5133,1.3729,1.4481,0.89,1.4608,High,Delhi,Delhi,28.7256504,77.2011573
+"Byculla, Mumbai - BMC",2026-09-01,0.7627,1.0,1.0666,1.0,0.8875,High,Mumbai,Maharashtra,18.9767,72.838
+"CBD Belapur, Belapur - MPCB",2026-09-01,0.9725,1.0,1.2064,0.97,1.0335,High,Belapur,Maharashtra,19.0243902,73.0406721
+"CDA Area, Cuttack - OSPCB",2026-09-01,1.0605,1.0,1.2327,0.98,1.0851,High,Cuttack,Odisha,20.48891,85.84768
+"CRRI Mathura Road, Delhi - IITM",2026-09-01,1.5888,1.5333,1.2827,0.9,1.4927,High,Delhi,Delhi,28.5512005,77.2735737
+"Cantonment Area, Delhi - DPCC",2026-09-01,0.8671,1.0,1.2397,0.99,0.9826,High,Delhi,Delhi,28.594169,77.1251
+"Central Academy for SFS, Byrnihat - PCBA",2026-09-01,1.7473,1.9661,1.3287,0.98,1.6805,High,Byrnihat,Assam,26.071318,91.87488
+"Central University, Hyderabad - TSPCB",2026-09-01,0.7427,1.0,1.1107,1.0,0.8847,High,Hyderabad,Telangana,17.460103,78.334361
+"Chakala-Andheri East, Mumbai - IITM",2026-09-01,0.8527,1.0,1.1107,1.0,0.948,High,Mumbai,Maharashtra,19.11074,72.86084
 "Chalai Bazaar, Ramanathapuram - TNPCB",2026-08-11,0.5296,1.0,1.0,0.41,0.7277,Low,Ramanathapuram,Tamil Nadu,9.36399,78.831977
-"Chandkheda, Ahmedabad - IITM",2026-08-31,1.2633,1.2667,1.4167,1.0,1.3009,High,Ahmedabad,Gujarat,23.107969,72.574648
-"Chandni Chowk, Delhi - IITM",2026-08-31,1.5699,1.7333,1.4567,1.0,1.5794,High,Delhi,Delhi,28.656756,77.227234
-"Charitra Van, Buxar - BSPCB",2026-08-17,2.3929,1.3651,1.9735,0.74,1.9818,Medium,Buxar,Bihar,25.56752,83.966379
-"Chauhan Colony, Chandrapur - MPCB",2026-08-31,1.1523,1.1333,1.4468,1.0,1.2147,High,Chandrapur,Maharashtra,19.9629,79.298714
-"Chembur, Mumbai - MPCB",2026-08-31,0.8111,1.0,1.0444,0.93,0.9105,High,Mumbai,Maharashtra,19.0364585,72.8954371
-"Chhatrapati Shivaji Intl. Airport (T2), Mumbai - MPCB",2026-08-31,1.0689,1.0,1.096,0.77,1.0579,Medium,Mumbai,Maharashtra,19.10078,72.87462
-"Chhoti Gwaltoli, Indore - MPPCB",2026-08-31,1.4583,1.1667,1.1822,1.0,1.3087,High,Indore,Madhya Pradesh,22.431,75.5213
-"Chikkaballapur Rural, Chikkaballapur - KSPCB",2026-08-31,0.7645,1.0381,1.1543,0.93,0.9148,High,Chikkaballapur,Karnataka,13.428828,77.731418
-"Chinchpada, Ambernath - MPCB",2026-08-31,1.1396,1.0345,1.3014,0.98,1.1499,High,Ambernath,Maharashtra,19.215784,73.199781
-"Chinna Bharatham Colony, Srikakulam - APPCB",2026-08-31,1.2059,1.0861,1.3157,0.88,1.2006,High,Srikakulam,Andhra Pradesh,18.292191,83.897173
-"Chitragupta Nagar, Siwan - BSPCB",2026-08-31,1.5112,1.9661,1.0757,0.98,1.4825,High,Siwan,Bihar,26.2271665,84.3570427
-"Christianpatty, Nagaon - PCBA",2026-08-31,1.2286,1.3286,1.2962,0.95,1.2698,High,Nagaon,Assam,26.349082,92.68449
-"City Center, Gwalior - MPPCB",2026-08-31,1.3516,1.0667,1.2036,1.0,1.2375,High,Gwalior,Madhya Pradesh,26.203442,78.193251
-"City Railway Station, Bengaluru - KSPCB",2026-08-31,1.1903,1.0443,1.0222,0.67,1.109,Medium,Bengaluru,Karnataka,12.9756843,77.5660749
-"Civic Center, Bhilai - Bhilai Steel Plant",2026-08-31,0.6374,1.0,1.0,0.95,0.7984,High,Bhilai,Chhattisgarh,21.185571,81.343175
-"Civil Line, Jalandhar - PPCB",2026-08-31,1.5376,1.4667,1.4261,1.0,1.4912,High,Jalandhar,Punjab,31.321907,75.578914
-"Civil Lines,  Ajmer - RSPCB",2026-08-31,1.408,1.3162,1.2278,0.97,1.3379,High,Ajmer,Rajasthan,26.470859,74.646594
-"Civil Lines, Bareilly - UPPCB",2026-08-31,1.0511,1.0,1.0548,0.98,1.039,High,Bareilly,Uttar Pradesh,28.359581,79.414455
-"Civil Lines, Sagar - MPPCB",2026-08-31,0.8695,1.0,1.0666,1.0,0.9476,High,Sagar,Madhya Pradesh,23.838586,78.759431
-"Collector Office, Yadgir - KSPCB",2026-08-31,0.7538,1.0,1.0887,0.97,0.8869,High,Yadgir,Karnataka,16.7602,77.1428
-"Collectorate, Gaya - BSPCB",2026-08-31,1.9054,1.5477,1.9039,0.76,1.8085,Medium,Gaya,Bihar,24.7955,84.9994
-"Collectorate, Jodhpur - RSPCB",2026-08-31,1.3309,1.1695,1.1808,0.99,1.2506,High,Jodhpur,Rajasthan,26.268249,73.0193853
-"Commonwealth Sports Complex, Delhi - DPCC",2026-08-31,1.4536,1.5667,1.433,1.0,1.4758,High,Delhi,Delhi,28.615828,77.271992
-"Corporation Ground, Thrissur - Kerala PCB",2026-08-31,1.1779,1.0,1.0375,0.94,1.0954,High,Thrissur,Kerala,10.5324,76.2159
-"D M Colony, Bihar Sharif - BSPCB",2026-08-31,3.4836,1.1826,1.0,0.71,1.9464,Medium,Bihar Sharif,Bihar,25.204762,85.51496
-"DM Office_Kachari Chowk, Bhagalpur - BSPCB",2026-08-31,1.6119,1.6852,1.6334,0.93,1.6353,High,Bhagalpur,Bihar,25.251013,86.989001
-"DM Office_Kasipur, Samastipur - BSPCB",2026-08-31,1.7009,1.7668,1.9545,0.95,1.7779,High,Samastipur,Bihar,25.859655,85.77944
-"DRM Office Danapur, Patna - BSPCB",2026-08-31,1.282,1.0,1.075,1.0,1.1529,High,Patna,Bihar,25.586562,85.043586
-"DTU, Delhi - CPCB",2026-08-31,1.4696,1.4,1.5508,1.0,1.4715,High,Delhi,Delhi,28.7500499,77.1112615
-"Dabuna, Nayagarh - OSPCB",2026-08-31,1.3609,1.3266,1.2219,0.75,1.3163,Medium,Nayagarh,Odisha,21.847279,85.416905
-"Dada Peer, Sasaram - BSPCB",2026-08-31,1.5058,1.2635,1.0222,0.82,1.3082,Medium,Sasaram,Bihar,24.952822,84.002396
-"Dadupura, Fatehpur Sikri - UPPCB",2026-08-31,1.0627,1.0,1.0373,0.98,1.0403,High,Fatehpur Sikri,Uttar Pradesh,27.097694,77.671335
-"Darshan Nagar, Chhapra - BSPCB",2026-08-31,1.6397,1.9309,1.0757,0.96,1.5373,High,Chhapra,Bihar,25.7808257,84.7446768
-"Dasnagar, Howrah - WBPCB",2026-08-31,1.218,1.2108,1.3014,0.97,1.2365,High,Howrah,West Bengal,22.6025571,88.3105664
-"Deen Dayal Nagar, Gwalior - MPPCB",2026-08-31,1.2154,1.0333,1.2314,1.0,1.1709,High,Gwalior,Madhya Pradesh,26.259242,78.216432
-"Deonar, Mumbai - IITM",2026-08-31,0.9268,1.0667,1.1543,1.0,1.0141,High,Mumbai,Maharashtra,19.04946,72.923
-"Deopur, Dhule - MPCB",2026-08-31,0.8964,1.0,1.1107,1.0,0.972,High,Dhule,Maharashtra,20.918946,74.776388
+"Chandkheda, Ahmedabad - IITM",2026-09-01,1.2729,1.2667,1.4167,1.0,1.3058,High,Ahmedabad,Gujarat,23.107969,72.574648
+"Chandni Chowk, Delhi - IITM",2026-09-01,1.5688,1.7333,1.4226,1.0,1.5695,High,Delhi,Delhi,28.656756,77.227234
+"Charitra Van, Buxar - BSPCB",2026-08-17,2.1955,1.3162,1.0,0.73,1.5871,Medium,Buxar,Bihar,25.56752,83.966379
+"Chauhan Colony, Chandrapur - MPCB",2026-09-01,1.1715,1.1333,1.4468,1.0,1.2248,High,Chandrapur,Maharashtra,19.9629,79.298714
+"Chembur, Mumbai - MPCB",2026-09-01,0.8064,1.0,1.0444,0.94,0.9078,High,Mumbai,Maharashtra,19.0364585,72.8954371
+"Chhatrapati Shivaji Intl. Airport (T2), Mumbai - MPCB",2026-09-01,1.0614,1.0,1.085,0.78,1.0515,Medium,Mumbai,Maharashtra,19.10078,72.87462
+"Chhoti Gwaltoli, Indore - MPPCB",2026-09-01,1.4687,1.1667,1.1822,1.0,1.3134,High,Indore,Madhya Pradesh,22.431,75.5213
+"Chikkaballapur Rural, Chikkaballapur - KSPCB",2026-09-01,0.7627,1.0381,1.1543,0.93,0.9137,High,Chikkaballapur,Karnataka,13.428828,77.731418
+"Chinchpada, Ambernath - MPCB",2026-09-01,1.1313,1.0345,1.3014,0.98,1.1457,High,Ambernath,Maharashtra,19.215784,73.199781
+"Chinna Bharatham Colony, Srikakulam - APPCB",2026-09-01,1.2216,1.0838,1.3194,0.89,1.2086,High,Srikakulam,Andhra Pradesh,18.292191,83.897173
+"Chitragupta Nagar, Siwan - BSPCB",2026-09-01,1.5107,1.9661,1.0757,0.98,1.4822,High,Siwan,Bihar,26.2271665,84.3570427
+"Christianpatty, Nagaon - PCBA",2026-09-01,1.2234,1.3223,1.2797,0.96,1.2615,High,Nagaon,Assam,26.349082,92.68449
+"City Center, Gwalior - MPPCB",2026-09-01,1.3523,1.0667,1.1674,1.0,1.2284,High,Gwalior,Madhya Pradesh,26.203442,78.193251
+"City Railway Station, Bengaluru - KSPCB",2026-09-01,1.1881,1.043,1.0222,0.68,1.1076,Medium,Bengaluru,Karnataka,12.9756843,77.5660749
+"Civic Center, Bhilai - Bhilai Steel Plant",2026-09-01,0.6455,1.0,1.0,0.95,0.8035,High,Bhilai,Chhattisgarh,21.185571,81.343175
+"Civil Line, Jalandhar - PPCB",2026-09-01,1.5572,1.5,1.4395,1.0,1.5127,High,Jalandhar,Punjab,31.321907,75.578914
+"Civil Lines,  Ajmer - RSPCB",2026-09-01,1.4015,1.2811,1.2106,0.97,1.3211,High,Ajmer,Rajasthan,26.470859,74.646594
+"Civil Lines, Bareilly - UPPCB",2026-09-01,1.0531,1.0,1.0548,0.98,1.04,High,Bareilly,Uttar Pradesh,28.359581,79.414455
+"Civil Lines, Sagar - MPPCB",2026-09-01,0.8866,1.0,1.0666,1.0,0.9569,High,Sagar,Madhya Pradesh,23.838586,78.759431
+"Collector Office, Yadgir - KSPCB",2026-09-01,0.7548,1.0,1.0887,0.96,0.8874,High,Yadgir,Karnataka,16.7602,77.1428
+"Collectorate, Gaya - BSPCB",2026-09-01,1.9623,1.5934,1.9163,0.76,1.8517,Medium,Gaya,Bihar,24.7955,84.9994
+"Collectorate, Jodhpur - RSPCB",2026-09-01,1.321,1.1695,1.1808,0.99,1.2459,High,Jodhpur,Rajasthan,26.268249,73.0193853
+"Commonwealth Sports Complex, Delhi - DPCC",2026-09-01,1.4632,1.5667,1.4126,1.0,1.4754,High,Delhi,Delhi,28.615828,77.271992
+"Corporation Ground, Thrissur - Kerala PCB",2026-09-01,1.1869,1.0,1.0375,0.94,1.0995,High,Thrissur,Kerala,10.5324,76.2159
+"D M Colony, Bihar Sharif - BSPCB",2026-09-01,3.4836,1.1826,1.0,0.71,1.9464,Medium,Bihar Sharif,Bihar,25.204762,85.51496
+"DM Office_Kachari Chowk, Bhagalpur - BSPCB",2026-09-01,1.606,1.7081,1.6017,0.94,1.6298,High,Bhagalpur,Bihar,25.251013,86.989001
+"DM Office_Kasipur, Samastipur - BSPCB",2026-09-01,1.7008,1.7668,1.9545,0.95,1.7778,High,Samastipur,Bihar,25.859655,85.77944
+"DRM Office Danapur, Patna - BSPCB",2026-09-01,1.2768,1.0,1.075,1.0,1.1506,High,Patna,Bihar,25.586562,85.043586
+"DTU, Delhi - CPCB",2026-09-01,1.4667,1.4,1.4992,1.0,1.4577,High,Delhi,Delhi,28.7500499,77.1112615
+"Dabuna, Nayagarh - OSPCB",2026-09-01,1.2982,1.2981,1.3081,0.76,1.3007,Medium,Nayagarh,Odisha,21.847279,85.416905
+"Dada Peer, Sasaram - BSPCB",2026-09-01,1.5259,1.3038,1.0222,0.83,1.3273,Medium,Sasaram,Bihar,24.952822,84.002396
+"Dadupura, Fatehpur Sikri - UPPCB",2026-09-01,1.0724,1.0345,1.0375,0.98,1.0541,High,Fatehpur Sikri,Uttar Pradesh,27.097694,77.671335
+"Darshan Nagar, Chhapra - BSPCB",2026-09-01,1.6494,1.9309,1.0757,0.96,1.5418,High,Chhapra,Bihar,25.7808257,84.7446768
+"Dasnagar, Howrah - WBPCB",2026-09-01,1.2237,1.2108,1.3014,0.97,1.2394,High,Howrah,West Bengal,22.6025571,88.3105664
+"Deen Dayal Nagar, Gwalior - MPPCB",2026-09-01,1.2083,1.0333,1.1797,1.0,1.155,High,Gwalior,Madhya Pradesh,26.259242,78.216432
+"Deonar, Mumbai - IITM",2026-09-01,0.9105,1.0333,1.1543,1.0,0.9972,High,Mumbai,Maharashtra,19.04946,72.923
+"Deopur, Dhule - MPCB",2026-09-01,0.8963,1.0,1.0923,1.0,0.9679,High,Dhule,Maharashtra,20.918946,74.776388
 "Devaraj Urs Badavane, Davanagere - KSPCB",2026-08-29,0.8395,1.0,1.1651,0.79,0.9519,Medium,Davanagere,Karnataka,14.4758,75.9052
-"Dhankawadi, Pune - IITM",2026-08-31,1.009,1.0,1.0887,0.9,1.0261,High,Pune,Maharashtra,18.459883,73.852193
-"Dhanmandi, Kota - RSPCB",2026-08-31,1.081,1.0,1.1974,0.98,1.0876,High,Kota,Rajasthan,25.16409,75.858137
-"Dhoinda, Rajsamand - RSPCB",2026-08-31,1.2648,1.0678,1.1963,0.99,1.1956,High,Rajsamand,Rajasthan,25.03636,73.883502
-"Digari Kalan, Jodhpur - RSPCB",2026-08-31,1.1175,1.1,1.208,1.0,1.135,High,Jodhpur,Rajasthan,26.29581,73.082283
-"District Court, Eluru - APPCB",2026-08-31,1.3206,1.0351,1.1122,0.97,1.1904,High,Eluru,Andhra Pradesh,16.711754,81.092095
-"Divisional Forest Office, Rairangpur - OSPCB",2026-08-29,0.7691,1.0,1.1362,0.96,0.9054,High,Rairangpur,Odisha,22.265816,86.174829
-"Dnyaneshwar Nagar, Solapur - MPCB",2026-08-31,0.8053,1.0,1.0296,1.0,0.904,High,Solapur,Maharashtra,17.6336264,75.9132495
-"Doon University, Dehradun - UKPCB",2026-08-31,1.0016,1.1225,1.1325,0.9,1.0627,High,Dehradun,Uttarakhand,30.269444,78.044167
-"Dr. Karni Singh Shooting Range, Delhi - DPCC",2026-08-31,1.3666,1.3865,1.5047,0.97,1.405,High,Delhi,Delhi,28.498571,77.26484
-"Dwarka-Sector 8, Delhi - DPCC ",2026-08-31,1.3567,1.6667,1.4161,1.0,1.4437,High,Delhi,Delhi,28.5710274,77.0719006
-"ECIL Kapra, Hyderabad - TSPCB",2026-08-31,1.1477,1.0333,1.1348,1.0,1.1148,High,Hyderabad,Telangana,17.470431,78.566959
-"Eco Herbal Park, Moradabad - UPPCB",2026-08-31,1.172,1.0667,1.3101,1.0,1.1771,High,Moradabad,Uttar Pradesh,28.840739,78.697531
-"Employment Office, Moradabad - UPPCB",2026-08-31,1.3947,1.1725,1.1856,0.98,1.2823,High,Moradabad,Uttar Pradesh,28.88528,78.7388
-"Evelyn Lodge, Asansol - WBPCB",2026-08-31,0.9702,1.0,1.0,0.98,0.985,High,Asansol,West Bengal,23.697936,86.944395
-"F-Block, Sirsa - HSPCB",2026-08-31,1.2262,1.1017,1.1969,0.99,1.1866,High,Sirsa,Haryana,29.5364,75.0158
-"FTI Kidwai Nagar, Kanpur - UPPCB",2026-08-31,1.4622,1.4,1.3604,1.0,1.4205,High,Kanpur,Uttar Pradesh,26.428282,80.327067
-"Ferro Chrome Colony, Byasanagar - OSPCB",2026-08-31,1.2777,1.1557,1.3588,0.92,1.2654,High,Byasanagar,Odisha,20.94185,86.1151
-"Fertilizer Township, Rourkela - OSPCB",2026-08-31,1.14,1.0,1.1325,0.85,1.1015,High,Rourkela,Odisha,22.18972222,84.86277778
-"Forest Office, Barbil - OSPCB",2026-08-31,1.2229,1.2108,1.4821,0.97,1.2799,High,Barbil,Odisha,22.1166054,85.3945546
-"Forest Rest House, Manguraha - BSPCB",2026-08-31,1.5262,1.3503,1.2945,0.92,1.4205,High,Manguraha,Bihar,27.308328,84.531742
-"Fort William, Kolkata - WBPCB",2026-08-31,1.1191,1.0345,1.3105,0.98,1.1415,High,Kolkata,West Bengal,22.55664,88.342674
-"GIDC, Ankleshwar - GPCB",2026-08-31,1.2531,1.0339,1.1122,0.99,1.1592,High,Ankleshwar,Gujarat,21.613267,73.010555
-"GIDC, Nandesari - Nandesari Ind. Association",2026-08-30,1.4969,1.2712,1.3453,0.89,1.3992,High,Nandesari,Gujarat,22.410802,73.097923
-"GIFT City, Gandhinagar - IITM",2026-08-31,1.2207,1.1667,1.1759,1.0,1.1958,High,Gandhinagar,Gujarat,23.163798,72.677768
-"GM Office, Brajrajnagar - OSPCB",2026-08-31,1.0526,1.0,1.0831,0.99,1.0467,High,Brajrajnagar,Odisha,21.8004996,83.8396977
-"GVM Corporation, Visakhapatnam - APPCB",2026-08-31,1.5039,1.5085,1.2558,0.99,1.4387,High,Visakhapatnam,Andhra Pradesh,17.72,83.3
-"Gandak Colony, Motihari - BSPCB",2026-08-31,1.323,1.244,1.667,0.84,1.3803,Medium,Motihari,Bihar,26.63086,84.90051
-"Ganga Nagar, Meerut - UPPCB",2026-08-31,1.4903,1.2415,1.5442,0.98,1.4365,High,Meerut,Uttar Pradesh,28.999264,77.7590354
-"Gangapur Road, Nashik - MPCB",2026-08-31,0.9688,1.0667,1.2362,1.0,1.0547,High,Nashik,Maharashtra,20.0073285,73.7762427
-"Gangineni Cheruvu, Chittoor - APPCB",2026-08-31,1.5221,1.7027,1.2945,0.97,1.5032,High,Chittoor,Andhra Pradesh,13.20488,79.097889
-"Gavalinagar, Pimpri Chinchwad - MPCB",2026-08-31,0.9602,1.0,1.1033,0.99,1.0043,High,Pimpri-Chinchwad,Maharashtra,18.63673,73.82487
-"General Hospital, Mandikhera(Nuh) - HSPCB",2026-08-31,1.3836,1.3351,1.049,0.89,1.2796,High,Mandikhera,Haryana,27.9002,76.9938
-"Ghatkopar, Mumbai - BMC",2026-08-31,0.86,1.0,1.1107,0.95,0.952,High,Mumbai,Maharashtra,19.083694,72.920967
-"Ghusuri, Howrah - WBPCB",2026-08-31,1.4094,1.3,1.4353,1.0,1.3875,High,Howrah,West Bengal,22.611968,88.347422
-"Girls College, Sivasagar - PCBA",2026-08-31,0.8951,1.0,1.096,0.89,0.968,High,Sivasagar,Assam,26.987634,94.636574
-"Gobind Pura, Yamuna Nagar - HSPCB",2026-08-31,1.6507,1.8433,1.5419,0.97,1.6682,High,Yamuna Nagar,Haryana,30.1480566,77.2893471
-"Gokul Nagar, Bhiwandi - MPCB",2026-08-31,0.9639,1.0678,1.0965,0.99,1.0213,High,Bhiwandi,Maharashtra,19.309073,73.057223
-"Golden Temple, Amritsar - PPCB",2026-08-31,1.5151,1.7459,1.4862,0.99,1.5622,High,Amritsar,Punjab,31.62,74.876512
-"Gole Bazar, Katni - MPPCB",2026-08-31,1.1216,1.0,1.2321,0.99,1.1158,High,Katni,Madhya Pradesh,23.50016,80.23284
-"Gomti Nagar, Lucknow - UPPCB",2026-08-31,1.2403,1.2,1.4268,1.0,1.2739,High,Lucknow,Uttar Pradesh,26.86812,81.005119
-"Govindh Bhavan Colony, Jabalpur - JMC",2026-08-31,1.0181,1.0,1.085,0.99,1.0298,High,Jabalpur,Madhya Pradesh,23.163174,79.973061
-"Govindpuram, Ghaziabad - UPPCB",2026-08-31,1.1548,1.2108,1.2744,0.97,1.1977,High,Ghaziabad,Uttar Pradesh,28.694528,77.494705
-"Govt. Girls Inter College, Kashipur - UKPCB",2026-08-31,1.0186,1.0,1.0,0.71,1.0093,Medium,Kashipur,Uttarakhand,29.2124114,78.9611753
-"Govt. High School Shikarpur, Patna - BSPCB",2026-08-31,1.2245,1.0358,1.041,0.96,1.1276,High,Patna,Bihar,25.592539,85.227158
-"Govt. Higher Secondary School, Milupara - CECB",2026-08-31,0.9291,1.0,1.2811,0.88,1.0255,High,Milupara,Chhattisgarh,22.1910172,83.5197009
-"Gulzarpet, Anantapur - APPCB",2026-08-31,1.4426,1.5842,1.2945,0.95,1.4373,High,Anantapur,Andhra Pradesh,14.675886,77.593027
-"Gupteshwar, Jabalpur - JMC",2026-08-24,1.266,1.0,1.1103,0.86,1.155,High,Jabalpur,Madhya Pradesh,23.142888,79.916147
-"Gurdeo Nagar, Aurangabad - BSPCB",2026-08-31,1.4587,1.4082,1.2945,0.75,1.4034,Medium,Aurangabad,Bihar,24.75746,84.366208
-"Gyaspur, Ahmedabad - IITM",2026-08-31,1.3606,1.4068,1.1107,0.99,1.3041,High,Ahmedabad,Gujarat,22.977134,72.553024
-"H.B. Colony, Bhiwani - HSPCB",2026-08-31,1.5778,1.533,1.1122,0.93,1.4353,High,Bhiwani,Haryana,28.806223,76.141105
-"HB Colony, Vijayawada - APPCB",2026-08-31,1.3697,1.2108,1.2569,0.97,1.2999,High,Vijayawada,Andhra Pradesh,16.536107,80.594233
-"HIMUDA Complex Phase-1, Baddi - HPPCB",2026-08-31,1.4341,1.5333,1.3711,1.0,1.442,High,Baddi,Himachal Pradesh,30.943887,76.801991
-"Hadapsar, Pune - IITM",2026-08-31,1.2547,1.0,1.1122,0.77,1.1503,Medium,Pune,Maharashtra,18.501793,73.927532
-"Hakimapada, Angul - OSPCB",2026-08-31,0.9968,1.0,1.3365,0.98,1.0735,High,Angul,Odisha,20.832874,85.104082
-"Hardev Nagar, Bathinda - PPCB",2026-08-31,1.3161,1.1405,1.2917,0.87,1.2639,High,Bathinda,Punjab,30.233011,74.907758
-"Hathkhoj, Bhilai - CECB",2026-08-31,0.9558,1.0,1.208,1.0,1.0249,High,Bhilai,Chhattisgarh,21.224231,81.40835
-"Hebbal 1st Stage, Mysuru - KSPCB",2026-08-31,0.9364,1.0,1.1325,1.0,0.9983,High,Mysuru,Karnataka,12.21041,76.37376
-"Hebbal, Bengaluru - KSPCB",2026-08-31,0.7613,1.0,1.1107,0.98,0.8958,High,Bengaluru,Karnataka,13.029152,77.585901
-"Hirawadi, Nashik - MPCB",2026-08-31,0.7952,1.0,1.0739,0.99,0.9078,High,Nashik,Maharashtra,20.021503,73.813844
-"Hombegowda Nagar, Bengaluru - KSPCB",2026-08-31,1.0312,1.0,1.0857,0.99,1.0366,High,Bengaluru,Karnataka,12.938539,77.5901
-"Housing Board, Hanumangarh - RSPCB",2026-08-31,1.0644,1.0,1.1915,0.99,1.0779,High,Hanumangarh,Rajasthan,29.61075,74.283608
-"Huda Sector, Fatehabad - HSPCB",2026-08-31,1.1724,1.138,1.1112,0.98,1.1482,High,Fatehabad,Haryana,29.503664,75.467934
-"ICRISAT Patancheru, Hyderabad - TSPCB",2026-08-31,0.8426,1.0,1.2571,0.98,0.972,High,Hyderabad,Telangana,17.5184,78.278777
-"IDA Pashamylaram, Hyderabad - TSPCB",2026-08-31,1.0326,1.0,1.1543,0.94,1.0533,High,Hyderabad,Telangana,17.5316895,78.218939
-"IESD Banaras Hindu University, Varanasi - UPPCB",2026-08-31,0.8597,1.0,1.2475,0.89,0.9799,High,Varanasi,Uttar Pradesh,25.262326,82.995408
-"IGI Airport (T3), Delhi - IITM",2026-08-31,1.5675,1.276,1.2943,0.88,1.4193,High,Delhi,Delhi,28.5627763,77.1180053
-"IGNOU_Maidan Garhi, Delhi - DPCC",2026-08-31,0.8899,1.1,1.1974,1.0,1.0106,High,Delhi,Delhi,28.493624,77.201159
-"IGSC Planetarium Complex, Patna - BSPCB",2026-08-18,1.4698,1.0913,1.9432,0.64,1.463,Low,Patna,Bihar,25.610369,85.132568
-"IHBAS, Dilshad Garden, Delhi - CPCB",2026-08-31,1.4152,1.345,1.2226,0.98,1.3472,High,Delhi,Delhi,28.6811736,77.3025234
-"IIPHG Lekawada, Gandhinagar - IITM",2026-08-31,1.0298,1.5,1.2426,1.0,1.1858,High,Gandhinagar,Gujarat,23.243639,72.68994
-"IIT Delhi, Delhi - IITM",2026-08-31,1.564,1.6781,1.2839,0.89,1.5151,High,Delhi,Delhi,28.54246,77.191651
-"IITG, Guwahati - PCBA",2026-08-31,0.6261,1.0,1.0,0.85,0.7912,High,Guwahati,Assam,26.2028636,91.70046436
-"IITH Kandi, Hyderabad - TSPCB",2026-08-29,1.1664,1.0,1.075,0.96,1.0997,High,Hyderabad,Telangana,17.585705,78.126199
-"IMD Lodhi Road, Delhi - IITM",2026-08-31,1.4706,1.339,1.4466,0.89,1.4307,High,Delhi,Delhi,28.5918245,77.2273074
-"ITO, Delhi - CPCB",2026-08-31,1.5907,1.2864,1.2784,0.96,1.4283,High,Delhi,Delhi,28.628624,77.24106
-"Ibrahimpur, Vijayapura - KSPCB",2026-08-31,0.9445,1.0,1.0,0.92,0.9719,High,Vijayapura,Karnataka,16.802639,75.722694
-"Idgah Hills, Bhopal - MPPCB",2026-08-31,1.1736,1.2148,1.3788,0.96,1.2324,High,Bhopal,Madhya Pradesh,23.264759,77.381568
-"Indira Colony Vistar, Pali - RSPCB",2026-08-31,1.9237,1.8398,1.4581,0.95,1.775,High,Pali,Rajasthan,25.771061,73.340227
-"Indirapuram, Ghaziabad - UPPCB",2026-08-31,1.4732,1.276,1.5129,0.98,1.4307,High,Ghaziabad,Uttar Pradesh,28.646233,77.358075
-"Indra Nagar, Jhunjhunu - RSPCB",2026-08-31,1.1222,1.0667,1.208,1.0,1.1287,High,Jhunjhunu,Rajasthan,28.108988,75.386577
-"Industrial Area, Hajipur - BSPCB",2026-08-31,1.2017,1.1333,1.4675,1.0,1.2449,High,Hajipur,Bihar,25.697189,85.2459
-"JN Stadium, Shillong - Meghalaya PCB",2026-08-31,0.6934,1.0,1.0555,0.97,0.844,High,Shillong,Meghalaya,25.5803419,91.8942571
-"JNU, Delhi - DPCC",2026-08-31,1.3011,1.3667,1.3345,1.0,1.3256,High,Delhi,Delhi,28.540721,77.168544
-"Jadavpur, Kolkata - WBPCB",2026-08-31,1.2697,1.1,1.3198,1.0,1.2369,High,Kolkata,West Bengal,22.49929,88.36917
-"Jagamohanpur, Keonjhar - OSPCB",2026-08-31,1.0391,1.1095,1.1307,0.95,1.0788,High,Keonjhar,Odisha,21.6439,85.599355
-"Jahangirpuri, Delhi - DPCC",2026-08-31,1.7908,1.7798,1.6403,0.99,1.7492,High,Delhi,Delhi,28.73282,77.170633
-"Jai Bhim Nagar, Meerut - UPPCB",2026-08-31,1.2632,1.2335,1.45,0.92,1.2998,High,Meerut,Uttar Pradesh,28.9535882,77.7622941
-"Jawahar Nagar, Puducherry - PPCC",2026-08-31,0.8837,1.0,1.1107,0.97,0.965,High,Puducherry,Puducherry,11.9309,79.8027
-"Jawaharlal Nehru Stadium, Delhi - DPCC",2026-08-31,1.5946,1.6901,1.5933,0.98,1.6176,High,Delhi,Delhi,28.58028,77.233829
-"Jayanagar 5th Block, Bengaluru - KSPCB",2026-08-31,1.226,1.2373,1.1512,0.99,1.2096,High,Bengaluru,Karnataka,12.920984,77.584908
-"Jhalamand, Jodhpur - RSPCB",2026-08-31,1.048,1.2333,1.1759,1.0,1.1234,High,Jodhpur,Rajasthan,26.215415,73.070156
-"Jhunsi, Prayagraj - UPPCB",2026-08-31,1.1231,1.1054,1.3433,0.97,1.1699,High,Prayagraj,Uttar Pradesh,25.425602,81.917152
-"Jigani, Bengaluru - KSPCB",2026-08-31,1.2905,1.0456,1.075,0.86,1.1697,High,Bengaluru,Karnataka,12.7816279,77.6299145
-"Jigar Colony, Moradabad - UPPCB",2026-08-31,1.2559,1.0,1.1831,0.98,1.1688,High,Moradabad,Uttar Pradesh,28.856664,78.772638
-"KHB Colony, Karwar - KSPCB",2026-08-30,0.9865,1.0373,1.1471,0.94,1.0374,High,Karwar,Karnataka,14.816666,74.141003
+"Dhankawadi, Pune - IITM",2026-09-01,1.0059,1.0,1.0887,0.9,1.0245,High,Pune,Maharashtra,18.459883,73.852193
+"Dhanmandi, Kota - RSPCB",2026-09-01,1.0786,1.0,1.1867,0.99,1.084,High,Kota,Rajasthan,25.16409,75.858137
+"Dhoinda, Rajsamand - RSPCB",2026-09-01,1.267,1.0678,1.1819,0.99,1.193,High,Rajsamand,Rajasthan,25.03636,73.883502
+"Digari Kalan, Jodhpur - RSPCB",2026-09-01,1.1123,1.1,1.1974,1.0,1.1299,High,Jodhpur,Rajasthan,26.29581,73.082283
+"District Court, Eluru - APPCB",2026-09-01,1.3176,1.0351,1.1122,0.97,1.189,High,Eluru,Andhra Pradesh,16.711754,81.092095
+"Divisional Forest Office, Rairangpur - OSPCB",2026-09-01,0.7737,1.0,1.1615,0.95,0.9131,High,Rairangpur,Odisha,22.265816,86.174829
+"Dnyaneshwar Nagar, Solapur - MPCB",2026-09-01,0.8047,1.0,1.037,1.0,0.9052,High,Solapur,Maharashtra,17.6336264,75.9132495
+"Doon University, Dehradun - UKPCB",2026-09-01,1.0144,1.1225,1.1325,0.9,1.0695,High,Dehradun,Uttarakhand,30.269444,78.044167
+"Dr. Karni Singh Shooting Range, Delhi - DPCC",2026-09-01,1.3715,1.3865,1.5047,0.97,1.4075,High,Delhi,Delhi,28.498571,77.26484
+"Dwarka-Sector 8, Delhi - DPCC ",2026-09-01,1.3682,1.6667,1.4922,1.0,1.4689,High,Delhi,Delhi,28.5710274,77.0719006
+"ECIL Kapra, Hyderabad - TSPCB",2026-09-01,1.1499,1.0333,1.1348,1.0,1.1159,High,Hyderabad,Telangana,17.470431,78.566959
+"Eco Herbal Park, Moradabad - UPPCB",2026-09-01,1.1825,1.0667,1.2931,1.0,1.1785,High,Moradabad,Uttar Pradesh,28.840739,78.697531
+"Employment Office, Moradabad - UPPCB",2026-09-01,1.4007,1.207,1.1856,0.98,1.2944,High,Moradabad,Uttar Pradesh,28.88528,78.7388
+"Evelyn Lodge, Asansol - WBPCB",2026-09-01,0.9699,1.0,1.0,0.98,0.9848,High,Asansol,West Bengal,23.697936,86.944395
+"F-Block, Sirsa - HSPCB",2026-09-01,1.2381,1.1017,1.1969,0.99,1.1924,High,Sirsa,Haryana,29.5364,75.0158
+"FTI Kidwai Nagar, Kanpur - UPPCB",2026-09-01,1.4537,1.3667,1.3604,1.0,1.4079,High,Kanpur,Uttar Pradesh,26.428282,80.327067
+"Ferro Chrome Colony, Byasanagar - OSPCB",2026-09-01,1.2865,1.1594,1.3604,0.91,1.2711,High,Byasanagar,Odisha,20.94185,86.1151
+"Fertilizer Township, Rourkela - OSPCB",2026-08-31,1.1409,1.0,1.1331,0.84,1.102,Medium,Rourkela,Odisha,22.18972222,84.86277778
+"Forest Office, Barbil - OSPCB",2026-09-01,1.2341,1.2148,1.4905,0.96,1.2886,High,Barbil,Odisha,22.1166054,85.3945546
+"Forest Rest House, Manguraha - BSPCB",2026-09-01,1.5294,1.3187,1.2945,0.91,1.4136,High,Manguraha,Bihar,27.308328,84.531742
+"Fort William, Kolkata - WBPCB",2026-09-01,1.1152,1.0345,1.3105,0.98,1.1395,High,Kolkata,West Bengal,22.55664,88.342674
+"GIDC, Ankleshwar - GPCB",2026-09-01,1.2349,1.0,1.1004,0.99,1.1382,High,Ankleshwar,Gujarat,21.613267,73.010555
+"GIDC, Nandesari - Nandesari Ind. Association",2026-09-01,1.4852,1.2415,1.3355,0.88,1.3829,High,Nandesari,Gujarat,22.410802,73.097923
+"GIFT City, Gandhinagar - IITM",2026-09-01,1.2189,1.1667,1.1651,1.0,1.1921,High,Gandhinagar,Gujarat,23.163798,72.677768
+"GM Office, Brajrajnagar - OSPCB",2026-09-01,1.0434,1.0,1.0831,0.99,1.0421,High,Brajrajnagar,Odisha,21.8004996,83.8396977
+"GVM Corporation, Visakhapatnam - APPCB",2026-09-01,1.5104,1.5085,1.2659,0.99,1.4447,High,Visakhapatnam,Andhra Pradesh,17.72,83.3
+"Gandak Colony, Motihari - BSPCB",2026-09-01,1.2894,1.2357,1.7369,0.85,1.3744,High,Motihari,Bihar,26.63086,84.90051
+"Ganga Nagar, Meerut - UPPCB",2026-09-01,1.5079,1.276,1.5507,0.98,1.4564,High,Meerut,Uttar Pradesh,28.999264,77.7590354
+"Gangapur Road, Nashik - MPCB",2026-09-01,0.9413,1.0333,1.2186,1.0,1.0278,High,Nashik,Maharashtra,20.0073285,73.7762427
+"Gangineni Cheruvu, Chittoor - APPCB",2026-09-01,1.5244,1.7027,1.3126,0.97,1.5096,High,Chittoor,Andhra Pradesh,13.20488,79.097889
+"Gavalinagar, Pimpri Chinchwad - MPCB",2026-09-01,0.9611,1.0,1.1033,0.99,1.0048,High,Pimpri-Chinchwad,Maharashtra,18.63673,73.82487
+"General Hospital, Mandikhera(Nuh) - HSPCB",2026-09-01,1.3908,1.3351,1.049,0.89,1.2829,High,Mandikhera,Haryana,27.9002,76.9938
+"Ghatkopar, Mumbai - BMC",2026-09-01,0.8569,1.0,1.0887,0.95,0.9456,High,Mumbai,Maharashtra,19.083694,72.920967
+"Ghusuri, Howrah - WBPCB",2026-09-01,1.4052,1.3,1.4353,1.0,1.3855,High,Howrah,West Bengal,22.611968,88.347422
+"Girls College, Sivasagar - PCBA",2026-09-01,0.895,1.0,1.1687,0.9,0.9836,High,Sivasagar,Assam,26.987634,94.636574
+"Gobind Pura, Yamuna Nagar - HSPCB",2026-09-01,1.6775,1.8433,1.5751,0.97,1.6906,High,Yamuna Nagar,Haryana,30.1480566,77.2893471
+"Gokul Nagar, Bhiwandi - MPCB",2026-09-01,0.9579,1.0678,1.097,0.99,1.0182,High,Bhiwandi,Maharashtra,19.309073,73.057223
+"Golden Temple, Amritsar - PPCB",2026-09-01,1.5131,1.7459,1.6123,0.99,1.5933,High,Amritsar,Punjab,31.62,74.876512
+"Gole Bazar, Katni - MPPCB",2026-09-01,1.1316,1.0,1.214,0.99,1.1166,High,Katni,Madhya Pradesh,23.50016,80.23284
+"Gomti Nagar, Lucknow - UPPCB",2026-09-01,1.2399,1.2,1.5004,1.0,1.2898,High,Lucknow,Uttar Pradesh,26.86812,81.005119
+"Govindh Bhavan Colony, Jabalpur - JMC",2026-09-01,1.0363,1.0,1.0739,0.99,1.0363,High,Jabalpur,Madhya Pradesh,23.163174,79.973061
+"Govindpuram, Ghaziabad - UPPCB",2026-09-01,1.161,1.2108,1.3365,0.97,1.2153,High,Ghaziabad,Uttar Pradesh,28.694528,77.494705
+"Govt. Girls Inter College, Kashipur - UKPCB",2026-09-01,1.0178,1.0,1.0,0.71,1.0089,Medium,Kashipur,Uttarakhand,29.2124114,78.9611753
+"Govt. High School Shikarpur, Patna - BSPCB",2026-09-01,1.226,1.0365,1.041,0.95,1.1285,High,Patna,Bihar,25.592539,85.227158
+"Govt. Higher Secondary School, Milupara - CECB",2026-09-01,0.9296,1.0,1.276,0.88,1.0247,High,Milupara,Chhattisgarh,22.1910172,83.5197009
+"Gulzarpet, Anantapur - APPCB",2026-09-01,1.4461,1.6208,1.2594,0.95,1.4374,High,Anantapur,Andhra Pradesh,14.675886,77.593027
+"Gupteshwar, Jabalpur - JMC",2026-08-24,1.2854,1.0,1.0969,0.85,1.1603,High,Jabalpur,Madhya Pradesh,23.142888,79.916147
+"Gurdeo Nagar, Aurangabad - BSPCB",2026-09-01,1.4414,1.4082,1.2945,0.75,1.3951,Medium,Aurangabad,Bihar,24.75746,84.366208
+"Gyaspur, Ahmedabad - IITM",2026-09-01,1.3787,1.4407,1.1107,0.99,1.3206,High,Ahmedabad,Gujarat,22.977134,72.553024
+"H.B. Colony, Bhiwani - HSPCB",2026-09-01,1.5739,1.533,1.1122,0.93,1.4336,High,Bhiwani,Haryana,28.806223,76.141105
+"HB Colony, Vijayawada - APPCB",2026-09-01,1.3687,1.2108,1.2673,0.97,1.3021,High,Vijayawada,Andhra Pradesh,16.536107,80.594233
+"HIMUDA Complex Phase-1, Baddi - HPPCB",2026-09-01,1.4635,1.5667,1.3825,1.0,1.4676,High,Baddi,Himachal Pradesh,30.943887,76.801991
+"Hadapsar, Pune - IITM",2026-09-01,1.2499,1.0,1.1122,0.78,1.1481,Medium,Pune,Maharashtra,18.501793,73.927532
+"Hakimapada, Angul - OSPCB",2026-09-01,0.9979,1.0,1.3014,0.99,1.067,High,Angul,Odisha,20.832874,85.104082
+"Hardev Nagar, Bathinda - PPCB",2026-09-01,1.3111,1.1405,1.2605,0.87,1.2538,High,Bathinda,Punjab,30.233011,74.907758
+"Hathkhoj, Bhilai - CECB",2026-09-01,0.9654,1.0,1.2402,1.0,1.0369,High,Bhilai,Chhattisgarh,21.224231,81.40835
+"Hebbal 1st Stage, Mysuru - KSPCB",2026-09-01,0.9408,1.0,1.1434,1.0,1.003,High,Mysuru,Karnataka,12.21041,76.37376
+"Hebbal, Bengaluru - KSPCB",2026-09-01,0.7687,1.0,1.1107,0.98,0.9001,High,Bengaluru,Karnataka,13.029152,77.585901
+"Hirawadi, Nashik - MPCB",2026-08-31,0.7973,1.0,1.0813,0.98,0.9106,High,Nashik,Maharashtra,20.021503,73.813844
+"Hombegowda Nagar, Bengaluru - KSPCB",2026-09-01,1.0375,1.0,1.0857,0.99,1.0398,High,Bengaluru,Karnataka,12.938539,77.5901
+"Housing Board, Hanumangarh - RSPCB",2026-09-01,1.0662,1.0,1.1808,0.99,1.0764,High,Hanumangarh,Rajasthan,29.61075,74.283608
+"Huda Sector, Fatehabad - HSPCB",2026-09-01,1.1925,1.1725,1.1112,0.98,1.1667,High,Fatehabad,Haryana,29.503664,75.467934
+"ICRISAT Patancheru, Hyderabad - TSPCB",2026-09-01,0.8512,1.0,1.2571,0.98,0.9769,High,Hyderabad,Telangana,17.5184,78.278777
+"IDA Pashamylaram, Hyderabad - TSPCB",2026-09-01,1.0488,1.0,1.1543,0.94,1.0615,High,Hyderabad,Telangana,17.5316895,78.218939
+"IESD Banaras Hindu University, Varanasi - UPPCB",2026-09-01,0.8325,1.0,1.2475,0.89,0.9643,High,Varanasi,Uttar Pradesh,25.262326,82.995408
+"IGI Airport (T3), Delhi - IITM",2026-09-01,1.5835,1.3105,1.2943,0.88,1.4361,High,Delhi,Delhi,28.5627763,77.1180053
+"IGNOU_Maidan Garhi, Delhi - DPCC",2026-09-01,0.8967,1.1,1.1974,1.0,1.0144,High,Delhi,Delhi,28.493624,77.201159
+"IGSC Planetarium Complex, Patna - BSPCB",2026-09-01,1.5214,1.1633,1.9432,0.65,1.5124,Medium,Patna,Bihar,25.610369,85.132568
+"IHBAS, Dilshad Garden, Delhi - CPCB",2026-09-01,1.4335,1.3795,1.2237,0.98,1.3648,High,Delhi,Delhi,28.6811736,77.3025234
+"IIPHG Lekawada, Gandhinagar - IITM",2026-09-01,1.0291,1.5,1.2076,1.0,1.1769,High,Gandhinagar,Gujarat,23.243639,72.68994
+"IIT Delhi, Delhi - IITM",2026-09-01,1.5711,1.712,1.2839,0.89,1.5262,High,Delhi,Delhi,28.54246,77.191651
+"IITG, Guwahati - PCBA",2026-09-01,0.6263,1.0,1.0,0.85,0.7914,High,Guwahati,Assam,26.2028636,91.70046436
+"IITH Kandi, Hyderabad - TSPCB",2026-08-29,1.1694,1.0,1.075,0.95,1.1011,High,Hyderabad,Telangana,17.585705,78.126199
+"IMD Lodhi Road, Delhi - IITM",2026-09-01,1.4791,1.3729,1.4265,0.89,1.4387,High,Delhi,Delhi,28.5918245,77.2273074
+"ITO, Delhi - CPCB",2026-09-01,1.597,1.2921,1.2695,0.95,1.4302,High,Delhi,Delhi,28.628624,77.24106
+"Ibrahimpur, Vijayapura - KSPCB",2026-09-01,0.9445,1.0,1.0,0.92,0.9719,High,Vijayapura,Karnataka,16.802639,75.722694
+"Idgah Hills, Bhopal - MPPCB",2026-09-01,1.1879,1.2148,1.3788,0.96,1.2399,High,Bhopal,Madhya Pradesh,23.264759,77.381568
+"Indira Colony Vistar, Pali - RSPCB",2026-09-01,1.9379,1.8764,1.6456,0.95,1.8453,High,Pali,Rajasthan,25.771061,73.340227
+"Indirapuram, Ghaziabad - UPPCB",2026-09-01,1.4833,1.276,1.4729,0.98,1.426,High,Ghaziabad,Uttar Pradesh,28.646233,77.358075
+"Indra Nagar, Jhunjhunu - RSPCB",2026-09-01,1.1082,1.0667,1.1867,1.0,1.1166,High,Jhunjhunu,Rajasthan,28.108988,75.386577
+"Industrial Area, Hajipur - BSPCB",2026-09-01,1.1993,1.1333,1.4675,1.0,1.2436,High,Hajipur,Bihar,25.697189,85.2459
+"JN Stadium, Shillong - Meghalaya PCB",2026-09-01,0.6927,1.0,1.0555,0.97,0.8436,High,Shillong,Meghalaya,25.5803419,91.8942571
+"JNU, Delhi - DPCC",2026-09-01,1.3088,1.3667,1.3018,1.0,1.3213,High,Delhi,Delhi,28.540721,77.168544
+"Jadavpur, Kolkata - WBPCB",2026-09-01,1.2624,1.1,1.3198,1.0,1.2333,High,Kolkata,West Bengal,22.49929,88.36917
+"Jagamohanpur, Keonjhar - OSPCB",2026-09-01,1.0427,1.1118,1.1506,0.94,1.086,High,Keonjhar,Odisha,21.6439,85.599355
+"Jahangirpuri, Delhi - DPCC",2026-09-01,1.7795,1.7798,1.6262,0.99,1.7399,High,Delhi,Delhi,28.73282,77.170633
+"Jai Bhim Nagar, Meerut - UPPCB",2026-09-01,1.292,1.2725,1.45,0.92,1.3248,High,Meerut,Uttar Pradesh,28.9535882,77.7622941
+"Jawahar Nagar, Puducherry - PPCC",2026-09-01,0.8868,1.0,1.1107,0.97,0.9667,High,Puducherry,Puducherry,11.9309,79.8027
+"Jawaharlal Nehru Stadium, Delhi - DPCC",2026-09-01,1.6038,1.7246,1.5933,0.98,1.6305,High,Delhi,Delhi,28.58028,77.233829
+"Jayanagar 5th Block, Bengaluru - KSPCB",2026-09-01,1.2273,1.2373,1.1522,0.99,1.2105,High,Bengaluru,Karnataka,12.920984,77.584908
+"Jhalamand, Jodhpur - RSPCB",2026-09-01,1.0416,1.2333,1.2186,1.0,1.13,High,Jodhpur,Rajasthan,26.215415,73.070156
+"Jhunsi, Prayagraj - UPPCB",2026-09-01,1.1303,1.1054,1.3433,0.97,1.1736,High,Prayagraj,Uttar Pradesh,25.425602,81.917152
+"Jigani, Bengaluru - KSPCB",2026-09-01,1.2903,1.0456,1.075,0.86,1.1696,High,Bengaluru,Karnataka,12.7816279,77.6299145
+"Jigar Colony, Moradabad - UPPCB",2026-09-01,1.2658,1.0,1.1603,0.98,1.1677,High,Moradabad,Uttar Pradesh,28.856664,78.772638
+"KHB Colony, Karwar - KSPCB",2026-09-01,1.0074,1.0745,1.1297,0.94,1.0535,High,Karwar,Karnataka,14.816666,74.141003
 "Kadri, Mangalore - KSPCB",2026-08-25,1.1275,1.0,1.2917,0.8,1.132,Medium,Mangalore,Karnataka,12.88925,74.853
-"Kalabhavan, Dharwad - KSPCB",2026-08-31,1.3291,1.0,1.0563,0.88,1.1687,High,Dharwad,Karnataka,15.459706,75.008381
-"Kalal Majra, Khanna - PPCB",2026-08-31,1.5144,1.179,1.1307,0.96,1.3223,High,Khanna,Punjab,30.736056,76.209694
-"Kalidaspur, Balasore - OSPCB",2026-08-31,0.9197,1.0,1.2234,1.0,1.0086,High,Balasore,Odisha,21.51161,86.89088
-"Kalindi Kunj, Khurja - UPPCB",2026-08-31,1.1078,1.0,1.2947,0.99,1.1227,High,Khurja,Uttar Pradesh,28.2348927,77.8683002
-"Kalu Nagar, Dombivli - MPCB",2026-08-31,0.6694,1.0,1.0278,1.0,0.8238,High,Dombivli,Maharashtra,19.2268427,73.0788456
-"Kalyana Nagara, Chikkamagaluru - KSPCB",2026-08-31,0.9586,1.0,1.1507,0.92,1.014,High,Chikkamagaluru,Karnataka,13.328028,75.797056
-"Kamalnath Nagar, Bettiah - BSPCB",2026-08-31,0.9403,1.0,1.0,0.93,0.9697,High,Bettiah,Bihar,26.80365,84.51954
-"Kamble Tarf Birwadi, Mahad - MPCB",2026-08-31,0.952,1.0,1.1224,1.0,1.0043,High,Mahad,Maharashtra,18.1023399,73.4783687
-"Kandivali West, Mumbai - BMC",2026-08-31,0.8164,1.0351,1.1107,0.97,0.9356,High,Mumbai,Maharashtra,19.215859,72.831718
-"Kanuru, Vijayawada - APPCB",2026-08-03,1.3219,1.0,1.0,0.71,1.1497,Medium,Vijayawada,Andhra Pradesh,16.486692,80.699436
-"Kareemganj, Gaya - BSPCB",2026-08-31,1.7145,1.3984,1.7349,0.91,1.6342,High,Gaya,Bihar,24.792403,84.992416
-"Kariavattom, Thiruvananthapuram - Kerala PCB",2026-08-31,1.1189,1.0,1.0974,0.98,1.0827,High,Thiruvananthapuram,Kerala,8.5637,76.8865
-"Karni Colony, Nagaur - RSPCB",2026-08-31,1.0522,1.2034,1.1865,0.99,1.1213,High,Nagaur,Rajasthan,27.213494,73.734444
-"Kasarvadavali, Thane - MPCB",2026-08-31,1.0989,1.0345,1.1041,0.98,1.0837,High,Thane,Maharashtra,19.26777,72.97182
-"Kashiram Nagar, Moradabad - UPPCB",2026-08-31,1.354,1.276,1.3563,0.98,1.3346,High,Moradabad,Uttar Pradesh,28.849399,78.742362
+"Kalabhavan, Dharwad - KSPCB",2026-09-01,1.3289,1.0,1.0375,0.88,1.1634,High,Dharwad,Karnataka,15.459706,75.008381
+"Kalal Majra, Khanna - PPCB",2026-09-01,1.5217,1.179,1.1491,0.96,1.3309,High,Khanna,Punjab,30.736056,76.209694
+"Kalidaspur, Balasore - OSPCB",2026-09-01,0.9223,1.0,1.2321,1.0,1.0118,High,Balasore,Odisha,21.51161,86.89088
+"Kalindi Kunj, Khurja - UPPCB",2026-09-01,1.1152,1.0,1.3115,0.99,1.1301,High,Khurja,Uttar Pradesh,28.2348927,77.8683002
+"Kalu Nagar, Dombivli - MPCB",2026-09-01,0.6662,1.0,1.0278,1.0,0.8218,High,Dombivli,Maharashtra,19.2268427,73.0788456
+"Kalyana Nagara, Chikkamagaluru - KSPCB",2026-09-01,0.9633,1.0,1.1507,0.92,1.0165,High,Chikkamagaluru,Karnataka,13.328028,75.797056
+"Kamalnath Nagar, Bettiah - BSPCB",2026-09-01,0.94,1.0,1.0,0.93,0.9695,High,Bettiah,Bihar,26.80365,84.51954
+"Kamble Tarf Birwadi, Mahad - MPCB",2026-09-01,0.9508,1.0,1.1224,1.0,1.0036,High,Mahad,Maharashtra,18.1023399,73.4783687
+"Kandivali West, Mumbai - BMC",2026-09-01,0.8067,1.0351,1.1107,0.97,0.93,High,Mumbai,Maharashtra,19.215859,72.831718
+"Kanuru, Vijayawada - APPCB",2026-08-03,0.4265,1.0,1.0,0.3,0.6531,Provisional,Vijayawada,Andhra Pradesh,16.486692,80.699436
+"Kareemganj, Gaya - BSPCB",2026-09-01,1.7179,1.4082,1.7865,0.9,1.6507,High,Gaya,Bihar,24.792403,84.992416
+"Kariavattom, Thiruvananthapuram - Kerala PCB",2026-09-01,1.1175,1.0,1.1091,0.98,1.0849,High,Thiruvananthapuram,Kerala,8.5637,76.8865
+"Karni Colony, Nagaur - RSPCB",2026-09-01,1.0525,1.2034,1.229,0.99,1.1314,High,Nagaur,Rajasthan,27.213494,73.734444
+"Kasarvadavali, Thane - MPCB",2026-09-01,1.0911,1.0345,1.0855,0.98,1.0753,High,Thane,Maharashtra,19.26777,72.97182
+"Kashiram Nagar, Moradabad - UPPCB",2026-09-01,1.3735,1.3105,1.3786,0.98,1.3587,High,Moradabad,Uttar Pradesh,28.849399,78.742362
 "Kasturi Nagar, Bengaluru - KSPCB",2026-08-20,1.5178,1.138,1.0375,0.77,1.2842,Medium,Bengaluru,Karnataka,13.003872,77.664217
-"Katargam, Surat - Nexteng Enviro",2026-08-31,1.0694,1.0,1.1625,1.0,1.0738,High,Surat,Gujarat,21.217779,72.834787
-"Katraj Dairy, Pune - MPCB",2026-08-31,0.8652,1.0,1.1107,0.9,0.9549,High,Pune,Maharashtra,18.45445,73.854155
-"Katrap, Badlapur - MPCB",2026-08-31,0.6928,1.0,1.0463,1.0,0.8418,High,Badlapur,Maharashtra,19.16485,73.23409
-"Kendriya Vidyalaya, Lucknow - CPCB",2026-08-31,1.1459,1.0333,1.2463,1.0,1.1404,High,Lucknow,Uttar Pradesh,26.906111,80.948222
-"Khadakpada, Kalyan - MPCB",2026-08-31,1.7499,1.3581,1.6485,0.86,1.6181,High,Kalyan,Maharashtra,19.25292,73.142019
-"Khaira, Boisar - MPCB",2026-08-31,1.0848,1.0,1.1697,0.99,1.0832,High,Boisar,Maharashtra,19.786089,72.757971
-"Kharahiya Basti, Araria - BSPCB",2026-08-31,1.2084,1.0703,1.1687,0.97,1.1626,High,Araria,Bihar,26.146529,87.454184
-"Khatikan Mohalla, Dausa - RSPCB",2026-08-31,1.297,1.339,1.3132,0.99,1.3115,High,Dausa,Rajasthan,26.895552,76.334753
-"Kherwadi_Bandra East, Mumbai - MPCB",2026-08-31,0.8889,1.0,1.0666,0.97,0.9581,High,Mumbai,Maharashtra,19.0632143,72.8456324
-"Khindipada-Bhandup West, Mumbai - IITM",2026-08-31,0.8494,1.0,1.1107,0.97,0.9462,High,Mumbai,Maharashtra,19.1653323,72.922099
-"Khrew, Pampore - JKPCC",2026-08-31,1.2159,1.0373,1.3588,0.84,1.2015,Medium,Pampore,Jammu and Kashmir,34.031606,75.009712
-"Khunmoh, Srinagar - JKPCC",2026-08-31,0.9876,1.0,1.1974,0.86,1.0396,High,Srinagar,Jammu and Kashmir,34.06313,74.96017
-"Knowledge Park - III, Greater Noida - UPPCB",2026-08-31,1.4444,1.3807,1.4488,0.93,1.4293,High,Greater Noida,Uttar Pradesh,28.47272,77.482
-"Knowledge Park - V, Greater Noida - UPPCB",2026-08-31,1.5815,1.8667,1.321,1.0,1.5759,High,Greater Noida,Uttar Pradesh,28.557054,77.453663
-"Kodungaiyur, Chennai - TNPCB",2026-08-31,1.1781,1.0,1.1171,1.0,1.1159,High,Chennai,Tamil Nadu,13.1278,80.2642
-"Kokapet, Hyderabad - TSPCB",2026-08-31,1.1137,1.0,1.075,0.94,1.0745,High,Hyderabad,Telangana,17.393559,78.339194
-"Kompally Municipal Office, Hyderabad - TSPCB",2026-08-31,1.0927,1.0,1.0757,0.99,1.0646,High,Hyderabad,Telangana,17.544899,78.486949
-"Kopripada-Vashi, Navi Mumbai - MPCB",2026-08-31,0.8527,1.0,1.0923,1.0,0.944,High,Navi Mumbai,Maharashtra,19.090337,73.014232
-"Koyana Nagar, Satara - MPCB",2026-08-31,1.0789,1.0,1.1759,0.99,1.0816,High,Satara,Maharashtra,17.696651,74.003387
-"Krishak Nagar, Raipur - CECB",2026-08-31,0.7911,1.0,1.1341,0.97,0.9179,High,Raipur,Chhattisgarh,21.237755,81.705301
-"Krishna Nagar, Bharatpur - RSPCB",2026-08-30,0.8753,1.0345,1.1107,0.98,0.9686,High,Bharatpur,Rajasthan,27.215415,77.50873
-"Kudikadu, Cuddalore - TNPCB",2026-08-31,0.9568,1.0,1.0739,0.87,0.9958,High,Cuddalore,Tamil Nadu,11.6829898,79.7532099
-"Kukrail Picnic Spot-1, Lucknow - UPPCB",2026-08-31,1.1045,1.0,1.1988,1.0,1.0997,High,Lucknow,Uttar Pradesh,26.90723,80.98579
-"Kurla, Mumbai - MPCB",2026-08-31,1.2076,1.0,1.2216,0.93,1.1553,High,Mumbai,Maharashtra,19.0863,72.8888
-"LGBI Airport, Guwahati - PCBA",2026-08-31,1.2601,1.1054,1.2216,0.97,1.21,High,Guwahati,Assam,26.10887,91.589544
+"Katargam, Surat - Nexteng Enviro",2026-09-01,1.0725,1.0,1.1592,1.0,1.0746,High,Surat,Gujarat,21.217779,72.834787
+"Katraj Dairy, Pune - MPCB",2026-08-31,0.8696,1.0,1.0997,0.89,0.9549,High,Pune,Maharashtra,18.45445,73.854155
+"Katrap, Badlapur - MPCB",2026-09-01,0.6943,1.0,1.0555,1.0,0.8446,High,Badlapur,Maharashtra,19.16485,73.23409
+"Kendriya Vidyalaya, Lucknow - CPCB",2026-09-01,1.1363,1.0333,1.2463,1.0,1.1356,High,Lucknow,Uttar Pradesh,26.906111,80.948222
+"Khadakpada, Kalyan - MPCB",2026-09-01,1.7646,1.3939,1.8636,0.86,1.6864,High,Kalyan,Maharashtra,19.25292,73.142019
+"Khaira, Boisar - MPCB",2026-09-01,1.0752,1.0,1.1777,1.0,1.0802,High,Boisar,Maharashtra,19.786089,72.757971
+"Kharahiya Basti, Araria - BSPCB",2026-09-01,1.2006,1.0703,1.1687,0.97,1.1588,High,Araria,Bihar,26.146529,87.454184
+"Khatikan Mohalla, Dausa - RSPCB",2026-09-01,1.3045,1.3729,1.3077,0.99,1.3221,High,Dausa,Rajasthan,26.895552,76.334753
+"Kherwadi_Bandra East, Mumbai - MPCB",2026-09-01,0.8801,1.0,1.0666,0.97,0.9534,High,Mumbai,Maharashtra,19.0632143,72.8456324
+"Khindipada-Bhandup West, Mumbai - IITM",2026-09-01,0.8336,1.0,1.1216,0.97,0.9396,High,Mumbai,Maharashtra,19.1653323,72.922099
+"Khrew, Pampore - JKPCC",2026-09-01,1.2265,1.0373,1.3588,0.84,1.2067,Medium,Pampore,Jammu and Kashmir,34.031606,75.009712
+"Khunmoh, Srinagar - JKPCC",2026-09-01,0.9884,1.0,1.1974,0.86,1.04,High,Srinagar,Jammu and Kashmir,34.06313,74.96017
+"Knowledge Park - III, Greater Noida - UPPCB",2026-09-01,1.4537,1.3807,1.4488,0.93,1.4339,High,Greater Noida,Uttar Pradesh,28.47272,77.482
+"Knowledge Park - V, Greater Noida - UPPCB",2026-09-01,1.6015,1.9,1.321,1.0,1.5929,High,Greater Noida,Uttar Pradesh,28.557054,77.453663
+"Kodungaiyur, Chennai - TNPCB",2026-09-01,1.1728,1.0,1.1171,1.0,1.1134,High,Chennai,Tamil Nadu,13.1278,80.2642
+"Kokapet, Hyderabad - TSPCB",2026-09-01,1.1133,1.0,1.075,0.94,1.0744,High,Hyderabad,Telangana,17.393559,78.339194
+"Kompally Municipal Office, Hyderabad - TSPCB",2026-09-01,1.096,1.0,1.0708,0.99,1.0649,High,Hyderabad,Telangana,17.544899,78.486949
+"Kopripada-Vashi, Navi Mumbai - MPCB",2026-09-01,0.8466,1.0,1.0923,1.0,0.9406,High,Navi Mumbai,Maharashtra,19.090337,73.014232
+"Koyana Nagar, Satara - MPCB",2026-09-01,1.0762,1.0,1.1748,1.0,1.0801,High,Satara,Maharashtra,17.696651,74.003387
+"Krishak Nagar, Raipur - CECB",2026-09-01,0.8052,1.0,1.1341,0.97,0.926,High,Raipur,Chhattisgarh,21.237755,81.705301
+"Krishna Nagar, Bharatpur - RSPCB",2026-09-01,0.881,1.0345,1.1107,0.98,0.9718,High,Bharatpur,Rajasthan,27.215415,77.50873
+"Kudikadu, Cuddalore - TNPCB",2026-09-01,0.9555,1.0,1.0739,0.87,0.9951,High,Cuddalore,Tamil Nadu,11.6829898,79.7532099
+"Kukrail Picnic Spot-1, Lucknow - UPPCB",2026-09-01,1.1014,1.0,1.2055,0.99,1.0997,High,Lucknow,Uttar Pradesh,26.90723,80.98579
+"Kurla, Mumbai - MPCB",2026-09-01,1.2076,1.0,1.2216,0.93,1.1553,High,Mumbai,Maharashtra,19.0863,72.8888
+"LGBI Airport, Guwahati - PCBA",2026-09-01,1.2708,1.1405,1.2216,0.97,1.2247,High,Guwahati,Assam,26.10887,91.589544
 "Lal Bahadur Shastri Nagar, Kalaburagi - KSPCB",2026-08-21,1.2663,1.0,1.2569,0.72,1.1915,Medium,Kalaburagi,Karnataka,17.321993,76.822628
-"Lalbagh, Lucknow - CPCB",2026-08-31,1.2136,1.1405,1.2237,0.97,1.1974,High,Lucknow,Uttar Pradesh,26.8458805,80.9365541
-"Lingaraj Nagar, Hubballi - KSPCB",2026-08-31,1.0889,1.0,1.0597,0.94,1.0588,High,Hubballi,Karnataka,15.3714823,75.1160168
-"Lingraj Mandir, Bhubaneswar - OSPCB",2026-08-31,1.2045,1.2556,1.3534,0.95,1.2531,High,Bhubaneswar,Odisha,20.24079,85.836784
-"Lohiyanagar, Begusarai - BSPCB",2026-08-31,1.3226,1.2415,1.5527,0.98,1.3551,High,Begusarai,Bihar,25.42742023,86.13886079
-"Loni, Ghaziabad - UPPCB",2026-08-31,1.5842,1.6,1.7238,1.0,1.622,High,Ghaziabad,Uttar Pradesh,28.757294,77.278792
-"Lumpyngngad, Shillong - Meghalaya PCB",2026-08-24,0.2908,1.0,1.0,0.5,0.5393,Low,Shillong,Meghalaya,25.5586,91.8985
-"MD University, Rohtak - HSPCB",2026-08-31,1.3501,1.3667,1.4475,1.0,1.378,High,Rohtak,Haryana,28.52123,76.37138
-"MIDC Ambad, Nashik - MPCB",2026-08-31,0.8822,1.0,1.1325,0.95,0.9689,High,Nashik,Maharashtra,19.95022,73.73148
-"MIDC Chilkalthana, Aurangabad - MPCB",2026-08-31,0.967,1.0,1.037,0.95,0.9923,High,Aurangabad,Maharashtra,19.87562,75.38731
-"MIDC Khutala, Chandrapur - MPCB",2026-08-31,1.0806,1.0389,1.2397,0.92,1.1074,High,Chandrapur,Maharashtra,19.9775302,79.2337086
-"MIET College, Meerut - UPPCB",2026-08-31,1.5126,1.5449,1.5933,0.92,1.5405,High,Meerut,Uttar Pradesh,28.972677,77.641018
-"MIT-Daudpur Kothi, Muzaffarpur - BSPCB",2026-08-31,0.9658,1.0,1.1507,1.0,1.0178,High,Muzaffarpur,Bihar,26.1403345,85.3650192
-"MM Ground, Bikaner - RSPCB",2026-08-31,1.0858,1.1826,1.2704,0.95,1.1536,High,Bikaner,Rajasthan,28.018792,73.292658
-"Madan Mohan Malaviya University of Technology, Gorakhpur - UPPCB",2026-08-31,1.8278,1.5715,1.5255,0.9,1.6823,High,Gorakhpur,Uttar Pradesh,26.730136,83.433859
-"Maguda Nagar, Indore - IMC",2026-08-31,0.8722,1.0345,1.0887,0.98,0.9621,High,Indore,Madhya Pradesh,22.7524,75.8872
-"Mahabir Colliery, Asansol - WBPCB",2026-08-31,0.9691,1.0339,1.3672,0.99,1.0734,High,Asansol,West Bengal,23.618183,87.105718
-"Mahal, Nagpur - MPCB",2026-08-31,1.0783,1.0,1.2656,0.96,1.1014,High,Nagpur,Maharashtra,21.14472,79.107595
-"Mahape, Navi Mumbai - MPCB",2026-08-31,1.0125,1.0,1.0997,0.97,1.0304,High,Navi Mumbai,Maharashtra,19.1135051,73.008978
-"Maharaj Bada, Gwalior - MPPCB",2026-08-31,1.4041,1.2667,1.5711,1.0,1.4074,High,Gwalior,Madhya Pradesh,26.200388,78.147714
-"Mahashweta Nagar, Ujjain - MPPCB",2026-08-31,1.2713,1.1695,1.3423,0.99,1.2621,High,Ujjain,Madhya Pradesh,23.1633321,75.800225
-"Mahatma Basaveswar Colony, Kalaburgi - KSPCB",2026-08-31,0.8557,1.0,1.1471,0.98,0.9573,High,Kalaburagi,Karnataka,17.336318,76.847397
-"Mahesh Nagar, Malegaon - MPCB",2026-08-31,1.1493,1.0,1.1419,0.96,1.1082,High,Malegaon,Maharashtra,20.555712,74.529236
-"Mahishkapur Road_B-Zone, Durgapur - WBPCB",2026-08-31,0.9436,1.0,1.2411,0.98,1.0253,High,Durgapur,West Bengal,23.567923,87.306843
-"Major Dhyan Chand National Stadium, Delhi - DPCC",2026-08-31,1.3318,1.2333,1.2234,1.0,1.279,High,Delhi,Delhi,28.611281,77.237738
-"Malad West, Mumbai - IITM",2026-08-31,0.7335,1.0,1.0666,0.99,0.8704,High,Mumbai,Maharashtra,19.19709,72.82204
-"Maldahiya, Varanasi - UPPCB",2026-08-31,0.9654,1.0,1.1705,0.99,1.022,High,Varanasi,Uttar Pradesh,25.32393,82.99687
-"Manali Village, Chennai - TNPCB",2026-08-31,1.2771,1.8333,1.2516,1.0,1.3909,High,Chennai,Tamil Nadu,13.1662,80.2584
-"Manali, Chennai - CPCB",2026-08-31,1.0469,1.0,1.1974,0.95,1.0703,High,Chennai,Tamil Nadu,13.164544,80.26285
-"Mandir Marg, Delhi - DPCC",2026-08-31,1.4565,1.5333,1.342,1.0,1.4454,High,Delhi,Delhi,28.636429,77.201067
-"Mandor, Jodhpur - RSPCB",2026-08-31,1.0965,1.2,1.2149,1.0,1.1507,High,Jodhpur,Rajasthan,26.358805,73.047444
-"Mangala, Bilaspur - NTPC",2026-08-31,1.2265,1.0351,1.2898,0.87,1.1905,High,Bilaspur,Chhattisgarh,22.08815,82.13737
-"Maninagar, Ahmedabad - GPCB",2026-08-31,1.7687,1.7246,1.6239,0.98,1.7204,High,Ahmedabad,Gujarat,23.002657,72.591912
-"Manoharpur, Agra - UPPCB",2026-08-31,1.8324,1.9309,1.5419,0.96,1.7781,High,Agra,Uttar Pradesh,27.23711,78.01936
-"Mansarovar Sector-12, Jaipur - RSPCB",2026-08-31,1.2075,1.1405,1.1754,0.97,1.1824,High,Jaipur,Rajasthan,26.843698,75.766894
-"Marhatal, Jabalpur - MPPCB",2026-08-31,1.1075,1.0667,1.1107,1.0,1.0979,High,Jabalpur,Madhya Pradesh,23.168606,79.932247
-"Mariam Nagar, Purnia - BSPCB",2026-08-31,0.9535,1.0,1.037,0.98,0.9854,High,Purnia,Bihar,25.366336,87.117468
-"Masoom Colony, Parbhani - MPCB",2026-08-31,0.8548,1.0,1.1253,0.98,0.9523,High,Parbhani,Maharashtra,19.265594,76.761463
-"Mavdi, Rajkot - Nexteng Enviro ",2026-08-31,1.1578,1.2,1.1122,1.0,1.1565,High,Rajkot,Gujarat,22.248853,70.776774
-"Mayaganj, Bhagalpur - BSPCB",2026-08-31,1.6015,1.5013,1.8844,0.96,1.6413,High,Bhagalpur,Bihar,25.265194,87.012947
-"Mazgaon, Mumbai - IITM",2026-08-31,1.0121,1.0,1.0776,0.98,1.025,High,Mumbai,Maharashtra,18.96702,72.84214
-"Meelavittan, Thoothukudi - TNPCB",2026-08-31,0.8516,1.0,1.0222,0.87,0.9279,High,Thoothukudi,Tamil Nadu,8.816428,78.099039
-"Meher Colony, Baripada - OSPCB",2026-08-31,1.0368,1.0,1.1856,0.97,1.0625,High,Baripada,Odisha,21.941841,86.728318
-"Mhada Colony, Pune - IITM",2026-08-31,1.2712,1.0,1.1867,0.87,1.1768,High,Pune,Maharashtra,18.57304,73.927715
-"Mindspace-Malad West, Mumbai - MPCB",2026-08-25,0.7875,1.0,1.0666,0.94,0.9019,High,Mumbai,Maharashtra,19.1878657,72.8304069
-"Mini Secretariat, Charkhi Dadri - HSPCB",2026-08-31,1.9798,1.9154,1.8892,0.99,1.9407,High,Charkhi Dadri,Haryana,28.593883,76.270653
-"Mirchaibari, Katihar - BSPCB",2026-08-31,0.9789,1.0,1.0965,0.88,1.0124,High,Katihar,Bihar,25.560083,87.553265
-"Model Town, Patiala - PPCB",2026-08-31,1.0205,1.0,1.1651,1.0,1.0496,High,Patiala,Punjab,30.349388,76.366642
-"More Chowk Waluj, Aurangabad - MPCB",2026-08-31,1.2614,1.0,1.0375,0.91,1.1335,High,Aurangabad,Maharashtra,19.8389439,75.244448
-"Moti Doongri, Alwar - RSPCB",2026-08-31,1.8289,2.0,1.4352,1.0,1.7603,High,Alwar,Rajasthan,27.554793,76.611536
-"Motilal Nehru NIT, Prayagraj - UPPCB",2026-08-31,0.8496,1.0339,1.1216,0.99,0.9565,High,Prayagraj,Uttar Pradesh,25.494,81.863
-"Mudtra Sili, Jalore - RSPCB",2026-08-31,1.1172,1.069,1.1543,0.98,1.114,High,Jalore,Rajasthan,25.344694,72.626208
-"Mulund West, Mumbai - MPCB",2026-08-31,0.9607,1.0,1.0739,0.77,0.9978,Medium,Mumbai,Maharashtra,19.175,72.9419
-"Mundka, Delhi - DPCC",2026-08-31,1.5048,1.8476,1.3115,0.99,1.5305,High,Delhi,Delhi,28.684678,77.076574
-"Municipal Corporation Office, Dharuhera -  HSPCB",2026-08-31,1.6105,1.7333,1.438,1.0,1.5946,High,Dharuhera,Haryana,28.2068,76.7997
-"Muradpur, Patna - BSPCB",2026-08-31,1.1723,1.0667,1.2066,1.0,1.1532,High,Patna,Bihar,25.619651,85.147382
-"Murthal, Sonipat - HSPCB",2026-08-31,1.3196,1.5622,1.0295,0.97,1.2936,High,Sonipat,Haryana,29.0272,77.0621
-"Muzaffarpur Collectorate, Muzaffarpur - BSPCB",2026-08-03,1.0301,1.0,1.2133,0.63,1.0652,Low,Muzaffarpur,Bihar,26.1209,85.3647
-"NISE Gwal Pahari, Gurugram - IITM",2026-08-31,1.4505,1.4068,1.1934,0.89,1.3709,High,Gurugram,Haryana,28.422681,77.148944
-"NSI Kalyanpur, Kanpur - UPPCB",2026-08-31,1.3192,1.1695,1.1681,0.99,1.2418,High,Kanpur,Uttar Pradesh,26.509954,80.249612
-"NSIT Dwarka, Delhi - CPCB",2026-08-31,1.2515,1.1594,1.2846,0.91,1.2358,High,Delhi,Delhi,28.60909,77.0325413
-"NSUT Jaffarpur, Delhi - DPCC",2026-08-31,1.3524,1.2811,1.3359,0.97,1.3301,High,Delhi,Delhi,28.594004,76.909423
-"Nacharam_TSIIC IALA, Hyderabad - TSPCB",2026-08-31,1.179,1.0,1.1114,0.94,1.1149,High,Hyderabad,Telangana,17.429398,78.569354
-"Nagar Nigam, Prayagraj - UPPCB",2026-08-31,0.7982,1.0667,1.3314,1.0,0.9753,High,Prayagraj,Uttar Pradesh,25.44919916,81.82735986
-"Nagar Palika Parishad, Baraut - UPPCB",2026-08-31,2.1945,1.7071,1.4712,0.85,1.8649,High,Baraut,Uttar Pradesh,29.09956,77.26235
-"Nagla Bhau, Firozabad - UPPCB",2026-08-31,1.075,1.0,1.1307,0.96,1.0691,High,Firozabad,Uttar Pradesh,27.168897,78.37696
-"Naharlagun, Naharlagun - APSPCB",2026-08-31,0.9031,1.0,1.1879,1.0,0.9921,High,Naharlagun,Arunachal Pradesh,27.103358,93.679645
-"Najafgarh, Delhi - DPCC",2026-08-31,1.2565,1.1667,1.2762,1.0,1.2382,High,Delhi,Delhi,28.570173,76.933762
-"Narela, Delhi - DPCC",2026-08-31,1.3836,1.345,1.3021,0.98,1.3532,High,Delhi,Delhi,28.822836,77.101981
-"Nathu Colony, Ballabgarh - HSPCB",2026-08-31,1.4031,1.4216,1.3252,0.97,1.3878,High,Ballabgarh,Haryana,28.3419248,77.319699
-"Navy Nagar-Colaba, Mumbai - IITM",2026-08-27,1.1322,1.0,1.1543,0.89,1.1029,High,Mumbai,Maharashtra,18.897756,72.81332
-"Nawapara SECL Colony, Chhal - CECB",2026-08-31,1.1419,1.1903,1.3806,0.93,1.2099,High,Chhal,Chhattisgarh,22.118125,83.140608
-"Nayapura, Kota - RSPCB",2026-08-31,1.3088,1.1667,1.2216,1.0,1.25,High,Kota,Rajasthan,25.196024,75.855668
-"Nehru Nagar, Delhi - DPCC",2026-08-31,1.5831,1.7333,1.5682,1.0,1.6156,High,Delhi,Delhi,28.56789,77.250515
-"Nehru Nagar, Kanpur - UPPCB",2026-08-31,1.2716,1.1725,1.3187,0.98,1.2575,High,Kanpur,Uttar Pradesh,26.4703136,80.3229863
-"Nerul, Navi Mumbai - MPCB",2026-08-31,0.9594,1.0,1.1107,0.8,1.0055,Medium,Navi Mumbai,Maharashtra,19.008751,73.01662
+"Lalbagh, Lucknow - CPCB",2026-09-01,1.2114,1.1405,1.2569,0.97,1.2044,High,Lucknow,Uttar Pradesh,26.8458805,80.9365541
+"Lingaraj Nagar, Hubballi - KSPCB",2026-09-01,1.0918,1.0,1.075,0.94,1.064,High,Hubballi,Karnataka,15.3714823,75.1160168
+"Lingraj Mandir, Bhubaneswar - OSPCB",2026-09-01,1.2258,1.2921,1.3806,0.95,1.2796,High,Bhubaneswar,Odisha,20.24079,85.836784
+"Lohiyanagar, Begusarai - BSPCB",2026-09-01,1.2558,1.207,1.5679,0.98,1.3144,High,Begusarai,Bihar,25.42742023,86.13886079
+"Loni, Ghaziabad - UPPCB",2026-09-01,1.5941,1.6333,1.7238,1.0,1.6355,High,Ghaziabad,Uttar Pradesh,28.757294,77.278792
+"Lumpyngngad, Shillong - Meghalaya PCB",2026-09-01,0.2931,1.0,1.0,0.5,0.5414,Low,Shillong,Meghalaya,25.5586,91.8985
+"MD University, Rohtak - HSPCB",2026-09-01,1.3733,1.4,1.4645,1.0,1.4023,High,Rohtak,Haryana,28.52123,76.37138
+"MIDC Ambad, Nashik - MPCB",2026-09-01,0.8791,1.0,1.1216,0.95,0.9649,High,Nashik,Maharashtra,19.95022,73.73148
+"MIDC Chilkalthana, Aurangabad - MPCB",2026-09-01,0.9741,1.0,1.037,0.95,0.996,High,Aurangabad,Maharashtra,19.87562,75.38731
+"MIDC Khutala, Chandrapur - MPCB",2026-09-01,1.0935,1.0389,1.2186,0.92,1.1092,High,Chandrapur,Maharashtra,19.9775302,79.2337086
+"MIET College, Meerut - UPPCB",2026-09-01,1.516,1.5179,1.5376,0.91,1.5219,High,Meerut,Uttar Pradesh,28.972677,77.641018
+"MIT-Daudpur Kothi, Muzaffarpur - BSPCB",2026-09-01,0.9693,1.0,1.1507,1.0,1.0197,High,Muzaffarpur,Bihar,26.1403345,85.3650192
+"MM Ground, Bikaner - RSPCB",2026-09-01,1.0727,1.1461,1.2811,0.95,1.1401,High,Bikaner,Rajasthan,28.018792,73.292658
+"Madan Mohan Malaviya University of Technology, Gorakhpur - UPPCB",2026-09-01,1.8268,1.5715,1.5255,0.9,1.6818,High,Gorakhpur,Uttar Pradesh,26.730136,83.433859
+"Maguda Nagar, Indore - IMC",2026-09-01,0.8819,1.0345,1.0887,0.98,0.9674,High,Indore,Madhya Pradesh,22.7524,75.8872
+"Mahabir Colliery, Asansol - WBPCB",2026-09-01,0.9619,1.0333,1.3466,1.0,1.0652,High,Asansol,West Bengal,23.618183,87.105718
+"Mahal, Nagpur - MPCB",2026-09-01,1.0898,1.0,1.2393,0.96,1.1015,High,Nagpur,Maharashtra,21.14472,79.107595
+"Mahape, Navi Mumbai - MPCB",2026-09-01,1.0056,1.0,1.0997,0.97,1.0269,High,Navi Mumbai,Maharashtra,19.1135051,73.008978
+"Maharaj Bada, Gwalior - MPPCB",2026-09-01,1.3969,1.2667,1.5711,1.0,1.4038,High,Gwalior,Madhya Pradesh,26.200388,78.147714
+"Mahashweta Nagar, Ujjain - MPPCB",2026-09-01,1.2781,1.1695,1.3423,0.99,1.2655,High,Ujjain,Madhya Pradesh,23.1633321,75.800225
+"Mahatma Basaveswar Colony, Kalaburgi - KSPCB",2026-09-01,0.8582,1.0,1.1471,0.98,0.9587,High,Kalaburagi,Karnataka,17.336318,76.847397
+"Mahesh Nagar, Malegaon - MPCB",2026-09-01,1.1617,1.0351,1.1491,0.97,1.1256,High,Malegaon,Maharashtra,20.555712,74.529236
+"Mahishkapur Road_B-Zone, Durgapur - WBPCB",2026-09-01,0.9347,1.0,1.2411,0.98,1.0205,High,Durgapur,West Bengal,23.567923,87.306843
+"Major Dhyan Chand National Stadium, Delhi - DPCC",2026-09-01,1.3324,1.2667,1.2234,1.0,1.2879,High,Delhi,Delhi,28.611281,77.237738
+"Malad West, Mumbai - IITM",2026-09-01,0.725,1.0,1.0703,0.99,0.866,High,Mumbai,Maharashtra,19.19709,72.82204
+"Maldahiya, Varanasi - UPPCB",2026-09-01,0.9538,1.0,1.1705,0.99,1.0159,High,Varanasi,Uttar Pradesh,25.32393,82.99687
+"Manali Village, Chennai - TNPCB",2026-09-01,1.2757,1.8333,1.2516,1.0,1.3901,High,Chennai,Tamil Nadu,13.1662,80.2584
+"Manali, Chennai - CPCB",2026-09-01,1.0439,1.0,1.1933,0.95,1.0679,High,Chennai,Tamil Nadu,13.164544,80.26285
+"Mandir Marg, Delhi - DPCC",2026-09-01,1.4498,1.5333,1.3115,1.0,1.4339,High,Delhi,Delhi,28.636429,77.201067
+"Mandor, Jodhpur - RSPCB",2026-09-01,1.0923,1.2,1.2149,1.0,1.1484,High,Jodhpur,Rajasthan,26.358805,73.047444
+"Mangala, Bilaspur - NTPC",2026-09-01,1.2342,1.0351,1.2866,0.87,1.1935,High,Bilaspur,Chhattisgarh,22.08815,82.13737
+"Maninagar, Ahmedabad - GPCB",2026-09-01,1.7744,1.7246,1.6239,0.98,1.7232,High,Ahmedabad,Gujarat,23.002657,72.591912
+"Manoharpur, Agra - UPPCB",2026-09-01,1.843,1.9309,1.5419,0.96,1.7833,High,Agra,Uttar Pradesh,27.23711,78.01936
+"Mansarovar Sector-12, Jaipur - RSPCB",2026-09-01,1.1991,1.1405,1.1325,0.97,1.1674,High,Jaipur,Rajasthan,26.843698,75.766894
+"Marhatal, Jabalpur - MPPCB",2026-09-01,1.1136,1.0667,1.1107,1.0,1.1009,High,Jabalpur,Madhya Pradesh,23.168606,79.932247
+"Mariam Nagar, Purnia - BSPCB",2026-09-01,0.9547,1.0,1.0555,0.97,0.9904,High,Purnia,Bihar,25.366336,87.117468
+"Masoom Colony, Parbhani - MPCB",2026-09-01,0.8539,1.0,1.1325,0.98,0.9533,High,Parbhani,Maharashtra,19.265594,76.761463
+"Mavdi, Rajkot - Nexteng Enviro ",2026-09-01,1.1545,1.2,1.1122,1.0,1.1549,High,Rajkot,Gujarat,22.248853,70.776774
+"Mayaganj, Bhagalpur - BSPCB",2026-09-01,1.6071,1.5013,1.744,0.96,1.6126,High,Bhagalpur,Bihar,25.265194,87.012947
+"Mazgaon, Mumbai - IITM",2026-09-01,1.0045,1.0,1.0831,0.97,1.0225,High,Mumbai,Maharashtra,18.96702,72.84214
+"Meelavittan, Thoothukudi - TNPCB",2026-09-01,0.8523,1.0,1.0222,0.87,0.9283,High,Thoothukudi,Tamil Nadu,8.816428,78.099039
+"Meher Colony, Baripada - OSPCB",2026-09-01,1.0385,1.0,1.17,0.97,1.0598,High,Baripada,Odisha,21.941841,86.728318
+"Mhada Colony, Pune - IITM",2026-09-01,1.2723,1.0,1.1711,0.87,1.1734,High,Pune,Maharashtra,18.57304,73.927715
+"Mindspace-Malad West, Mumbai - MPCB",2026-09-01,0.7799,1.0,1.0666,0.93,0.8975,High,Mumbai,Maharashtra,19.1878657,72.8304069
+"Mini Secretariat, Charkhi Dadri - HSPCB",2026-09-01,1.9758,1.9154,1.9235,0.99,1.9474,High,Charkhi Dadri,Haryana,28.593883,76.270653
+"Mirchaibari, Katihar - BSPCB",2026-09-01,0.9764,1.0,1.075,0.88,1.0061,High,Katihar,Bihar,25.560083,87.553265
+"Model Town, Patiala - PPCB",2026-09-01,1.0299,1.0,1.1507,1.0,1.0511,High,Patiala,Punjab,30.349388,76.366642
+"More Chowk Waluj, Aurangabad - MPCB",2026-09-01,1.2581,1.0,1.0375,0.92,1.132,High,Aurangabad,Maharashtra,19.8389439,75.244448
+"Moti Doongri, Alwar - RSPCB",2026-09-01,1.8214,2.0,1.4352,1.0,1.7566,High,Alwar,Rajasthan,27.554793,76.611536
+"Motilal Nehru NIT, Prayagraj - UPPCB",2026-09-01,0.8401,1.0339,1.1107,0.99,0.9488,High,Prayagraj,Uttar Pradesh,25.494,81.863
+"Mudtra Sili, Jalore - RSPCB",2026-09-01,1.1115,1.069,1.1543,0.98,1.1112,High,Jalore,Rajasthan,25.344694,72.626208
+"Mulund West, Mumbai - MPCB",2026-09-01,0.96,1.0,1.0923,0.77,1.0017,Medium,Mumbai,Maharashtra,19.175,72.9419
+"Mundka, Delhi - DPCC",2026-09-01,1.5057,1.8476,1.3115,0.99,1.531,High,Delhi,Delhi,28.684678,77.076574
+"Municipal Corporation Office, Dharuhera -  HSPCB",2026-09-01,1.6039,1.7,1.54,1.0,1.611,High,Dharuhera,Haryana,28.2068,76.7997
+"Muradpur, Patna - BSPCB",2026-09-01,1.1686,1.0667,1.1704,1.0,1.1426,High,Patna,Bihar,25.619651,85.147382
+"Murthal, Sonipat - HSPCB",2026-09-01,1.3067,1.527,1.0295,0.97,1.28,High,Sonipat,Haryana,29.0272,77.0621
+"Muzaffarpur Collectorate, Muzaffarpur - BSPCB",2026-08-03,1.0037,1.0,1.3435,0.62,1.0786,Low,Muzaffarpur,Bihar,26.1209,85.3647
+"NISE Gwal Pahari, Gurugram - IITM",2026-09-01,1.4599,1.4407,1.1762,0.89,1.3786,High,Gurugram,Haryana,28.422681,77.148944
+"NSI Kalyanpur, Kanpur - UPPCB",2026-09-01,1.3182,1.1695,1.195,0.99,1.2484,High,Kanpur,Uttar Pradesh,26.509954,80.249612
+"NSIT Dwarka, Delhi - CPCB",2026-09-01,1.2501,1.1557,1.2719,0.92,1.2311,High,Delhi,Delhi,28.60909,77.0325413
+"NSUT Jaffarpur, Delhi - DPCC",2026-09-01,1.3509,1.2811,1.3087,0.97,1.3226,High,Delhi,Delhi,28.594004,76.909423
+"Nacharam_TSIIC IALA, Hyderabad - TSPCB",2026-09-01,1.1839,1.0,1.0928,0.94,1.1125,High,Hyderabad,Telangana,17.429398,78.569354
+"Nagar Nigam, Prayagraj - UPPCB",2026-09-01,0.7998,1.0667,1.4355,1.0,0.9949,High,Prayagraj,Uttar Pradesh,25.44919916,81.82735986
+"Nagar Palika Parishad, Baraut - UPPCB",2026-09-01,2.2291,1.7303,1.4473,0.86,1.8782,High,Baraut,Uttar Pradesh,29.09956,77.26235
+"Nagla Bhau, Firozabad - UPPCB",2026-09-01,1.0728,1.0,1.1122,0.96,1.0636,High,Firozabad,Uttar Pradesh,27.168897,78.37696
+"Naharlagun, Naharlagun - APSPCB",2026-09-01,0.8994,1.0,1.2118,1.0,0.995,High,Naharlagun,Arunachal Pradesh,27.103358,93.679645
+"Najafgarh, Delhi - DPCC",2026-09-01,1.2538,1.1667,1.2917,1.0,1.2406,High,Delhi,Delhi,28.570173,76.933762
+"Narela, Delhi - DPCC",2026-09-01,1.4047,1.3795,1.3021,0.98,1.3721,High,Delhi,Delhi,28.822836,77.101981
+"Nathu Colony, Ballabgarh - HSPCB",2026-09-01,1.4096,1.4216,1.3372,0.97,1.3941,High,Ballabgarh,Haryana,28.3419248,77.319699
+"Navy Nagar-Colaba, Mumbai - IITM",2026-09-01,1.1168,1.0,1.1759,0.88,1.1005,High,Mumbai,Maharashtra,18.897756,72.81332
+"Nawapara SECL Colony, Chhal - CECB",2026-09-01,1.1128,1.1523,1.2045,0.93,1.145,High,Chhal,Chhattisgarh,22.118125,83.140608
+"Nayapura, Kota - RSPCB",2026-09-01,1.3197,1.1667,1.2216,1.0,1.2552,High,Kota,Rajasthan,25.196024,75.855668
+"Nehru Nagar, Delhi - DPCC",2026-09-01,1.5924,1.7333,1.5933,1.0,1.6267,High,Delhi,Delhi,28.56789,77.250515
+"Nehru Nagar, Kanpur - UPPCB",2026-09-01,1.2668,1.1725,1.3018,0.98,1.251,High,Kanpur,Uttar Pradesh,26.4703136,80.3229863
+"Nerul, Navi Mumbai - MPCB",2026-09-01,0.9463,1.0,1.1107,0.8,0.9986,Medium,Navi Mumbai,Maharashtra,19.008751,73.01662
 "New Anaj Mandi, Khairthal - RSPCB",2026-08-25,1.6159,1.5185,1.9578,0.85,1.6692,High,Khairthal,Rajasthan,27.8015617,76.6365217
-"New Colony, Bundi - RSPCB",2026-08-31,1.1133,1.0,1.1902,0.99,1.1021,High,Bundi,Rajasthan,25.435774,75.644272
-"New DM Office, Arrah - BSPCB",2026-08-30,0.9813,1.0,1.075,0.9,1.0087,High,Arrah,Bihar,25.5626095,84.663264
-"New Industrial Town, Faridabad - HSPCB",2026-08-31,1.5074,1.8333,1.1893,1.0,1.4919,High,Faridabad,Haryana,28.39072,77.30059
-"New Malakpet, Hyderabad - TSPCB",2026-08-31,1.0822,1.0,1.1114,0.99,1.0681,High,Hyderabad,Telangana,17.37206,78.50864
-"New Mandi, Muzaffarnagar - UPPCB",2026-08-31,1.4544,1.4407,1.5406,0.99,1.472,High,Muzaffarnagar,Uttar Pradesh,29.4723508,77.7194031
-"New Tehsil, Shamli - UPPCB",2026-08-31,1.2191,1.1946,1.1831,0.92,1.2039,High,Shamli,Uttar Pradesh,29.4603683,77.3410291
-"North Campus, DU, Delhi - IITM",2026-08-31,1.9258,1.9154,1.5075,0.89,1.809,High,Delhi,Delhi,28.6573814,77.1585447
-"OP Jindal Industrial Park, Tumidih - CECB",2026-08-31,1.1505,1.0761,1.2925,0.93,1.1649,High,Tumidih,Chhattisgarh,22.06631475,83.33820077
-"OP Jindal School, Kunjemura - CECB",2026-08-31,0.7192,1.0339,1.3799,0.99,0.9269,High,Kunjemura,Chhattisgarh,22.12665,83.483212
-"Okhla Phase-2, Delhi - DPCC",2026-08-31,1.4189,1.4667,1.375,1.0,1.4195,High,Delhi,Delhi,28.530785,77.271255
-"Old City, Sri Ganganagar - RSPCB",2026-08-31,1.358,1.6103,1.2188,0.99,1.3793,High,Sri Ganganagar,Rajasthan,29.931624,73.864511
-"Old MIDC, Jalna - MPCB",2026-08-31,1.1395,1.0408,1.2744,0.9,1.1456,High,Jalna,Maharashtra,19.854616,75.905894
-"Omex Eternity, Vrindavan - UPPCB",2026-08-31,1.3003,1.1054,1.2362,0.97,1.2329,High,Vrindavan,Uttar Pradesh,27.571409,77.655757
-"Opp GPO Civil Lines, Nagpur - MPCB",2026-08-31,0.9493,1.0,1.2421,0.98,1.0286,High,Nagpur,Maharashtra,21.152875,79.0517531
-"PCBL Residential Complex, Durgapur - WBPCB",2026-08-31,1.1075,1.207,1.1651,0.98,1.146,High,Durgapur,West Bengal,23.508764,87.35444
-"PWD Junction, Kohima - NPCB",2026-08-31,0.6965,1.0,1.0974,1.0,0.8542,High,Kohima,Nagaland,25.6635413,94.0989878
-"Padmapukur, Howrah - WBPCB",2026-08-31,1.0373,1.0,1.187,0.93,1.0631,High,Howrah,West Bengal,22.5687319,88.2797276
-"Pali Dungra, Mathura - UPPCB",2026-08-31,1.0977,1.1667,1.2128,1.0,1.1427,High,Mathura,Uttar Pradesh,27.410954,77.550619
-"Pallavpuram Phase 2, Meerut - UPPCB",2026-08-31,1.7035,1.7246,1.6075,0.98,1.6842,High,Meerut,Uttar Pradesh,29.06351,77.709723
-"Pan Bazaar, Guwahati - PCBA",2026-08-31,0.749,1.0,1.0278,0.78,0.8714,Medium,Guwahati,Assam,26.1875,91.744194
-"Panchal Nagar, Gadag - KSPCB",2026-08-31,1.5899,1.7081,1.1506,0.94,1.4929,High,Gadag,Karnataka,15.411456,75.638133
-"Panchawati_Pashan, Pune - IITM",2026-08-31,1.0451,1.0,1.1216,0.9,1.0521,High,Pune,Maharashtra,18.536457,73.805454
-"Pandav Nagari, Nashik - MPCB",2026-08-31,0.7619,1.0,1.1107,0.99,0.8961,High,Nashik,Maharashtra,19.9591346,73.7788008
-"Park Street Wakad, Pimpri Chinchwad - MPCB",2026-08-31,0.8591,1.0,1.1219,0.94,0.9539,High,Pimpri-Chinchwad,Maharashtra,18.59051,73.77946
-"Paryavaran Parisar, Bhopal - MPPCB",2026-08-31,1.0584,1.0,1.1974,0.98,1.0762,High,Bhopal,Madhya Pradesh,23.210494,77.425409
-"Patia, Bhubaneswar - OSPCB",2026-08-31,0.9107,1.0,1.126,0.99,0.983,High,Bhubaneswar,Odisha,20.34652,85.8163
-"Patparganj, Delhi - DPCC",2026-08-31,1.296,1.3581,1.2512,0.96,1.2998,High,Delhi,Delhi,28.623763,77.287209
-"Patti Mehar, Ambala - HSPCB",2026-08-31,1.5135,1.6781,1.2776,0.99,1.4886,High,Ambala,Haryana,30.379589,76.778328
-"Peenya, Bengaluru - CPCB",2026-08-31,0.9584,1.2789,1.6763,0.91,1.1846,High,Bengaluru,Karnataka,13.0270199,77.494094
-"Perungudi, Chennai - TNPCB",2026-08-31,0.9353,1.4,1.4849,1.0,1.1612,High,Chennai,Tamil Nadu,12.9533,80.2357
-"Phase-1 GIDC, Vapi - GPCB",2026-08-31,0.9409,1.0,1.1974,0.98,1.0147,High,Vapi,Gujarat,20.362421,72.918013
-"Phase-4 GIDC, Vatva - GPCB",2026-08-31,1.8351,1.8667,1.7605,1.0,1.8239,High,Vatva,Gujarat,22.969611,72.6435
-"Pimpleshwar Mandir, Kalyan - MPCB",2026-08-31,1.1617,1.0,1.1674,0.99,1.1203,High,Kalyan,Maharashtra,19.192056,72.9585188
-"Plammoodu, Thiruvananthapuram - Kerala PCB",2026-08-31,0.7613,1.0,1.1107,1.0,0.8957,High,Thiruvananthapuram,Kerala,8.5149093,76.9435879
-"Police Commissionerate, Jaipur - RSPCB",2026-08-31,1.5855,1.5175,1.391,0.98,1.5177,High,Jaipur,Rajasthan,26.9164092,75.7994901
-"Police Line, Saharsa - BSPCB",2026-08-31,1.1172,1.1757,1.4621,0.97,1.2103,High,Saharsa,Bihar,25.892357,86.590325
-"Police Lines, Jind - HSPCB",2026-08-31,1.4452,1.3729,1.4224,0.99,1.4211,High,Jind,Haryana,29.307814,76.337619
-"Powai, Mumbai - MPCB",2026-08-31,0.9006,1.0,1.3775,0.66,1.0281,Medium,Mumbai,Maharashtra,19.1375,72.915056
-"Prabhat Colony, Jalgaon - MPCB",2026-08-31,0.9352,1.0,1.1661,1.0,1.005,High,Jalgaon,Maharashtra,21.001264,75.565602
-"Pragati Nagar, Pratapgarh - RSPCB",2026-08-31,1.2388,1.0667,1.2208,1.0,1.189,High,Pratapgarh,Rajasthan,24.041198,74.780702
-"Prashant Garden, Khora - UPPCB",2026-08-31,1.7976,1.8572,1.6065,0.94,1.7621,High,Khora,Uttar Pradesh,28.61119,77.34206
-"Pratap Nagar, Bhilwara - RSPCB",2026-08-31,1.4046,1.3795,1.281,0.98,1.3665,High,Bhilwara,Rajasthan,25.339605,74.618883
-"Priyambada Housing Estate, Haldia - WBPCB",2026-08-31,1.0097,1.0,1.195,0.99,1.0506,High,Haldia,West Bengal,22.06047,88.109737
-"Punjab Agricultural University, Ludhiana - PPCB",2026-08-24,1.6694,1.5839,1.5532,0.92,1.6182,High,Ludhiana,Punjab,30.9028,75.8086
-"Punjabi Bagh, Delhi - DPCC",2026-08-31,1.617,1.6211,1.6792,0.98,1.6333,High,Delhi,Delhi,28.674045,77.131023
-"Pusa, Delhi - DPCC",2026-08-31,1.3886,1.5667,1.2802,1.0,1.4023,High,Delhi,Delhi,28.639652,77.146275
-"Pusa, Delhi - IITM",2026-08-31,1.5112,1.2034,1.2691,0.89,1.3666,High,Delhi,Delhi,28.63611,77.173332
-"R K Puram, Delhi - DPCC",2026-08-31,1.6945,1.6573,1.3287,0.95,1.5857,High,Delhi,Delhi,28.563262,77.186937
-"RIICO Ind. Area III, Bhiwadi - RSPCB",2026-08-31,1.7764,1.9,1.7595,1.0,1.8022,High,Bhiwadi,Rajasthan,28.194909,76.862296
-"RIICO Sitapura, Jaipur - RSPCB",2026-08-31,1.4645,1.3729,1.2744,0.99,1.3918,High,Jaipur,Rajasthan,26.786682,75.827928
-"RIMT University, Mandi Gobindgarh - PPCB",2026-08-31,1.8863,1.9493,1.6888,0.99,1.85,High,Mandi Gobindgarh,Punjab,30.649961,76.331442
-"Rabindra Bharati University, Kolkata - WBPCB",2026-08-31,1.2369,1.2667,1.3772,1.0,1.2782,High,Kolkata,West Bengal,22.627847,88.380669
-"Rabindra Sarobar, Kolkata - WBPCB",2026-08-31,0.8897,1.0,1.1471,1.0,0.9762,High,Kolkata,West Bengal,22.51106,88.35142
-"Rachnakar Colony, Aurangabad - MPCB",2026-08-31,1.1318,1.0333,1.2216,1.0,1.1276,High,Aurangabad,Maharashtra,19.863756,75.321188
-"Radhakishan Pura, Sikar - RSPCB",2026-08-31,1.3148,1.3667,1.2027,1.0,1.2984,High,Sikar,Rajasthan,27.608912,75.153302
-"Raghunathpali, Rourkela - OSPCB",2026-08-31,0.9736,1.0703,1.2186,0.97,1.0545,High,Rourkela,Odisha,22.220833,84.809444
-"Raikhad, Ahmedabad - IITM",2026-08-31,1.0632,1.0333,1.1985,1.0,1.0877,High,Ahmedabad,Gujarat,23.020509,72.579261
-"Railway Colony, Barmer - RSPCB",2026-08-31,1.0261,1.0667,1.1651,1.0,1.0695,High,Barmer,Rajasthan,25.747299,71.393989
-"Railway Colony, Guwahati - PCBA",2026-08-31,1.0538,1.0345,1.3543,0.98,1.1169,High,Guwahati,Assam,26.181742,91.78063
-"Raja Ganj, Dholpur - RSPCB",2026-08-31,1.1995,1.1095,1.2064,0.95,1.1781,High,Dholpur,Rajasthan,26.699557,77.898881
-"Rajanpur, Gajraula - UPPCB",2026-08-31,1.2665,1.2712,1.6221,0.99,1.3486,High,Gajraula,Uttar Pradesh,28.829109,78.248796
-"Rajbagh, Srinagar - JKPCC",2026-08-31,0.8969,1.0,1.0739,0.99,0.9641,High,Srinagar,Jammu and Kashmir,34.066206,74.81982
-"Rajbansi Nagar, Patna - BSPCB",2026-08-31,1.1062,1.0,1.1933,0.89,1.0992,High,Patna,Bihar,25.599486,85.113666
-"Rajendra Nagar North, Guntur - APPCB",2026-08-31,1.3887,1.0667,1.2036,1.0,1.2544,High,Guntur,Andhra Pradesh,16.316553,80.413302
-"Rajendra Nagar, Bareilly - UPPCB",2026-08-31,1.1999,1.0778,1.1856,0.92,1.1646,High,Bareilly,Uttar Pradesh,28.38910936,79.42963708
-"Rajiv Gandhi Park, Vijayawada - APPCB",2026-08-31,1.4522,1.246,1.1506,0.97,1.3186,High,Vijayawada,Andhra Pradesh,16.509717,80.612222
-"Rajiv Nagar, Vijayawada - APPCB",2026-08-31,1.3822,1.179,1.2332,0.96,1.291,High,Vijayawada,Andhra Pradesh,16.554731,80.64911
-"Rajlaxmi Nagar, Jhalawar - RSPCB",2026-08-31,1.282,1.0678,1.3875,0.99,1.2492,High,Jhalawar,Rajasthan,24.588397,76.172782
-"Rakhial, Ahmedabad - IITM",2026-08-31,1.4223,1.4,1.3311,1.0,1.3934,High,Ahmedabad,Gujarat,23.016834,72.625775
-"Ram Nagar, Nagpur - MPCB",2026-08-31,1.0896,1.0678,1.2829,0.99,1.1293,High,Nagpur,Maharashtra,21.143383,79.048912
-"Rama Rao Peta, Kakinada - APPCB",2026-08-31,1.257,1.0,1.1112,0.9,1.1511,High,Kakinada,Andhra Pradesh,16.962488,82.229513
-"Ramachandrapuram, Hyderabad - TSPCB",2026-08-31,1.1584,1.0,1.1856,1.0,1.1231,High,Hyderabad,Telangana,17.528544,78.286195
-"Ramdaspeth, Akola - MPCB",2026-08-31,1.0469,1.0,1.1231,0.99,1.0533,High,Akola,Maharashtra,20.719516,77.000253
-"Rampur, Korba - CECB",2026-08-31,0.7009,1.0,1.1015,0.93,0.8577,High,Korba,Chhattisgarh,22.368195,82.746431
-"Ramteerth Nagar, Belgaum - KSPCB",2026-08-31,0.8344,1.0,1.1737,0.87,0.9508,High,Belgaum,Karnataka,15.888653,74.541751
-"Ratandeep Housing Society, Solapur - MPCB",2026-08-31,1.0756,1.0,1.1491,1.0,1.0738,High,Solapur,Maharashtra,17.65439,75.90649
-"Ratanpura, Rupnagar - Ambuja Cements",2026-08-31,1.1816,1.0,1.1872,0.79,1.1347,Medium,Rupnagar,Punjab,31.0325454,76.5623046
-"Rati Talai, Banswara - RSPCB",2026-08-31,1.1499,1.0,1.0997,0.99,1.0981,High,Banswara,Rajasthan,23.55519,74.44001
-"Regional Park, Indore - IMC",2026-08-31,0.8539,1.0,1.0,0.98,0.9241,High,Indore,Madhya Pradesh,22.678,75.8559
-"Residency Area, Indore - IMC",2026-08-31,1.0212,1.0,1.2201,0.9,1.0621,High,Indore,Madhya Pradesh,22.7084,75.8815
-"Revenue Colony-Shivajinagar, Pune - IITM",2026-08-31,1.0962,1.0,1.1107,0.96,1.0748,High,Pune,Maharashtra,18.530085,73.849598
-"Rishi Nagar, Kaithal - HSPCB",2026-08-31,1.5388,1.6325,1.375,0.97,1.5184,High,Kaithal,Haryana,29.8006,76.4155
-"Rohini, Delhi - DPCC",2026-08-31,1.6739,1.9667,1.8031,1.0,1.7754,High,Delhi,Delhi,28.732528,77.11992
-"Rohta, Agra - UPPCB",2026-08-31,1.1017,1.0,1.1618,0.99,1.0897,High,Agra,Uttar Pradesh,27.106972,78.000111
-"Royapuram, Chennai - TNPCB",2026-08-31,1.1909,1.0333,1.0936,1.0,1.1252,High,Chennai,Tamil Nadu,13.1036,80.2909
-"SAC ISRO Bopal, Ahmedabad - IITM",2026-08-31,1.2894,1.1155,1.3256,0.8,1.2522,Medium,Ahmedabad,Gujarat,23.041137,72.456691
-"SAC ISRO Satellite, Ahmedabad - IITM",2026-08-31,1.3033,1.3667,1.5197,1.0,1.3705,High,Ahmedabad,Gujarat,23.023389,72.515201
-"SDM Office_Khagra, Kishanganj - BSPCB",2026-08-31,1.1968,1.0373,1.1122,0.94,1.1338,High,Kishanganj,Bihar,26.0881305,87.93840336
-"SFTI Kusdihra, Gaya - BSPCB",2026-08-31,1.008,1.0,1.1226,1.0,1.0334,High,Gaya,Bihar,24.762518,84.982348
-"SIDCO Kurichi, Coimbatore - TNPCB",2026-08-28,0.9383,1.0,1.0139,0.94,0.972,High,Coimbatore,Tamil Nadu,10.942451,76.978996
-"SRM University, Modinagar - UPPCB",2026-08-31,1.4332,1.4781,1.2945,0.91,1.408,High,Modinagar,Uttar Pradesh,28.798171,77.540243
-"SVPI Airport Hansol, Ahmedabad - IITM",2026-08-29,1.1369,1.2811,1.2568,0.97,1.2011,High,Ahmedabad,Gujarat,23.076793,72.627874
-"SVSPA Campus, Barrackpore - WBPCB",2026-08-31,1.0659,1.0339,1.2203,0.99,1.0942,High,Barrackpore,West Bengal,22.7605581,88.3617589
-"Sadanand Nagar, Mehsana - Nexteng Enviro",2026-08-31,1.2171,1.1667,1.223,1.0,1.2058,High,Mehsana,Gujarat,23.59315,72.372792
-"Sadar Bazar, Jaisalmer - RSPCB",2026-08-31,1.2076,1.5,1.2666,1.0,1.2902,High,Jaisalmer,Rajasthan,26.912329,70.909168
-"Sahilara, Maihar - KJS Cements",2026-08-31,0.7986,1.0,1.0693,0.78,0.9088,Medium,Maihar,Madhya Pradesh,24.2613009,80.7231783
-"Sahu Nagar, Sawai Madhopur - RSPCB",2026-08-31,1.206,1.0678,1.1654,0.99,1.1599,High,Sawai Madhopur,Rajasthan,26.031443,76.359327
-"Samanpura, Patna - BSPCB",2026-08-31,1.7683,1.7171,1.9034,0.91,1.788,High,Patna,Bihar,25.596727,85.085624
-"Samrat Ashok Udhyan, Jodhpur - RSPCB",2026-08-31,1.0429,1.0333,1.1974,1.0,1.0771,High,Jodhpur,Rajasthan,26.253384,72.976571
-"Sanathnagar, Hyderabad - TSPCB",2026-08-31,1.0665,1.0,1.1555,0.89,1.0707,High,Hyderabad,Telangana,17.4559458,78.4332152
-"Sanegurava Halli, Bengaluru - KSPCB",2026-08-14,0.855,1.0,1.0222,0.63,0.9298,Low,Bengaluru,Karnataka,12.990328,77.5431385
-"Sanjay Nagar, Ghaziabad - UPPCB",2026-08-31,1.3619,1.345,1.5622,0.98,1.405,High,Ghaziabad,Uttar Pradesh,28.685382,77.453839
-"Sanjay Palace, Agra - UPPCB",2026-08-31,1.1968,1.2333,1.3704,1.0,1.2474,High,Agra,Uttar Pradesh,27.19865833,78.00598056
-"Sanpada, Navi Mumbai - MPCB",2026-08-31,0.7706,1.0,1.0518,1.0,0.889,High,Navi Mumbai,Maharashtra,19.0575752,73.0151367
-"Sardar Patel Inter College, Baghpat - UPPCB",2026-08-31,1.2664,1.179,1.3215,0.96,1.2573,High,Baghpat,Uttar Pradesh,28.964949,77.278761
-"Sardar Patel Nagar, Dhanbad - JSPCB",2026-08-31,1.4176,1.4472,1.0444,0.76,1.3202,Medium,Dhanbad,Jharkhand,23.80569,86.44268
-"Satyawati Vihar, Karauli - RSPCB",2026-08-31,1.0209,1.0,1.1494,0.96,1.0462,High,Karauli,Rajasthan,26.506177,77.025989
-"Savitribai Phule Pune University, Pune - MPCB",2026-08-31,0.7726,1.0,1.0666,0.94,0.8933,High,Pune,Maharashtra,18.547056,73.826908
-"Savta Mali Nagar, Pimpri-Chinchwad - IITM",2026-08-31,1.1095,1.0,1.2186,0.9,1.1067,High,Pimpri-Chinchwad,Maharashtra,18.614767,73.799516
-"Sawe Wadi, Latur - MPCB",2026-08-31,0.9895,1.0,1.2022,1.0,1.0416,High,Latur,Maharashtra,18.39963,76.57452
-"Science Center, Surat - SMC",2026-08-31,1.258,1.0,1.0936,0.89,1.147,High,Surat,Gujarat,21.170046,72.795405
-"Secretariat, Amaravati - APPCB",2026-08-31,1.0896,1.1142,1.2811,0.93,1.141,High,Amaravati,Andhra Pradesh,16.5150833,80.5181667
-"Sector - 125, Noida - UPPCB",2026-08-31,1.5367,1.527,1.3832,0.97,1.4944,High,Noida,Uttar Pradesh,28.5447608,77.3231257
-"Sector - 62, Noida - IITM",2026-08-31,1.6593,1.5333,1.5709,0.9,1.6047,High,Noida,Uttar Pradesh,28.6245479,77.3577104
-"Sector 11, Faridabad - HSPCB",2026-08-31,2.2832,1.9154,1.6303,0.99,2.0086,High,Faridabad,Haryana,28.376058,77.315741
-"Sector 22, Chandigarh - CPCC",2026-08-31,0.8576,1.0,1.1651,0.99,0.9621,High,Chandigarh,Chandigarh,30.735567,76.775714
-"Sector 30, Faridabad - HSPCB",2026-08-31,1.5817,1.345,1.0444,0.98,1.3692,High,Faridabad,Haryana,28.4417,77.3217
-"Sector-1, Noida - UPPCB",2026-08-31,1.4197,1.483,1.1754,0.98,1.3691,High,Noida,Uttar Pradesh,28.5898,77.3101
-"Sector-10, Gandhinagar - GPCB",2026-08-31,1.078,1.0365,1.2393,0.95,1.1053,High,Gandhinagar,Gujarat,23.221714,72.654328
-"Sector-116, Noida - UPPCB",2026-08-31,1.8948,1.8626,1.6888,0.98,1.8332,High,Noida,Uttar Pradesh,28.56923,77.393848
-"Sector-12, Karnal - HSPCB",2026-08-31,1.3648,1.4068,1.4261,0.99,1.3904,High,Karnal,Haryana,29.6953,77.0027
-"Sector-18, Panipat - HSPCB",2026-08-31,1.8977,1.7877,1.8573,0.96,1.8596,High,Panipat,Haryana,29.432304,76.972765
-"Sector-2 IMT, Manesar - HSPCB",2026-08-31,1.7001,1.6556,1.5419,0.98,1.6481,High,Manesar,Haryana,28.360699,76.93609
-"Sector-2 Industrial Area, Pithampur - MPPCB",2026-08-31,1.6948,1.8137,1.7266,0.99,1.7318,High,Pithampur,Madhya Pradesh,22.624758,75.675238
-"Sector-2 Murlipura, Jaipur - RSPCB",2026-08-31,1.4259,1.3865,1.2917,0.97,1.3814,High,Jaipur,Rajasthan,26.960669,75.771817
-"Sector-2, Rourkela - OSPCB",2026-08-31,1.0147,1.0,1.0,0.8,1.0073,Medium,Rourkela,Odisha,22.245,84.88111111
-"Sector-25, Chandigarh - CPCC",2026-08-31,1.0199,1.0,1.2562,0.97,1.0692,High,Chandigarh,Chandigarh,30.751462,76.762879
-"Sector-2E Kalamboli, Navi Mumbai - MPCB",2026-08-31,0.8276,1.0,1.0739,1.0,0.9261,High,Navi Mumbai,Maharashtra,19.02579,73.10297
-"Sector-3B Avas Vikas Colony, Agra - UPPCB",2026-08-31,1.37,1.1074,1.1856,0.96,1.2529,High,Agra,Uttar Pradesh,27.19412,77.96237
-"Sector-51, Gurugram - HSPCB",2026-08-31,1.9858,1.8756,1.859,0.93,1.9256,High,Gurugram,Haryana,28.4227,77.0667
-"Sector-53, Chandigarh - CPCC",2026-08-31,0.7887,1.0,1.1052,0.95,0.9105,High,Chandigarh,Chandigarh,30.719859,76.738637
-"Sector-6, Panchkula - HSPCB ",2026-08-31,1.3227,1.0,1.2116,0.89,1.2066,High,Panchkula,Haryana,30.7057778,76.8531805555555
-"Sector-7, Kurukshetra - HSPCB",2026-08-31,1.358,1.2667,1.2393,1.0,1.3044,High,Kurukshetra,Haryana,29.966942,76.875879
-"Sector-D Industrial Area, Mandideep - MPPCB",2026-08-31,1.4654,1.6,1.5143,1.0,1.5103,High,Mandideep,Madhya Pradesh,23.10844,77.511428
-"Semmandalam, Cuddalore - TNPCB",2026-08-31,0.6735,1.0,1.2397,0.43,0.866,Low,Cuddalore,Tamil Nadu,11.7637683,79.7499835
-"Sewri, Mumbai - BMC",2026-08-31,0.8029,1.0,1.0923,0.89,0.9161,High,Mumbai,Maharashtra,19.000084,72.85673
-"Shadipur, Delhi - CPCB",2026-08-31,1.3132,1.0678,1.1831,0.99,1.2149,High,Delhi,Delhi,28.6514781,77.1473105
-"Shahjahan Garden, Agra - UPPCB",2026-08-31,1.0778,1.0339,1.1222,0.99,1.0775,High,Agra,Uttar Pradesh,27.169338,78.03582
-"Shasthri Nagar, Ratlam - IPCA Lab",2026-08-31,1.3078,1.0,1.1674,0.87,1.1887,High,Ratlam,Madhya Pradesh,23.331731,75.045981
-"Shastri Nagar, Chittorgarh - RSPCB",2026-08-31,1.4524,1.4746,1.5376,0.99,1.4789,High,Chittorgarh,Rajasthan,24.892047,74.623527
-"Shastri Nagar, Jaipur - RSPCB",2026-08-31,1.6048,1.9333,1.4261,1.0,1.6324,High,Jaipur,Rajasthan,26.9502929,75.730943
-"Shastri Nagar, Narnaul - HSPCB",2026-08-31,1.5743,1.5764,1.1854,0.99,1.467,High,Narnaul,Haryana,28.060249,76.113115
-"Shastri Nagar, Tonk - RSPCB",2026-08-31,1.3928,1.5667,1.3706,1.0,1.4286,High,Tonk,Rajasthan,26.159933,75.780517
-"Shastripuram, Agra - UPPCB",2026-08-31,1.2213,1.0339,1.1491,0.99,1.1537,High,Agra,Uttar Pradesh,27.19862,77.92066
-"Shivaji Nagar, Jhansi - UPPCB",2026-08-31,1.1991,1.0,1.1815,0.98,1.1417,High,Jhansi,Uttar Pradesh,25.4547,78.6039
-"Shivaji Nagar, Mumbai - BMC",2026-08-31,0.9615,1.0,1.1831,0.98,1.0227,High,Mumbai,Maharashtra,19.060498,72.923356
-"Shivaji Nagar, Rishikesh - UKPCB",2026-08-31,0.3255,1.0,1.0,1.0,0.5705,High,Rishikesh,Uttarakhand,30.075911,78.2859547
-"Shivaji University, Kolhapur - MPCB",2026-08-31,0.8967,1.0,1.1471,1.0,0.98,High,Kolhapur,Maharashtra,16.6870449,74.2505872
-"Shivapura_Peenya, Bengaluru - KSPCB",2026-08-31,1.2363,1.0,1.0742,0.85,1.132,High,Bengaluru,Karnataka,13.0246342,77.5080115
-"Shivneri Colony, Amravati - MPCB",2026-08-31,0.9231,1.0,1.1471,0.98,0.9943,High,Amravati,Maharashtra,20.9402359,77.7895248
-"Shri Shivaji Science College, Amravati - MPCB",2026-08-31,0.8992,1.0,1.2467,0.97,1.002,High,Amravati,Maharashtra,20.939198,77.765701
-"Shrinath Puram, Kota - RSPCB",2026-08-31,1.2973,1.138,1.1856,0.98,1.2275,High,Kota,Rajasthan,25.14389,75.821256
-"Shrivastav Colony, Damoh - MPPCB",2026-08-31,0.9353,1.0,1.0279,0.89,0.9738,High,Damoh,Madhya Pradesh,23.81748678,79.446246
-"Shyam Nagar, Palwal - HSPCB",2026-08-31,1.322,1.339,1.1334,0.99,1.2762,High,Palwal,Haryana,28.1485564,77.3320667
-"Siddharth Nagar-Worli, Mumbai - IITM",2026-08-28,0.9043,1.0,1.0997,0.8,0.9738,Medium,Mumbai,Maharashtra,19.000083,72.813993
-"Sidhi Vinayak Nagar, Ulhasnagar - MPCB",2026-08-31,0.9967,1.0351,1.4675,0.97,1.1084,High,Ulhasnagar,Maharashtra,19.235581,73.159121
-"Sikulpuikawn, Aizawl - Mizoram PCB",2026-08-28,0.318,1.0,1.0,0.82,0.5639,Medium,Aizawl,Mizoram,23.7176342,92.7192841
-"Silk Board, Bengaluru - KSPCB",2026-08-31,1.3224,1.3586,1.3413,0.91,1.3361,High,Bengaluru,Karnataka,12.917348,77.622813
-"Siltara Phase-II, Raipur - CECB",2026-08-31,1.2303,1.069,1.2811,0.98,1.1999,High,Raipur,Chhattisgarh,21.371751,81.664929
-"Sinchan Bhavan, Kolhapur - MPCB",2026-08-31,0.7726,1.0,1.0813,0.92,0.8963,High,Kolhapur,Maharashtra,16.7143745,74.2426398
-"Sion, Mumbai - MPCB",2026-08-31,1.0027,1.0,1.1302,0.86,1.0325,High,Mumbai,Maharashtra,19.047,72.8746
-"Sirifort, Delhi - CPCB",2026-08-31,1.664,1.8,1.5314,1.0,1.6621,High,Delhi,Delhi,28.5504249,77.2159377
-"Sita Rama Nagar, Kurnool - APPCB",2026-08-31,1.0769,1.0,1.1122,0.92,1.0657,High,Kurnool,Andhra Pradesh,15.83411,78.028546
+"New Colony, Bundi - RSPCB",2026-09-01,1.1158,1.0,1.1687,0.99,1.0983,High,Bundi,Rajasthan,25.435774,75.644272
+"New DM Office, Arrah - BSPCB",2026-09-01,0.9812,1.0,1.075,0.9,1.0086,High,Arrah,Bihar,25.5626095,84.663264
+"New Industrial Town, Faridabad - HSPCB",2026-09-01,1.5107,1.8333,1.2237,1.0,1.5042,High,Faridabad,Haryana,28.39072,77.30059
+"New Malakpet, Hyderabad - TSPCB",2026-09-01,1.0888,1.0,1.1122,0.99,1.0716,High,Hyderabad,Telangana,17.37206,78.50864
+"New Mandi, Muzaffarnagar - UPPCB",2026-09-01,1.488,1.4746,1.6022,0.99,1.5123,High,Muzaffarnagar,Uttar Pradesh,29.4723508,77.7194031
+"New Tehsil, Shamli - UPPCB",2026-09-01,1.2642,1.2335,1.1831,0.92,1.2358,High,Shamli,Uttar Pradesh,29.4603683,77.3410291
+"North Campus, DU, Delhi - IITM",2026-09-01,1.9339,1.9154,1.5075,0.89,1.8128,High,Delhi,Delhi,28.6573814,77.1585447
+"OP Jindal Industrial Park, Tumidih - CECB",2026-09-01,1.0971,1.0381,1.2583,0.93,1.1198,High,Tumidih,Chhattisgarh,22.06631475,83.33820077
+"OP Jindal School, Kunjemura - CECB",2026-09-01,0.7161,1.0339,1.3608,0.99,0.9216,High,Kunjemura,Chhattisgarh,22.12665,83.483212
+"Okhla Phase-2, Delhi - DPCC",2026-09-01,1.4278,1.5,1.3157,1.0,1.4163,High,Delhi,Delhi,28.530785,77.271255
+"Old City, Sri Ganganagar - RSPCB",2026-09-01,1.3519,1.6442,1.1977,0.99,1.3774,High,Sri Ganganagar,Rajasthan,29.931624,73.864511
+"Old MIDC, Jalna - MPCB",2026-09-01,1.1666,1.0408,1.2216,0.9,1.1469,High,Jalna,Maharashtra,19.854616,75.905894
+"Omex Eternity, Vrindavan - UPPCB",2026-09-01,1.314,1.1054,1.2393,0.97,1.2402,High,Vrindavan,Uttar Pradesh,27.571409,77.655757
+"Opp GPO Civil Lines, Nagpur - MPCB",2026-09-01,0.9616,1.0,1.2246,0.97,1.0315,High,Nagpur,Maharashtra,21.152875,79.0517531
+"PCBL Residential Complex, Durgapur - WBPCB",2026-09-01,1.0976,1.2108,1.16,0.97,1.1405,High,Durgapur,West Bengal,23.508764,87.35444
+"PWD Junction, Kohima - NPCB",2026-09-01,0.6904,1.0,1.0974,1.0,0.8504,High,Kohima,Nagaland,25.6635413,94.0989878
+"Padmapukur, Howrah - WBPCB",2026-09-01,1.0348,1.0,1.187,0.93,1.0618,High,Howrah,West Bengal,22.5687319,88.2797276
+"Pali Dungra, Mathura - UPPCB",2026-09-01,1.0905,1.1667,1.1856,1.0,1.1325,High,Mathura,Uttar Pradesh,27.410954,77.550619
+"Pallavpuram Phase 2, Meerut - UPPCB",2026-09-01,1.7155,1.7459,1.6468,0.99,1.7055,High,Meerut,Uttar Pradesh,29.06351,77.709723
+"Pan Bazaar, Guwahati - PCBA",2026-09-01,0.7744,1.0,1.0361,0.77,0.8879,Medium,Guwahati,Assam,26.1875,91.744194
+"Panchal Nagar, Gadag - KSPCB",2026-09-01,1.5819,1.6938,1.1874,0.95,1.4978,High,Gadag,Karnataka,15.411456,75.638133
+"Panchawati_Pashan, Pune - IITM",2026-09-01,1.0433,1.0,1.1216,0.9,1.0512,High,Pune,Maharashtra,18.536457,73.805454
+"Pandav Nagari, Nashik - MPCB",2026-09-01,0.7592,1.0,1.1107,0.99,0.8945,High,Nashik,Maharashtra,19.9591346,73.7788008
+"Park Street Wakad, Pimpri Chinchwad - MPCB",2026-09-01,0.8694,1.0,1.1219,0.94,0.9596,High,Pimpri-Chinchwad,Maharashtra,18.59051,73.77946
+"Paryavaran Parisar, Bhopal - MPPCB",2026-09-01,1.0718,1.0,1.1974,0.98,1.083,High,Bhopal,Madhya Pradesh,23.210494,77.425409
+"Patia, Bhubaneswar - OSPCB",2026-09-01,0.9127,1.0,1.1884,0.99,0.9975,High,Bhubaneswar,Odisha,20.34652,85.8163
+"Patparganj, Delhi - DPCC",2026-09-01,1.3031,1.3939,1.2326,0.96,1.3069,High,Delhi,Delhi,28.623763,77.287209
+"Patti Mehar, Ambala - HSPCB",2026-09-01,1.5334,1.712,1.2846,0.99,1.508,High,Ambala,Haryana,30.379589,76.778328
+"Peenya, Bengaluru - CPCB",2026-09-01,0.9565,1.2725,1.6514,0.92,1.1775,High,Bengaluru,Karnataka,13.0270199,77.494094
+"Perungudi, Chennai - TNPCB",2026-09-01,0.9547,1.4,1.4929,1.0,1.1748,High,Chennai,Tamil Nadu,12.9533,80.2357
+"Phase-1 GIDC, Vapi - GPCB",2026-09-01,0.9521,1.0,1.1759,0.98,1.0161,High,Vapi,Gujarat,20.362421,72.918013
+"Phase-4 GIDC, Vatva - GPCB",2026-09-01,1.8488,1.9,1.7605,1.0,1.8388,High,Vatva,Gujarat,22.969611,72.6435
+"Pimpleshwar Mandir, Kalyan - MPCB",2026-09-01,1.1568,1.0,1.1491,0.99,1.1136,High,Kalyan,Maharashtra,19.192056,72.9585188
+"Plammoodu, Thiruvananthapuram - Kerala PCB",2026-09-01,0.7599,1.0,1.1107,1.0,0.8949,High,Thiruvananthapuram,Kerala,8.5149093,76.9435879
+"Police Commissionerate, Jaipur - RSPCB",2026-09-01,1.5813,1.5175,1.391,0.98,1.5158,High,Jaipur,Rajasthan,26.9164092,75.7994901
+"Police Line, Saharsa - BSPCB",2026-09-01,1.1182,1.1757,1.4533,0.97,1.209,High,Saharsa,Bihar,25.892357,86.590325
+"Police Lines, Jind - HSPCB",2026-09-01,1.4644,1.4068,1.4068,0.99,1.4353,High,Jind,Haryana,29.307814,76.337619
+"Powai, Mumbai - MPCB",2026-09-01,0.9216,1.0,1.4766,0.66,1.0583,Medium,Mumbai,Maharashtra,19.1375,72.915056
+"Prabhat Colony, Jalgaon - MPCB",2026-09-01,0.9386,1.0,1.1938,1.0,1.0127,High,Jalgaon,Maharashtra,21.001264,75.565602
+"Pragati Nagar, Pratapgarh - RSPCB",2026-09-01,1.2333,1.0667,1.268,1.0,1.1976,High,Pratapgarh,Rajasthan,24.041198,74.780702
+"Prashant Garden, Khora - UPPCB",2026-09-01,1.8109,1.8944,1.6065,0.94,1.7774,High,Khora,Uttar Pradesh,28.61119,77.34206
+"Pratap Nagar, Bhilwara - RSPCB",2026-09-01,1.4035,1.3795,1.281,0.98,1.3659,High,Bhilwara,Rajasthan,25.339605,74.618883
+"Priyambada Housing Estate, Haldia - WBPCB",2026-09-01,1.009,1.0,1.2116,0.99,1.0539,High,Haldia,West Bengal,22.06047,88.109737
+"Punjab Agricultural University, Ludhiana - PPCB",2026-08-24,1.6774,1.5976,1.5543,0.91,1.6258,High,Ludhiana,Punjab,30.9028,75.8086
+"Punjabi Bagh, Delhi - DPCC",2026-09-01,1.6219,1.6556,1.6519,0.98,1.6377,High,Delhi,Delhi,28.674045,77.131023
+"Pusa, Delhi - DPCC",2026-09-01,1.3978,1.6,1.2652,1.0,1.4102,High,Delhi,Delhi,28.639652,77.146275
+"Pusa, Delhi - IITM",2026-09-01,1.5262,1.2034,1.2648,0.89,1.3722,High,Delhi,Delhi,28.63611,77.173332
+"R K Puram, Delhi - DPCC",2026-09-01,1.7124,1.6938,1.3946,0.95,1.6223,High,Delhi,Delhi,28.563262,77.186937
+"RIICO Ind. Area III, Bhiwadi - RSPCB",2026-09-01,1.7906,1.9,1.8005,1.0,1.8198,High,Bhiwadi,Rajasthan,28.194909,76.862296
+"RIICO Sitapura, Jaipur - RSPCB",2026-09-01,1.4889,1.4068,1.2931,0.99,1.4171,High,Jaipur,Rajasthan,26.786682,75.827928
+"RIMT University, Mandi Gobindgarh - PPCB",2026-09-01,1.8832,1.9316,1.6532,0.98,1.8345,High,Mandi Gobindgarh,Punjab,30.649961,76.331442
+"Rabindra Bharati University, Kolkata - WBPCB",2026-09-01,1.232,1.2667,1.3772,1.0,1.2756,High,Kolkata,West Bengal,22.627847,88.380669
+"Rabindra Sarobar, Kolkata - WBPCB",2026-09-01,0.8867,1.0,1.1471,1.0,0.9745,High,Kolkata,West Bengal,22.51106,88.35142
+"Rachnakar Colony, Aurangabad - MPCB",2026-09-01,1.1328,1.0333,1.2216,1.0,1.1281,High,Aurangabad,Maharashtra,19.863756,75.321188
+"Radhakishan Pura, Sikar - RSPCB",2026-09-01,1.3222,1.4,1.2027,1.0,1.3099,High,Sikar,Rajasthan,27.608912,75.153302
+"Raghunathpali, Rourkela - OSPCB",2026-09-01,0.9619,1.0703,1.2186,0.97,1.0481,High,Rourkela,Odisha,22.220833,84.809444
+"Raikhad, Ahmedabad - IITM",2026-09-01,1.0667,1.0333,1.1985,1.0,1.0895,High,Ahmedabad,Gujarat,23.020509,72.579261
+"Railway Colony, Barmer - RSPCB",2026-09-01,1.0145,1.0333,1.1216,1.0,1.0451,High,Barmer,Rajasthan,25.747299,71.393989
+"Railway Colony, Guwahati - PCBA",2026-09-01,1.049,1.0351,1.3401,0.97,1.1115,High,Guwahati,Assam,26.181742,91.78063
+"Raja Ganj, Dholpur - RSPCB",2026-09-01,1.2011,1.1095,1.1856,0.95,1.1737,High,Dholpur,Rajasthan,26.699557,77.898881
+"Rajanpur, Gajraula - UPPCB",2026-09-01,1.301,1.3051,1.6704,0.99,1.386,High,Gajraula,Uttar Pradesh,28.829109,78.248796
+"Rajbagh, Srinagar - JKPCC",2026-08-31,0.8972,1.0,1.0739,0.98,0.9642,High,Srinagar,Jammu and Kashmir,34.066206,74.81982
+"Rajbansi Nagar, Patna - BSPCB",2026-09-01,1.105,1.0,1.1856,0.89,1.0969,High,Patna,Bihar,25.599486,85.113666
+"Rajendra Nagar North, Guntur - APPCB",2026-09-01,1.3905,1.0667,1.2036,1.0,1.2552,High,Guntur,Andhra Pradesh,16.316553,80.413302
+"Rajendra Nagar, Bareilly - UPPCB",2026-09-01,1.2033,1.0761,1.1782,0.93,1.164,High,Bareilly,Uttar Pradesh,28.38910936,79.42963708
+"Rajiv Gandhi Park, Vijayawada - APPCB",2026-09-01,1.4512,1.246,1.1506,0.97,1.3182,High,Vijayawada,Andhra Pradesh,16.509717,80.612222
+"Rajiv Nagar, Vijayawada - APPCB",2026-09-01,1.3883,1.2148,1.2226,0.96,1.3008,High,Vijayawada,Andhra Pradesh,16.554731,80.64911
+"Rajlaxmi Nagar, Jhalawar - RSPCB",2026-09-01,1.2911,1.0678,1.3875,0.99,1.2536,High,Jhalawar,Rajasthan,24.588397,76.172782
+"Rakhial, Ahmedabad - IITM",2026-09-01,1.4272,1.4,1.3311,1.0,1.3958,High,Ahmedabad,Gujarat,23.016834,72.625775
+"Ram Nagar, Nagpur - MPCB",2026-09-01,1.1034,1.0678,1.2829,0.99,1.1364,High,Nagpur,Maharashtra,21.143383,79.048912
+"Rama Rao Peta, Kakinada - APPCB",2026-09-01,1.2505,1.0,1.1112,0.9,1.1481,High,Kakinada,Andhra Pradesh,16.962488,82.229513
+"Ramachandrapuram, Hyderabad - TSPCB",2026-09-01,1.1608,1.0,1.1856,1.0,1.1242,High,Hyderabad,Telangana,17.528544,78.286195
+"Ramdaspeth, Akola - MPCB",2026-09-01,1.0544,1.0,1.1122,0.99,1.0545,High,Akola,Maharashtra,20.719516,77.000253
+"Rampur, Korba - CECB",2026-09-01,0.7066,1.0,1.0877,0.93,0.8585,High,Korba,Chhattisgarh,22.368195,82.746431
+"Ramteerth Nagar, Belgaum - KSPCB",2026-09-01,0.8305,1.0,1.1737,0.87,0.9485,High,Belgaum,Karnataka,15.888653,74.541751
+"Ratandeep Housing Society, Solapur - MPCB",2026-09-01,1.0742,1.0,1.1307,1.0,1.0688,High,Solapur,Maharashtra,17.65439,75.90649
+"Ratanpura, Rupnagar - Ambuja Cements",2026-09-01,1.1826,1.0,1.1692,0.8,1.1308,Medium,Rupnagar,Punjab,31.0325454,76.5623046
+"Rati Talai, Banswara - RSPCB",2026-09-01,1.1476,1.0,1.0776,0.99,1.0915,High,Banswara,Rajasthan,23.55519,74.44001
+"Regional Park, Indore - IMC",2026-09-01,0.8621,1.0,1.0,0.98,0.9285,High,Indore,Madhya Pradesh,22.678,75.8559
+"Residency Area, Indore - IMC",2026-09-01,1.0405,1.0,1.2216,0.9,1.0724,High,Indore,Madhya Pradesh,22.7084,75.8815
+"Revenue Colony-Shivajinagar, Pune - IITM",2026-09-01,1.1006,1.0,1.0887,0.95,1.0716,High,Pune,Maharashtra,18.530085,73.849598
+"Rishi Nagar, Kaithal - HSPCB",2026-09-01,1.5714,1.6676,1.3845,0.97,1.5452,High,Kaithal,Haryana,29.8006,76.4155
+"Rohini, Delhi - DPCC",2026-09-01,1.6765,1.9667,1.7892,1.0,1.7734,High,Delhi,Delhi,28.732528,77.11992
+"Rohta, Agra - UPPCB",2026-09-01,1.1046,1.0,1.1833,0.99,1.0962,High,Agra,Uttar Pradesh,27.106972,78.000111
+"Royapuram, Chennai - TNPCB",2026-09-01,1.196,1.0333,1.075,1.0,1.1227,High,Chennai,Tamil Nadu,13.1036,80.2909
+"SAC ISRO Bopal, Ahmedabad - IITM",2026-09-01,1.2706,1.1101,1.3256,0.81,1.2415,Medium,Ahmedabad,Gujarat,23.041137,72.456691
+"SAC ISRO Satellite, Ahmedabad - IITM",2026-09-01,1.3081,1.3667,1.5197,1.0,1.373,High,Ahmedabad,Gujarat,23.023389,72.515201
+"SDM Office_Khagra, Kishanganj - BSPCB",2026-09-01,1.2008,1.0373,1.1122,0.94,1.1356,High,Kishanganj,Bihar,26.0881305,87.93840336
+"SFTI Kusdihra, Gaya - BSPCB",2026-09-01,0.9967,1.0,1.1226,1.0,1.0276,High,Gaya,Bihar,24.762518,84.982348
+"SIDCO Kurichi, Coimbatore - TNPCB",2026-08-28,0.8778,1.0,1.0,0.93,0.9369,High,Coimbatore,Tamil Nadu,10.942451,76.978996
+"SRM University, Modinagar - UPPCB",2026-09-01,1.4622,1.5179,1.2945,0.91,1.4316,High,Modinagar,Uttar Pradesh,28.798171,77.540243
+"SVPI Airport Hansol, Ahmedabad - IITM",2026-09-01,1.1468,1.2811,1.2605,0.97,1.2072,High,Ahmedabad,Gujarat,23.076793,72.627874
+"SVSPA Campus, Barrackpore - WBPCB",2026-09-01,1.0609,1.0339,1.2203,0.99,1.0916,High,Barrackpore,West Bengal,22.7605581,88.3617589
+"Sadanand Nagar, Mehsana - Nexteng Enviro",2026-09-01,1.2131,1.1667,1.223,1.0,1.2038,High,Mehsana,Gujarat,23.59315,72.372792
+"Sadar Bazar, Jaisalmer - RSPCB",2026-09-01,1.2088,1.5,1.2737,1.0,1.2926,High,Jaisalmer,Rajasthan,26.912329,70.909168
+"Sahilara, Maihar - KJS Cements",2026-09-01,0.7986,1.0,1.0693,0.78,0.9088,Medium,Maihar,Madhya Pradesh,24.2613009,80.7231783
+"Sahu Nagar, Sawai Madhopur - RSPCB",2026-09-01,1.213,1.0678,1.1434,0.99,1.1577,High,Sawai Madhopur,Rajasthan,26.031443,76.359327
+"Samanpura, Patna - BSPCB",2026-09-01,1.7574,1.7396,1.9034,0.92,1.7883,High,Patna,Bihar,25.596727,85.085624
+"Samrat Ashok Udhyan, Jodhpur - RSPCB",2026-09-01,1.036,1.0333,1.1651,1.0,1.0662,High,Jodhpur,Rajasthan,26.253384,72.976571
+"Sanathnagar, Hyderabad - TSPCB",2026-09-01,1.061,1.0,1.1555,0.89,1.068,High,Hyderabad,Telangana,17.4559458,78.4332152
+"Sanegurava Halli, Bengaluru - KSPCB",2026-08-14,0.8553,1.0,1.0222,0.62,0.9299,Low,Bengaluru,Karnataka,12.990328,77.5431385
+"Sanjay Nagar, Ghaziabad - UPPCB",2026-09-01,1.3707,1.345,1.5517,0.98,1.4072,High,Ghaziabad,Uttar Pradesh,28.685382,77.453839
+"Sanjay Palace, Agra - UPPCB",2026-09-01,1.1799,1.2,1.3598,1.0,1.2277,High,Agra,Uttar Pradesh,27.19865833,78.00598056
+"Sanpada, Navi Mumbai - MPCB",2026-09-01,0.7565,1.0,1.0518,1.0,0.8808,High,Navi Mumbai,Maharashtra,19.0575752,73.0151367
+"Sardar Patel Inter College, Baghpat - UPPCB",2026-09-01,1.2706,1.179,1.3014,0.96,1.2546,High,Baghpat,Uttar Pradesh,28.964949,77.278761
+"Sardar Patel Nagar, Dhanbad - JSPCB",2026-09-01,1.4712,1.4082,1.0887,0.75,1.3497,Medium,Dhanbad,Jharkhand,23.80569,86.44268
+"Satyawati Vihar, Karauli - RSPCB",2026-09-01,1.0278,1.0,1.1247,0.96,1.044,High,Karauli,Rajasthan,26.506177,77.025989
+"Savitribai Phule Pune University, Pune - MPCB",2026-09-01,0.7781,1.0,1.0666,0.94,0.8964,High,Pune,Maharashtra,18.547056,73.826908
+"Savta Mali Nagar, Pimpri-Chinchwad - IITM",2026-09-01,1.112,1.0,1.208,0.9,1.1055,High,Pimpri-Chinchwad,Maharashtra,18.614767,73.799516
+"Sawe Wadi, Latur - MPCB",2026-09-01,0.9905,1.0,1.1808,1.0,1.0375,High,Latur,Maharashtra,18.39963,76.57452
+"Science Center, Surat - SMC",2026-09-01,1.2567,1.0,1.0936,0.89,1.1464,High,Surat,Gujarat,21.170046,72.795405
+"Secretariat, Amaravati - APPCB",2026-09-01,1.1055,1.1142,1.2811,0.93,1.1493,High,Amaravati,Andhra Pradesh,16.5150833,80.5181667
+"Sector - 125, Noida - UPPCB",2026-09-01,1.5569,1.5622,1.3788,0.97,1.5116,High,Noida,Uttar Pradesh,28.5447608,77.3231257
+"Sector - 62, Noida - IITM",2026-09-01,1.6764,1.5667,1.5603,0.9,1.619,High,Noida,Uttar Pradesh,28.6245479,77.3577104
+"Sector 11, Faridabad - HSPCB",2026-09-01,2.3036,1.9493,1.5818,0.99,2.0112,High,Faridabad,Haryana,28.376058,77.315741
+"Sector 22, Chandigarh - CPCC",2026-09-01,0.868,1.0,1.1769,0.99,0.9704,High,Chandigarh,Chandigarh,30.735567,76.775714
+"Sector 30, Faridabad - HSPCB",2026-09-01,1.614,1.3795,1.0757,0.98,1.4022,High,Faridabad,Haryana,28.4417,77.3217
+"Sector-1, Noida - UPPCB",2026-09-01,1.4338,1.5175,1.1754,0.98,1.3838,High,Noida,Uttar Pradesh,28.5898,77.3101
+"Sector-10, Gandhinagar - GPCB",2026-09-01,1.0875,1.0373,1.2216,0.94,1.1064,High,Gandhinagar,Gujarat,23.221714,72.654328
+"Sector-116, Noida - UPPCB",2026-09-01,1.9124,1.8971,1.7108,0.98,1.8562,High,Noida,Uttar Pradesh,28.56923,77.393848
+"Sector-12, Karnal - HSPCB",2026-09-01,1.3662,1.4,1.4261,1.0,1.3894,High,Karnal,Haryana,29.6953,77.0027
+"Sector-18, Panipat - HSPCB",2026-09-01,1.9076,1.7877,1.859,0.96,1.8648,High,Panipat,Haryana,29.432304,76.972765
+"Sector-2 IMT, Manesar - HSPCB",2026-09-01,1.7136,1.6901,1.5419,0.98,1.6632,High,Manesar,Haryana,28.360699,76.93609
+"Sector-2 Industrial Area, Pithampur - MPPCB",2026-09-01,1.7195,1.8476,1.7266,0.99,1.7525,High,Pithampur,Madhya Pradesh,22.624758,75.675238
+"Sector-2 Murlipura, Jaipur - RSPCB",2026-09-01,1.4371,1.3865,1.2917,0.97,1.3868,High,Jaipur,Rajasthan,26.960669,75.771817
+"Sector-2, Rourkela - OSPCB",2026-08-31,1.0128,1.0,1.0,0.79,1.0064,Medium,Rourkela,Odisha,22.245,84.88111111
+"Sector-25, Chandigarh - CPCC",2026-09-01,1.0261,1.0,1.2562,0.96,1.0724,High,Chandigarh,Chandigarh,30.751462,76.762879
+"Sector-2E Kalamboli, Navi Mumbai - MPCB",2026-09-01,0.8292,1.0,1.0739,1.0,0.927,High,Navi Mumbai,Maharashtra,19.02579,73.10297
+"Sector-3B Avas Vikas Colony, Agra - UPPCB",2026-09-01,1.3759,1.1074,1.1856,0.96,1.2556,High,Agra,Uttar Pradesh,27.19412,77.96237
+"Sector-51, Gurugram - HSPCB",2026-09-01,1.9895,1.8944,1.8488,0.94,1.9296,High,Gurugram,Haryana,28.4227,77.0667
+"Sector-53, Chandigarh - CPCC",2026-09-01,0.7974,1.0,1.1161,0.95,0.9179,High,Chandigarh,Chandigarh,30.719859,76.738637
+"Sector-6, Panchkula - HSPCB ",2026-09-01,1.334,1.0,1.2022,0.89,1.2094,High,Panchkula,Haryana,30.7057778,76.8531805555555
+"Sector-7, Kurukshetra - HSPCB",2026-09-01,1.371,1.3,1.2744,1.0,1.3284,High,Kurukshetra,Haryana,29.966942,76.875879
+"Sector-D Industrial Area, Mandideep - MPPCB",2026-09-01,1.4628,1.6,1.4972,1.0,1.5047,High,Mandideep,Madhya Pradesh,23.10844,77.511428
+"Semmandalam, Cuddalore - TNPCB",2026-09-01,0.7201,1.0,1.2397,0.43,0.8954,Low,Cuddalore,Tamil Nadu,11.7637683,79.7499835
+"Sewri, Mumbai - BMC",2026-09-01,0.7856,1.0,1.0739,0.89,0.9023,High,Mumbai,Maharashtra,19.000084,72.85673
+"Shadipur, Delhi - CPCB",2026-09-01,1.3175,1.1017,1.1831,0.99,1.2264,High,Delhi,Delhi,28.6514781,77.1473105
+"Shahjahan Garden, Agra - UPPCB",2026-09-01,1.0756,1.0339,1.1331,0.99,1.079,High,Agra,Uttar Pradesh,27.169338,78.03582
+"Shasthri Nagar, Ratlam - IPCA Lab",2026-09-01,1.3081,1.0,1.1674,0.87,1.1888,High,Ratlam,Madhya Pradesh,23.331731,75.045981
+"Shastri Nagar, Chittorgarh - RSPCB",2026-09-01,1.4454,1.4667,1.4838,1.0,1.4603,High,Chittorgarh,Rajasthan,24.892047,74.623527
+"Shastri Nagar, Jaipur - RSPCB",2026-08-31,1.6047,1.9154,1.4261,0.99,1.6286,High,Jaipur,Rajasthan,26.9502929,75.730943
+"Shastri Nagar, Narnaul - HSPCB",2026-09-01,1.5713,1.5764,1.1854,0.99,1.4656,High,Narnaul,Haryana,28.060249,76.113115
+"Shastri Nagar, Tonk - RSPCB",2026-09-01,1.4057,1.6,1.3621,1.0,1.4406,High,Tonk,Rajasthan,26.159933,75.780517
+"Shastripuram, Agra - UPPCB",2026-09-01,1.2156,1.0345,1.1575,0.98,1.1534,High,Agra,Uttar Pradesh,27.19862,77.92066
+"Shivaji Nagar, Jhansi - UPPCB",2026-08-31,1.1984,1.0,1.1543,0.97,1.1347,High,Jhansi,Uttar Pradesh,25.4547,78.6039
+"Shivaji Nagar, Mumbai - BMC",2026-09-01,0.9642,1.0,1.1831,0.98,1.0241,High,Mumbai,Maharashtra,19.060498,72.923356
+"Shivaji Nagar, Rishikesh - UKPCB",2026-09-01,0.3264,1.0,1.0,1.0,0.5713,High,Rishikesh,Uttarakhand,30.075911,78.2859547
+"Shivaji University, Kolhapur - MPCB",2026-09-01,0.8961,1.0,1.1471,1.0,0.9797,High,Kolhapur,Maharashtra,16.6870449,74.2505872
+"Shivapura_Peenya, Bengaluru - KSPCB",2026-09-01,1.2371,1.0,1.0375,0.86,1.1225,High,Bengaluru,Karnataka,13.0246342,77.5080115
+"Shivneri Colony, Amravati - MPCB",2026-09-01,0.935,1.0,1.1398,0.98,0.9991,High,Amravati,Maharashtra,20.9402359,77.7895248
+"Shri Shivaji Science College, Amravati - MPCB",2026-09-01,0.9095,1.0,1.2397,0.97,1.0063,High,Amravati,Maharashtra,20.939198,77.765701
+"Shrinath Puram, Kota - RSPCB",2026-09-01,1.2966,1.138,1.1491,0.98,1.2177,High,Kota,Rajasthan,25.14389,75.821256
+"Shrivastav Colony, Damoh - MPPCB",2026-09-01,0.9504,1.0,1.0279,0.89,0.9816,High,Damoh,Madhya Pradesh,23.81748678,79.446246
+"Shyam Nagar, Palwal - HSPCB",2026-09-01,1.3191,1.339,1.1177,0.99,1.2703,High,Palwal,Haryana,28.1485564,77.3320667
+"Siddharth Nagar-Worli, Mumbai - IITM",2026-08-28,0.8872,1.0,1.0887,0.79,0.9621,Medium,Mumbai,Maharashtra,19.000083,72.813993
+"Sidhi Vinayak Nagar, Ulhasnagar - MPCB",2026-09-01,1.0041,1.0351,1.4768,0.97,1.1142,High,Ulhasnagar,Maharashtra,19.235581,73.159121
+"Sikulpuikawn, Aizawl - Mizoram PCB",2026-08-28,0.3137,1.0,1.0,0.81,0.5601,Medium,Aizawl,Mizoram,23.7176342,92.7192841
+"Silk Board, Bengaluru - KSPCB",2026-09-01,1.3847,1.3892,1.3413,0.92,1.3748,High,Bengaluru,Karnataka,12.917348,77.622813
+"Siltara Phase-II, Raipur - CECB",2026-09-01,1.2294,1.0678,1.2913,0.99,1.2015,High,Raipur,Chhattisgarh,21.371751,81.664929
+"Sinchan Bhavan, Kolhapur - MPCB",2026-09-01,0.7664,1.0,1.0887,0.92,0.8942,High,Kolhapur,Maharashtra,16.7143745,74.2426398
+"Sion, Mumbai - MPCB",2026-09-01,0.9594,1.0,1.1302,0.86,1.0099,High,Mumbai,Maharashtra,19.047,72.8746
+"Sirifort, Delhi - CPCB",2026-09-01,1.6708,1.8333,1.4834,1.0,1.6599,High,Delhi,Delhi,28.5504249,77.2159377
+"Sita Rama Nagar, Kurnool - APPCB",2026-09-01,1.0864,1.0,1.0936,0.92,1.0659,High,Kurnool,Andhra Pradesh,15.83411,78.028546
 "Skara Yokma, Leh - LPCC",2026-08-29,0.8047,1.1771,1.521,0.77,1.0377,Medium,Leh,Ladakh,34.147096,77.55709
-"Sneh Nagar, Nanded - MPCB",2026-08-31,1.012,1.0,1.1297,0.99,1.0371,High,Nanded,Maharashtra,19.173852,77.296291
-"Somajiguda, Hyderabad - TSPCB",2026-08-31,1.246,1.0,1.075,0.98,1.1366,High,Hyderabad,Telangana,17.417094,78.457437
-"Sonia Vihar, Delhi - DPCC",2026-08-31,1.628,1.7333,1.7605,1.0,1.6864,High,Delhi,Delhi,28.710508,77.249485
-"Sri Aurobindo Marg, Delhi - DPCC",2026-08-31,1.3497,1.246,1.2605,0.97,1.3006,High,Delhi,Delhi,28.531346,77.190156
-"Srinivas Nagar Colony, Machilipatnam - APPCB",2026-08-31,1.4331,1.2108,1.1122,0.97,1.2896,High,Machilipatnam,Andhra Pradesh,16.186555,81.13219
-"Stuart Hill, Madikeri - KSPCB",2026-08-31,0.5887,1.0,1.0444,0.96,0.7756,High,Madikeri,Karnataka,12.415911,75.73505
-"Subash Chowk, Churu - RSPCB",2026-08-31,0.9602,1.0703,1.2533,0.97,1.0545,High,Churu,Rajasthan,28.296139,74.961696
-"Suhagi, Jabalpur - JMC",2026-08-31,1.2733,1.1054,1.1622,0.97,1.2014,High,Jabalpur,Madhya Pradesh,23.218135,79.95777
-"Suryakiran Bhawan NCL, Singrauli - MPPCB",2026-08-31,1.1259,1.0456,1.4415,0.86,1.1757,High,Singrauli,Madhya Pradesh,24.10897,82.64558
-"T T Nagar, Bhopal - MPPCB",2026-08-31,1.1297,1.0,1.1759,0.99,1.1068,High,Bhopal,Madhya Pradesh,23.233584,77.400574
-"Talcher Coalfields,Talcher - OSPCB",2026-08-31,1.438,1.2858,1.166,0.9,1.3269,High,Talcher,Odisha,20.9360711,85.1707021
-"Talkatora District Industries Center, Lucknow - CPCB",2026-08-31,1.1638,1.1,1.392,1.0,1.2,High,Lucknow,Uttar Pradesh,26.83399722,80.8917361
-"Talkatora Garden, Delhi - DPCC",2026-08-31,1.3433,1.3865,1.2776,0.97,1.3371,High,Delhi,Delhi,28.62181,77.1944633
-"Tarakpur, Ahmednagar - MPCB",2026-08-31,0.8835,1.0,1.0887,0.96,0.9601,High,Ahmednagar,Maharashtra,19.10122,74.73339
-"Tarapur, Silchar - PCBA",2026-08-31,1.0863,1.0,1.0375,0.99,1.0519,High,Silchar,Assam,24.82827,92.79525
-"Tata Stadium, Jorapokhar - JSPCB",2026-08-31,1.4004,1.5085,1.1163,0.99,1.3481,High,Jorapokhar,Jharkhand,23.707909,86.41467
-"Tata Township, Bileipada - OSPCB",2026-08-31,1.3298,1.2357,1.5032,0.85,1.3463,High,Bileipada,Odisha,22.06156703,85.47409613
-"Teri Gram, Gurugram - HSPCB",2026-08-31,2.0217,1.9,1.9243,1.0,1.9662,High,Gurugram,Haryana,28.4275,77.1465
-"Thavakkara, Kannur - Kerala PCB",2026-08-31,1.3488,1.4568,1.0757,0.93,1.2994,High,Kannur,Kerala,11.875,75.3732
-"Thergaon, Pimpri Chinchwad - MPCB",2026-08-31,0.9364,1.0,1.1543,0.98,1.003,High,Pimpri-Chinchwad,Maharashtra,18.616318,73.765797
-"Thimmalapura, Tumakuru - KSPCB",2026-08-12,1.241,1.0,1.0444,0.64,1.1262,Low,Tumakuru,Karnataka,13.377516,77.099072
-"Toll Gate, Tirumala - APPCB",2026-08-31,1.0166,1.0667,1.1221,1.0,1.0546,High,Tirumala,Andhra Pradesh,13.67,79.35
-"Tondare-Taloja, Navi Mumbai - MPCB",2026-08-31,1.0169,1.0,1.1856,0.98,1.0523,High,Navi Mumbai,Maharashtra,19.063,73.1209
-"Town Hall, Munger - BSPCB",2026-08-31,1.3952,1.2357,1.5338,0.85,1.3859,High,Munger,Bihar,25.376776,86.471523
-"Transport Nagar, Moradabad - UPPCB",2026-08-31,1.3862,1.2921,1.3988,0.95,1.3651,High,Moradabad,Uttar Pradesh,28.802625,78.753728
-"Transport Nagar-Nigdi, Pune - IITM",2026-08-31,1.1747,1.0,1.1442,0.89,1.1209,High,Pimpri-Chinchwad,Maharashtra,18.664282,73.763966
-"Trivenidevi Bhalotia College, Asansol - WBPCB",2026-08-31,0.8951,1.0,1.0647,0.97,0.9611,High,Asansol,West Bengal,23.616515,87.119133
+"Sneh Nagar, Nanded - MPCB",2026-09-01,1.0206,1.0,1.1297,0.99,1.0415,High,Nanded,Maharashtra,19.173852,77.296291
+"Somajiguda, Hyderabad - TSPCB",2026-09-01,1.2631,1.0345,1.075,0.98,1.1541,High,Hyderabad,Telangana,17.417094,78.457437
+"Sonia Vihar, Delhi - DPCC",2026-09-01,1.6176,1.7333,1.6839,1.0,1.6624,High,Delhi,Delhi,28.710508,77.249485
+"Sri Aurobindo Marg, Delhi - DPCC",2026-09-01,1.3573,1.2811,1.2419,0.97,1.3084,High,Delhi,Delhi,28.531346,77.190156
+"Srinivas Nagar Colony, Machilipatnam - APPCB",2026-09-01,1.4145,1.1757,1.1122,0.97,1.2718,High,Machilipatnam,Andhra Pradesh,16.186555,81.13219
+"Stuart Hill, Madikeri - KSPCB",2026-09-01,0.5914,1.0,1.0444,0.97,0.7774,High,Madikeri,Karnataka,12.415911,75.73505
+"Subash Chowk, Churu - RSPCB",2026-09-01,0.9575,1.0703,1.2533,0.97,1.0531,High,Churu,Rajasthan,28.296139,74.961696
+"Suhagi, Jabalpur - JMC",2026-09-01,1.2773,1.1054,1.1622,0.97,1.2032,High,Jabalpur,Madhya Pradesh,23.218135,79.95777
+"Suryakiran Bhawan NCL, Singrauli - MPPCB",2026-09-01,1.1173,1.0456,1.3065,0.86,1.1428,High,Singrauli,Madhya Pradesh,24.10897,82.64558
+"T T Nagar, Bhopal - MPPCB",2026-09-01,1.1407,1.0,1.1759,0.99,1.1122,High,Bhopal,Madhya Pradesh,23.233584,77.400574
+"Talcher Coalfields,Talcher - OSPCB",2026-09-01,1.4344,1.2858,1.166,0.9,1.3253,High,Talcher,Odisha,20.9360711,85.1707021
+"Talkatora District Industries Center, Lucknow - CPCB",2026-09-01,1.1583,1.1,1.392,1.0,1.1972,High,Lucknow,Uttar Pradesh,26.83399722,80.8917361
+"Talkatora Garden, Delhi - DPCC",2026-09-01,1.348,1.3865,1.2701,0.97,1.3375,High,Delhi,Delhi,28.62181,77.1944633
+"Tarakpur, Ahmednagar - MPCB",2026-09-01,0.8709,1.0,1.0887,0.96,0.9533,High,Ahmednagar,Maharashtra,19.10122,74.73339
+"Tarapur, Silchar - PCBA",2026-09-01,1.0866,1.0,1.0375,0.99,1.0521,High,Silchar,Assam,24.82827,92.79525
+"Tata Stadium, Jorapokhar - JSPCB",2026-09-01,1.4013,1.5085,1.108,0.99,1.346,High,Jorapokhar,Jharkhand,23.707909,86.41467
+"Tata Township, Bileipada - OSPCB",2026-09-01,1.3105,1.2357,1.2483,0.85,1.2758,High,Bileipada,Odisha,22.06156703,85.47409613
+"Teri Gram, Gurugram - HSPCB",2026-09-01,2.0171,1.8667,1.889,1.0,1.9462,High,Gurugram,Haryana,28.4275,77.1465
+"Thavakkara, Kannur - Kerala PCB",2026-09-01,1.3695,1.4949,1.0757,0.93,1.3178,High,Kannur,Kerala,11.875,75.3732
+"Thergaon, Pimpri Chinchwad - MPCB",2026-09-01,0.9345,1.0,1.1476,0.98,1.0005,High,Pimpri-Chinchwad,Maharashtra,18.616318,73.765797
+"Thimmalapura, Tumakuru - KSPCB",2026-08-12,1.242,1.0,1.0444,0.63,1.1266,Low,Tumakuru,Karnataka,13.377516,77.099072
+"Toll Gate, Tirumala - APPCB",2026-09-01,1.0123,1.0667,1.125,1.0,1.053,High,Tirumala,Andhra Pradesh,13.67,79.35
+"Tondare-Taloja, Navi Mumbai - MPCB",2026-08-31,1.0178,1.0,1.1856,0.97,1.0527,High,Navi Mumbai,Maharashtra,19.063,73.1209
+"Town Hall, Munger - BSPCB",2026-09-01,1.3944,1.2357,1.5338,0.85,1.3855,High,Munger,Bihar,25.376776,86.471523
+"Transport Nagar, Moradabad - UPPCB",2026-09-01,1.4192,1.3286,1.4355,0.95,1.4,High,Moradabad,Uttar Pradesh,28.802625,78.753728
+"Transport Nagar-Nigdi, Pune - IITM",2026-09-01,1.179,1.0,1.1341,0.88,1.1205,High,Pimpri-Chinchwad,Maharashtra,18.664282,73.763966
+"Trivenidevi Bhalotia College, Asansol - WBPCB",2026-09-01,0.8937,1.0,1.0647,0.97,0.9603,High,Asansol,West Bengal,23.616515,87.119133
 "Uchapatti, Madurai - TNPCB",2026-08-07,0.5225,1.0,1.208,0.63,0.7578,Low,Madurai,Tamil Nadu,9.865935,78.022669
-"Udyogamandal, Eloor - Kerala PCB",2026-08-31,1.1197,1.0,1.0222,0.9,1.064,High,Eloor,Kerala,10.073232,76.302765
-"Upvan Fort, Thane - MPCB",2026-08-31,0.7819,1.0,1.0739,0.99,0.9002,High,Thane,Maharashtra,19.222279,72.957979
-"Urban Estate-II, Hisar - HSPCB",2026-08-31,1.3553,1.1725,1.3297,0.98,1.3009,High,Hisar,Haryana,29.14056,75.744941
-"Urban, Chamarajanagar - KSPCB",2026-08-31,1.0649,1.0,1.0739,0.99,1.0505,High,Chamarajanagar,Karnataka,11.55358,76.55521
-"Urja Nagar, Korba - CECB",2026-08-31,0.6369,1.0,1.1107,0.98,0.8193,High,Korba,Chhattisgarh,22.348441,82.549611
-"Vaikuntapuram, Tirupati - APPCB",2026-08-31,1.4169,1.1095,1.1122,0.95,1.2546,High,Tirupati,Andhra Pradesh,13.615387,79.40923
-"Vasundhara Nagar_UIT, Bhiwadi - RSPCB",2026-08-31,1.3013,1.1675,1.2552,0.89,1.2551,High,Bhiwadi,Rajasthan,28.207266,76.829265
-"Vasundhara, Ghaziabad - UPPCB",2026-08-31,1.6773,1.7877,1.6405,0.96,1.6948,High,Ghaziabad,Uttar Pradesh,28.6603346,77.3572563
-"Ved Vihar-Loni, Ghaziabad - UPPCB",2026-08-31,1.6109,1.6333,1.6291,1.0,1.621,High,Ghaziabad,Uttar Pradesh,28.739153,77.273668
-"Vedhaynath Colony, Sirohi - RSPCB",2026-08-31,1.0853,1.0333,1.1325,1.0,1.0836,High,Sirohi,Rajasthan,24.885261,72.857549
-"Velachery Res. Area, Chennai - CPCB",2026-08-31,1.2589,1.2667,1.0887,1.0,1.2159,High,Chennai,Tamil Nadu,13.0052189,80.2398125
-"Vibhab Nagar, Firozabad - UPPCB",2026-08-31,0.8948,1.0,1.037,0.95,0.9546,High,Firozabad,Uttar Pradesh,27.1594,78.3953
-"Victoria, Kolkata - WBPCB",2026-08-31,1.6045,1.7591,1.4261,0.98,1.5941,High,Kolkata,West Bengal,22.5448082,88.3403691
-"Vidayagiri, Bagalkot - KSPCB",2026-08-12,1.0938,1.0,1.0,0.8,1.0458,Medium,Bagalkot,Karnataka,16.172806,75.659694
-"Vidhyanagar, Bhavnagar - Nexteng Enviro",2026-08-31,1.159,1.0,1.0444,1.0,1.0883,High,Bhavnagar,Gujarat,21.755417,72.139056
-"Vigyan Nagar, Alwar - RSPCB",2026-08-24,1.3674,1.4472,1.1974,0.94,1.3417,High,Alwar,Rajasthan,27.598796,76.63861
-"Vijay Nagar, Ramanagara - KSPCB",2026-08-31,0.9622,1.0333,1.0887,0.9,1.0102,High,Ramanagara,Karnataka,12.733409,77.298051
-"Vijay Nagar, Sangli - MPCB",2026-08-31,0.8526,1.0,1.1107,0.96,0.9479,High,Sangli,Maharashtra,16.5038,74.3623
-"Vikas Sadan, Gurugram - HSPCB",2026-08-31,1.7024,1.8433,1.7318,0.97,1.744,High,Gurugram,Haryana,28.4501238,77.0263051
-"Vinoba Nagara, Shivamogga - KSPCB",2026-08-31,1.1239,1.0,1.2569,0.95,1.1225,High,Shivamogga,Karnataka,13.94,75.555917
-"Vithalwadi, Ulhasnagar - MPCB",2026-08-31,0.7983,1.0,1.1434,0.99,0.9239,High,Ulhasnagar,Maharashtra,19.2307571,73.155192
-"Vivek Vihar, Delhi - DPCC",2026-08-31,1.5043,1.6103,1.322,0.99,1.4815,High,Delhi,Delhi,28.672342,77.31526
-"Ward-32 Bapupara, Siliguri - WBPCB",2026-08-31,1.1794,1.8784,1.0444,0.97,1.2853,High,Siliguri,West Bengal,26.6879226,88.4152495
-"Wave City, Ghaziabad - UPPCB",2026-08-31,0.4546,1.0,1.0,0.5,0.6742,Low,Ghaziabad,Uttar Pradesh,28.646675,77.489049
-"Wazirpur, Delhi - DPCC",2026-08-31,2.1034,1.9135,1.8295,0.97,1.9838,High,Delhi,Delhi,28.699793,77.165453
-"Womens College_City Center, Durgapur - WBPCB",2026-08-31,1.256,1.2,1.4609,1.0,1.2896,High,Durgapur,West Bengal,23.549395,87.300496
-"Worli, Mumbai - MPCB",2026-08-31,1.0995,1.0716,1.1114,0.96,1.0954,High,Mumbai,Maharashtra,18.9936162,72.8128113
-"Yamunapuram, Bulandshahr - UPPCB",2026-08-31,1.2926,1.2667,1.3505,1.0,1.3003,High,Bulandshahr,Uttar Pradesh,28.406963,77.849831
-"Yerramukkapalli, Kadapa - APPCB",2026-08-31,1.4175,1.3586,1.3256,0.91,1.3792,High,Kadapa,Andhra Pradesh,14.465052,78.824187
-"Zero Point GICI, Gangtok - SSPCB",2026-08-31,0.6979,1.0,1.1289,0.84,0.8611,Medium,Gangtok,Sikkim,27.33853,88.614099
-"Zoo Park, Hyderabad - TSPCB",2026-08-31,0.786,1.0,1.2186,0.96,0.9315,High,Hyderabad,Telangana,17.349694,78.451437
+"Udyogamandal, Eloor - Kerala PCB",2026-09-01,1.1252,1.0,1.0222,0.91,1.0666,High,Eloor,Kerala,10.073232,76.302765
+"Upvan Fort, Thane - MPCB",2026-09-01,0.772,1.0,1.0739,0.99,0.8945,High,Thane,Maharashtra,19.222279,72.957979
+"Urban Estate-II, Hisar - HSPCB",2026-09-01,1.3633,1.1725,1.3297,0.98,1.3047,High,Hisar,Haryana,29.14056,75.744941
+"Urban, Chamarajanagar - KSPCB",2026-09-01,1.0649,1.0,1.0739,0.99,1.0505,High,Chamarajanagar,Karnataka,11.55358,76.55521
+"Urja Nagar, Korba - CECB",2026-09-01,0.6416,1.0,1.1107,0.98,0.8223,High,Korba,Chhattisgarh,22.348441,82.549611
+"Vaikuntapuram, Tirupati - APPCB",2026-09-01,1.4201,1.1095,1.1491,0.95,1.2663,High,Tirupati,Andhra Pradesh,13.615387,79.40923
+"Vasundhara Nagar_UIT, Bhiwadi - RSPCB",2026-09-01,1.2971,1.1721,1.2569,0.88,1.2548,High,Bhiwadi,Rajasthan,28.207266,76.829265
+"Vasundhara, Ghaziabad - UPPCB",2026-09-01,1.682,1.7877,1.6403,0.96,1.6971,High,Ghaziabad,Uttar Pradesh,28.6603346,77.3572563
+"Ved Vihar-Loni, Ghaziabad - UPPCB",2026-09-01,1.6373,1.6667,1.6291,1.0,1.6425,High,Ghaziabad,Uttar Pradesh,28.739153,77.273668
+"Vedhaynath Colony, Sirohi - RSPCB",2026-09-01,1.0839,1.0333,1.1325,1.0,1.0828,High,Sirohi,Rajasthan,24.885261,72.857549
+"Velachery Res. Area, Chennai - CPCB",2026-09-01,1.2668,1.2667,1.0887,1.0,1.2197,High,Chennai,Tamil Nadu,13.0052189,80.2398125
+"Vibhab Nagar, Firozabad - UPPCB",2026-08-31,0.8976,1.0,1.037,0.94,0.956,High,Firozabad,Uttar Pradesh,27.1594,78.3953
+"Victoria, Kolkata - WBPCB",2026-09-01,1.6096,1.7591,1.5024,0.98,1.6176,High,Kolkata,West Bengal,22.5448082,88.3403691
+"Vidayagiri, Bagalkot - KSPCB",2026-08-12,1.0936,1.0,1.0,0.79,1.0458,Medium,Bagalkot,Karnataka,16.172806,75.659694
+"Vidhyanagar, Bhavnagar - Nexteng Enviro",2026-09-01,1.1568,1.0,1.0444,1.0,1.0873,High,Bhavnagar,Gujarat,21.755417,72.139056
+"Vigyan Nagar, Alwar - RSPCB",2026-08-24,1.3571,1.4188,1.2149,0.93,1.3348,High,Alwar,Rajasthan,27.598796,76.63861
+"Vijay Nagar, Ramanagara - KSPCB",2026-09-01,0.9584,1.0333,1.0887,0.9,1.0082,High,Ramanagara,Karnataka,12.733409,77.298051
+"Vijay Nagar, Sangli - MPCB",2026-09-01,0.8531,1.0,1.1107,0.96,0.9482,High,Sangli,Maharashtra,16.5038,74.3623
+"Vikas Sadan, Gurugram - HSPCB",2026-09-01,1.6874,1.8433,1.873,0.97,1.7707,High,Gurugram,Haryana,28.4501238,77.0263051
+"Vinoba Nagara, Shivamogga - KSPCB",2026-09-01,1.1249,1.0,1.2553,0.96,1.1226,High,Shivamogga,Karnataka,13.94,75.555917
+"Vithalwadi, Ulhasnagar - MPCB",2026-09-01,0.7939,1.0,1.1651,0.99,0.9257,High,Ulhasnagar,Maharashtra,19.2307571,73.155192
+"Vivek Vihar, Delhi - DPCC",2026-09-01,1.5038,1.6442,1.2798,0.99,1.477,High,Delhi,Delhi,28.672342,77.31526
+"Ward-32 Bapupara, Siliguri - WBPCB",2026-09-01,1.1685,1.8433,1.0444,0.97,1.2733,High,Siliguri,West Bengal,26.6879226,88.4152495
+"Wave City, Ghaziabad - UPPCB",2026-09-01,0.4564,1.0,1.0,0.5,0.6756,Low,Ghaziabad,Uttar Pradesh,28.646675,77.489049
+"Wazirpur, Delhi - DPCC",2026-09-01,2.1128,1.9135,1.8211,0.97,1.986,High,Delhi,Delhi,28.699793,77.165453
+"Womens College_City Center, Durgapur - WBPCB",2026-09-01,1.2494,1.2,1.4609,1.0,1.2862,High,Durgapur,West Bengal,23.549395,87.300496
+"Worli, Mumbai - MPCB",2026-09-01,1.0891,1.073,1.1107,0.95,1.0904,High,Mumbai,Maharashtra,18.9936162,72.8128113
+"Yamunapuram, Bulandshahr - UPPCB",2026-09-01,1.3181,1.3,1.3608,1.0,1.3241,High,Bulandshahr,Uttar Pradesh,28.406963,77.849831
+"Yerramukkapalli, Kadapa - APPCB",2026-09-01,1.4214,1.3674,1.3256,0.9,1.3834,High,Kadapa,Andhra Pradesh,14.465052,78.824187
+"Zero Point GICI, Gangtok - SSPCB",2026-09-01,0.6982,1.0,1.1289,0.84,0.8613,Medium,Gangtok,Sikkim,27.33853,88.614099
+"Zoo Park, Hyderabad - TSPCB",2026-09-01,0.7923,1.0,1.2186,0.96,0.9352,High,Hyderabad,Telangana,17.349694,78.451437
