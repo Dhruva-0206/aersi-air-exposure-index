@@ -25,17 +25,9 @@ function renderNav() {
 
 function renderFooter() {
   return `
-  <style>
-    /* Footer now has 3 columns (was 4) — override .footer-grid's column
-       count at each breakpoint the site already uses, without touching
-       css/style.css. */
-    .footer-grid-3 { grid-template-columns: 2fr 1fr 1fr; }
-    @media (max-width: 1024px) { .footer-grid-3 { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 768px)  { .footer-grid-3 { grid-template-columns: 1fr; } }
-  </style>
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid footer-grid-3">
+      <div class="footer-grid">
         <div>
           <div class="footer-brand">
             <img src="logo.png" alt="AERSI" style="width:32px;height:32px;border-radius:8px;object-fit:cover;">
@@ -52,6 +44,14 @@ function renderFooter() {
           <ul class="footer-links">
             <li><a href="mailto:aersi.org@gmail.com">aersi.org@gmail.com</a></li>
             <li><a href="https://www.linkedin.com/in/dhruva-chakrabarty/" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Data</div>
+          <ul class="footer-links">
+            <li><a href="https://data.gov.in" target="_blank">CPCB Data Source</a></li>
+            <li><a href="methodology.html">Formula Reference</a></li>
+            <li><a href="https://doi.org/10.5281/zenodo.22065550" target="_blank" rel="noopener">Dataset (Zenodo)</a></li>
           </ul>
         </div>
         <div>
