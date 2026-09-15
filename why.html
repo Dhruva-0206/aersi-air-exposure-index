@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why AERSI? — Air Exposure Severity Index</title>
-  <meta name="description" content="Why standard AQI is not enough — and how AERSI fills the gap with persistence, variability, and data honesty.">
+  <title>Why AERSI? - Air Exposure Severity Index</title>
+  <meta name="description" content="Why standard AQI is not enough, and how AERSI fills the gap with persistence, variability, and data honesty.">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/layout.js"></script>
@@ -124,8 +124,8 @@
           </h1>
           <p style="font-size:1.1rem;color:var(--text2);line-height:1.8;max-width:600px;">
             Standard air quality indices answer one question: how bad is the air right now?
-            But chronic health damage from air pollution is shaped by something far more
-            complex — persistence, volatility, multi-pollutant burden, and data reliability.
+            But chronic health damage from air pollution is shaped by something far more complex.
+            Persistence, volatility, multi-pollutant burden, and data reliability all play a role.
             AERSI is built to measure all of them.
           </p>
         </div>
@@ -136,7 +136,7 @@
       <div class="container-narrow">
 
         <div class="big-quote anim-fade-up">
-          <p>"The burden of air pollution on human health is not determined by the worst single day — it is determined by the cumulative weight of every day, every spike, every season of exposure."</p>
+          <p>"The burden of air pollution on human health is not determined by the worst single day. It is determined by the cumulative weight of every day, every spike, every season of exposure."</p>
         </div>
 
         <div class="section-header anim-fade-up">
@@ -179,7 +179,7 @@
           <div class="dimension-card">
             <div class="dimension-tag">PL</div>
             <h3>Pollution Load</h3>
-            <p>WHO-normalized weighted sum of all pollutants present, with a soft-saturation transform that reflects the sublinear dose-response relationship for fine particles. Missing pollutants are handled via weight renormalization — not silently excused.</p>
+            <p>WHO-normalized weighted sum of all pollutants present, with a soft-saturation transform that reflects the sublinear dose-response relationship for fine particles. Missing pollutants are handled via weight renormalization, not silently excused.</p>
           </div>
           <div class="dimension-card">
             <div class="dimension-tag">EPF</div>
@@ -189,12 +189,12 @@
           <div class="dimension-card">
             <div class="dimension-tag">VSF</div>
             <h3>Variability Severity</h3>
-            <p>Unpredictable swings cause acute health events. VSF uses median absolute day-to-day AQI change — robust to sensor spikes — to capture instability that consistently bad air does not produce.</p>
+            <p>Unpredictable swings cause acute health events. VSF uses median absolute day-to-day AQI change, robust to sensor spikes, to capture instability that consistently bad air does not produce.</p>
           </div>
           <div class="dimension-card">
             <div class="dimension-tag">CF</div>
             <h3>Data Confidence</h3>
-            <p>A station with two pollutants and 10 days of data should not be presented with the same confidence as a fully observed one. CF is computed and shown as a confidence label — making data quality visible, not hidden.</p>
+            <p>A station with two pollutants and 10 days of data should not be presented with the same confidence as a fully observed one. CF is computed and shown as a confidence label, making data quality visible, not hidden.</p>
           </div>
         </div>
 
@@ -207,25 +207,25 @@
             <div class="scenario-label">Scenario 1</div>
             <h3>The Consistent Polluter</h3>
             <p>AQI of 180 every single day for 30 days. Dangerous, but predictable. The damage accumulates slowly and steadily.</p>
-            <div class="scenario-verdict">✓ AERSI captures the high EPF — persistent exposure penalized correctly</div>
+            <div class="scenario-verdict">✓ AERSI captures the high EPF - persistent exposure penalized correctly</div>
           </div>
           <div class="scenario-card">
             <div class="scenario-label">Scenario 2</div>
             <h3>The Unpredictable Spiker</h3>
-            <p>AQI swings between 40 and 400 with no pattern. Average is also 180. AQI treats these identically. AERSI does not — the high VSF correctly distinguishes the spiker.</p>
-            <div class="scenario-verdict">✓ AERSI captures the high VSF — acute spike risk penalized correctly</div>
+            <p>AQI swings between 40 and 400 with no pattern. Average is also 180. AQI treats these identically. AERSI does not. The high VSF correctly distinguishes the spiker.</p>
+            <div class="scenario-verdict">✓ AERSI captures the high VSF - acute spike risk penalized correctly</div>
           </div>
           <div class="scenario-card">
             <div class="scenario-label">Scenario 3</div>
             <h3>The Multi-Pollutant Station</h3>
-            <p>AQI reports only the worst single pollutant. A station with PM2.5 at 3× and NO2 at 2× looks identical to one with just PM2.5 at 3×. AERSI combines them — the multi-pollutant burden is visible.</p>
-            <div class="scenario-verdict">✓ AERSI captures combined burden — PL sums all pollutants with renormalized weights</div>
+            <p>AQI reports only the worst single pollutant. A station with PM2.5 at 3× and NO2 at 2× looks identical to one with just PM2.5 at 3×. AERSI combines them. The multi-pollutant burden is visible.</p>
+            <div class="scenario-verdict">✓ AERSI captures combined burden - PL sums all pollutants with renormalized weights</div>
           </div>
           <div class="scenario-card">
             <div class="scenario-label">Scenario 4</div>
             <h3>The Sparse Data Station</h3>
-            <p>A station only reports PM2.5 with 15 days of data. AQI treats this identically to a fully observed station. AERSI shows "Low Confidence" — the uncertainty is honest, not hidden.</p>
-            <div class="scenario-verdict">✓ AERSI flags data gaps honestly — sparse stations scored but confidence labelled</div>
+            <p>A station only reports PM2.5 with 15 days of data. AQI treats this identically to a fully observed station. AERSI shows "Low Confidence." The uncertainty is honest, not hidden.</p>
+            <div class="scenario-verdict">✓ AERSI flags data gaps honestly - sparse stations scored but confidence labelled</div>
           </div>
         </div>
 

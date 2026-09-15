@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore — AERSI</title>
+  <title>Explore - AERSI</title>
   <meta name="description" content="Explore AERSI scores across India. Compare stations, states, and pollution patterns.">
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
@@ -242,8 +242,8 @@
         <tr>
           <td style="color:var(--text3);font-family:var(--font-mono);font-size:0.75rem;">${i+1}</td>
           <td style="font-weight:500;">${escapeHtml(s.station)}</td>
-          <td style="color:var(--text2);">${escapeHtml(s.city) || '—'}</td>
-          <td style="color:var(--text2);">${escapeHtml(s.state) || '—'}</td>
+          <td style="color:var(--text2);">${escapeHtml(s.city) || '-'}</td>
+          <td style="color:var(--text2);">${escapeHtml(s.state) || '-'}</td>
           <td style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:${cat.color};">${fmt(s.AERSI)}</td>
           <td><span class="badge badge-${cat.cls}">${cat.label}</span></td>
           <td style="font-family:var(--font-mono);font-size:0.8rem;">${fmt(s.PL)}</td>
