@@ -1,7 +1,7 @@
 """
 AERSI Daily Pipeline Orchestrator
 Runs all steps in order, logs results, exits cleanly on failure.
-Fetch step is non-fatal: falls back to the most recent snapshot within 3 days.
+Fetch step is non-fatal: falls back to the most recent snapshot within 14 days.
 """
 
 import subprocess
@@ -43,7 +43,7 @@ STEPS = [
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
-def find_recent_snapshot(max_days_back: int = 3) -> Path | None:
+def find_recent_snapshot(max_days_back: int = 14) -> Path | None:
     """Return the most recent snapshot file within max_days_back days, or None."""
     today_date = datetime.now(timezone.utc).date()
     for delta in range(max_days_back + 1):
@@ -86,17 +86,17 @@ def main():
         if not success:
             # Fetch failure is non-fatal if a recent snapshot exists
             if script == "src/fetch/fetch_snapshot.py":
-                fallback = find_recent_snapshot(max_days_back=3)
+                fallback = find_recent_snapshot(max_days_back=14)
                 if fallback:
                     log.warning(
                         f"Fetch failed — falling back to most recent snapshot: {fallback.name}"
                     )
                     log.warning(
-                        "Downstream steps will use this snapshot. Score freshness may be 1-3 days old."
+                        "Downstream steps will use this snapshot. Score freshness may be 1-14 days old."
                     )
                     log.info(f"  OK (fallback)\n")
                 else:
-                    log.error("Fetch failed and no recent snapshot found within 3 days.")
+                    log.error("Fetch failed and no recent snapshot found within 14 days.")
                     log.error("Pipeline halted.")
                     sys.exit(1)
             else:

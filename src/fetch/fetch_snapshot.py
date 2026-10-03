@@ -42,7 +42,7 @@ if OUTPUT_FILE.exists():
 
 # ── Fallback helpers ─────────────────────────────────────────────────────────
 
-FALLBACK_MAX_DAYS = 7
+FALLBACK_MAX_DAYS = 14
 
 def find_recent_snapshot(max_days_back: int = FALLBACK_MAX_DAYS):
     """Return the most recent existing snapshot within max_days_back days, or None."""
