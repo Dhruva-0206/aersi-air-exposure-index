@@ -8,7 +8,7 @@ import os
 import time
 import requests
 import pandas as pd
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -40,6 +40,31 @@ if OUTPUT_FILE.exists():
     print(f"Snapshot already exists for {TODAY}, skipping fetch.")
     raise SystemExit(0)
 
+# ── Fallback helpers ─────────────────────────────────────────────────────────
+
+FALLBACK_MAX_DAYS = 7
+
+def find_recent_snapshot(max_days_back: int = FALLBACK_MAX_DAYS):
+    """Return the most recent existing snapshot within max_days_back days, or None."""
+    today_date = datetime.now(timezone.utc).date()
+    for delta in range(1, max_days_back + 1):
+        candidate = today_date - timedelta(days=delta)
+        f = SNAPSHOT_DIR / f"cpcb_snapshot_{candidate}.csv"
+        if f.exists():
+            return f
+    return None
+
+
+def fall_back_or_halt():
+    """Use a recent snapshot if the API is unusable, otherwise halt the pipeline."""
+    fallback = find_recent_snapshot(FALLBACK_MAX_DAYS)
+    if fallback:
+        print(f"WARNING: API fetch failed - falling back to existing snapshot: {fallback.name}")
+        print(f"WARNING: Fallback is within the {FALLBACK_MAX_DAYS}-day window. Downstream steps will use this data.")
+        raise SystemExit(0)
+    print(f"ERROR: API unreachable and no snapshot found within {FALLBACK_MAX_DAYS} days.")
+    raise SystemExit(1)
+
 # ── Paginated fetch ──────────────────────────────────────────────────────────
 
 print(f"Fetching CPCB snapshot for {TODAY}")
@@ -56,6 +81,7 @@ headers = {
 }
 
 while True:
+    response = None
     for attempt in range(5):
         try:
             response = requests.get(
@@ -75,20 +101,32 @@ while True:
                     retry_after = int(response.headers.get("Retry-After", 120))
                 print(f"  HTTP {response.status_code} on page {page}, attempt {attempt + 1}/5 — retrying in {retry_after}s...")
                 if attempt == 4:
-                    raise RuntimeError(f"API returned {response.status_code} five times on page {page}.")
+                    print(f"WARNING: API returned {response.status_code} five times on page {page}.")
+                    fall_back_or_halt()
                 time.sleep(retry_after)
                 continue
             break
-        except requests.exceptions.ReadTimeout:
+        except requests.exceptions.ConnectionError as e:
+            print(f"  Connection error on page {page}, attempt {attempt + 1}/5: {e}")
+            print("WARNING: Connection refused/unreachable - retrying will not help. Skipping to fallback.")
+            fall_back_or_halt()
+        except requests.exceptions.Timeout:
             print(f"  Timeout on page {page}, attempt {attempt + 1}/5 — retrying in 30s...")
             if attempt == 4:
-                raise RuntimeError("API timed out 5 times in a row. Try again later.")
+                print("WARNING: API timed out 5 times in a row.")
+                fall_back_or_halt()
+            time.sleep(30)
+        except requests.exceptions.RequestException as e:
+            print(f"  Request error on page {page}, attempt {attempt + 1}/5: {e}")
+            if attempt == 4:
+                print("WARNING: Request failed 5 times in a row.")
+                fall_back_or_halt()
             time.sleep(30)
 
-    if response.status_code != 200:
-        raise RuntimeError(
-            f"API request failed (HTTP {response.status_code}): {response.text[:300]}"
-        )
+    if response is None or response.status_code != 200:
+        status = response.status_code if response is not None else "no response"
+        print(f"WARNING: API request failed (HTTP {status}).")
+        fall_back_or_halt()
 
     payload = response.json()
     records = payload.get("records", [])
@@ -105,7 +143,8 @@ while True:
 print(f"Total records fetched: {len(all_records)}")
 
 if not all_records:
-    raise RuntimeError("API returned zero records — aborting.")
+    print("WARNING: API returned zero records.")
+    fall_back_or_halt()
 
 # ── Save ─────────────────────────────────────────────────────────────────────
 
